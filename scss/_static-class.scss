@@ -1,0 +1,27 @@
+.btn-red {
+  max-width: 160px;
+  width: 100%;
+  height: 44px;
+  background-color: $color-red;
+  @include text($color: $color-white, $fontWeight: 700);
+  &:hover {
+    background-color: $color-red-60;
+  }
+  &:active {
+    background-color: $color-red-80;
+  }
+}
+
+.btn-red-disabled {
+  max-width: 160px;
+  width: 100%;
+  height: 44px;
+  background-color: $color-grey-50;
+  @include text($color: $color-white, $fontWeight: 700);
+}
+
+.text-h1 {
+  @include text($size: 40px, $fontWeight: 900, $lineHeight: 60px);
+  text-transform: uppercase;
+  font-style: normal;
+}
