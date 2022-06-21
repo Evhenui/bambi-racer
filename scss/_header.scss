@@ -1,0 +1,154 @@
+.header {
+  width: 100%;
+  height: 76px;
+  background-color: $color-gray-100;
+
+  &__wrp {
+    max-width: $width-page;
+    width: 100%;
+    height: 100%;
+    @extend %padding-mob;
+    @extend %centre-marg;
+    @extend %centre-space-between;
+  }
+  &__wrp-left-cont {
+    @extend %centre-space-between;
+    max-width: 436px;
+    width: 100%;
+  }
+  &__btn-catalog-wrp {
+    width: 100%;
+    position: relative;
+    @extend %centre-flex;
+  }
+  &__btn-catalog {
+    max-width: 119px;
+    width: 100%;
+    @extend %centre-flex;
+    justify-content: flex-start;
+    font-weight: 500;
+  }
+  &__languages-wrp {
+    max-width: 68px;
+    width: 100%;
+    @extend %centre-space-between;
+  }
+  &__languages-btn {
+    @include text($color: $color-grey-60);
+    text-transform: uppercase;
+    &.active {
+      color: $color-white;
+    }
+  }
+  &__languages-btn-line {
+    width: 1px;
+    height: 24px;
+    background-color: $color-grey-70;
+    display: flex;
+  }
+  &__wrp-right-cont {
+    max-width: 460px;
+    width: 100%;
+    @extend %centre-space-between;
+  }
+  &__search-input {
+    height: 44px;
+  }
+  &__search-form-wrp {
+    @extend %centre-flex;
+  }
+  &__menu-btn-wrp {
+    height: 44px;
+    width: 44px;
+    position: relative;
+  }
+  &__menu-btn-line {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    left: 11px;
+    background-color: $color-gray-30;
+    border-radius: 16px;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      top: 6px;
+      left: 0;
+      background-color: $color-gray-30;
+      border-radius: 16px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      top: -6px;
+      left: 0;
+      background-color: $color-gray-30;
+      border-radius: 16px;
+    }
+  }
+  &__catalog-item-wrp {
+    height: 40px;
+
+    width: 100%;
+  }
+  &__catalog-wrp {
+    width: 280px;
+    background-color: $color-gray-100;
+    @include text($textAlign: left, $color: $color-gray-20, $lineHeight: 24px);
+    row-gap: 4px;
+    position: absolute;
+    top: 70px;
+    left: 43px;
+    display: none;
+    &::after {
+      content: "";
+      top: -7px;
+      left: 22px;
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      display: flex;
+      background-color: $color-gray-100;
+      transform: rotate(-45deg);
+      z-index: -1;
+    }
+    &.active {
+      display: block;
+      z-index: 200;
+    }
+  }
+  &__catalog-item-wrp {
+    padding-left: 20px;
+    padding-right: 20px;
+    @extend %centre-space-between;
+    &:hover .header__catalog-item-hover {
+      opacity: 1;
+      transition: 0.3s ease-out;
+    }
+    &:hover {
+      background-color: $color-grey-95;
+    }
+  }
+  &__catalog-item-hover {
+    width: 6px;
+    height: 6px;
+    display: flex;
+    background-color: $color-red;
+    transform: rotate(-45deg);
+    opacity: 0;
+
+    transition: 0.3s ease-in;
+  }
+}
+
+.js-main {
+  &.active {
+    backdrop-filter: blur(10px);
+    background-color: #03020e3d;
+    z-index: 20;
+  }
+}

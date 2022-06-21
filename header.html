@@ -6,18 +6,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="icon/favicon-black.svg" type="image/x-icon">
+    <script src="js/main.js"></script>
     <title>Bambi racer</title>
 </head>
 
 <body>
-    <button class="btn-red">click
-    </button>
-    <button class="btn-red-disabled">click
-    </button>
-    <h1 class="text-h1">
-        Hello
-    </h1>
-
+    <header class="header">
+        <div class="header__wrp">
+            <div class="header__wrp-left-cont">
+                <a href="#">
+                    <object id="logo-svg" type="image/svg+xml" data="img/heder-logo-img.svg"></object>
+                </a>
+                <div class="header__btn-catalog-wrp">
+                    <button class="header__btn-catalog btn-red js-header-btn-catalog">
+                        <img src="icon/header-catalog-icon.svg" alt="catalog">
+                        <span>Каталог</span>
+                    </button>
+                    <div class="header__catalog-wrp js-header-catalog">
+                        <div class="header__catalog-item-wrp">
+                            <a href="#">Электромобили</a>
+                            <span class="header__catalog-item-hover"></span>
+                        </div>
+                        <div class="header__catalog-item-wrp">
+                            <a href="#">Металлические квадроциклы</a>
+                            <span class="header__catalog-item-hover"></span>
+                        </div>
+                        <div class="header__catalog-item-wrp">
+                            <a href="#">Велокарты</a>
+                            <span class="header__catalog-item-hover"></span>
+                        </div>
+                        <div class="header__catalog-item-wrp">
+                            <a href="#">Каталки-толокары</a>
+                            <span class="header__catalog-item-hover"></span>
+                        </div>
+                        <div class="header__catalog-item-wrp">
+                            <a href="#">Запчасти и Комплектующие</a>
+                            <span class="header__catalog-item-hover"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__languages-wrp">
+                    <button class="header__languages-btn active">ru</button>
+                    <span class="header__languages-btn-line"></span>
+                    <button class="header__languages-btn">ua</button>
+                </div>
+            </div>
+            <div class="header__wrp-right-cont">
+                <form class="header__search-form-wrp">
+                    <input class="header__search-input" type="text">
+                    <button>
+                        <img src="icon/header-search-icon.svg" alt="">
+                    </button>
+                </form>
+                <a href="tel:+">
+                    <img src="icon/header-phone-icon.svg" alt="">
+                </a>
+                <a href="#">
+                    <img src="icon/header-comparison-icon.svg" alt="">
+                </a>
+                <button>
+                    <img src="icon/header-basket-icon.svg" alt="">
+                </button>
+                <button>
+                    <img src="icon/header-personal-area-icon.svg" alt="">
+                </button>
+                <div>
+                    <button class="header__menu-btn-wrp">
+                        <span class="header__menu-btn-line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
 </body>
 
 </html>

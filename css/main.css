@@ -128,6 +128,40 @@ label {
   --my-variable-hiadth: 10px;
 }
 
+.header__btn-catalog-wrp, .header__btn-catalog, .header__search-form-wrp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header__wrp {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header__wrp, .header__wrp-left-cont, .header__languages-wrp, .header__wrp-right-cont, .header__catalog-item-wrp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__wrp {
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
 .btn-red {
   max-width: 160px;
   width: 100%;
@@ -162,6 +196,19 @@ label {
   color: #ffffff;
 }
 
+.btn-red-white-background {
+  max-width: 160px;
+  width: 100%;
+  height: 44px;
+  background-color: #9c9696;
+  font-family: "Mulish", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+  text-align: center;
+  color: #ffffff;
+}
+
 .text-h1 {
   font-family: "Mulish", sans-serif;
   font-size: 40px;
@@ -170,6 +217,188 @@ label {
   text-align: center;
   color: #090102;
   text-transform: uppercase;
-  font-style: normal;
+}
+
+.header {
+  width: 100%;
+  height: 76px;
+  background-color: #1a1919;
+}
+
+.header__wrp {
+  max-width: 1440px;
+  width: 100%;
+  height: 100%;
+}
+
+.header__wrp-left-cont {
+  max-width: 436px;
+  width: 100%;
+}
+
+.header__btn-catalog-wrp {
+  width: 100%;
+  position: relative;
+}
+
+.header__btn-catalog {
+  max-width: 119px;
+  width: 100%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-weight: 500;
+}
+
+.header__languages-wrp {
+  max-width: 68px;
+  width: 100%;
+}
+
+.header__languages-btn {
+  font-family: "Mulish", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+  color: #827d7d;
+  text-transform: uppercase;
+}
+
+.header__languages-btn.active {
+  color: #ffffff;
+}
+
+.header__languages-btn-line {
+  width: 1px;
+  height: 24px;
+  background-color: #686464;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__wrp-right-cont {
+  max-width: 460px;
+  width: 100%;
+}
+
+.header__search-input {
+  height: 44px;
+}
+
+.header__menu-btn-wrp {
+  height: 44px;
+  width: 44px;
+  position: relative;
+}
+
+.header__menu-btn-line {
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  left: 11px;
+  background-color: #cecaca;
+  border-radius: 16px;
+}
+
+.header__menu-btn-line::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  top: 6px;
+  left: 0;
+  background-color: #cecaca;
+  border-radius: 16px;
+}
+
+.header__menu-btn-line::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  top: -6px;
+  left: 0;
+  background-color: #cecaca;
+  border-radius: 16px;
+}
+
+.header__catalog-item-wrp {
+  height: 40px;
+  width: 100%;
+}
+
+.header__catalog-wrp {
+  width: 280px;
+  background-color: #1a1919;
+  font-family: "Mulish", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: #e6e5e5;
+  row-gap: 4px;
+  position: absolute;
+  top: 70px;
+  left: 43px;
+  display: none;
+}
+
+.header__catalog-wrp::after {
+  content: "";
+  top: -7px;
+  left: 22px;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #1a1919;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  z-index: -1;
+}
+
+.header__catalog-wrp.active {
+  display: block;
+  z-index: 200;
+}
+
+.header__catalog-item-wrp {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.header__catalog-item-wrp:hover .header__catalog-item-hover {
+  opacity: 1;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.header__catalog-item-wrp:hover {
+  background-color: #212121;
+}
+
+.header__catalog-item-hover {
+  width: 6px;
+  height: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #c12125;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  opacity: 0;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+
+.js-main.active {
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background-color: #03020e3d;
+  z-index: 20;
 }
 /*# sourceMappingURL=main.css.map */
