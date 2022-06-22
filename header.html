@@ -11,7 +11,7 @@
     <title>Bambi racer</title>
 </head>
 
-<body>
+<body id="body-cont">
     <header class="header">
         <div class="header__wrp">
             <div class="header__wrp-left-cont">
@@ -26,59 +26,193 @@
                     <div class="header__catalog-wrp js-header-catalog">
                         <div class="header__catalog-item-wrp">
                             <a href="#">Электромобили</a>
-                            <span class="header__catalog-item-hover"></span>
+                            <span class="red-diamonds"></span>
                         </div>
                         <div class="header__catalog-item-wrp">
                             <a href="#">Металлические квадроциклы</a>
-                            <span class="header__catalog-item-hover"></span>
+                            <span class="red-diamonds"></span>
                         </div>
                         <div class="header__catalog-item-wrp">
                             <a href="#">Велокарты</a>
-                            <span class="header__catalog-item-hover"></span>
+                            <span class="red-diamonds"></span>
                         </div>
                         <div class="header__catalog-item-wrp">
                             <a href="#">Каталки-толокары</a>
-                            <span class="header__catalog-item-hover"></span>
+                            <span class="red-diamonds"></span>
                         </div>
                         <div class="header__catalog-item-wrp">
                             <a href="#">Запчасти и Комплектующие</a>
-                            <span class="header__catalog-item-hover"></span>
+                            <span class="red-diamonds"></span>
                         </div>
                     </div>
                 </div>
                 <div class="header__languages-wrp">
-                    <button class="header__languages-btn active">ru</button>
+                    <button class="header__languages-btn active js-header-languages">ru</button>
                     <span class="header__languages-btn-line"></span>
-                    <button class="header__languages-btn">ua</button>
+                    <button class="header__languages-btn js-header-languages">ua</button>
                 </div>
             </div>
             <div class="header__wrp-right-cont">
-                <form class="header__search-form-wrp">
-                    <input class="header__search-input" type="text">
-                    <button>
+                <form class="header__search-form-wrp js-search">
+                    <input class="header__search-input js-search-input" type="text">
+                    <button class="header__btn-search js-btn-search">
                         <img src="icon/header-search-icon.svg" alt="">
                     </button>
                 </form>
-                <a href="tel:+">
+                <a class="header__right-item" href="tel:+">
                     <img src="icon/header-phone-icon.svg" alt="">
                 </a>
-                <a href="#">
+                <a class="header__right-item" href="#">
                     <img src="icon/header-comparison-icon.svg" alt="">
                 </a>
-                <button>
+                <button class="header__right-item">
                     <img src="icon/header-basket-icon.svg" alt="">
                 </button>
-                <button>
+                <button class="header__right-item">
                     <img src="icon/header-personal-area-icon.svg" alt="">
                 </button>
                 <div>
-                    <button class="header__menu-btn-wrp">
+                    <button class="header__menu-btn-wrp is-btn-menu">
                         <span class="header__menu-btn-line"></span>
                     </button>
                 </div>
             </div>
         </div>
+        <div class="header__menu-wrp">
+            <div class="header__menu-section-wrp">
+                <div class="js-menu-wrp header__menu-section">
+                    <div class="header__menu-name-categoty-wrp js-menu-btn">
+                        <h2 class="header__menu-name-categoty">Каталог</h2>
+                        <img class="header__menu-name-categoty-icon active" src="icon/arrow-white-icon.svg" alt="">
+                    </div>
+                    <div class="header__menu-item-link-wrp active">
+                        <a class="header__menu-item-link" href="#">
+                            <p class="header__menu-item-text">Электромобили</p>
+                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                        </a>
+                        <a class="header__menu-item-link" href="#">
+                            <p class="header__menu-item-text">Металлические квадроциклы</p>
+                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                        </a>
+                        <a class="header__menu-item-link" href="#">
+                            <p class="header__menu-item-text">Велокарты</p>
+                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                        </a>
+                        <a class="header__menu-item-link" href="#">
+                            <p class="header__menu-item-text">Каталки-толокары</p>
+                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                        </a>
+                        <a class="header__menu-item-link" href="#">
+                            <p class="header__menu-item-text">Запчасти и Комплектующие</p>
+                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="js-menu-wrp header__menu-section">
+                    <div class="header__menu-name-categoty-wrp js-menu-btn">
+                        <h2 class="header__menu-name-categoty">О компании</h2>
+                        <img class="header__menu-name-categoty-icon" src="icon/arrow-white-icon.svg" alt="">
+                    </div>
+                    <div class="header__menu-item-link-wrp">
+                        <a class="header__menu-item-link" href="#">
+                            <p class="header__menu-item-text">О компании</p>
+                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                        </a>
+                        <a class="header__menu-item-link" href="#">
+                            <p class="header__menu-item-text">Оплата и доставка</p>
+                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                        </a>
+                        <a class="header__menu-item-link" href="#">
+                            <p class="header__menu-item-text">Гарантия и сервис</p>
+                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                        </a>
+                        <a class="header__menu-item-link" href="#">
+                            <p class="header__menu-item-text">Стать партнером</p>
+                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                        </a>
+                        <a class="header__menu-item-link" href="#">
+                            <p class="header__menu-item-text">Контакты</p>
+                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                        </a>
+                        <a class="header__menu-item-link" href="#">
+                            <p class="header__menu-item-text">Text</p>
+                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="js-menu-wrp header__menu-section">
+                    <div class="header__menu-name-categoty-wrp js-menu-btn">
+                        <h2 class="header__menu-name-categoty">Сервис и поддержка</h2>
+                        <img class="header__menu-name-categoty-icon" src="icon/arrow-white-icon.svg" alt="">
+                    </div>
+                    <div class="header__menu-item-link-wrp">
+                        <a class="header__menu-item-link" href="#">
+                            <p class="header__menu-item-text">FAQ</p>
+                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                        </a>
+                        <a class="header__menu-item-link" href="#">
+                            <p class="header__menu-item-text">Возврат и обмен</p>
+                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                        </a>
+                        <a class="header__menu-item-link" href="#">
+                            <p class="header__menu-item-text">Инструкции</p>
+                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                        </a>
+                        <a class="header__menu-item-link" href="#">
+                            <p class="header__menu-item-text">Text</p>
+                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="header__menu-section">
+                    <div class="header__menu-name-categoty-wrp js-menu-btn">
+                        <a href="#">
+                            <h2 class="header__menu-name-categoty">Блог</h2>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="header__menu-work-time">
+                <p class="header__menu-work-time-title-text">График работы</p>
+                <div class="header__menu-work-time-timeline-wrp">
+                    <div class="header__menu-work-time-timeline">
+                        <p>
+                            с 08:00 до 17:00
+                        </p>
+                        <p>
+                            Сб, Вс - выходные
+                        </p>
+                    </div>
+                    <div class="header__menu-work-time-timeline">
+                        <a href="tel:+380931234577">+38(093)123-45-77</a>
+                        <a href="tel:+380931234577">+38(093)123-45-77</a>
+                    </div>
+                </div>
+            </div>
+            <div class="header__menu-social">
+                <a href="#">
+                    <img src="icon/header-faceboock-icon.svg" alt="">
+                </a>
+                <a href="#">
+                    <img src="icon/header-telegram-icon.svg" alt="">
+                </a>
+                <a href="#">
+                    <img src="icon/header-instogram-icon.svg" alt="">
+                </a>
+                <a href="#">
+                    <img src="icon/header-youtube-icon.svg" alt="">
+                </a>
+                <a href="#">
+                    <img src="icon/header-viber-icon.svg" alt="">
+                </a>
+            </div>
+        </div>
     </header>
+
+    <main class="js-main">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </main>
 </body>
 
 </html>

@@ -32,3 +32,13 @@
   @include text($size: 40px, $fontWeight: 900, $lineHeight: 60px);
   text-transform: uppercase;
 }
+
+.red-diamonds {
+  width: 6px;
+  height: 6px;
+  display: flex;
+  background-color: $color-red;
+  transform: rotate(-45deg);
+  opacity: 0;
+  transition: 0.3s ease-in;
+}

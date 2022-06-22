@@ -2,7 +2,7 @@
   width: 100%;
   height: 76px;
   background-color: $color-gray-100;
-
+  position: relative;
   &__wrp {
     max-width: $width-page;
     width: 100%;
@@ -47,20 +47,69 @@
     display: flex;
   }
   &__wrp-right-cont {
-    max-width: 460px;
+    max-width: 620px;
     width: 100%;
     @extend %centre-space-between;
+    justify-content: flex-end;
   }
   &__search-input {
     height: 44px;
+    max-width: 460px;
+    width: 100%;
+    padding-left: 10px;
+    @include text($textAlign: left, $color: $color-white);
+    opacity: 0;
+    border-bottom: 1px solid $color-grey-50;
+    &.active {
+      border-bottom: 1px solid $color-grey-50;
+      opacity: 1;
+    }
   }
   &__search-form-wrp {
+    width: 100%;
     @extend %centre-flex;
+    &:hover .header__search-input {
+      opacity: 1;
+    }
+  }
+  &__btn-search {
+    display: contents;
+  }
+  &__right-item {
+    display: contents;
   }
   &__menu-btn-wrp {
     height: 44px;
     width: 44px;
     position: relative;
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      background-color: $color-gray-30;
+      border-radius: 16px;
+      left: 11px;
+    }
+    &::after {
+      top: 30px;
+      transition: 0.3s ease-out;
+    }
+    &::before {
+      top: 14px;
+      transition: 0.3s ease-out;
+    }
+    &.active::before {
+      transform: rotate(45deg);
+      top: 22px;
+      transition: 0.3s ease-in;
+    }
+    &.active::after {
+      transform: rotate(-45deg);
+      top: 22px;
+      transition: 0.3s ease-in;
+    }
   }
   &__menu-btn-line {
     position: absolute;
@@ -69,25 +118,10 @@
     left: 11px;
     background-color: $color-gray-30;
     border-radius: 16px;
-    &::after {
-      content: "";
-      position: absolute;
-      width: 20px;
-      height: 2px;
-      top: 6px;
-      left: 0;
-      background-color: $color-gray-30;
-      border-radius: 16px;
-    }
-    &::before {
-      content: "";
-      position: absolute;
-      width: 20px;
-      height: 2px;
-      top: -6px;
-      left: 0;
-      background-color: $color-gray-30;
-      border-radius: 16px;
+    transition: 0.3s ease-out;
+    &.active {
+      transform: scale(0);
+      transition: 0.3s ease-in;
     }
   }
   &__catalog-item-wrp {
@@ -125,7 +159,7 @@
     padding-left: 20px;
     padding-right: 20px;
     @extend %centre-space-between;
-    &:hover .header__catalog-item-hover {
+    &:hover .red-diamonds {
       opacity: 1;
       transition: 0.3s ease-out;
     }
@@ -133,15 +167,93 @@
       background-color: $color-grey-95;
     }
   }
-  &__catalog-item-hover {
-    width: 6px;
-    height: 6px;
+  &__menu-wrp {
+    max-width: 315px;
+    width: 100%;
+    padding-left: 24px;
+    padding-top: 24px;
+    position: absolute;
+    right: 0;
+    background-color: $color-gray-100;
+    @include text(
+      $size: 16px,
+      $textAlign: left,
+      $color: $color-gray-20,
+      $lineHeight: 20px
+    );
+  }
+  &__menu-item-text {
+    font-size: 14px;
+  }
+  &__menu-item-link {
+    min-height: 40px;
+    padding-left: 20px;
     display: flex;
-    background-color: $color-red;
-    transform: rotate(-45deg);
+    @extend %centre-space-between;
+    &:hover .red-diamonds {
+      opacity: 1;
+      transition: opacity 0.3s ease-out;
+    }
+    &:hover {
+      background-color: $color-grey-95;
+    }
+  }
+  &__menu-item-text-diamond {
+    margin-right: 20px;
+  }
+  &__menu-item-link-wrp {
+    max-width: 268px;
+    width: 100%;
+    max-height: 0;
     opacity: 0;
-
-    transition: 0.3s ease-in;
+    visibility: hidden;
+    transition: 0.3s ease-out;
+    &.active {
+      max-height: 700px;
+      transition: 0.3s ease-in;
+      opacity: 1;
+      visibility: inherit;
+    }
+  }
+  &__menu-name-categoty {
+    font-size: 16px;
+  }
+  &__menu-name-categoty-wrp {
+    max-width: 268px;
+    width: 100%;
+    min-height: 40px;
+    @extend %centre-space-between;
+    cursor: pointer;
+  }
+  &__menu-name-categoty-icon {
+    transition: 0.3s ease-out;
+    &.active {
+      transform: rotateX(180deg);
+      transition: 0.3s ease-in;
+    }
+  }
+  &__menu-section {
+    margin-bottom: 34px;
+  }
+  &__menu-section-wrp {
+    margin-bottom: 62px;
+  }
+  &__menu-work-time {
+    margin-right: 20px;
+    margin-bottom: 32px;
+  }
+  &__menu-work-time-timeline {
+    @extend %centre-flex-columb;
+    align-items: flex-start;
+    row-gap: 4px;
+    @include text($size: 12px, $textAlign: left, $color: $color-gray-40);
+  }
+  &__menu-work-time-title-text {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  &__menu-work-time-timeline-wrp {
+    @extend %centre-space-between;
   }
 }
 
