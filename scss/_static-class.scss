@@ -1,3 +1,10 @@
+#body-cont {
+  overflow-x: hidden;
+  &.active {
+    overflow-y: hidden;
+  }
+}
+
 .btn-red {
   max-width: 160px;
   width: 100%;

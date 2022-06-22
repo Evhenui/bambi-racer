@@ -2,16 +2,20 @@ window.onload = function () {
     const bodyCont = document.getElementById('body-cont')
     const mainCont = document.querySelector('.js-main');
     
+    
+    // sizeWindows();
+    // window.addEventListener('resize', () =>{
+    //     sizeWindows();
+    // });   
+    
+
+
     //каталог в меню
     
     const btnCMenuCatalog = document.querySelectorAll('.js-menu-btn');
-    console.log(btnCMenuCatalog);
     btnCMenuCatalog.forEach((el) => {
-        console.log(el);
         el.addEventListener('click', function () {
             el.closest('.js-menu-wrp').querySelector('.header__menu-item-link-wrp').classList.toggle('active');
-            console.log(this);
-            console.log(this.querySelector('.header__menu-name-categoty-icon'));
             this.querySelector('.header__menu-name-categoty-icon').classList.toggle('active')
         })
     })
@@ -19,15 +23,25 @@ window.onload = function () {
     //меню кнопка 
     const menuBtn = document.querySelector('.is-btn-menu'),
         menuBtnLine = menuBtn.querySelector('.header__menu-btn-line');
+    const menuHeader = document.querySelector('.js-menu');    
+    const menuHidth = document.documentElement.clientHeight;
+
+   
 
     menuBtn.addEventListener('click', function (event) {
+        menuHeader.style.setProperty('height', menuHidth + 'px');
         event.stopPropagation();
         event.target.classList.toggle('active');
-        menuBtnLine.classList.toggle('active')
+        menuBtnLine.classList.toggle('active');
+        menuHeader.classList.toggle('active');
+        bodyCont.classList.toggle('active');
+        mainCont.classList.toggle('active');    
     })
 
-    closeMain(menuBtn);
+    closeMain(menuBtn, menuHeader);
     closeMain(menuBtnLine);
+    closeMain(menuHeader);
+    closeMain(bodyCont)
 
     //поиск
     const searchHeader = document.querySelector('.js-search'),
@@ -86,9 +100,7 @@ window.onload = function () {
                 event.stopPropagation();
             })
         }
-        
     }
-    
 }
 
 

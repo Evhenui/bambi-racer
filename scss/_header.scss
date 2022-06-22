@@ -173,14 +173,23 @@
     padding-left: 24px;
     padding-top: 24px;
     position: absolute;
-    right: 0;
+    right: -316px;
     background-color: $color-gray-100;
+    @extend %flex-columb;
+    justify-content: space-between;
     @include text(
       $size: 16px,
       $textAlign: left,
       $color: $color-gray-20,
       $lineHeight: 20px
     );
+    z-index: 10000;
+    transition: 0.3s ease-out;
+    overflow: auto;
+    &.active {
+      right: 0;
+      transition: 0.3s ease-in;
+    }
   }
   &__menu-item-text {
     font-size: 14px;
@@ -253,6 +262,10 @@
     margin-bottom: 20px;
   }
   &__menu-work-time-timeline-wrp {
+    @extend %centre-space-between;
+  }
+  &__menu-social {
+    padding-top: 36px;
     @extend %centre-space-between;
   }
 }

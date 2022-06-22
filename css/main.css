@@ -156,12 +156,22 @@ label {
           flex-direction: column;
 }
 
+.header__menu-wrp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .header__wrp {
   margin-left: auto;
   margin-right: auto;
 }
 
-.header__wrp, .header__wrp-left-cont, .header__languages-wrp, .header__wrp-right-cont, .header__catalog-item-wrp, .header__menu-item-link, .header__menu-name-categoty-wrp, .header__menu-work-time-timeline-wrp {
+.header__wrp, .header__wrp-left-cont, .header__languages-wrp, .header__wrp-right-cont, .header__catalog-item-wrp, .header__menu-item-link, .header__menu-name-categoty-wrp, .header__menu-work-time-timeline-wrp, .header__menu-social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -176,6 +186,14 @@ label {
 .header__wrp {
   padding-left: 48px;
   padding-right: 48px;
+}
+
+#body-cont {
+  overflow-x: hidden;
+}
+
+#body-cont.active {
+  overflow-y: hidden;
 }
 
 .btn-red {
@@ -478,14 +496,27 @@ label {
   padding-left: 24px;
   padding-top: 24px;
   position: absolute;
-  right: 0;
+  right: -316px;
   background-color: #1a1919;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-family: "Mulish", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   text-align: left;
   color: #e6e5e5;
+  z-index: 10000;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  overflow: auto;
+}
+
+.header__menu-wrp.active {
+  right: 0;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
 }
 
 .header__menu-item-text {
@@ -584,6 +615,10 @@ label {
 .header__menu-work-time-title-text {
   font-size: 14px;
   margin-bottom: 20px;
+}
+
+.header__menu-social {
+  padding-top: 36px;
 }
 
 .js-main.active {
