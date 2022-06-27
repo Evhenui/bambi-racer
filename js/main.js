@@ -1,7 +1,15 @@
 window.onload = function () {
     const bodyCont = document.getElementById('body-cont');
     const mainCont = document.querySelector('.js-main');
-    const widthScreen = window.innerWidth;
+    let widthScreen = window.innerWidth;
+    console.log(bodyCont);
+  
+    window.addEventListener('resize', () => {
+        widthScreen = window.innerWidth;
+        if(widthScreen <= 460) {
+            menuHeader.style.setProperty('width', widthScreen + 'px');
+        }
+    })
 
     //каталог в меню
     
@@ -30,7 +38,11 @@ window.onload = function () {
         } else {
             menuHeader.style.setProperty('height', menuHidth + 'px');
         }
-        menuHeader.style.setProperty('width', widthScreen + 'px');
+        if(widthScreen <= 460) {
+            menuHeader.style.setProperty('width', widthScreen + 'px');
+        }
+        
+        
         event.stopPropagation();
         event.target.classList.toggle('active');
         // menuBtnLine.classList.toggle('active');
