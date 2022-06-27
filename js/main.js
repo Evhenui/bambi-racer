@@ -21,6 +21,7 @@ window.onload = function () {
     const mobItemMenuActiv = document.querySelectorAll('.js-mob-item-active');
     const mobItemMenuActivLeft = document.querySelector('.js-mob-item-active-left');
     const mobItemMenuActivRight = document.querySelector('.js-mob-item-active-right');
+    const arrActivBlock = [menuBtnLine, menuHeader, bodyCont, mainCont, mobItemMenuActivLeft, mobItemMenuActivRight]
     const menuHidth = document.documentElement.clientHeight;
 
     menuBtn.addEventListener('click', function (event) {
@@ -32,12 +33,17 @@ window.onload = function () {
         menuHeader.style.setProperty('width', widthScreen + 'px');
         event.stopPropagation();
         event.target.classList.toggle('active');
-        menuBtnLine.classList.toggle('active');
-        menuHeader.classList.toggle('active');
-        bodyCont.classList.toggle('active');
-        mainCont.classList.toggle('active');
-        mobItemMenuActivLeft.classList.toggle('active');
-        mobItemMenuActivRight.classList.toggle('active');    
+        // menuBtnLine.classList.toggle('active');
+        // menuHeader.classList.toggle('active');
+        // bodyCont.classList.toggle('active');
+        // mainCont.classList.toggle('active');
+        // mobItemMenuActivLeft.classList.toggle('active');
+        // mobItemMenuActivRight.classList.toggle('active');
+        
+        arrActivBlock.forEach((el) => {
+            el.classList.toggle('active');
+        })
+        
         mobItemMenu.forEach((el) => {
             el.classList.toggle('active');
             console.log(el);
