@@ -40,9 +40,14 @@
   margin-right: auto;
 }
 
-%padding-mob {
+%padding-country {
   padding-left: 48px;
   padding-right: 48px;
+}
+
+@mixin padding-mob {
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 %modal-wrp {

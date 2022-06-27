@@ -1,7 +1,13 @@
+html {
+  // overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
+}
+
 #body-cont {
   overflow-x: hidden;
   &.active {
     overflow-y: hidden;
+    margin-right: calc(-1 * (100vw - 100%));
   }
 }
 
@@ -13,9 +19,15 @@
   @include text($color: $color-white, $fontWeight: 700);
   &:hover {
     background-color: $color-red-60;
+    @include __860 {
+      background-color: #991a1d00;
+    }
   }
   &:active {
     background-color: $color-red-80;
+    @include __860 {
+      background-color: #991a1d00;
+    }
   }
 }
 

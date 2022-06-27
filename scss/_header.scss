@@ -7,19 +7,41 @@
     max-width: $width-page;
     width: 100%;
     height: 100%;
-    @extend %padding-mob;
+    @extend %padding-country;
     @extend %centre-marg;
     @extend %centre-space-between;
+    @include __860 {
+      @include padding-mob;
+    }
   }
   &__wrp-left-cont {
     @extend %centre-space-between;
     max-width: 436px;
     width: 100%;
+    @include __860 {
+      max-width: 100px;
+    }
+  }
+  &__left-img-logo {
+    @include __860 {
+      display: none;
+    }
+  }
+  &__left-img-logo-mob {
+    display: none;
+    @include __860 {
+      display: flex;
+    }
   }
   &__btn-catalog-wrp {
     width: 100%;
     position: relative;
     @extend %centre-flex;
+  }
+  &__btn-catalog-text {
+    @include __860 {
+      display: none;
+    }
   }
   &__btn-catalog {
     max-width: 119px;
@@ -27,11 +49,19 @@
     @extend %centre-flex;
     justify-content: flex-start;
     font-weight: 500;
+    @include __860 {
+      max-width: 100%;
+      width: auto;
+      background-color: #c1212500;
+    }
   }
   &__languages-wrp {
     max-width: 68px;
     width: 100%;
     @extend %centre-space-between;
+    @include __860 {
+      display: none;
+    }
   }
   &__languages-btn {
     @include text($color: $color-grey-60);
@@ -68,9 +98,41 @@
   &__search-form-wrp {
     width: 100%;
     @extend %centre-flex;
+    transition: 0.1s ease-out;
     &:hover .header__search-input {
       opacity: 1;
     }
+    &.active {
+      background-color: $color-gray-100;
+      position: absolute;
+      top: 18px;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding-right: 32px;
+      padding-left: 16px;
+      // transition: 0.1s ease-in;
+    }
+  }
+  &__btn-search-close {
+    position: relative;
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  &__btn-search-close-line {
+    width: 24px;
+    height: 2px;
+    background-color: $color-white;
+    position: absolute;
+    cursor: pointer;
+  }
+  &__btn-search-close-line-l {
+    transform: rotate(45deg);
+  }
+  &__btn-search-close-line-r {
+    transform: rotate(-45deg);
   }
   &__btn-search {
     display: contents;
@@ -78,10 +140,16 @@
   &__right-item {
     display: contents;
   }
+  &__right-item-icon {
+    @include __860 {
+      display: none;
+    }
+  }
   &__menu-btn-wrp {
     height: 44px;
     width: 44px;
     position: relative;
+    z-index: 122;
     &::after,
     &::before {
       content: "";
@@ -138,6 +206,10 @@
     top: 70px;
     left: 43px;
     display: none;
+    @include __860 {
+      left: 4px;
+      width: 248px;
+    }
     &::after {
       content: "";
       top: -7px;
@@ -168,12 +240,12 @@
     }
   }
   &__menu-wrp {
-    max-width: 315px;
-    width: 100%;
+    width: 315px;
+    height: 0;
     padding-left: 24px;
-    padding-top: 24px;
+    padding-top: 34px;
     position: absolute;
-    right: -316px;
+    right: -48px;
     background-color: $color-gray-100;
     @extend %flex-columb;
     justify-content: space-between;
@@ -183,12 +255,24 @@
       $color: $color-gray-20,
       $lineHeight: 20px
     );
-    z-index: 10000;
+    z-index: 100;
     transition: 0.3s ease-out;
     overflow: auto;
+    visibility: hidden;
+    @include __860 {
+      top: 58px;
+      right: -16px;
+    }
     &.active {
-      right: 0;
+      visibility: inherit;
       transition: 0.3s ease-in;
+    }
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $color-grey-80;
+      border-radius: 4px;
     }
   }
   &__menu-item-text {
@@ -246,10 +330,19 @@
   }
   &__menu-section-wrp {
     margin-bottom: 62px;
+    &::-webkit-scrollbar {
+      width: 4px;
+      margin-left: 20px;
+      padding-left: 20px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $color-grey-80;
+      border-radius: 4px;
+    }
   }
   &__menu-work-time {
     margin-right: 20px;
-    margin-bottom: 32px;
+    margin-bottom: 80px;
   }
   &__menu-work-time-timeline {
     @extend %centre-flex-columb;
@@ -268,6 +361,9 @@
     padding-top: 36px;
     @extend %centre-space-between;
   }
+  &__right-wrp-menu {
+    position: relative;
+  }
 }
 
 .js-main {
@@ -275,5 +371,31 @@
     backdrop-filter: blur(10px);
     background-color: #03020e3d;
     z-index: 20;
+  }
+}
+
+.js-mob-item {
+  &.active {
+    display: none;
+  }
+}
+
+.js-mob-item-active {
+  &.active {
+    display: flex;
+    z-index: 1000;
+    position: relative;
+  }
+}
+
+.js-mob-item-active-left {
+  &.active {
+    max-width: 300px;
+  }
+}
+
+.js-mob-item-active-right {
+  &.active {
+    max-width: 74px;
   }
 }
