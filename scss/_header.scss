@@ -64,7 +64,7 @@
     }
   }
   &__languages-btn {
-    @include text($color: $color-grey-60);
+    @include text($color: $color-gray-60);
     text-transform: uppercase;
     &.active {
       color: $color-white;
@@ -73,7 +73,7 @@
   &__languages-btn-line {
     width: 1px;
     height: 24px;
-    background-color: $color-grey-70;
+    background-color: $color-gray-70;
     display: flex;
   }
   &__wrp-right-cont {
@@ -81,6 +81,7 @@
     width: 100%;
     @extend %centre-space-between;
     justify-content: flex-end;
+    position: relative;
   }
   &__search-input {
     height: 44px;
@@ -89,9 +90,9 @@
     padding-left: 10px;
     @include text($textAlign: left, $color: $color-white);
     opacity: 0;
-    border-bottom: 1px solid $color-grey-50;
-    &.active {
-      border-bottom: 1px solid $color-grey-50;
+    border-bottom: 1px solid $color-gray-50;
+    &.activeSerch {
+      border-bottom: 1px solid $color-gray-50;
       opacity: 1;
     }
   }
@@ -102,7 +103,7 @@
     &:hover .header__search-input {
       opacity: 1;
     }
-    &.active {
+    &.activeSerch {
       background-color: $color-gray-100;
       position: absolute;
       top: 18px;
@@ -117,7 +118,7 @@
   &__btn-search-close {
     position: relative;
     display: none;
-    &.active {
+    &.activeSerch {
       display: block;
     }
   }
@@ -139,8 +140,16 @@
   }
   &__right-item {
     display: contents;
+    position: relative;
   }
   &__right-item-icon {
+    @include __860 {
+      display: none;
+    }
+  }
+  &__right-item-phone {
+    max-width: 44px;
+    width: 100%;
     @include __860 {
       display: none;
     }
@@ -149,7 +158,7 @@
     height: 44px;
     width: 44px;
     position: relative;
-    z-index: 122;
+    z-index: 99;
     &::after,
     &::before {
       content: "";
@@ -236,7 +245,7 @@
       transition: 0.3s ease-out;
     }
     &:hover {
-      background-color: $color-grey-95;
+      background-color: $color-gray-95;
     }
   }
   &__menu-wrp {
@@ -271,7 +280,7 @@
       width: 4px;
     }
     &::-webkit-scrollbar-thumb {
-      background: $color-grey-80;
+      background: $color-gray-80;
       border-radius: 4px;
     }
   }
@@ -288,7 +297,7 @@
       transition: opacity 0.3s ease-out;
     }
     &:hover {
-      background-color: $color-grey-95;
+      background-color: $color-gray-95;
     }
   }
   &__menu-item-text-diamond {
@@ -297,6 +306,7 @@
   &__menu-item-link-wrp {
     max-width: 268px;
     width: 100%;
+    color: $color-gray-40;
     max-height: 0;
     opacity: 0;
     visibility: hidden;
@@ -315,6 +325,7 @@
     max-width: 268px;
     width: 100%;
     min-height: 40px;
+    color: $color-white;
     @extend %centre-space-between;
     cursor: pointer;
   }
@@ -328,15 +339,29 @@
   &__menu-section {
     margin-bottom: 34px;
   }
-  &__menu-section-wrp {
-    margin-bottom: 62px;
+  &__menu-section-item {
+    margin-right: 20px;
+    overflow: auto;
     &::-webkit-scrollbar {
       width: 4px;
       margin-left: 20px;
       padding-left: 20px;
     }
     &::-webkit-scrollbar-thumb {
-      background: $color-grey-80;
+      background: $color-gray-80;
+      border-radius: 4px;
+    }
+  }
+  &__menu-section-wrp {
+    margin-bottom: 62px;
+    margin-right: 16px;
+    &::-webkit-scrollbar {
+      width: 4px;
+      margin-left: 20px;
+      padding-left: 20px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $color-gray-80;
       border-radius: 4px;
     }
   }
@@ -363,6 +388,113 @@
   }
   &__right-wrp-menu {
     position: relative;
+  }
+  &__phone-menu {
+    width: 280px;
+    padding: 12px 20px 20px 20px;
+    background-color: $color-gray-100;
+    @include text($textAlign: left, $color: $color-gray-20, $lineHeight: 24px);
+    row-gap: 4px;
+    position: absolute;
+    top: 70px;
+    right: 62px;
+    display: none;
+    @include __860 {
+      left: 4px;
+      width: 248px;
+    }
+    &::after {
+      content: "";
+      top: -7px;
+      right: 128px;
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      display: flex;
+      background-color: $color-gray-100;
+      transform: rotate(-45deg);
+      z-index: -1;
+    }
+    &.active {
+      display: block;
+      z-index: 200;
+    }
+  }
+  &__phone-menu-schedule {
+    padding-top: 12px;
+    margin-bottom: 16px;
+    @extend %centre-space-between;
+    font-size: 16px;
+  }
+  &__phone-menu-schedule-time {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  &__phone-menu-schedule-link {
+    @extend %centre-space-between;
+  }
+  &__phone-menu-schedule-link-wrp {
+    padding-left: 33px;
+    padding-right: 29px;
+    margin-bottom: 20px;
+    background-color: $color-gray-95;
+  }
+  &__phone-menu-schedule-or {
+    margin-bottom: 20px;
+    color: $color-gray-40;
+    text-align: center;
+  }
+  &__phone-menu-schedule-text {
+    margin-bottom: 24px;
+    text-align: left;
+  }
+  &__phone-menu-schedule-input {
+    margin-bottom: 24px;
+  }
+  &__phone-menu-schedule-btn {
+    max-width: 100%;
+  }
+  &__menu-personal-wrp {
+    display: none;
+    max-width: 220px;
+    width: 100%;
+    margin-bottom: 18px;
+    @extend %centre-space-between;
+    color: $color-white;
+    font-size: 13px;
+    @include __860 {
+      display: flex;
+    }
+  }
+  &__menu-personal-line-vertical {
+    width: 1px;
+    height: 24px;
+    position: relative;
+    display: flex;
+    background-color: $color-gray-40;
+  }
+  &__menu-personal-login {
+    max-width: 158px;
+    width: 100%;
+    @extend %centre-space-between;
+  }
+  &__menu-personal-line {
+    width: 100%;
+    height: 1px;
+    margin-bottom: 18px;
+    display: flex;
+    margin-right: 20px;
+    background-color: $color-gray-90;
+  }
+  &__menu-personal-basket,
+  &__menu-personal-comparison {
+    @extend %centre-space-between;
+    justify-content: flex-start;
+    column-gap: 20px;
+    font-size: 13px;
+  }
+  &__menu-personal-basket-comparison {
+    margin-bottom: 18px;
   }
 }
 

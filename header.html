@@ -66,9 +66,40 @@
                         <span class="header__btn-search-close-line header__btn-search-close-line-l"></span>
                     </div>
                 </form>
-                <a class="header__right-item" href="tel:+">
+                <div class="header__right-item js-mob-item js-phone">
+                    <a class="header__right-item-phone" href="#">
+                        <img class="header__right-item-icon js-mob-item" src="icon/header-phone-icon.svg" alt="">
+                    </a>
+                    <div class="header__phone-menu js-phone-menu">
+                        <div class="header__phone-menu-schedule">
+                            <p>Звоните</p>
+                            <div class="header__phone-menu-schedule-time">
+                                <p>с 08:00 до 17:00 </p>
+                                <p>Сб, Вс - выходные</p>
+
+                            </div>
+                        </div>
+                        <div class="header__phone-menu-schedule-link-wrp">
+                            <a class="header__phone-menu-schedule-link" href="tel:+380931234577">
+                                <img src="icon/header-phone-call-icon.svg" alt="">
+                                <span>+38(093)123-45-77</span>
+                            </a>
+                        </div>
+                        <p class="header__phone-menu-schedule-or">Или</p>
+                        <p class="header__phone-menu-schedule-text">Оставьте номер телефона и мы перезвоним</p>
+                        <form>
+                            <div class="header__phone-menu-schedule-input input-wrp">
+                                <span class="input-wrp__text">Введите номер телефона</span>
+                                <input type="tel" name="" id="" placeholder="+38(0__)___-__-__">
+                            </div>
+
+                            <button class="btn-red header__phone-menu-schedule-btn">Перезвоните мне</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- <a class="header__right-item" href="tel:+">
                     <img class="header__right-item-icon js-mob-item" src="icon/header-phone-icon.svg" alt="">
-                </a>
+                </a> -->
                 <a class="header__right-item" href="#">
                     <img class="header__right-item-icon js-mob-item" src="icon/header-comparison-icon.svg" alt="">
                 </a>
@@ -79,104 +110,130 @@
                     <img class="header__right-item-icon" src="icon/header-personal-area-icon.svg" alt="">
                 </button>
                 <div class="header__right-wrp-menu">
-                    <button class="header__menu-btn-wrp is-btn-menu">
+                    <button class="header__menu-btn-wrp js-btn-menu">
                         <span class="header__menu-btn-line"></span>
                     </button>
                     <div class="header__menu-wrp js-menu">
                         <div class="header__menu-section-wrp">
-                            <div class="js-menu-wrp header__menu-section">
-                                <div class="header__menu-name-categoty-wrp js-menu-btn">
-                                    <h2 class="header__menu-name-categoty">Каталог</h2>
-                                    <img class="header__menu-name-categoty-icon active" src="icon/arrow-white-icon.svg"
-                                        alt="">
+                            <div class="header__menu-personal-wrp">
+                                <img src="icon/header-personal-area-icon.svg" alt="personal">
+                                <div class="header__menu-personal-login">
+                                    <a href="#">Вход</a>
+                                    <span class="header__menu-personal-line-vertical"></span>
+                                    <a href="#">Регистрация</a>
                                 </div>
-                                <div class="header__menu-item-link-wrp active">
-                                    <a class="header__menu-item-link" href="#">
-                                        <p class="header__menu-item-text">Электромобили</p>
-                                        <span class="header__menu-item-text-diamond red-diamonds"></span>
-                                    </a>
-                                    <a class="header__menu-item-link" href="#">
-                                        <p class="header__menu-item-text">Металлические квадроциклы</p>
-                                        <span class="header__menu-item-text-diamond red-diamonds"></span>
-                                    </a>
-                                    <a class="header__menu-item-link" href="#">
-                                        <p class="header__menu-item-text">Велокарты</p>
-                                        <span class="header__menu-item-text-diamond red-diamonds"></span>
-                                    </a>
-                                    <a class="header__menu-item-link" href="#">
-                                        <p class="header__menu-item-text">Каталки-толокары</p>
-                                        <span class="header__menu-item-text-diamond red-diamonds"></span>
-                                    </a>
-                                    <a class="header__menu-item-link" href="#">
-                                        <p class="header__menu-item-text">Запчасти и Комплектующие</p>
-                                        <span class="header__menu-item-text-diamond red-diamonds"></span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="js-menu-wrp header__menu-section">
-                                <div class="header__menu-name-categoty-wrp js-menu-btn">
-                                    <h2 class="header__menu-name-categoty">О компании</h2>
-                                    <img class="header__menu-name-categoty-icon" src="icon/arrow-white-icon.svg" alt="">
-                                </div>
-                                <div class="header__menu-item-link-wrp">
-                                    <a class="header__menu-item-link" href="#">
-                                        <p class="header__menu-item-text">О компании</p>
-                                        <span class="header__menu-item-text-diamond red-diamonds"></span>
-                                    </a>
-                                    <a class="header__menu-item-link" href="#">
-                                        <p class="header__menu-item-text">Оплата и доставка</p>
-                                        <span class="header__menu-item-text-diamond red-diamonds"></span>
-                                    </a>
-                                    <a class="header__menu-item-link" href="#">
-                                        <p class="header__menu-item-text">Гарантия и сервис</p>
-                                        <span class="header__menu-item-text-diamond red-diamonds"></span>
-                                    </a>
-                                    <a class="header__menu-item-link" href="#">
-                                        <p class="header__menu-item-text">Стать партнером</p>
-                                        <span class="header__menu-item-text-diamond red-diamonds"></span>
-                                    </a>
-                                    <a class="header__menu-item-link" href="#">
-                                        <p class="header__menu-item-text">Контакты</p>
-                                        <span class="header__menu-item-text-diamond red-diamonds"></span>
-                                    </a>
-                                    <a class="header__menu-item-link" href="#">
-                                        <p class="header__menu-item-text">Text</p>
-                                        <span class="header__menu-item-text-diamond red-diamonds"></span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="js-menu-wrp header__menu-section">
-                                <div class="header__menu-name-categoty-wrp js-menu-btn">
-                                    <h2 class="header__menu-name-categoty">Сервис и поддержка</h2>
-                                    <img class="header__menu-name-categoty-icon" src="icon/arrow-white-icon.svg" alt="">
-                                </div>
-                                <div class="header__menu-item-link-wrp">
-                                    <a class="header__menu-item-link" href="#">
-                                        <p class="header__menu-item-text">FAQ</p>
-                                        <span class="header__menu-item-text-diamond red-diamonds"></span>
-                                    </a>
-                                    <a class="header__menu-item-link" href="#">
-                                        <p class="header__menu-item-text">Возврат и обмен</p>
-                                        <span class="header__menu-item-text-diamond red-diamonds"></span>
-                                    </a>
-                                    <a class="header__menu-item-link" href="#">
-                                        <p class="header__menu-item-text">Инструкции</p>
-                                        <span class="header__menu-item-text-diamond red-diamonds"></span>
-                                    </a>
-                                    <a class="header__menu-item-link" href="#">
-                                        <p class="header__menu-item-text">Text</p>
-                                        <span class="header__menu-item-text-diamond red-diamonds"></span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="header__menu-section">
-                                <div class="header__menu-name-categoty-wrp js-menu-btn">
-                                    <a href="#">
-                                        <h2 class="header__menu-name-categoty">Блог</h2>
-                                    </a>
 
+                            </div>
+                            <span class="header__menu-personal-line"></span>
+                            <div class="header__menu-personal-basket-comparison">
+                                <a class="header__menu-personal-basket">
+                                    <img src="icon/header-basket-icon.svg" alt="basket">
+                                    <span>Корзина</span>
+                                </a>
+                                <a class="header__menu-personal-comparison">
+                                    <img src="icon/header-comparison-icon.svg" alt="basket">
+                                    <span>Сравнение</span>
+                                </a>
+                            </div>
+                            <span class="header__menu-personal-line"></span>
+                            <div class="header__menu-section-item">
+                                <div class="js-menu-wrp header__menu-section">
+                                    <div class="header__menu-name-categoty-wrp js-menu-btn">
+                                        <h2 class="header__menu-name-categoty">Каталог</h2>
+                                        <img class="header__menu-name-categoty-icon" src="icon/arrow-white-icon.svg"
+                                            alt="">
+                                    </div>
+                                    <div class="header__menu-item-link-wrp active">
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Весь каталог</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Электромобили</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Металлические квадроциклы</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Велокарты</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Каталки-толокары</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="js-menu-wrp header__menu-section">
+                                    <div class="header__menu-name-categoty-wrp js-menu-btn">
+                                        <h2 class="header__menu-name-categoty">О компании</h2>
+                                        <img class="header__menu-name-categoty-icon" src="icon/arrow-white-icon.svg"
+                                            alt="">
+                                    </div>
+                                    <div class="header__menu-item-link-wrp">
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">О компании</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Оплата и доставка</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Гарантия и сервис</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Стать партнером</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Контакты</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Text</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="js-menu-wrp header__menu-section">
+                                    <div class="header__menu-name-categoty-wrp js-menu-btn">
+                                        <h2 class="header__menu-name-categoty">Сервис и поддержка</h2>
+                                        <img class="header__menu-name-categoty-icon" src="icon/arrow-white-icon.svg"
+                                            alt="">
+                                    </div>
+                                    <div class="header__menu-item-link-wrp">
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">FAQ</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Возврат и обмен</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Инструкции</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Text</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="header__menu-section">
+                                    <div class="header__menu-name-categoty-wrp js-menu-btn">
+                                        <a href="#">
+                                            <h2 class="header__menu-name-categoty">Блог</h2>
+                                        </a>
+
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
                         <div class="header__menu-work-time">
                             <p class="header__menu-work-time-title-text">График работы</p>

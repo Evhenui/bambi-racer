@@ -22,14 +22,14 @@ window.onload = function () {
     })
 
     //меню кнопка 
-    const menuBtn = document.querySelector('.is-btn-menu'),
+    const menuBtn = document.querySelector('.js-btn-menu'),
         menuBtnLine = menuBtn.querySelector('.header__menu-btn-line');
     const menuHeader = document.querySelector('.js-menu');
     const mobItemMenu = document.querySelectorAll('.js-mob-item');
     const mobItemMenuActiv = document.querySelectorAll('.js-mob-item-active');
     const mobItemMenuActivLeft = document.querySelector('.js-mob-item-active-left');
     const mobItemMenuActivRight = document.querySelector('.js-mob-item-active-right');
-    const arrActivBlock = [menuBtnLine, menuHeader, bodyCont, mainCont, mobItemMenuActivLeft, mobItemMenuActivRight]
+    const arrActivBlock = [menuBtnLine, menuHeader, bodyCont];
     const menuHidth = document.documentElement.clientHeight;
 
     menuBtn.addEventListener('click', function (event) {
@@ -41,30 +41,31 @@ window.onload = function () {
         if(widthScreen <= 460) {
             menuHeader.style.setProperty('width', widthScreen + 'px');
         }
-        
-        
+        if(mainCont != null) {
+            mainCont.classList.add('active');
+        } 
         event.stopPropagation();
         event.target.classList.toggle('active');
-        // menuBtnLine.classList.toggle('active');
-        // menuHeader.classList.toggle('active');
-        // bodyCont.classList.toggle('active');
-        // mainCont.classList.toggle('active');
-        // mobItemMenuActivLeft.classList.toggle('active');
-        // mobItemMenuActivRight.classList.toggle('active');
-        
-        arrActivBlock.forEach((el) => {
-            el.classList.toggle('active');
-        })
-        
-        mobItemMenu.forEach((el) => {
-            el.classList.toggle('active');
-            console.log(el);
-        })
-        mobItemMenuActiv.forEach((el) => {
-            el.classList.toggle('active');
-            console.log(el);
-        })
-        
+        closeMain(mainCont);
+        if(widthScreen <= 860) {
+            arrActivBlock.forEach((el) => {
+                el.classList.toggle('active');
+            });
+            
+            mobItemMenu.forEach((el) => {
+                el.classList.toggle('active');
+            });
+            mobItemMenuActiv.forEach((el) => {
+                el.classList.toggle('active');
+            });
+            mobItemMenuActivLeft.classList.toggle('active');
+            mobItemMenuActivRight.classList.toggle('active');
+        } else {
+            arrActivBlock.forEach((el) => {
+                el.classList.toggle('active');
+            })
+        }
+        closeActive([phoneMenyHeader, jsHeaderCatalog]);
     })
 
     closeMain(menuBtn, menuHeader);
@@ -80,17 +81,17 @@ window.onload = function () {
 
     searchBntMobClose.addEventListener('click', () => {
         if(widthScreen <= 860) {
-            searchHeader.classList.remove('active');
-            searchBntMobClose.classList.remove('active');
+            searchHeader.classList.remove('activeSerch');
+            searchBntMobClose.classList.remove('activeSerch');
         }
     })
 
     searchBnt.addEventListener('click', (event) => {
         event.preventDefault()
-        searchInput.classList.toggle('active');
+        searchInput.classList.toggle('activeSerch');
         if(widthScreen <= 860) {
-            searchHeader.classList.add('active');
-            searchBntMobClose.classList.add('active');
+            searchHeader.classList.add('activeSerch');
+            searchBntMobClose.classList.add('activeSerch');
         }
         event.stopPropagation();
 
@@ -122,19 +123,39 @@ window.onload = function () {
         event.stopPropagation();
         jsHeaderCatalog.classList.toggle('active');
         if(mainCont != null) {
-            mainCont.classList.toggle('active')
-        }
+            mainCont.classList.add('active');
+        } 
+        searchInput.classList.remove('activeSerch');
+        menuHeader.style.setProperty('height', 0 + 'px');
+        closeActive([phoneMenyHeader, menuHeader, menuBtn, menuBtnLine]);
+        closeMain(mainCont);
       
     });
     closeMain(jsHeaderCatalog, jsHeaderCatalog);
-    closeMain(mainCont);
+    // closeMain(mainCont);
+    closeMain(bodyCont);
 
+    //телефон модалка оставить контакты
+    const phoneHeader = document.querySelector('.js-phone');
+    const phoneMenyHeader = phoneHeader.querySelector('.js-phone-menu')
+
+    phoneHeader.addEventListener('click', function(event) {
+        event.stopPropagation();
+        phoneMenyHeader.classList.toggle('active');
+        if(mainCont != null) {
+            mainCont.classList.add('active');
+        } 
+        closeActive([jsHeaderCatalog, menuHeader, menuBtn, menuBtnLine]);
+        menuHeader.style.setProperty('height', 0 + 'px');
+    })
+    closeMain(phoneMenyHeader, phoneMenyHeader);
 
 // функция удаляет актив если кликаеш по body
     function closeMain(params, stopRrop) {
         if(bodyCont != null) {
             bodyCont.addEventListener('click', () => {
-                params.classList.remove('active')
+                params.classList.remove('active');
+                menuHeader.style.setProperty('height', 0 + 'px');
             })
         }
         if(stopRrop != null) {
@@ -142,6 +163,13 @@ window.onload = function () {
                 event.stopPropagation();
             })
         }
+    }
+
+    function closeActive(params) {
+        params.forEach((el) => {
+            console.log(el);
+            el.classList.remove('active')
+        })
     }
 }
 
