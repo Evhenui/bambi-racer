@@ -249,7 +249,7 @@
     }
   }
   &__menu-wrp {
-    width: 315px;
+    width: 340px;
     height: 0;
     padding-left: 24px;
     padding-top: 34px;
@@ -340,7 +340,7 @@
     margin-bottom: 34px;
   }
   &__menu-section-item {
-    margin-right: 20px;
+    // margin-right: 20px;
     overflow: auto;
     &::-webkit-scrollbar {
       width: 4px;
@@ -348,8 +348,14 @@
       padding-left: 20px;
     }
     &::-webkit-scrollbar-thumb {
+      width: 4px;
       background: $color-gray-80;
       border-radius: 4px;
+    }
+    &::-webkit-scrollbar-track {
+      width: 10px;
+      height: 1px;
+      background: $color-gray-90;
     }
   }
   &__menu-section-wrp {
@@ -490,7 +496,7 @@
   &__menu-personal-comparison {
     @extend %centre-space-between;
     justify-content: flex-start;
-    column-gap: 20px;
+    column-gap: 16px;
     font-size: 13px;
   }
   &__menu-personal-basket-comparison {
