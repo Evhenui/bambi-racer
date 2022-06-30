@@ -79,7 +79,7 @@ html {
 }
 
 .number-amount {
-  padding: 3px 6px;
+  padding: 2px 4px;
   background-color: $color-red;
-  color: $color-white;
+  @include text($size: 12px, $color: $color-white, $lineHeight: 12px);
 }

@@ -139,7 +139,8 @@
     display: contents;
   }
   &__right-item {
-    display: contents;
+    width: 100%;
+    max-width: 44px;
     position: relative;
   }
   &__right-item-icon {
@@ -501,6 +502,11 @@
   }
   &__menu-personal-basket-comparison {
     margin-bottom: 18px;
+  }
+  &__right-item-amount {
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }
 

@@ -307,8 +307,13 @@ html {
 }
 
 .number-amount {
-  padding: 3px 6px;
+  padding: 2px 4px;
   background-color: #c12125;
+  font-family: "Mulish", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
   color: #ffffff;
 }
 
@@ -505,7 +510,8 @@ html {
 }
 
 .header__right-item {
-  display: contents;
+  width: 100%;
+  max-width: 44px;
   position: relative;
 }
 
@@ -979,6 +985,12 @@ html {
   margin-bottom: 18px;
 }
 
+.header__right-item-amount {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 .js-main.active {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
@@ -1004,5 +1016,9 @@ html {
 
 .js-mob-item-active-right.active {
   max-width: 74px;
+}
+
+.footer {
+  background-color: #090102;
 }
 /*# sourceMappingURL=main.css.map */
