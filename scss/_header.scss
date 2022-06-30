@@ -58,6 +58,7 @@
   &__languages-wrp {
     max-width: 68px;
     width: 100%;
+    margin-right: 12px;
     @extend %centre-space-between;
     @include __860 {
       display: none;
@@ -106,7 +107,7 @@
     &.activeSerch {
       background-color: $color-gray-100;
       position: absolute;
-      top: 18px;
+      top: 0;
       left: 0;
       right: 0;
       z-index: 100;
@@ -142,6 +143,9 @@
     width: 100%;
     max-width: 44px;
     position: relative;
+    @include __860 {
+      display: none;
+    }
   }
   &__right-item-icon {
     @include __860 {
@@ -214,7 +218,7 @@
     row-gap: 4px;
     position: absolute;
     top: 70px;
-    left: 43px;
+    left: 73px;
     display: none;
     @include __860 {
       left: 4px;
@@ -404,7 +408,7 @@
     row-gap: 4px;
     position: absolute;
     top: 70px;
-    right: 62px;
+    right: -113px;
     display: none;
     @include __860 {
       left: 4px;
