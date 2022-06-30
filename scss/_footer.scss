@@ -4,6 +4,9 @@
   &__wrp {
     @extend %size-page;
     @extend %padding-country;
+    @include __860 {
+      @include padding-mob;
+    }
   }
 }
 
@@ -11,7 +14,15 @@
   margin-bottom: 32px;
   @include text($textAlign: left, $color: $color-white);
   @extend %centre-space-between;
+  gap: 24px;
   align-items: flex-start;
+  flex-wrap: wrap;
+  @include __1280 {
+    justify-content: space-around;
+  }
+  @include __640 {
+    flex-direction: column;
+  }
   &__title-text-clock {
     margin-bottom: 20px;
     font-size: 14px;
@@ -24,6 +35,41 @@
       $color: $color-white,
       $fontWeight: 700
     );
+  }
+  &__form {
+    max-width: 300px;
+    width: 100%;
+    @include __640 {
+      max-width: 100%;
+    }
+  }
+  &__form-wrp {
+    @include __640 {
+      width: 100%;
+    }
+  }
+  &__input-wrp {
+    max-width: 300px;
+    margin-bottom: 20px;
+    @include __640 {
+      max-width: 100%;
+    }
+  }
+  &__input {
+    color: $color-white;
+  }
+  &__input-text {
+    background-color: $color-black;
+  }
+  &__form-btn {
+    max-width: 300px;
+    margin-bottom: 20px;
+    @include __640 {
+      max-width: 100%;
+    }
+  }
+  &__social-wrp {
+    @extend %centre-space-between;
   }
 }
 
@@ -51,8 +97,13 @@
   &__wrp {
     padding-top: 12px;
     padding-bottom: 12px;
+    column-gap: 24px;
     @extend %size-page;
     @extend %padding-country;
     @extend %centre-space-between;
+    flex-wrap: wrap;
+    @include __860 {
+      @include padding-mob;
+    }
   }
 }
