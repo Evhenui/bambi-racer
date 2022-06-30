@@ -496,6 +496,10 @@
     display: flex;
     margin-right: 20px;
     background-color: $color-gray-90;
+    display: none;
+    @include __860 {
+      display: block;
+    }
   }
   &__menu-personal-basket,
   &__menu-personal-comparison {
@@ -505,7 +509,11 @@
     font-size: 13px;
   }
   &__menu-personal-basket-comparison {
+    display: none;
     margin-bottom: 18px;
+    @include __860 {
+      display: block;
+    }
   }
   &__right-item-amount {
     position: absolute;
