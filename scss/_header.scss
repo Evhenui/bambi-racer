@@ -22,6 +22,9 @@
       max-width: 100px;
     }
   }
+  &__wrp-left-cont-link-logo {
+    width: 100%;
+  }
   &__left-img-logo {
     @include __860 {
       display: none;
@@ -29,6 +32,7 @@
   }
   &__left-img-logo-mob {
     display: none;
+    width: 100%;
     @include __860 {
       display: flex;
     }
@@ -68,6 +72,9 @@
     @include text($color: $color-gray-60);
     text-transform: uppercase;
     &.active {
+      color: $color-white;
+    }
+    &:hover {
       color: $color-white;
     }
   }

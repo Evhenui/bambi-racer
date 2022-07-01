@@ -1,13 +1,17 @@
 html {
   // overflow-x: hidden;
-  margin-right: calc(-1 * (100vw - 100%));
+  // margin-right: calc(-1 * (100vw - 100%));
 }
 
 #body-cont {
   overflow-x: hidden;
+  margin-right: 17px;
   &.active {
     overflow-y: hidden;
-    margin-right: calc(-1 * (100vw - 100%));
+    padding-right: 21px;
+    @include __860 {
+      padding-right: 0;
+    }
   }
 }
 

@@ -42,8 +42,12 @@ window.onload = function () {
             menuHeader.style.setProperty('width', widthScreen + 'px');
         }
         if(mainCont != null) {
-            mainCont.classList.add('active');
-        } 
+            if(mainCont.classList.contains('active')) {
+                mainCont.classList.remove('active');
+            } else {
+                mainCont.classList.add('active');
+            } 
+        }
         event.stopPropagation();
         event.target.classList.toggle('active');
         closeMain(mainCont);
@@ -123,7 +127,11 @@ window.onload = function () {
         event.stopPropagation();
         jsHeaderCatalog.classList.toggle('active');
         if(mainCont != null) {
-            mainCont.classList.add('active');
+            if(mainCont.classList.contains('active')) {
+                mainCont.classList.remove('active');
+            } else {
+                mainCont.classList.add('active');
+            } 
         } 
         searchInput.classList.remove('activeSerch');
         menuHeader.style.setProperty('height', 0 + 'px');
@@ -143,8 +151,12 @@ window.onload = function () {
         event.stopPropagation();
         phoneMenyHeader.classList.toggle('active');
         if(mainCont != null) {
-            mainCont.classList.add('active');
-        } 
+            if(mainCont.classList.contains('active')) {
+                mainCont.classList.remove('active');
+            } else {
+                mainCont.classList.add('active');
+            } 
+        }
         closeActive([jsHeaderCatalog, menuHeader, menuBtn, menuBtnLine]);
         menuHeader.style.setProperty('height', 0 + 'px');
     })
@@ -171,6 +183,30 @@ window.onload = function () {
             el.classList.remove('active')
         })
     }
+
+
+    //слайдер swiper
+    new Swiper('.img-slider', {
+        //Стрелки
+        navigation: {
+            nextEl: '.btn-next',
+            prevEl: '.btn-prev'
+        },
+        //Навигация
+        //пргресс бар
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true,
+        },
+        grabCursor: true,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            stopOnLastSlide: true,
+            disableOnInteraction: true,
+        }
+    });
 }
 
 
