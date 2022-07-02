@@ -271,6 +271,9 @@ label {
   text-align: center;
   color: #827d7d;
 }
+.input-wrp:hover {
+  border: 1px solid #ffffff;
+}
 
 .number-amount {
   padding: 2px 4px;
@@ -966,6 +969,16 @@ label {
     max-width: 100%;
   }
 }
+.footer-content__social-link:hover .footer-content__social-icon {
+  display: none;
+}
+.footer-content__social-link:hover .footer-content__social-icon-hov {
+  display: block;
+}
+.footer-content__social-icon-hov {
+  display: none;
+}
+
 .footer-logo {
   margin-bottom: 28px;
 }
@@ -981,6 +994,9 @@ label {
 }
 .footer-text:last-child {
   margin-bottom: 0;
+}
+.footer-text:hover {
+  color: #ffffff;
 }
 
 .footer-special-documents {
@@ -1003,6 +1019,9 @@ label {
     padding-left: 16px;
     padding-right: 16px;
   }
+}
+.footer-special-documents__text:hover {
+  color: #ffffff;
 }
 
 .btn-next,

@@ -71,6 +71,17 @@
   &__social-wrp {
     @extend %centre-space-between;
   }
+  &__social-link {
+    &:hover .footer-content__social-icon {
+      display: none;
+    }
+    &:hover .footer-content__social-icon-hov {
+      display: block;
+    }
+  }
+  &__social-icon-hov {
+    display: none;
+  }
 }
 
 .footer-logo {
@@ -82,6 +93,9 @@
   @include text($size: 14px, $color: $color-gray-40, $textAlign: left);
   &:last-child {
     margin-bottom: 0;
+  }
+  &:hover {
+    color: $color-white;
   }
 }
 
@@ -104,6 +118,11 @@
     flex-wrap: wrap;
     @include __860 {
       @include padding-mob;
+    }
+  }
+  &__text {
+    &:hover {
+      color: $color-white;
     }
   }
 }

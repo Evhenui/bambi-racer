@@ -81,6 +81,10 @@ html {
     @include text($size: 12px, $color: $color-gray-60, $lineHeight: 20px);
   }
 
+  &:hover {
+    border: 1px solid $color-white;
+  }
+
   // <div class="header__phone-menu-schedule-input input-wrp">
   //   <span class="input-wrp__text">Введите номер телефона</span>
   //   <input type="tel" name="" id="" placeholder="+38(0__)___-__-__">
