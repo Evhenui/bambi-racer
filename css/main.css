@@ -121,7 +121,7 @@ label {
   --my-variable-hiadth: 10px;
 }
 
-.img-slider .wrp-cont, .header__search-form-wrp, .header__btn-catalog, .header__btn-catalog-wrp {
+.img-slider .wrp-cont, .header__right-item-phone, .header__right-item, .header__search-form-wrp, .header__btn-catalog, .header__btn-catalog-wrp {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -168,7 +168,7 @@ label {
 }
 #body-cont.active {
   overflow-y: hidden;
-  padding-right: 21px;
+  padding-right: 17px;
 }
 @media (max-width: 860px) {
   #body-cont.active {
@@ -382,6 +382,7 @@ label {
 .header__wrp-right-cont {
   max-width: 620px;
   width: 100%;
+  column-gap: 4px;
   justify-content: flex-end;
   position: relative;
 }
@@ -443,9 +444,19 @@ label {
 .header__btn-search {
   display: contents;
 }
+.header__btn-search:hover .header__btn-search-img {
+  display: none;
+}
+.header__btn-search:hover .header__btn-search-img-hov {
+  display: flex;
+}
+.header__btn-search-img-hov {
+  display: none;
+}
 .header__right-item {
   width: 100%;
   max-width: 44px;
+  height: 44px;
   position: relative;
 }
 @media (max-width: 860px) {
@@ -453,10 +464,17 @@ label {
     display: none;
   }
 }
+.header__right-item:hover {
+  background-color: #343232;
+}
 @media (max-width: 860px) {
   .header__right-item-icon {
     display: none;
   }
+}
+.header__right-item-icon-size {
+  width: 20px;
+  height: 20px;
 }
 .header__right-item-phone {
   max-width: 44px;
@@ -465,6 +483,7 @@ label {
 @media (max-width: 860px) {
   .header__right-item-phone {
     display: none;
+    transition: 0.3s ease-out;
   }
 }
 .header__menu-btn-wrp {
@@ -499,6 +518,9 @@ label {
   transform: rotate(-45deg);
   top: 22px;
   transition: 0.3s ease-in;
+}
+.header__menu-btn-wrp:hover {
+  background-color: #343232;
 }
 .header__menu-btn-line {
   position: absolute;
@@ -569,11 +591,11 @@ label {
   width: 340px;
   height: 0;
   padding-left: 24px;
-  padding-top: 34px;
+  padding-top: 24px;
   position: absolute;
   right: -48px;
   background-color: #1a1919;
-  justify-content: space-between;
+  justify-content: flex-start;
   font-family: "Mulish", sans-serif;
   font-size: 16px;
   font-weight: 400;

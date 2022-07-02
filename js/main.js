@@ -14,10 +14,11 @@ window.onload = function () {
     //каталог в меню
     
     const btnCMenuCatalog = document.querySelectorAll('.js-menu-btn');
+    console.log(btnCMenuCatalog)
     btnCMenuCatalog.forEach((el) => {
         el.addEventListener('click', function () {
             el.closest('.js-menu-wrp').querySelector('.header__menu-item-link-wrp').classList.toggle('active');
-            this.querySelector('.header__menu-name-categoty-icon').classList.toggle('active')
+            this.querySelector('.header__menu-name-categoty-icon').classList.toggle('active');
         })
     })
 

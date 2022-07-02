@@ -87,6 +87,7 @@
   &__wrp-right-cont {
     max-width: 620px;
     width: 100%;
+    column-gap: 4px;
     @extend %centre-space-between;
     justify-content: flex-end;
     position: relative;
@@ -145,13 +146,27 @@
   }
   &__btn-search {
     display: contents;
+    &:hover .header__btn-search-img {
+      display: none;
+    }
+    &:hover .header__btn-search-img-hov {
+      display: flex;
+    }
+  }
+  &__btn-search-img-hov {
+    display: none;
   }
   &__right-item {
     width: 100%;
     max-width: 44px;
+    height: 44px;
+    @extend %centre-flex;
     position: relative;
     @include __860 {
       display: none;
+    }
+    &:hover {
+      background-color: $color-gray-90;
     }
   }
   &__right-item-icon {
@@ -159,11 +174,17 @@
       display: none;
     }
   }
+  &__right-item-icon-size {
+    width: 20px;
+    height: 20px;
+  }
   &__right-item-phone {
     max-width: 44px;
     width: 100%;
+    @extend %centre-flex;
     @include __860 {
       display: none;
+      transition: 0.3s ease-out;
     }
   }
   &__menu-btn-wrp {
@@ -198,6 +219,9 @@
       transform: rotate(-45deg);
       top: 22px;
       transition: 0.3s ease-in;
+    }
+    &:hover {
+      background-color: $color-gray-90;
     }
   }
   &__menu-btn-line {
@@ -264,12 +288,12 @@
     width: 340px;
     height: 0;
     padding-left: 24px;
-    padding-top: 34px;
+    padding-top: 24px;
     position: absolute;
     right: -48px;
     background-color: $color-gray-100;
     @extend %flex-columb;
-    justify-content: space-between;
+    justify-content: flex-start;
     @include text(
       $size: 16px,
       $textAlign: left,

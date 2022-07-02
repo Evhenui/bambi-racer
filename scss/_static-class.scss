@@ -8,7 +8,7 @@ html {
   margin-right: 17px;
   &.active {
     overflow-y: hidden;
-    padding-right: 21px;
+    padding-right: 17px;
     @include __860 {
       padding-right: 0;
     }
