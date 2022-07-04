@@ -2,6 +2,7 @@ window.onload = function () {
     const bodyCont = document.getElementById('body-cont');
     const mainCont = document.querySelector('.js-main');
     let widthScreen = window.innerWidth;
+    let hidthSizePage = document.documentElement.clientHeight;
     console.log(bodyCont);
   
     window.addEventListener('resize', () => {
@@ -31,13 +32,13 @@ window.onload = function () {
     const mobItemMenuActivLeft = document.querySelector('.js-mob-item-active-left');
     const mobItemMenuActivRight = document.querySelector('.js-mob-item-active-right');
     const arrActivBlock = [menuBtnLine, menuHeader, bodyCont];
-    const menuHidth = document.documentElement.clientHeight;
+    console.log(hidthSizePage);
 
     menuBtn.addEventListener('click', function (event) {
         if(menuHeader.classList.contains('active') === true) {
             menuHeader.style.setProperty('height', 0 + 'px');
         } else {
-            menuHeader.style.setProperty('height', menuHidth + 'px');
+            menuHeader.style.setProperty('height', hidthSizePage + 'px');
         }
         if(widthScreen <= 460) {
             menuHeader.style.setProperty('width', widthScreen + 'px');
@@ -187,11 +188,13 @@ window.onload = function () {
 
 
     //слайдер swiper
-    new Swiper('.img-slider', {
+    const mainSlider =  new Swiper('.main-slider', {
         //Стрелки
         navigation: {
-            nextEl: '.btn-next',
-            prevEl: '.btn-prev'
+            // nextEl: '.btn-next',
+            // prevEl: '.btn-prev'
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         },
         //Навигация
         //пргресс бар
@@ -208,6 +211,55 @@ window.onload = function () {
             disableOnInteraction: true,
         }
     });
+
+    const mainSliderText = new Swiper('.main-slider-text', {
+        navigation: {
+            // nextEl: '.btn-next',
+            // prevEl: '.btn-prev'
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        //Навигация
+        //пргресс бар
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true,
+        },
+        grabCursor: true,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            stopOnLastSlide: true,
+            disableOnInteraction: true,
+        }
+    });
+    
+    mainSlider.controller.control = mainSliderText;
+    mainSliderText.controller.control = mainSlider;
+
+    if(mainCont != null) {
+        const imgSliderMain = document.querySelector('.js-img-slider');
+        imgSliderMain.style.setProperty('height', hidthSizePage + 'px')
+        // imgSliderMain.style.setProperty('height', hidthSizePage + 'px');
+       
+    }
+    
+
+    if(mainCont != null) {
+        const btnSliderLeft = mainCont.querySelector('.js-btn-left-slider');
+        const btnSliderRight = mainCont.querySelector('.js-btn-right-slider');
+        // const textSlider = mainCont.querySelector('.js-text-slider');
+        const textSliderHeigth = mainCont.querySelector('.js-text-wrp');
+        textSliderHeigth.style.setProperty('height', hidthSizePage + 'px');
+        // textSlider.style.setProperty('hidth', hidthSizePage + 'px');
+        if(widthScreen > 1440) {
+            btnSliderLeft.style.setProperty('left', ((widthScreen - 1440) / 2) + 'px');
+            btnSliderRight.style.setProperty('right', ((widthScreen - 1440) / 2) + 'px');
+        }
+        
+    }
+    
 }
 
 

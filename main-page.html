@@ -14,48 +14,337 @@
 </head>
 
 <body id="body-cont">
+    <header class="header">
+        <div class="header__wrp">
+            <div class="header__wrp-left-cont js-mob-item-active-left">
+                <a class="header__wrp-left-cont-link-logo" href="#">
+                    <img class="header__left-img-logo js-mob-item-active" src="img/heder-logo-img.svg"
+                        alt="Bambi Racer">
+                    <img class="header__left-img-logo-mob js-mob-item" src="img/heder-logo-mob-img.svg"
+                        alt="Bambi Racer">
+                </a>
+                <div class="header__btn-catalog-wrp js-mob-item">
+                    <button class="header__btn-catalog btn-red js-header-btn-catalog">
+                        <img src="icon/header-catalog-icon.svg" alt="catalog">
+                        <span class="header__btn-catalog-text">Каталог</span>
+                    </button>
+                    <div class="header__catalog-wrp js-header-catalog">
+                        <div class="header__catalog-item-wrp">
+                            <a href="#">Электромобили</a>
+                            <span class="red-diamonds"></span>
+                        </div>
+                        <div class="header__catalog-item-wrp">
+                            <a href="#">Металлические квадроциклы</a>
+                            <span class="red-diamonds"></span>
+                        </div>
+                        <div class="header__catalog-item-wrp">
+                            <a href="#">Велокарты</a>
+                            <span class="red-diamonds"></span>
+                        </div>
+                        <div class="header__catalog-item-wrp">
+                            <a href="#">Каталки-толокары</a>
+                            <span class="red-diamonds"></span>
+                        </div>
+                        <div class="header__catalog-item-wrp">
+                            <a href="#">Запчасти и Комплектующие</a>
+                            <span class="red-diamonds"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__languages-wrp js-mob-item-active">
+                    <button class="header__languages-btn active js-header-languages">ru</button>
+                    <span class="header__languages-btn-line"></span>
+                    <button class="header__languages-btn js-header-languages">ua</button>
+                </div>
+            </div>
+            <div class="header__wrp-right-cont js-mob-item-active-right">
+                <form class="header__search-form-wrp js-search js-mob-item">
+                    <input class="header__search-input js-search-input" type="text">
+                    <button class="header__btn-search js-btn-search">
+                        <img class="header__btn-search-img" src="icon/header-search-icon.svg" alt="">
+                        <img class="header__btn-search-img-hov" src="icon/header-search-icon-hov.svg" alt="">
+                    </button>
+                    <div class="header__btn-search-close js-btn-search-mob-close">
+                        <span class="header__btn-search-close-line header__btn-search-close-line-r"></span>
+                        <span class="header__btn-search-close-line header__btn-search-close-line-l"></span>
+                    </div>
+                </form>
+                <div class="header__right-item js-mob-item js-phone">
+                    <a class="header__right-item-phone" href="#">
+                        <img class="header__right-item-icon header__right-item-phone-img js-mob-item"
+                            src="icon/header-phone-icon.svg" alt="">
+                    </a>
+                    <div class="header__phone-menu js-phone-menu">
+                        <div class="header__phone-menu-schedule">
+                            <p>Звоните</p>
+                            <div class="header__phone-menu-schedule-time">
+                                <p>с 08:00 до 17:00 </p>
+                                <p>Сб, Вс - выходные</p>
 
-    <main class="js-main">
+                            </div>
+                        </div>
+                        <div class="header__phone-menu-schedule-link-wrp">
+                            <a class="header__phone-menu-schedule-link" href="tel:+380931234577">
+                                <img src="icon/header-phone-call-icon.svg" alt="">
+                                <span>+38(093)123-45-77</span>
+                            </a>
+                        </div>
+                        <p class="header__phone-menu-schedule-or">Или</p>
+                        <p class="header__phone-menu-schedule-text">Оставьте номер телефона и мы перезвоним</p>
+                        <form>
+                            <div class="header__phone-menu-schedule-input input-wrp">
+                                <span class="input-wrp__text">Введите номер телефона</span>
+                                <input type="tel" name="" id="" placeholder="+38(0__)___-__-__">
+                            </div>
+
+                            <button class="btn-red header__phone-menu-schedule-btn">Перезвоните мне</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- <a class="header__right-item" href="tel:+">
+                    <img class="header__right-item-icon js-mob-item" src="icon/header-phone-icon.svg" alt="">
+                </a> -->
+                <a class="header__right-item" href="#">
+                    <img class="header__right-item-icon header__right-item-icon-size js-mob-item"
+                        src="icon/header-comparison-icon.svg" alt="">
+                    <span class="header__right-item-amount number-amount">5</span>
+                </a>
+                <button class="header__right-item js-mob-item">
+                    <img class="header__right-item-icon header__right-item-icon-size" src="icon/header-basket-icon.svg"
+                        alt="">
+                    <span class="header__right-item-amount number-amount">5</span>
+                </button>
+                <button class="header__right-item">
+                    <img class="header__right-item-icon header__right-item-icon-size"
+                        src="icon/header-personal-area-icon.svg" alt="">
+                </button>
+                <div class="header__right-wrp-menu">
+                    <button class="header__menu-btn-wrp js-btn-menu">
+                        <span class="header__menu-btn-line"></span>
+                    </button>
+                    <div class="header__menu-wrp js-menu">
+                        <div class="header__menu-section-wrp">
+                            <div class="header__menu-personal-wrp">
+                                <img src="icon/header-personal-area-icon.svg" alt="personal">
+                                <div class="header__menu-personal-login">
+                                    <a href="#">Вход</a>
+                                    <span class="header__menu-personal-line-vertical"></span>
+                                    <a href="#">Регистрация</a>
+                                </div>
+
+                            </div>
+                            <span class="header__menu-personal-line"></span>
+                            <div class="header__menu-personal-basket-comparison">
+                                <a class="header__menu-personal-basket">
+                                    <img src="icon/header-basket-icon.svg" alt="basket">
+                                    <span>Корзина</span>
+                                    <span class="number-amount">500</span>
+                                </a>
+                                <a class="header__menu-personal-comparison">
+                                    <img src="icon/header-comparison-icon.svg" alt="basket">
+                                    <span>Сравнение</span>
+                                    <span class="number-amount">500</span>
+                                </a>
+                            </div>
+                            <span class="header__menu-personal-line"></span>
+                            <div class="header__menu-section-item">
+                                <div class="js-menu-wrp header__menu-section">
+                                    <div class="header__menu-name-categoty-wrp js-menu-btn">
+                                        <h2 class="header__menu-name-categoty">Каталог</h2>
+                                        <img class="header__menu-name-categoty-icon active"
+                                            src="icon/arrow-white-icon.svg" alt="">
+                                    </div>
+                                    <div class="header__menu-item-link-wrp active">
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Весь каталог</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Электромобили</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Металлические квадроциклы</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Велокарты</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Каталки-толокары</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="js-menu-wrp header__menu-section">
+                                    <div class="header__menu-name-categoty-wrp js-menu-btn">
+                                        <h2 class="header__menu-name-categoty">О компании</h2>
+                                        <img class="header__menu-name-categoty-icon" src="icon/arrow-white-icon.svg"
+                                            alt="">
+                                    </div>
+                                    <div class="header__menu-item-link-wrp">
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">О компании</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Оплата и доставка</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Гарантия и сервис</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Стать партнером</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Контакты</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Text</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="js-menu-wrp header__menu-section">
+                                    <div class="header__menu-name-categoty-wrp js-menu-btn">
+                                        <h2 class="header__menu-name-categoty">Сервис и поддержка</h2>
+                                        <img class="header__menu-name-categoty-icon" src="icon/arrow-white-icon.svg"
+                                            alt="">
+                                    </div>
+                                    <div class="header__menu-item-link-wrp">
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">FAQ</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Возврат и обмен</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Инструкции</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Text</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="header__menu-section">
+                                    <div class="header__menu-name-categoty-wrp js-menu-btn">
+                                        <a href="#">
+                                            <h2 class="header__menu-name-categoty">Блог</h2>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="header__menu-work-time">
+                            <p class="header__menu-work-time-title-text">График работы</p>
+                            <div class="header__menu-work-time-timeline-wrp">
+                                <div class="header__menu-work-time-timeline">
+                                    <p>
+                                        с 08:00 до 17:00
+                                    </p>
+                                    <p>
+                                        Сб, Вс - выходные
+                                    </p>
+                                </div>
+                                <div class="header__menu-work-time-timeline">
+                                    <a href="tel:+380931234577">+38(093)123-45-77</a>
+                                    <a href="tel:+380931234577">+38(093)123-45-77</a>
+                                </div>
+                            </div>
+                            <div class="header__menu-social">
+                                <a href="#">
+                                    <img src="icon/header-faceboock-icon.svg" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="icon/header-telegram-icon.svg" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="icon/header-instogram-icon.svg" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="icon/header-youtube-icon.svg" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="icon/header-viber-icon.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <main class="js-main ">
         <!-- Slider main container -->
-        <div class="swiper img-slider">
+        <div class="swiper main-slider ">
             <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper js-img-slider">
                 <!-- Slides -->
-                <div class="swiper-slide wrp">
-                        <div class="wrp-cont">
-                            <h2 class="text">Текст какойто заготовок 1</h2>
-                            <button class="btn-text">
+                <div class="swiper-slide">
+                    <!-- <div class="btn-next">кнопка в перед </div> -->
+                    <!-- <div class="main-slider__text-btn-wrt">
+                        <div class="main-slider__text-btn js-text-slider">
+                            <h2 class="main-slider__text">Текст какойто заготовок 1</h2>
+                            <button class="btn-red main-slider__btn">
                                 Кнопка
                             </button>
                         </div>
-                        <img class="img" src="img/slider-main.png" alt="">
+                    </div> -->
+                    <img class="main-slider__img " src="img/slider-main.png" alt="">
+                    <!-- <div class="btn-prev"> кнопка назад </div> -->
                 </div>
-                <div class="swiper-slide wrp">
-                        <div class="wrp-cont">
-                            <h2 class="text">Текст какойто заготовок 2</h2>
-                            <button class="btn-text">
-                                Кнопка
-                            </button>
-                        </div>
-                        <img class="img" src="img/slider-main.png" alt="">
-                </div>
-                <div class="swiper-slide wrp">
-                        <div class="wrp-cont">
-                            <h2 class="text">Текст какойто заготовок 3</h2>
-                            <button class="btn-text">
-                                Кнопка
-                            </button>
-                        </div>
-                        <img class="img" src="img/slider-main.png" alt="">
-                </div>
-                ...
             </div>
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
-
+            <div class="main-slider__nav-btn-wrp">
+                <div class="swiper-button-prev js-btn-left-slider"></div>
+                <div class="swiper-button-next js-btn-right-slider"> </div>
+            </div>
             <!-- If we need navigation buttons -->
-            <div class="btn-prev"> кнопка назад </div>
-            <div class="btn-next">кнопка в перед </div>
+            <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"> </div> -->
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+        <div class="swiper main-slider-text ">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <!-- <div class="btn-next">кнопка в перед </div> -->
+
+                    <h2 class="main-slider__text">Текст какойто заготовок 1</h2>
+                    <button class="btn-red main-slider__btn">
+                        Кнопка
+                    </button>
+
+                    <!-- <img class="main-slider__img " src="img/slider-main.png" alt=""> -->
+                    <!-- <div class="btn-prev"> кнопка назад </div> -->
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <div class="main-slider__nav-btn-wrp">
+                <!-- <div class="swiper-button-prev js-btn-left-slider"></div>
+                <div class="swiper-button-next js-btn-right-slider"> </div> -->
+            </div>
+            <!-- If we need navigation buttons -->
+            <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"> </div> -->
 
             <!-- If we need scrollbar -->
             <div class="swiper-scrollbar"></div>

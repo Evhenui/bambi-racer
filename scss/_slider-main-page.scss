@@ -17,11 +17,11 @@
   font-size: 50px;
 }
 
-.img-slider .swiper-pagination {
+.main-slider .swiper-pagination {
   bottom: 0;
 }
 
-.img-slider .swiper-pagination-bullet {
+.main-slider .swiper-pagination-bullet {
   width: 40px;
   height: 40px;
   background-color: rgb(255, 102, 0);
@@ -29,33 +29,90 @@
   font-size: 14px;
 }
 
-.img-slider .wrp-cont {
+.main-slider .wrp-cont {
   position: absolute;
   @extend %centre-flex;
   flex-direction: column;
 }
 
-.img-slider .text {
+.main-slider .text {
   //position: absolute;
   font-size: 100px;
   z-index: 200;
   color: #51b900;
 }
 
-.img-slider  .img {
+.main-slider {
   position: relative;
-  z-index: 2;
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+  }
+  // &__wrp-cont {
+  //   height: 100%;
+  //   position: relative;
+  // }
+  &__text-btn {
+    padding-top: 20%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+  }
+  &__text-btn-wrt {
+    position: relative;
+    @extend %size-page;
+    width: 1156px;
+    @extend %padding-country;
+  }
+  &__text {
+    max-width: 660px;
+    width: 100%;
+    margin-bottom: 40px;
+    @include text(
+      $size: 60px,
+      $lineHeight: 80px,
+      $color: $color-white,
+      $textAlign: left,
+      $fontWeight: 900
+    );
+    font-style: normal;
+    text-transform: uppercase;
+    z-index: 22;
+  }
+  &__btn {
+    z-index: 100;
+  }
+  &__nav-btn-wrp {
+    @extend %size-page;
+  }
 }
 
-.wrp {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  align-items: center;
+.swiper.main-slider-text {
+  z-index: 10000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  // display: contents;
 }
 
-.btn-text {
-  font-size: 56px;
-  color: #51b900;
-  z-index: 20;
+.main-slider__nav-btn-wrp .swiper-button-prev {
+  left: 60px;
+}
+.swiper-button-prev::before {
+  content: "";
+  width: 100px;
+  height: 56px;
+  background-image: url("../icon/arrow-main-slider-left.svg");
+}
+.swiper-button-next::before {
+  content: "";
+  // content: "dsc";
+  width: 100px;
+  height: 56px;
+  background-image: url("../icon/arrow-main-slider-right.svg");
+  // margin-right: ;
 }
