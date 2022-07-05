@@ -2,10 +2,17 @@ html {
   // overflow-x: hidden;
   // margin-right: calc(-1 * (100vw - 100%));
 }
+:root {
+  --width-page: 1440px;
+  --height-monitor: 700px;
+}
+
+.width {
+  width: var(--width-page) px;
+}
 
 #body-cont {
   overflow-x: hidden;
-  margin-right: 17px;
   &.active {
     overflow-y: hidden;
     padding-right: 17px;

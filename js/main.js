@@ -1,15 +1,20 @@
 window.onload = function () {
     const bodyCont = document.getElementById('body-cont');
     const mainCont = document.querySelector('.js-main');
+    const blurMenu = document.querySelector('.js-clacc-blur');
+    
     let widthScreen = window.innerWidth;
     let hidthSizePage = document.documentElement.clientHeight;
-    console.log(bodyCont);
-  
+    
+    
+    positionBtnSlider();
     window.addEventListener('resize', () => {
         widthScreen = window.innerWidth;
         if(widthScreen <= 460) {
             menuHeader.style.setProperty('width', widthScreen + 'px');
+
         }
+        positionBtnSlider();
     })
 
     //каталог в меню
@@ -31,10 +36,20 @@ window.onload = function () {
     const mobItemMenuActiv = document.querySelectorAll('.js-mob-item-active');
     const mobItemMenuActivLeft = document.querySelector('.js-mob-item-active-left');
     const mobItemMenuActivRight = document.querySelector('.js-mob-item-active-right');
+    const menuTelMob =  document.querySelector('.header__menu-work-time');
     const arrActivBlock = [menuBtnLine, menuHeader, bodyCont];
     console.log(hidthSizePage);
 
     menuBtn.addEventListener('click', function (event) {
+        window.getComputedStyle(menuTelMob).getPropertyValue('--width-page');
+        menuTelMob.style.setProperty('--width-page', (widthScreen) + 'px');
+        // if(menuTelMob.classList.contains('.active')) {
+        //     menuTelMob.classList.remove('active');        
+        // } else {
+        //     setTimeout(function() {
+                menuTelMob.classList.toggle('active')
+        //     }, 200)
+        // }
         if(menuHeader.classList.contains('active') === true) {
             menuHeader.style.setProperty('height', 0 + 'px');
         } else {
@@ -43,13 +58,11 @@ window.onload = function () {
         if(widthScreen <= 460) {
             menuHeader.style.setProperty('width', widthScreen + 'px');
         }
-        if(mainCont != null) {
-            if(mainCont.classList.contains('active')) {
-                mainCont.classList.remove('active');
-            } else {
-                mainCont.classList.add('active');
-            } 
-        }
+        if(blurMenu.classList.contains('active')) {
+            blurMenu.classList.remove('active');
+        } else {
+            blurMenu.classList.add('active');
+        } 
         event.stopPropagation();
         event.target.classList.toggle('active');
         closeMain(mainCont);
@@ -201,7 +214,8 @@ window.onload = function () {
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
-            dynamicBullets: true,
+            spaceBetween: 10,
+            // dynamicBullets: true,
         },
         grabCursor: true,
         loop: true,
@@ -212,31 +226,22 @@ window.onload = function () {
         }
     });
 
-    const mainSliderText = new Swiper('.main-slider-text', {
-        navigation: {
-            // nextEl: '.btn-next',
-            // prevEl: '.btn-prev'
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        //Навигация
-        //пргресс бар
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-            dynamicBullets: true,
-        },
-        grabCursor: true,
-        loop: true,
-        autoplay: {
-            delay: 5000,
-            stopOnLastSlide: true,
-            disableOnInteraction: true,
+    //кнопки слайдера их растояние от экрана 
+
+
+    function positionBtnSlider () {
+        if(mainCont != null) {
+            const btnSliderLeft = mainCont.querySelector('.js-btn-left-slider');
+            const btnSliderRight = mainCont.querySelector('.js-btn-right-slider');
+            
+            if(widthScreen > 1440) {
+                btnSliderLeft.style.setProperty('left', ((widthScreen - 1344) / 2) + 'px');
+                btnSliderRight.style.setProperty('right', ((widthScreen - 1344) / 2) + 'px');
+            }
         }
-    });
+    }
+
     
-    mainSlider.controller.control = mainSliderText;
-    mainSliderText.controller.control = mainSlider;
 
     if(mainCont != null) {
         const imgSliderMain = document.querySelector('.js-img-slider');
@@ -246,20 +251,16 @@ window.onload = function () {
     }
     
 
-    if(mainCont != null) {
-        const btnSliderLeft = mainCont.querySelector('.js-btn-left-slider');
-        const btnSliderRight = mainCont.querySelector('.js-btn-right-slider');
-        // const textSlider = mainCont.querySelector('.js-text-slider');
-        const textSliderHeigth = mainCont.querySelector('.js-text-wrp');
-        textSliderHeigth.style.setProperty('height', hidthSizePage + 'px');
-        // textSlider.style.setProperty('hidth', hidthSizePage + 'px');
-        if(widthScreen > 1440) {
-            btnSliderLeft.style.setProperty('left', ((widthScreen - 1440) / 2) + 'px');
-            btnSliderRight.style.setProperty('right', ((widthScreen - 1440) / 2) + 'px');
-        }
-        
-    }
     
+    
+    window.getComputedStyle(mainCont).getPropertyValue('--width-page');
+    mainCont.style.setProperty('--width-page', widthScreen + 'px');
+    const heightSliderText = document.querySelector('.js-height-slider-text')
+    window.getComputedStyle(heightSliderText).getPropertyValue('--height-monitor');
+    mainCont.style.setProperty('--height-monitor', hidthSizePage + 'px');
+    
+
+
 }
 
 

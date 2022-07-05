@@ -312,6 +312,7 @@
     @include __860 {
       top: 58px;
       right: -16px;
+      padding-left: 16px;
     }
     &.active {
       visibility: inherit;
@@ -384,7 +385,7 @@
     }
   }
   &__menu-section-item {
-    // margin-right: 20px;
+    background-color: $color-gray-100;
     height: 472px;
     overflow: auto;
     &::-webkit-scrollbar {
@@ -408,7 +409,7 @@
   }
   &__menu-section-wrp {
     // margin-bottom: 62px;
-    margin-right: 16px;
+    margin-right: 24px;
     &::-webkit-scrollbar {
       width: 4px;
       margin-left: 20px;
@@ -418,10 +419,41 @@
       background: $color-gray-80;
       border-radius: 4px;
     }
+    @include __860 {
+      margin-right: 16px;
+    }
   }
   &__menu-work-time {
-    margin-right: 20px;
-    margin-bottom: 80px;
+    padding-right: 20px;
+    padding-left: 16px;
+    padding-bottom: 80px;
+    width: 304px;
+
+    // width: var(--width-page);
+    // display: none;
+    // visibility: hidden;
+    bottom: -247px;
+
+    display: flex;
+    flex-direction: column;
+    // transition: 0;
+    background-color: $color-gray-100;
+    // opacity: 0;
+    transition: 0.3s ease-out;
+    @include __480 {
+      width: var((--width-page));
+      left: 0;
+      position: fixed;
+    }
+    &.active {
+      bottom: -64px;
+      // opacity: 1;
+      transition: 0.3s ease-out;
+    }
+  }
+  &__menu-work-time-wrp {
+    width: 100%;
+    background-color: $color-gray-100;
   }
   &__menu-work-time-timeline {
     @extend %centre-flex-columb;
@@ -429,16 +461,36 @@
     row-gap: 4px;
     @include text($size: 12px, $textAlign: left, $color: $color-gray-40);
   }
+  &__menu-work-time-timeline-mob {
+    display: none;
+    @extend %centre-flex;
+    @include text($size: 12px, $textAlign: left, $color: $color-gray-40);
+    @include __860 {
+      display: flex;
+    }
+  }
+  &__menu-work-time-timeline-tel {
+    display: flex;
+    flex-direction: column;
+    @include text($size: 12px, $textAlign: left, $color: $color-gray-40);
+    @include __860 {
+      display: none;
+    }
+  }
   &__menu-work-time-title-text {
     font-size: 14px;
     margin-bottom: 20px;
   }
   &__menu-work-time-timeline-wrp {
     @extend %centre-space-between;
+    column-gap: 16px;
   }
   &__menu-social {
     padding-top: 36px;
     @extend %centre-space-between;
+    @include __860 {
+      padding-top: 20px;
+    }
   }
   &__right-wrp-menu {
     position: relative;
@@ -567,11 +619,16 @@
   }
 }
 
-.js-main {
+.js-clacc-blur {
   &.active {
     backdrop-filter: blur(10px);
     background-color: #03020e3d;
     z-index: 20;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 }
 
