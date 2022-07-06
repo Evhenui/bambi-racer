@@ -58,14 +58,10 @@ window.onload = function () {
         if(widthScreen <= 460) {
             menuHeader.style.setProperty('width', widthScreen + 'px');
         }
-        if(blurMenu.classList.contains('active')) {
-            blurMenu.classList.remove('active');
-        } else {
-            blurMenu.classList.add('active');
-        } 
         event.stopPropagation();
         event.target.classList.toggle('active');
-        closeMain(mainCont);
+        closeMain(blurMenu);
+        blurDel(menuBtn);
         if(widthScreen <= 860) {
             arrActivBlock.forEach((el) => {
                 el.classList.toggle('active');
@@ -141,22 +137,16 @@ window.onload = function () {
     headerBtnCatalog.addEventListener('click', (event) => {
         event.stopPropagation();
         jsHeaderCatalog.classList.toggle('active');
-        if(mainCont != null) {
-            if(mainCont.classList.contains('active')) {
-                mainCont.classList.remove('active');
-            } else {
-                mainCont.classList.add('active');
-            } 
-        } 
+        blurDel(jsHeaderCatalog);
         searchInput.classList.remove('activeSerch');
         menuHeader.style.setProperty('height', 0 + 'px');
         closeActive([phoneMenyHeader, menuHeader, menuBtn, menuBtnLine]);
-        closeMain(mainCont);
+        closeMain(blurMenu);
       
     });
     closeMain(jsHeaderCatalog, jsHeaderCatalog);
     // closeMain(mainCont);
-    closeMain(bodyCont);
+    closeMain(blurMenu);
 
     //телефон модалка оставить контакты
     const phoneHeader = document.querySelector('.js-phone');
@@ -165,13 +155,8 @@ window.onload = function () {
     phoneHeader.addEventListener('click', function(event) {
         event.stopPropagation();
         phoneMenyHeader.classList.toggle('active');
-        if(mainCont != null) {
-            if(mainCont.classList.contains('active')) {
-                mainCont.classList.remove('active');
-            } else {
-                mainCont.classList.add('active');
-            } 
-        }
+            console.log(blurMenu.classList.contains('active'));
+            blurDel(phoneMenyHeader);
         closeActive([jsHeaderCatalog, menuHeader, menuBtn, menuBtnLine]);
         menuHeader.style.setProperty('height', 0 + 'px');
     })
@@ -197,6 +182,16 @@ window.onload = function () {
             console.log(el);
             el.classList.remove('active')
         })
+    }
+
+    //Функция удаления блюра
+
+    function blurDel(params) {
+        if(params.classList.contains('active')) {
+            blurMenu.classList.add('active');
+        } else {
+            blurMenu.classList.remove('active');
+        }
     }
 
 
