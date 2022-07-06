@@ -76,6 +76,19 @@
   color: $color;
 }
 
+@mixin card-prod-cat-late($backgroundColor: $color-orange) {
+  padding: 4px 8px;
+  position: absolute;
+  top: 8px;
+  left: 4px;
+  border-radius: 1px;
+  background-color: $backgroundColor;
+  @include text($size: 10px, $color: $color-white, $fontWeight: 700);
+  display: inline-flex;
+  text-transform: uppercase;
+  transform: rotate(-5deg);
+}
+
 @mixin padding-mob {
   padding-left: 16px;
   padding-right: 16px;

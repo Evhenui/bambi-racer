@@ -12,6 +12,7 @@ html {
 }
 
 #body-cont {
+  background-color: $color-background;
   overflow-x: hidden;
   &.active {
     overflow-y: hidden;
@@ -20,6 +21,10 @@ html {
       padding-right: 0;
     }
   }
+}
+
+.main-wrp {
+  margin-top: 74px;
 }
 
 .btn-red {

@@ -1,0 +1,60 @@
+.card-prod-catalog {
+  padding-left: 100px;
+  padding-top: 100px;
+  &__wrp {
+    max-width: 324px;
+    width: 100%;
+    padding: 0 12px;
+    background-color: $color-white;
+    position: relative;
+  }
+  &__nameplate-top-wrp {
+    @include card-prod-cat-late;
+  }
+  &__nameplate-sale-wrp {
+    @include card-prod-cat-late($backgroundColor: $color-red);
+    display: none;
+  }
+  &__nameplate-new-wrp {
+    @include card-prod-cat-late($backgroundColor: $color-green);
+    display: none;
+  }
+  &__icon-wrp {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    @extend %flex-columb;
+    row-gap: 24px;
+  }
+  &__img {
+    @extend %centre-flex;
+    @extend %centre-marg;
+  }
+  &__title-text {
+    margin-bottom: 4px;
+    @include text(
+      $size: 16px,
+      $textAlign: left,
+      $fontWeight: 700,
+      $lineHeight: 20px
+    );
+  }
+  &__price {
+    @include text(
+      $size: 16px,
+      $textAlign: left,
+      $fontWeight: 700,
+      $lineHeight: 20px
+    );
+  }
+  &__not-available {
+    display: none;
+    @include text(
+      $size: 16px,
+      $textAlign: left,
+      $color: $color-gray-60,
+      $fontWeight: 700,
+      $lineHeight: 20px
+    );
+  }
+}
