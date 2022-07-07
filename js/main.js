@@ -1,4 +1,8 @@
+import {cardProdCatalog} from './card-prod-catalog.js'
+        cardProdCatalog();
+
 window.onload = function () {
+
     const bodyCont = document.getElementById('body-cont');
     const mainCont = document.querySelector('.js-main');
     const blurMenu = document.querySelector('.js-clacc-blur');

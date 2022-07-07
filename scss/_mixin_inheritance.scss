@@ -89,6 +89,15 @@
   transform: rotate(-5deg);
 }
 
+@mixin color-card-prod($backgroundColor: $color-red) {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  border: 2px solid $color-gray-30;
+  background-color: $backgroundColor;
+}
+
 @mixin padding-mob {
   padding-left: 16px;
   padding-right: 16px;

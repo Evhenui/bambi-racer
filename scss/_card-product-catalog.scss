@@ -39,6 +39,47 @@
       $lineHeight: 20px
     );
   }
+  &__rating-wrp {
+    width: 60px;
+    position: relative;
+  }
+  &__rating-img-activ-wrp {
+    width: 68%;
+    height: 12px;
+    display: flex;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &__rating-img-activ {
+    width: 100%;
+    height: 12px;
+    position: absolute;
+    background-image: url("../icon/raitig-img-active-smal.svg");
+    background-repeat: no-repeat;
+  }
+  &__reviews-wrp {
+    column-gap: 4px;
+    @extend %centre-flex;
+  }
+  &__reviews-text {
+    @include text(
+      $size: 10px,
+      $textAlign: left,
+      $fontWeight: 400,
+      $color: $color-gray-70,
+      $lineHeight: 12px
+    );
+  }
+  &__rating-reviews {
+    margin-bottom: 8px;
+    display: flex;
+  }
+  &__rating-reviews-wrp {
+    column-gap: 6px;
+    @extend %centre-flex;
+  }
   &__price {
     @include text(
       $size: 16px,
@@ -56,5 +97,91 @@
       $fontWeight: 700,
       $lineHeight: 20px
     );
+  }
+  &__colors-wrp {
+    max-width: 264px;
+    width: 100%;
+    margin-bottom: 16px;
+    @extend %centre-space-between;
+    @extend %centre-marg;
+  }
+  &__colors-red {
+    @include color-card-prod;
+  }
+  &__colors-blue {
+    @include color-card-prod($backgroundColor: #1154ff);
+  }
+  &__colors-black {
+    @include color-card-prod($backgroundColor: $color-black);
+  }
+  &__colors-green {
+    @include color-card-prod($backgroundColor: $color-green);
+  }
+  &__colors-orange {
+    @include color-card-prod($backgroundColor: $color-orange);
+  }
+  &__colors-golden {
+    @include color-card-prod($backgroundColor: $color-golden);
+  }
+  &__colors-white {
+    @include color-card-prod($backgroundColor: $color-white);
+  }
+  &__colors-number {
+    @include text($color: $color-gray-60, $lineHeight: 24px, $fontWeight: 700);
+  }
+  &__colors-item-wrp {
+    width: 24px;
+    height: 24px;
+    @extend %centre-flex;
+  }
+  &__buy-price {
+    min-height: 44px;
+    padding-bottom: 12px;
+    @extend %centre-space-between;
+  }
+  &__buy {
+    height: 44px;
+    background-color: $color-red;
+    @extend %centre-space-between;
+  }
+  &__buy-img {
+    padding-left: 11px;
+    margin-right: 12px;
+  }
+  &__buy-text {
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in;
+    @include text($color: $color-white, $fontWeight: 700, $textAlign: left);
+    &.active {
+      width: 66px;
+      opacity: 1;
+      visibility: inherit;
+      transition: 0.3s ease-out;
+    }
+  }
+}
+
+.js-card-catalog-color {
+  cursor: pointer;
+  border-radius: 50%;
+  &.active {
+    width: 24px;
+    height: 24px;
+    border: 1px solid $color-black;
+  }
+}
+
+.js-card-catalog-color-item {
+  transition: 0.2s ease-in;
+  &:hover {
+    width: 20px;
+    height: 20px;
+    transition: 0.2s ease-out;
+  }
+  &.active {
+    display: flex;
+    border: 1px solid $color-gray-30;
   }
 }
