@@ -1,11 +1,18 @@
-import {cardProdCatalog} from './card-prod-catalog.js'
+import {cardProdCatalog} from './card-prod-catalog.js';
         cardProdCatalog();
+
+import {mainPageProductSlider}  from './main-page-product-slider.js';
+        mainPageProductSlider()      
 
 window.onload = function () {
 
     const bodyCont = document.getElementById('body-cont');
     const mainCont = document.querySelector('.js-main');
     const blurMenu = document.querySelector('.js-clacc-blur');
+
+    console.log(window.getComputedStyle(bodyCont, null).height);
+    window.getComputedStyle(blurMenu).getPropertyValue('--height-page');
+    blurMenu.style.setProperty('--height-page', (bodyCont.scrollHeight * 1.5) + 'px');
     
     let widthScreen = window.innerWidth;
     let hidthSizePage = document.documentElement.clientHeight;
@@ -231,14 +238,16 @@ window.onload = function () {
         if(imgSliderMain != null) {
             imgSliderMain.style.setProperty('height', hidthSizePage + 'px');
         }
-        
-    
-    window.getComputedStyle(mainCont).getPropertyValue('--width-page');
-    mainCont.style.setProperty('--width-page', widthScreen + 'px');
+
     const heightSliderText = document.querySelector('.js-height-slider-text');
-    if(heightSliderText != null) {
-        window.getComputedStyle(heightSliderText).getPropertyValue('--height-monitor');
-        mainCont.style.setProperty('--height-monitor', hidthSizePage + 'px');
+    const heightSlider = document.querySelector('.js-height-slider')
+    if(heightSliderText != null && heightSlider != null) {
+
+        window.getComputedStyle(heightSlider).getPropertyValue('--width-page');
+        heightSlider.style.setProperty('--width-page', widthScreen + 'px');
+
+        window.getComputedStyle(heightSlider).getPropertyValue('--height-monitor');
+        heightSlider.style.setProperty('--height-monitor', hidthSizePage + 'px');
     }
     
 }

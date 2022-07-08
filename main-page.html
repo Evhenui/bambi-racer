@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="icon/favicon-black.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
-    <script src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
     <title>Bambi racer</title>
 </head>
 
@@ -101,9 +101,6 @@
                         </form>
                     </div>
                 </div>
-                <!-- <a class="header__right-item" href="tel:+">
-                    <img class="header__right-item-icon js-mob-item" src="icon/header-phone-icon.svg" alt="">
-                </a> -->
                 <a class="header__right-item" href="#">
                     <img class="header__right-item-icon header__right-item-icon-size js-mob-item"
                         src="icon/header-comparison-icon.svg" alt="">
@@ -246,47 +243,41 @@
                             </div>
 
                         </div>
-                        <!-- <span class="header__menu-personal-line"></span> -->
-                        <div class="header__menu-work-time-wrp">
-                            <div class="header__menu-work-time">
-                                <p class="header__menu-work-time-title-text">График работы</p>
-                                <div class="header__menu-work-time-timeline-wrp">
-                                    <div class="header__menu-work-time-timeline">
-                                        <p>
-                                            с 08:00 до 17:00
-                                        </p>
-                                        <p>
-                                            Сб, Вс - выходные
-                                        </p>
-                                    </div>
-                                    <div class="header__menu-work-time-timeline-mob">
-                                        <img src="icon/header-phone-call-icon.svg" alt="">
-                                        <a href="tel:+380931234577">Свяжитесь с нами</a>
-                                    </div>
-                                    <div class="header__menu-work-time-timeline-tel">
-                                        <a href="tel:+380931234577">+38(093)123-45-77</a>
-                                        <a href="tel:+380931234577">+38(093)123-45-77</a>
-                                    </div>
+                        <div class="header__menu-work-time">
+                            <p class="header__menu-work-time-title-text">График работы</p>
+                            <div class="header__menu-work-time-timeline-wrp">
+                                <div class="header__menu-work-time-timeline">
+                                    <p>
+                                        с 08:00 до 17:00
+                                    </p>
+                                    <p>
+                                        Сб, Вс - выходные
+                                    </p>
                                 </div>
-                                <div class="header__menu-social">
-                                    <a href="#">
-                                        <img src="icon/header-faceboock-icon.svg" alt="">
-                                    </a>
-                                    <a href="#">
-                                        <img src="icon/header-telegram-icon.svg" alt="">
-                                    </a>
-                                    <a href="#">
-                                        <img src="icon/header-instogram-icon.svg" alt="">
-                                    </a>
-                                    <a href="#">
-                                        <img src="icon/header-youtube-icon.svg" alt="">
-                                    </a>
-                                    <a href="#">
-                                        <img src="icon/header-viber-icon.svg" alt="">
-                                    </a>
+                                <div class="header__menu-work-time-timeline">
+                                    <a href="tel:+380931234577">+38(093)123-45-77</a>
+                                    <a href="tel:+380931234577">+38(093)123-45-77</a>
                                 </div>
                             </div>
+                            <div class="header__menu-social">
+                                <a href="#">
+                                    <img src="icon/header-faceboock-icon.svg" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="icon/header-telegram-icon.svg" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="icon/header-instogram-icon.svg" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="icon/header-youtube-icon.svg" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="icon/header-viber-icon.svg" alt="">
+                                </a>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -294,10 +285,8 @@
 
     </header>
     <main class="js-main">
-        <div class="js-clacc-blur">
-        </div>
-        <div>
-            <div class="swiper main-slider ">
+        <section class="main-slider-wrp">
+            <div class="swiper main-slider js-height-slider">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper js-img-slider">
                     <!-- Slides -->
@@ -354,10 +343,2304 @@
                 <!-- If we need scrollbar -->
                 <!-- <div class="swiper-scrollbar"></div> -->
             </div>
-        </div>
+        </section>
+        <section class="main-page-product js-product-slider">
+            <div class="main-page-product__title-text-wrp">
+                <div class="main-page-product__title-text-item js-product-slider-btm">
+                    <h3 class="main-page-product__title-text">топ продаж</h3>
+                    <span class="main-page-product__title-line js-product-slider-line active"></span>
+                </div>
+                <div class="main-page-product__title-text-item js-product-slider-btm">
+                    <h3 class="main-page-product__title-text">Акции</h3>
+                    <span class="main-page-product__title-line js-product-slider-line"></span>
+                </div>
+                <div class="main-page-product__title-text-item js-product-slider-btm">
+                    <h3 class="main-page-product__title-text">новинки</h3>
+                    <span class="main-page-product__title-line js-product-slider-line"></span>
+                </div>
+            </div>
+            <div>
+                <div class="main-page-product__carousel active js-product-slider-content">
+                    <div class="main-page-product__carousel-top-wrp">
+                        <!-- Slider main container -->
+                        <div class="swiper main-page-product__carousel-top">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <div class="card-prod-catalog">
+                                        <div class="card-prod-catalog__wrp">
+                                            <div>
+                                                <div class="card-prod-catalog__nameplate-top-wrp">
+                                                    <p>
+                                                        Топ продаж
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-sale-wrp">
+                                                    <p>
+                                                        Акция
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-new-wrp">
+                                                    <p>
+                                                        Новинка
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__icon-wrp">
+                                                <img src="icon/card-product-catalog-comparison-icon.svg" alt="">
+                                                <img src="icon/card-product-catalog-lick-icon.svg" alt="">
+                                            </div>
+                                            <img class="card-prod-catalog__img" src="img/produkt-catalog-img.png"
+                                                alt="Название товара">
+                                            <div class="card-prod-catalog__colors-wrp">
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-red js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-blue js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-black js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-green js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-orange js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-white js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp ">
+                                                    <p class="card-prod-catalog__colors-number">+2</p>
+                                                </div>
+                                            </div>
+                                            <h2 class="card-prod-catalog__title-text">Название товара какое-то очень
+                                                длинное
+                                            </h2>
+                                            <div class="card-prod-catalog__rating-reviews">
+                                                <div class="card-prod-catalog__rating-reviews-wrp">
+                                                    <div class="card-prod-catalog__rating-wrp">
+                                                        <img class="card-prod-catalog__rating-img-dise"
+                                                            src="icon/raitig-img-noactive.svg" alt="рейтинг">
+                                                        <div class="card-prod-catalog__rating-img-activ-wrp">
+                                                            <span class="card-prod-catalog__rating-img-activ"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-prod-catalog__reviews-wrp">
+                                                        <img src="icon/reviews-icon-card-prod-catalog.svg" alt="">
+                                                        <p class="card-prod-catalog__reviews-text">
+                                                            <span>4</span> отзыва
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__buy-price">
+                                                <div>
+                                                    <p class="card-prod-catalog__price">16 398,38 грн</p>
+                                                    <p class="card-prod-catalog__not-available">Нет в наличии</p>
+                                                </div>
+                                                <button class="card-prod-catalog__buy js-btn-buy-card-prod-catalog">
+                                                    <img class="card-prod-catalog__buy-img"
+                                                        src="icon/header-basket-icon.svg" alt="buy">
+                                                    <p class="card-prod-catalog__buy-text">Купить</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card-prod-catalog">
+                                        <div class="card-prod-catalog__wrp">
+                                            <div>
+                                                <div class="card-prod-catalog__nameplate-top-wrp">
+                                                    <p>
+                                                        Топ продаж
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-sale-wrp">
+                                                    <p>
+                                                        Акция
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-new-wrp">
+                                                    <p>
+                                                        Новинка
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__icon-wrp">
+                                                <img src="icon/card-product-catalog-comparison-icon.svg" alt="">
+                                                <img src="icon/card-product-catalog-lick-icon.svg" alt="">
+                                            </div>
+                                            <img class="card-prod-catalog__img" src="img/produkt-catalog-img.png"
+                                                alt="Название товара">
+                                            <div class="card-prod-catalog__colors-wrp">
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-red js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-blue js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-black js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-green js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-orange js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-white js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp ">
+                                                    <p class="card-prod-catalog__colors-number">+2</p>
+                                                </div>
+                                            </div>
+                                            <h2 class="card-prod-catalog__title-text">Название товара какое-то очень
+                                                длинное
+                                            </h2>
+                                            <div class="card-prod-catalog__rating-reviews">
+                                                <div class="card-prod-catalog__rating-reviews-wrp">
+                                                    <div class="card-prod-catalog__rating-wrp">
+                                                        <img class="card-prod-catalog__rating-img-dise"
+                                                            src="icon/raitig-img-noactive.svg" alt="рейтинг">
+                                                        <div class="card-prod-catalog__rating-img-activ-wrp">
+                                                            <span class="card-prod-catalog__rating-img-activ"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-prod-catalog__reviews-wrp">
+                                                        <img src="icon/reviews-icon-card-prod-catalog.svg" alt="">
+                                                        <p class="card-prod-catalog__reviews-text">
+                                                            <span>4</span> отзыва
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__buy-price">
+                                                <div>
+                                                    <p class="card-prod-catalog__price">16 398,38 грн</p>
+                                                    <p class="card-prod-catalog__not-available">Нет в наличии</p>
+                                                </div>
+                                                <button class="card-prod-catalog__buy js-btn-buy-card-prod-catalog">
+                                                    <img class="card-prod-catalog__buy-img"
+                                                        src="icon/header-basket-icon.svg" alt="buy">
+                                                    <p class="card-prod-catalog__buy-text">Купить</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card-prod-catalog">
+                                        <div class="card-prod-catalog__wrp">
+                                            <div>
+                                                <div class="card-prod-catalog__nameplate-top-wrp">
+                                                    <p>
+                                                        Топ продаж
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-sale-wrp">
+                                                    <p>
+                                                        Акция
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-new-wrp">
+                                                    <p>
+                                                        Новинка
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__icon-wrp">
+                                                <img src="icon/card-product-catalog-comparison-icon.svg" alt="">
+                                                <img src="icon/card-product-catalog-lick-icon.svg" alt="">
+                                            </div>
+                                            <img class="card-prod-catalog__img" src="img/produkt-catalog-img.png"
+                                                alt="Название товара">
+                                            <div class="card-prod-catalog__colors-wrp">
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-red js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-blue js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-black js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-green js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-orange js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-white js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp ">
+                                                    <p class="card-prod-catalog__colors-number">+2</p>
+                                                </div>
+                                            </div>
+                                            <h2 class="card-prod-catalog__title-text">Название товара какое-то очень
+                                                длинное
+                                            </h2>
+                                            <div class="card-prod-catalog__rating-reviews">
+                                                <div class="card-prod-catalog__rating-reviews-wrp">
+                                                    <div class="card-prod-catalog__rating-wrp">
+                                                        <img class="card-prod-catalog__rating-img-dise"
+                                                            src="icon/raitig-img-noactive.svg" alt="рейтинг">
+                                                        <div class="card-prod-catalog__rating-img-activ-wrp">
+                                                            <span class="card-prod-catalog__rating-img-activ"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-prod-catalog__reviews-wrp">
+                                                        <img src="icon/reviews-icon-card-prod-catalog.svg" alt="">
+                                                        <p class="card-prod-catalog__reviews-text">
+                                                            <span>4</span> отзыва
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__buy-price">
+                                                <div>
+                                                    <p class="card-prod-catalog__price">16 398,38 грн</p>
+                                                    <p class="card-prod-catalog__not-available">Нет в наличии</p>
+                                                </div>
+                                                <button class="card-prod-catalog__buy js-btn-buy-card-prod-catalog">
+                                                    <img class="card-prod-catalog__buy-img"
+                                                        src="icon/header-basket-icon.svg" alt="buy">
+                                                    <p class="card-prod-catalog__buy-text">Купить</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card-prod-catalog">
+                                        <div class="card-prod-catalog__wrp">
+                                            <div>
+                                                <div class="card-prod-catalog__nameplate-top-wrp">
+                                                    <p>
+                                                        Топ продаж
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-sale-wrp">
+                                                    <p>
+                                                        Акция
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-new-wrp">
+                                                    <p>
+                                                        Новинка
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__icon-wrp">
+                                                <img src="icon/card-product-catalog-comparison-icon.svg" alt="">
+                                                <img src="icon/card-product-catalog-lick-icon.svg" alt="">
+                                            </div>
+                                            <img class="card-prod-catalog__img" src="img/produkt-catalog-img.png"
+                                                alt="Название товара">
+                                            <div class="card-prod-catalog__colors-wrp">
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-red js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-blue js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-black js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-green js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-orange js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-white js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp ">
+                                                    <p class="card-prod-catalog__colors-number">+2</p>
+                                                </div>
+                                            </div>
+                                            <h2 class="card-prod-catalog__title-text">Название товара какое-то очень
+                                                длинное
+                                            </h2>
+                                            <div class="card-prod-catalog__rating-reviews">
+                                                <div class="card-prod-catalog__rating-reviews-wrp">
+                                                    <div class="card-prod-catalog__rating-wrp">
+                                                        <img class="card-prod-catalog__rating-img-dise"
+                                                            src="icon/raitig-img-noactive.svg" alt="рейтинг">
+                                                        <div class="card-prod-catalog__rating-img-activ-wrp">
+                                                            <span class="card-prod-catalog__rating-img-activ"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-prod-catalog__reviews-wrp">
+                                                        <img src="icon/reviews-icon-card-prod-catalog.svg" alt="">
+                                                        <p class="card-prod-catalog__reviews-text">
+                                                            <span>4</span> отзыва
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__buy-price">
+                                                <div>
+                                                    <p class="card-prod-catalog__price">16 398,38 грн</p>
+                                                    <p class="card-prod-catalog__not-available">Нет в наличии</p>
+                                                </div>
+                                                <button class="card-prod-catalog__buy js-btn-buy-card-prod-catalog">
+                                                    <img class="card-prod-catalog__buy-img"
+                                                        src="icon/header-basket-icon.svg" alt="buy">
+                                                    <p class="card-prod-catalog__buy-text">Купить</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card-prod-catalog">
+                                        <div class="card-prod-catalog__wrp">
+                                            <div>
+                                                <div class="card-prod-catalog__nameplate-top-wrp">
+                                                    <p>
+                                                        Топ продаж
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-sale-wrp">
+                                                    <p>
+                                                        Акция
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-new-wrp">
+                                                    <p>
+                                                        Новинка
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__icon-wrp">
+                                                <img src="icon/card-product-catalog-comparison-icon.svg" alt="">
+                                                <img src="icon/card-product-catalog-lick-icon.svg" alt="">
+                                            </div>
+                                            <img class="card-prod-catalog__img" src="img/produkt-catalog-img.png"
+                                                alt="Название товара">
+                                            <div class="card-prod-catalog__colors-wrp">
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-red js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-blue js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-black js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-green js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-orange js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-white js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp ">
+                                                    <p class="card-prod-catalog__colors-number">+2</p>
+                                                </div>
+                                            </div>
+                                            <h2 class="card-prod-catalog__title-text">Название товара какое-то очень
+                                                длинное
+                                            </h2>
+                                            <div class="card-prod-catalog__rating-reviews">
+                                                <div class="card-prod-catalog__rating-reviews-wrp">
+                                                    <div class="card-prod-catalog__rating-wrp">
+                                                        <img class="card-prod-catalog__rating-img-dise"
+                                                            src="icon/raitig-img-noactive.svg" alt="рейтинг">
+                                                        <div class="card-prod-catalog__rating-img-activ-wrp">
+                                                            <span class="card-prod-catalog__rating-img-activ"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-prod-catalog__reviews-wrp">
+                                                        <img src="icon/reviews-icon-card-prod-catalog.svg" alt="">
+                                                        <p class="card-prod-catalog__reviews-text">
+                                                            <span>4</span> отзыва
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__buy-price">
+                                                <div>
+                                                    <p class="card-prod-catalog__price">16 398,38 грн</p>
+                                                    <p class="card-prod-catalog__not-available">Нет в наличии</p>
+                                                </div>
+                                                <button class="card-prod-catalog__buy js-btn-buy-card-prod-catalog">
+                                                    <img class="card-prod-catalog__buy-img"
+                                                        src="icon/header-basket-icon.svg" alt="buy">
+                                                    <p class="card-prod-catalog__buy-text">Купить</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card-prod-catalog">
+                                        <div class="card-prod-catalog__wrp">
+                                            <div>
+                                                <div class="card-prod-catalog__nameplate-top-wrp">
+                                                    <p>
+                                                        Топ продаж
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-sale-wrp">
+                                                    <p>
+                                                        Акция
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-new-wrp">
+                                                    <p>
+                                                        Новинка
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__icon-wrp">
+                                                <img src="icon/card-product-catalog-comparison-icon.svg" alt="">
+                                                <img src="icon/card-product-catalog-lick-icon.svg" alt="">
+                                            </div>
+                                            <img class="card-prod-catalog__img" src="img/produkt-catalog-img.png"
+                                                alt="Название товара">
+                                            <div class="card-prod-catalog__colors-wrp">
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-red js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-blue js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-black js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-green js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-orange js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-white js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp ">
+                                                    <p class="card-prod-catalog__colors-number">+2</p>
+                                                </div>
+                                            </div>
+                                            <h2 class="card-prod-catalog__title-text">Название товара какое-то очень
+                                                длинное
+                                            </h2>
+                                            <div class="card-prod-catalog__rating-reviews">
+                                                <div class="card-prod-catalog__rating-reviews-wrp">
+                                                    <div class="card-prod-catalog__rating-wrp">
+                                                        <img class="card-prod-catalog__rating-img-dise"
+                                                            src="icon/raitig-img-noactive.svg" alt="рейтинг">
+                                                        <div class="card-prod-catalog__rating-img-activ-wrp">
+                                                            <span class="card-prod-catalog__rating-img-activ"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-prod-catalog__reviews-wrp">
+                                                        <img src="icon/reviews-icon-card-prod-catalog.svg" alt="">
+                                                        <p class="card-prod-catalog__reviews-text">
+                                                            <span>4</span> отзыва
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__buy-price">
+                                                <div>
+                                                    <p class="card-prod-catalog__price">16 398,38 грн</p>
+                                                    <p class="card-prod-catalog__not-available">Нет в наличии</p>
+                                                </div>
+                                                <button class="card-prod-catalog__buy js-btn-buy-card-prod-catalog">
+                                                    <img class="card-prod-catalog__buy-img"
+                                                        src="icon/header-basket-icon.svg" alt="buy">
+                                                    <p class="card-prod-catalog__buy-text">Купить</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card-prod-catalog">
+                                        <div class="card-prod-catalog__wrp">
+                                            <div>
+                                                <div class="card-prod-catalog__nameplate-top-wrp">
+                                                    <p>
+                                                        Топ продаж
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-sale-wrp">
+                                                    <p>
+                                                        Акция
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-new-wrp">
+                                                    <p>
+                                                        Новинка
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__icon-wrp">
+                                                <img src="icon/card-product-catalog-comparison-icon.svg" alt="">
+                                                <img src="icon/card-product-catalog-lick-icon.svg" alt="">
+                                            </div>
+                                            <img class="card-prod-catalog__img" src="img/produkt-catalog-img.png"
+                                                alt="Название товара">
+                                            <div class="card-prod-catalog__colors-wrp">
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-red js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-blue js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-black js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-green js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-orange js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-white js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp ">
+                                                    <p class="card-prod-catalog__colors-number">+2</p>
+                                                </div>
+                                            </div>
+                                            <h2 class="card-prod-catalog__title-text">Название товара какое-то очень
+                                                длинное
+                                            </h2>
+                                            <div class="card-prod-catalog__rating-reviews">
+                                                <div class="card-prod-catalog__rating-reviews-wrp">
+                                                    <div class="card-prod-catalog__rating-wrp">
+                                                        <img class="card-prod-catalog__rating-img-dise"
+                                                            src="icon/raitig-img-noactive.svg" alt="рейтинг">
+                                                        <div class="card-prod-catalog__rating-img-activ-wrp">
+                                                            <span class="card-prod-catalog__rating-img-activ"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-prod-catalog__reviews-wrp">
+                                                        <img src="icon/reviews-icon-card-prod-catalog.svg" alt="">
+                                                        <p class="card-prod-catalog__reviews-text">
+                                                            <span>4</span> отзыва
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__buy-price">
+                                                <div>
+                                                    <p class="card-prod-catalog__price">16 398,38 грн</p>
+                                                    <p class="card-prod-catalog__not-available">Нет в наличии</p>
+                                                </div>
+                                                <button class="card-prod-catalog__buy js-btn-buy-card-prod-catalog">
+                                                    <img class="card-prod-catalog__buy-img"
+                                                        src="icon/header-basket-icon.svg" alt="buy">
+                                                    <p class="card-prod-catalog__buy-text">Купить</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="main-page-product__carousel-top-nav-wrp">
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-pagination main-page-product__carousel-top-pagination "></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-page-product__carousel js-product-slider-content">
+                    <div class="main-page-product__carousel-top-wrp">
+                        <!-- Slider main container -->
+                        <div class="swiper main-page-product__carousel-top">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <div class="card-prod-catalog">
+                                        <div class="card-prod-catalog__wrp">
+                                            <div>
+                                                <!-- <div class="card-prod-catalog__nameplate-top-wrp">
+                                                    <p>
+                                                        Топ продаж
+                                                    </p>
+                                                </div> -->
+                                                <div class="card-prod-catalog__nameplate-sale-wrp"
+                                                    style="display: block;">
+                                                    <p>
+                                                        Акция
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-new-wrp">
+                                                    <p>
+                                                        Новинка
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__icon-wrp">
+                                                <img src="icon/card-product-catalog-comparison-icon.svg" alt="">
+                                                <img src="icon/card-product-catalog-lick-icon.svg" alt="">
+                                            </div>
+                                            <img class="card-prod-catalog__img" src="img/produkt-catalog-img.png"
+                                                alt="Название товара">
+                                            <div class="card-prod-catalog__colors-wrp">
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-red js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-blue js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-black js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-green js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-orange js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-white js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp ">
+                                                    <p class="card-prod-catalog__colors-number">+2</p>
+                                                </div>
+                                            </div>
+                                            <h2 class="card-prod-catalog__title-text">Название товара какое-то очень
+                                                длинное
+                                            </h2>
+                                            <div class="card-prod-catalog__rating-reviews">
+                                                <div class="card-prod-catalog__rating-reviews-wrp">
+                                                    <div class="card-prod-catalog__rating-wrp">
+                                                        <img class="card-prod-catalog__rating-img-dise"
+                                                            src="icon/raitig-img-noactive.svg" alt="рейтинг">
+                                                        <div class="card-prod-catalog__rating-img-activ-wrp">
+                                                            <span class="card-prod-catalog__rating-img-activ"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-prod-catalog__reviews-wrp">
+                                                        <img src="icon/reviews-icon-card-prod-catalog.svg" alt="">
+                                                        <p class="card-prod-catalog__reviews-text">
+                                                            <span>4</span> отзыва
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__buy-price">
+                                                <div>
+                                                    <p class="card-prod-catalog__price">16 398,38 грн</p>
+                                                    <p class="card-prod-catalog__not-available">Нет в наличии</p>
+                                                </div>
+                                                <button class="card-prod-catalog__buy js-btn-buy-card-prod-catalog">
+                                                    <img class="card-prod-catalog__buy-img"
+                                                        src="icon/header-basket-icon.svg" alt="buy">
+                                                    <p class="card-prod-catalog__buy-text">Купить</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card-prod-catalog">
+                                        <div class="card-prod-catalog__wrp">
+                                            <div>
+                                                <div class="card-prod-catalog__nameplate-sale-wrp"
+                                                    style="display: block;">
+                                                    <p>
+                                                        Акция
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-new-wrp">
+                                                    <p>
+                                                        Новинка
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__icon-wrp">
+                                                <img src="icon/card-product-catalog-comparison-icon.svg" alt="">
+                                                <img src="icon/card-product-catalog-lick-icon.svg" alt="">
+                                            </div>
+                                            <img class="card-prod-catalog__img" src="img/produkt-catalog-img.png"
+                                                alt="Название товара">
+                                            <div class="card-prod-catalog__colors-wrp">
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-red js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-blue js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-black js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-green js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-orange js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-white js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp ">
+                                                    <p class="card-prod-catalog__colors-number">+2</p>
+                                                </div>
+                                            </div>
+                                            <h2 class="card-prod-catalog__title-text">Название товара какое-то очень
+                                                длинное
+                                            </h2>
+                                            <div class="card-prod-catalog__rating-reviews">
+                                                <div class="card-prod-catalog__rating-reviews-wrp">
+                                                    <div class="card-prod-catalog__rating-wrp">
+                                                        <img class="card-prod-catalog__rating-img-dise"
+                                                            src="icon/raitig-img-noactive.svg" alt="рейтинг">
+                                                        <div class="card-prod-catalog__rating-img-activ-wrp">
+                                                            <span class="card-prod-catalog__rating-img-activ"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-prod-catalog__reviews-wrp">
+                                                        <img src="icon/reviews-icon-card-prod-catalog.svg" alt="">
+                                                        <p class="card-prod-catalog__reviews-text">
+                                                            <span>4</span> отзыва
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__buy-price">
+                                                <div>
+                                                    <p class="card-prod-catalog__price">16 398,38 грн</p>
+                                                    <p class="card-prod-catalog__not-available">Нет в наличии</p>
+                                                </div>
+                                                <button class="card-prod-catalog__buy js-btn-buy-card-prod-catalog">
+                                                    <img class="card-prod-catalog__buy-img"
+                                                        src="icon/header-basket-icon.svg" alt="buy">
+                                                    <p class="card-prod-catalog__buy-text">Купить</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card-prod-catalog">
+                                        <div class="card-prod-catalog__wrp">
+                                            <div>
+                                                <div class="card-prod-catalog__nameplate-sale-wrp"
+                                                    style="display: block;">
+                                                    <p>
+                                                        Акция
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-new-wrp">
+                                                    <p>
+                                                        Новинка
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__icon-wrp">
+                                                <img src="icon/card-product-catalog-comparison-icon.svg" alt="">
+                                                <img src="icon/card-product-catalog-lick-icon.svg" alt="">
+                                            </div>
+                                            <img class="card-prod-catalog__img" src="img/produkt-catalog-img.png"
+                                                alt="Название товара">
+                                            <div class="card-prod-catalog__colors-wrp">
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-red js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-blue js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-black js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-green js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-orange js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-white js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp ">
+                                                    <p class="card-prod-catalog__colors-number">+2</p>
+                                                </div>
+                                            </div>
+                                            <h2 class="card-prod-catalog__title-text">Название товара какое-то очень
+                                                длинное
+                                            </h2>
+                                            <div class="card-prod-catalog__rating-reviews">
+                                                <div class="card-prod-catalog__rating-reviews-wrp">
+                                                    <div class="card-prod-catalog__rating-wrp">
+                                                        <img class="card-prod-catalog__rating-img-dise"
+                                                            src="icon/raitig-img-noactive.svg" alt="рейтинг">
+                                                        <div class="card-prod-catalog__rating-img-activ-wrp">
+                                                            <span class="card-prod-catalog__rating-img-activ"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-prod-catalog__reviews-wrp">
+                                                        <img src="icon/reviews-icon-card-prod-catalog.svg" alt="">
+                                                        <p class="card-prod-catalog__reviews-text">
+                                                            <span>4</span> отзыва
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__buy-price">
+                                                <div>
+                                                    <p class="card-prod-catalog__price">16 398,38 грн</p>
+                                                    <p class="card-prod-catalog__not-available">Нет в наличии</p>
+                                                </div>
+                                                <button class="card-prod-catalog__buy js-btn-buy-card-prod-catalog">
+                                                    <img class="card-prod-catalog__buy-img"
+                                                        src="icon/header-basket-icon.svg" alt="buy">
+                                                    <p class="card-prod-catalog__buy-text">Купить</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card-prod-catalog">
+                                        <div class="card-prod-catalog__wrp">
+                                            <div>
+                                                <div class="card-prod-catalog__nameplate-sale-wrp"
+                                                    style="display: block;">
+                                                    <p>
+                                                        Акция
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-new-wrp">
+                                                    <p>
+                                                        Новинка
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__icon-wrp">
+                                                <img src="icon/card-product-catalog-comparison-icon.svg" alt="">
+                                                <img src="icon/card-product-catalog-lick-icon.svg" alt="">
+                                            </div>
+                                            <img class="card-prod-catalog__img" src="img/produkt-catalog-img.png"
+                                                alt="Название товара">
+                                            <div class="card-prod-catalog__colors-wrp">
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-red js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-blue js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-black js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-green js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-orange js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-white js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp ">
+                                                    <p class="card-prod-catalog__colors-number">+2</p>
+                                                </div>
+                                            </div>
+                                            <h2 class="card-prod-catalog__title-text">Название товара какое-то очень
+                                                длинное
+                                            </h2>
+                                            <div class="card-prod-catalog__rating-reviews">
+                                                <div class="card-prod-catalog__rating-reviews-wrp">
+                                                    <div class="card-prod-catalog__rating-wrp">
+                                                        <img class="card-prod-catalog__rating-img-dise"
+                                                            src="icon/raitig-img-noactive.svg" alt="рейтинг">
+                                                        <div class="card-prod-catalog__rating-img-activ-wrp">
+                                                            <span class="card-prod-catalog__rating-img-activ"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-prod-catalog__reviews-wrp">
+                                                        <img src="icon/reviews-icon-card-prod-catalog.svg" alt="">
+                                                        <p class="card-prod-catalog__reviews-text">
+                                                            <span>4</span> отзыва
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__buy-price">
+                                                <div>
+                                                    <p class="card-prod-catalog__price">16 398,38 грн</p>
+                                                    <p class="card-prod-catalog__not-available">Нет в наличии</p>
+                                                </div>
+                                                <button class="card-prod-catalog__buy js-btn-buy-card-prod-catalog">
+                                                    <img class="card-prod-catalog__buy-img"
+                                                        src="icon/header-basket-icon.svg" alt="buy">
+                                                    <p class="card-prod-catalog__buy-text">Купить</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card-prod-catalog">
+                                        <div class="card-prod-catalog__wrp">
+                                            <div>
+                                                <div class="card-prod-catalog__nameplate-top-wrp">
+                                                    <p>
+                                                        Топ продаж
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-sale-wrp">
+                                                    <p>
+                                                        Акция
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-new-wrp">
+                                                    <p>
+                                                        Новинка
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__icon-wrp">
+                                                <img src="icon/card-product-catalog-comparison-icon.svg" alt="">
+                                                <img src="icon/card-product-catalog-lick-icon.svg" alt="">
+                                            </div>
+                                            <img class="card-prod-catalog__img" src="img/produkt-catalog-img.png"
+                                                alt="Название товара">
+                                            <div class="card-prod-catalog__colors-wrp">
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-red js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-blue js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-black js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-green js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-orange js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-white js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp ">
+                                                    <p class="card-prod-catalog__colors-number">+2</p>
+                                                </div>
+                                            </div>
+                                            <h2 class="card-prod-catalog__title-text">Название товара какое-то очень
+                                                длинное
+                                            </h2>
+                                            <div class="card-prod-catalog__rating-reviews">
+                                                <div class="card-prod-catalog__rating-reviews-wrp">
+                                                    <div class="card-prod-catalog__rating-wrp">
+                                                        <img class="card-prod-catalog__rating-img-dise"
+                                                            src="icon/raitig-img-noactive.svg" alt="рейтинг">
+                                                        <div class="card-prod-catalog__rating-img-activ-wrp">
+                                                            <span class="card-prod-catalog__rating-img-activ"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-prod-catalog__reviews-wrp">
+                                                        <img src="icon/reviews-icon-card-prod-catalog.svg" alt="">
+                                                        <p class="card-prod-catalog__reviews-text">
+                                                            <span>4</span> отзыва
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__buy-price">
+                                                <div>
+                                                    <p class="card-prod-catalog__price">16 398,38 грн</p>
+                                                    <p class="card-prod-catalog__not-available">Нет в наличии</p>
+                                                </div>
+                                                <button class="card-prod-catalog__buy js-btn-buy-card-prod-catalog">
+                                                    <img class="card-prod-catalog__buy-img"
+                                                        src="icon/header-basket-icon.svg" alt="buy">
+                                                    <p class="card-prod-catalog__buy-text">Купить</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card-prod-catalog">
+                                        <div class="card-prod-catalog__wrp">
+                                            <div>
+                                                <div class="card-prod-catalog__nameplate-top-wrp">
+                                                    <p>
+                                                        Топ продаж
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-sale-wrp">
+                                                    <p>
+                                                        Акция
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-new-wrp">
+                                                    <p>
+                                                        Новинка
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__icon-wrp">
+                                                <img src="icon/card-product-catalog-comparison-icon.svg" alt="">
+                                                <img src="icon/card-product-catalog-lick-icon.svg" alt="">
+                                            </div>
+                                            <img class="card-prod-catalog__img" src="img/produkt-catalog-img.png"
+                                                alt="Название товара">
+                                            <div class="card-prod-catalog__colors-wrp">
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-red js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-blue js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-black js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-green js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-orange js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-white js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp ">
+                                                    <p class="card-prod-catalog__colors-number">+2</p>
+                                                </div>
+                                            </div>
+                                            <h2 class="card-prod-catalog__title-text">Название товара какое-то очень
+                                                длинное
+                                            </h2>
+                                            <div class="card-prod-catalog__rating-reviews">
+                                                <div class="card-prod-catalog__rating-reviews-wrp">
+                                                    <div class="card-prod-catalog__rating-wrp">
+                                                        <img class="card-prod-catalog__rating-img-dise"
+                                                            src="icon/raitig-img-noactive.svg" alt="рейтинг">
+                                                        <div class="card-prod-catalog__rating-img-activ-wrp">
+                                                            <span class="card-prod-catalog__rating-img-activ"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-prod-catalog__reviews-wrp">
+                                                        <img src="icon/reviews-icon-card-prod-catalog.svg" alt="">
+                                                        <p class="card-prod-catalog__reviews-text">
+                                                            <span>4</span> отзыва
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__buy-price">
+                                                <div>
+                                                    <p class="card-prod-catalog__price">16 398,38 грн</p>
+                                                    <p class="card-prod-catalog__not-available">Нет в наличии</p>
+                                                </div>
+                                                <button class="card-prod-catalog__buy js-btn-buy-card-prod-catalog">
+                                                    <img class="card-prod-catalog__buy-img"
+                                                        src="icon/header-basket-icon.svg" alt="buy">
+                                                    <p class="card-prod-catalog__buy-text">Купить</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card-prod-catalog">
+                                        <div class="card-prod-catalog__wrp">
+                                            <div>
+                                                <div class="card-prod-catalog__nameplate-top-wrp">
+                                                    <p>
+                                                        Топ продаж
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-sale-wrp">
+                                                    <p>
+                                                        Акция
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-new-wrp">
+                                                    <p>
+                                                        Новинка
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__icon-wrp">
+                                                <img src="icon/card-product-catalog-comparison-icon.svg" alt="">
+                                                <img src="icon/card-product-catalog-lick-icon.svg" alt="">
+                                            </div>
+                                            <img class="card-prod-catalog__img" src="img/produkt-catalog-img.png"
+                                                alt="Название товара">
+                                            <div class="card-prod-catalog__colors-wrp">
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-red js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-blue js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-black js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-green js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-orange js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-white js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp ">
+                                                    <p class="card-prod-catalog__colors-number">+2</p>
+                                                </div>
+                                            </div>
+                                            <h2 class="card-prod-catalog__title-text">Название товара какое-то очень
+                                                длинное
+                                            </h2>
+                                            <div class="card-prod-catalog__rating-reviews">
+                                                <div class="card-prod-catalog__rating-reviews-wrp">
+                                                    <div class="card-prod-catalog__rating-wrp">
+                                                        <img class="card-prod-catalog__rating-img-dise"
+                                                            src="icon/raitig-img-noactive.svg" alt="рейтинг">
+                                                        <div class="card-prod-catalog__rating-img-activ-wrp">
+                                                            <span class="card-prod-catalog__rating-img-activ"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-prod-catalog__reviews-wrp">
+                                                        <img src="icon/reviews-icon-card-prod-catalog.svg" alt="">
+                                                        <p class="card-prod-catalog__reviews-text">
+                                                            <span>4</span> отзыва
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__buy-price">
+                                                <div>
+                                                    <p class="card-prod-catalog__price">16 398,38 грн</p>
+                                                    <p class="card-prod-catalog__not-available">Нет в наличии</p>
+                                                </div>
+                                                <button class="card-prod-catalog__buy js-btn-buy-card-prod-catalog">
+                                                    <img class="card-prod-catalog__buy-img"
+                                                        src="icon/header-basket-icon.svg" alt="buy">
+                                                    <p class="card-prod-catalog__buy-text">Купить</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card-prod-catalog">
+                                        <div class="card-prod-catalog__wrp">
+                                            <div>
+                                                <div class="card-prod-catalog__nameplate-top-wrp">
+                                                    <p>
+                                                        Топ продаж
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-sale-wrp">
+                                                    <p>
+                                                        Акция
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-new-wrp">
+                                                    <p>
+                                                        Новинка
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__icon-wrp">
+                                                <img src="icon/card-product-catalog-comparison-icon.svg" alt="">
+                                                <img src="icon/card-product-catalog-lick-icon.svg" alt="">
+                                            </div>
+                                            <img class="card-prod-catalog__img" src="img/produkt-catalog-img.png"
+                                                alt="Название товара">
+                                            <div class="card-prod-catalog__colors-wrp">
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-red js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-blue js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-black js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-green js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-orange js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-white js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp ">
+                                                    <p class="card-prod-catalog__colors-number">+2</p>
+                                                </div>
+                                            </div>
+                                            <h2 class="card-prod-catalog__title-text">Название товара какое-то очень
+                                                длинное
+                                            </h2>
+                                            <div class="card-prod-catalog__rating-reviews">
+                                                <div class="card-prod-catalog__rating-reviews-wrp">
+                                                    <div class="card-prod-catalog__rating-wrp">
+                                                        <img class="card-prod-catalog__rating-img-dise"
+                                                            src="icon/raitig-img-noactive.svg" alt="рейтинг">
+                                                        <div class="card-prod-catalog__rating-img-activ-wrp">
+                                                            <span class="card-prod-catalog__rating-img-activ"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-prod-catalog__reviews-wrp">
+                                                        <img src="icon/reviews-icon-card-prod-catalog.svg" alt="">
+                                                        <p class="card-prod-catalog__reviews-text">
+                                                            <span>4</span> отзыва
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__buy-price">
+                                                <div>
+                                                    <p class="card-prod-catalog__price">16 398,38 грн</p>
+                                                    <p class="card-prod-catalog__not-available">Нет в наличии</p>
+                                                </div>
+                                                <button class="card-prod-catalog__buy js-btn-buy-card-prod-catalog">
+                                                    <img class="card-prod-catalog__buy-img"
+                                                        src="icon/header-basket-icon.svg" alt="buy">
+                                                    <p class="card-prod-catalog__buy-text">Купить</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="main-page-product__carousel-top-nav-wrp">
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-pagination main-page-product__carousel-top-pagination "></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-page-product__carousel js-product-slider-content">
+                    <div class="main-page-product__carousel-top-wrp">
+                        <!-- Slider main container -->
+                        <div class="swiper main-page-product__carousel-top">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <div class="card-prod-catalog">
+                                        <div class="card-prod-catalog__wrp">
+                                            <div>
+                                                <!-- <div class="card-prod-catalog__nameplate-top-wrp">
+                                                    <p>
+                                                        Топ продаж
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-sale-wrp">
+                                                    <p>
+                                                        Акция
+                                                    </p>
+                                                </div> -->
+                                                <div style="display: block;"
+                                                    class="card-prod-catalog__nameplate-new-wrp">
+                                                    <p>
+                                                        Новинка
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__icon-wrp">
+                                                <img src="icon/card-product-catalog-comparison-icon.svg" alt="">
+                                                <img src="icon/card-product-catalog-lick-icon.svg" alt="">
+                                            </div>
+                                            <img class="card-prod-catalog__img" src="img/produkt-catalog-img.png"
+                                                alt="Название товара">
+                                            <div class="card-prod-catalog__colors-wrp">
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-red js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-blue js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-black js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-green js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-orange js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-white js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp ">
+                                                    <p class="card-prod-catalog__colors-number">+2</p>
+                                                </div>
+                                            </div>
+                                            <h2 class="card-prod-catalog__title-text">Название товара какое-то очень
+                                                длинное
+                                            </h2>
+                                            <div class="card-prod-catalog__rating-reviews">
+                                                <div class="card-prod-catalog__rating-reviews-wrp">
+                                                    <div class="card-prod-catalog__rating-wrp">
+                                                        <img class="card-prod-catalog__rating-img-dise"
+                                                            src="icon/raitig-img-noactive.svg" alt="рейтинг">
+                                                        <div class="card-prod-catalog__rating-img-activ-wrp">
+                                                            <span class="card-prod-catalog__rating-img-activ"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-prod-catalog__reviews-wrp">
+                                                        <img src="icon/reviews-icon-card-prod-catalog.svg" alt="">
+                                                        <p class="card-prod-catalog__reviews-text">
+                                                            <span>4</span> отзыва
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__buy-price">
+                                                <div>
+                                                    <p class="card-prod-catalog__price">16 398,38 грн</p>
+                                                    <p class="card-prod-catalog__not-available">Нет в наличии</p>
+                                                </div>
+                                                <button class="card-prod-catalog__buy js-btn-buy-card-prod-catalog">
+                                                    <img class="card-prod-catalog__buy-img"
+                                                        src="icon/header-basket-icon.svg" alt="buy">
+                                                    <p class="card-prod-catalog__buy-text">Купить</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card-prod-catalog">
+                                        <div class="card-prod-catalog__wrp">
+                                            <div>
+                                                <!-- <div class="card-prod-catalog__nameplate-top-wrp">
+                                                    <p>
+                                                        Топ продаж
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-sale-wrp">
+                                                    <p>
+                                                        Акция
+                                                    </p>
+                                                </div> -->
+                                                <div style="display: block;"
+                                                    class="card-prod-catalog__nameplate-new-wrp">
+                                                    <p>
+                                                        Новинка
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__icon-wrp">
+                                                <img src="icon/card-product-catalog-comparison-icon.svg" alt="">
+                                                <img src="icon/card-product-catalog-lick-icon.svg" alt="">
+                                            </div>
+                                            <img class="card-prod-catalog__img" src="img/produkt-catalog-img.png"
+                                                alt="Название товара">
+                                            <div class="card-prod-catalog__colors-wrp">
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-red js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-blue js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-black js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-green js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-orange js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-white js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp ">
+                                                    <p class="card-prod-catalog__colors-number">+2</p>
+                                                </div>
+                                            </div>
+                                            <h2 class="card-prod-catalog__title-text">Название товара какое-то очень
+                                                длинное
+                                            </h2>
+                                            <div class="card-prod-catalog__rating-reviews">
+                                                <div class="card-prod-catalog__rating-reviews-wrp">
+                                                    <div class="card-prod-catalog__rating-wrp">
+                                                        <img class="card-prod-catalog__rating-img-dise"
+                                                            src="icon/raitig-img-noactive.svg" alt="рейтинг">
+                                                        <div class="card-prod-catalog__rating-img-activ-wrp">
+                                                            <span class="card-prod-catalog__rating-img-activ"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-prod-catalog__reviews-wrp">
+                                                        <img src="icon/reviews-icon-card-prod-catalog.svg" alt="">
+                                                        <p class="card-prod-catalog__reviews-text">
+                                                            <span>4</span> отзыва
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__buy-price">
+                                                <div>
+                                                    <p class="card-prod-catalog__price">16 398,38 грн</p>
+                                                    <p class="card-prod-catalog__not-available">Нет в наличии</p>
+                                                </div>
+                                                <button class="card-prod-catalog__buy js-btn-buy-card-prod-catalog">
+                                                    <img class="card-prod-catalog__buy-img"
+                                                        src="icon/header-basket-icon.svg" alt="buy">
+                                                    <p class="card-prod-catalog__buy-text">Купить</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card-prod-catalog">
+                                        <div class="card-prod-catalog__wrp">
+                                            <div>
+                                                <!-- <div class="card-prod-catalog__nameplate-top-wrp">
+                                                    <p>
+                                                        Топ продаж
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-sale-wrp">
+                                                    <p>
+                                                        Акция
+                                                    </p>
+                                                </div> -->
+                                                <div style="display: block;"
+                                                    class="card-prod-catalog__nameplate-new-wrp">
+                                                    <p>
+                                                        Новинка
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__icon-wrp">
+                                                <img src="icon/card-product-catalog-comparison-icon.svg" alt="">
+                                                <img src="icon/card-product-catalog-lick-icon.svg" alt="">
+                                            </div>
+                                            <img class="card-prod-catalog__img" src="img/produkt-catalog-img.png"
+                                                alt="Название товара">
+                                            <div class="card-prod-catalog__colors-wrp">
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-red js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-blue js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-black js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-green js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-orange js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-white js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp ">
+                                                    <p class="card-prod-catalog__colors-number">+2</p>
+                                                </div>
+                                            </div>
+                                            <h2 class="card-prod-catalog__title-text">Название товара какое-то очень
+                                                длинное
+                                            </h2>
+                                            <div class="card-prod-catalog__rating-reviews">
+                                                <div class="card-prod-catalog__rating-reviews-wrp">
+                                                    <div class="card-prod-catalog__rating-wrp">
+                                                        <img class="card-prod-catalog__rating-img-dise"
+                                                            src="icon/raitig-img-noactive.svg" alt="рейтинг">
+                                                        <div class="card-prod-catalog__rating-img-activ-wrp">
+                                                            <span class="card-prod-catalog__rating-img-activ"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-prod-catalog__reviews-wrp">
+                                                        <img src="icon/reviews-icon-card-prod-catalog.svg" alt="">
+                                                        <p class="card-prod-catalog__reviews-text">
+                                                            <span>4</span> отзыва
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__buy-price">
+                                                <div>
+                                                    <p class="card-prod-catalog__price">16 398,38 грн</p>
+                                                    <p class="card-prod-catalog__not-available">Нет в наличии</p>
+                                                </div>
+                                                <button class="card-prod-catalog__buy js-btn-buy-card-prod-catalog">
+                                                    <img class="card-prod-catalog__buy-img"
+                                                        src="icon/header-basket-icon.svg" alt="buy">
+                                                    <p class="card-prod-catalog__buy-text">Купить</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card-prod-catalog">
+                                        <div class="card-prod-catalog__wrp">
+                                            <div>
+                                                <!-- <div class="card-prod-catalog__nameplate-top-wrp">
+                                                    <p>
+                                                        Топ продаж
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-sale-wrp">
+                                                    <p>
+                                                        Акция
+                                                    </p>
+                                                </div> -->
+                                                <div style="display: block;"
+                                                    class="card-prod-catalog__nameplate-new-wrp">
+                                                    <p>
+                                                        Новинка
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__icon-wrp">
+                                                <img src="icon/card-product-catalog-comparison-icon.svg" alt="">
+                                                <img src="icon/card-product-catalog-lick-icon.svg" alt="">
+                                            </div>
+                                            <img class="card-prod-catalog__img" src="img/produkt-catalog-img.png"
+                                                alt="Название товара">
+                                            <div class="card-prod-catalog__colors-wrp">
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-red js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-blue js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-black js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-green js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-orange js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-white js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp ">
+                                                    <p class="card-prod-catalog__colors-number">+2</p>
+                                                </div>
+                                            </div>
+                                            <h2 class="card-prod-catalog__title-text">Название товара какое-то очень
+                                                длинное
+                                            </h2>
+                                            <div class="card-prod-catalog__rating-reviews">
+                                                <div class="card-prod-catalog__rating-reviews-wrp">
+                                                    <div class="card-prod-catalog__rating-wrp">
+                                                        <img class="card-prod-catalog__rating-img-dise"
+                                                            src="icon/raitig-img-noactive.svg" alt="рейтинг">
+                                                        <div class="card-prod-catalog__rating-img-activ-wrp">
+                                                            <span class="card-prod-catalog__rating-img-activ"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-prod-catalog__reviews-wrp">
+                                                        <img src="icon/reviews-icon-card-prod-catalog.svg" alt="">
+                                                        <p class="card-prod-catalog__reviews-text">
+                                                            <span>4</span> отзыва
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__buy-price">
+                                                <div>
+                                                    <p class="card-prod-catalog__price">16 398,38 грн</p>
+                                                    <p class="card-prod-catalog__not-available">Нет в наличии</p>
+                                                </div>
+                                                <button class="card-prod-catalog__buy js-btn-buy-card-prod-catalog">
+                                                    <img class="card-prod-catalog__buy-img"
+                                                        src="icon/header-basket-icon.svg" alt="buy">
+                                                    <p class="card-prod-catalog__buy-text">Купить</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card-prod-catalog">
+                                        <div class="card-prod-catalog__wrp">
+                                            <div>
+                                                <div class="card-prod-catalog__nameplate-top-wrp">
+                                                    <p>
+                                                        Топ продаж
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-sale-wrp">
+                                                    <p>
+                                                        Акция
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-new-wrp">
+                                                    <p>
+                                                        Новинка
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__icon-wrp">
+                                                <img src="icon/card-product-catalog-comparison-icon.svg" alt="">
+                                                <img src="icon/card-product-catalog-lick-icon.svg" alt="">
+                                            </div>
+                                            <img class="card-prod-catalog__img" src="img/produkt-catalog-img.png"
+                                                alt="Название товара">
+                                            <div class="card-prod-catalog__colors-wrp">
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-red js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-blue js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-black js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-green js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-orange js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-white js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp ">
+                                                    <p class="card-prod-catalog__colors-number">+2</p>
+                                                </div>
+                                            </div>
+                                            <h2 class="card-prod-catalog__title-text">Название товара какое-то очень
+                                                длинное
+                                            </h2>
+                                            <div class="card-prod-catalog__rating-reviews">
+                                                <div class="card-prod-catalog__rating-reviews-wrp">
+                                                    <div class="card-prod-catalog__rating-wrp">
+                                                        <img class="card-prod-catalog__rating-img-dise"
+                                                            src="icon/raitig-img-noactive.svg" alt="рейтинг">
+                                                        <div class="card-prod-catalog__rating-img-activ-wrp">
+                                                            <span class="card-prod-catalog__rating-img-activ"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-prod-catalog__reviews-wrp">
+                                                        <img src="icon/reviews-icon-card-prod-catalog.svg" alt="">
+                                                        <p class="card-prod-catalog__reviews-text">
+                                                            <span>4</span> отзыва
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__buy-price">
+                                                <div>
+                                                    <p class="card-prod-catalog__price">16 398,38 грн</p>
+                                                    <p class="card-prod-catalog__not-available">Нет в наличии</p>
+                                                </div>
+                                                <button class="card-prod-catalog__buy js-btn-buy-card-prod-catalog">
+                                                    <img class="card-prod-catalog__buy-img"
+                                                        src="icon/header-basket-icon.svg" alt="buy">
+                                                    <p class="card-prod-catalog__buy-text">Купить</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card-prod-catalog">
+                                        <div class="card-prod-catalog__wrp">
+                                            <div>
+                                                <div class="card-prod-catalog__nameplate-top-wrp">
+                                                    <p>
+                                                        Топ продаж
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-sale-wrp">
+                                                    <p>
+                                                        Акция
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-new-wrp">
+                                                    <p>
+                                                        Новинка
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__icon-wrp">
+                                                <img src="icon/card-product-catalog-comparison-icon.svg" alt="">
+                                                <img src="icon/card-product-catalog-lick-icon.svg" alt="">
+                                            </div>
+                                            <img class="card-prod-catalog__img" src="img/produkt-catalog-img.png"
+                                                alt="Название товара">
+                                            <div class="card-prod-catalog__colors-wrp">
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-red js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-blue js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-black js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-green js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-orange js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-white js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp ">
+                                                    <p class="card-prod-catalog__colors-number">+2</p>
+                                                </div>
+                                            </div>
+                                            <h2 class="card-prod-catalog__title-text">Название товара какое-то очень
+                                                длинное
+                                            </h2>
+                                            <div class="card-prod-catalog__rating-reviews">
+                                                <div class="card-prod-catalog__rating-reviews-wrp">
+                                                    <div class="card-prod-catalog__rating-wrp">
+                                                        <img class="card-prod-catalog__rating-img-dise"
+                                                            src="icon/raitig-img-noactive.svg" alt="рейтинг">
+                                                        <div class="card-prod-catalog__rating-img-activ-wrp">
+                                                            <span class="card-prod-catalog__rating-img-activ"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-prod-catalog__reviews-wrp">
+                                                        <img src="icon/reviews-icon-card-prod-catalog.svg" alt="">
+                                                        <p class="card-prod-catalog__reviews-text">
+                                                            <span>4</span> отзыва
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__buy-price">
+                                                <div>
+                                                    <p class="card-prod-catalog__price">16 398,38 грн</p>
+                                                    <p class="card-prod-catalog__not-available">Нет в наличии</p>
+                                                </div>
+                                                <button class="card-prod-catalog__buy js-btn-buy-card-prod-catalog">
+                                                    <img class="card-prod-catalog__buy-img"
+                                                        src="icon/header-basket-icon.svg" alt="buy">
+                                                    <p class="card-prod-catalog__buy-text">Купить</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card-prod-catalog">
+                                        <div class="card-prod-catalog__wrp">
+                                            <div>
+                                                <div class="card-prod-catalog__nameplate-top-wrp">
+                                                    <p>
+                                                        Топ продаж
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-sale-wrp">
+                                                    <p>
+                                                        Акция
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-new-wrp">
+                                                    <p>
+                                                        Новинка
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__icon-wrp">
+                                                <img src="icon/card-product-catalog-comparison-icon.svg" alt="">
+                                                <img src="icon/card-product-catalog-lick-icon.svg" alt="">
+                                            </div>
+                                            <img class="card-prod-catalog__img" src="img/produkt-catalog-img.png"
+                                                alt="Название товара">
+                                            <div class="card-prod-catalog__colors-wrp">
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-red js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-blue js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-black js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-green js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-orange js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-white js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp ">
+                                                    <p class="card-prod-catalog__colors-number">+2</p>
+                                                </div>
+                                            </div>
+                                            <h2 class="card-prod-catalog__title-text">Название товара какое-то очень
+                                                длинное
+                                            </h2>
+                                            <div class="card-prod-catalog__rating-reviews">
+                                                <div class="card-prod-catalog__rating-reviews-wrp">
+                                                    <div class="card-prod-catalog__rating-wrp">
+                                                        <img class="card-prod-catalog__rating-img-dise"
+                                                            src="icon/raitig-img-noactive.svg" alt="рейтинг">
+                                                        <div class="card-prod-catalog__rating-img-activ-wrp">
+                                                            <span class="card-prod-catalog__rating-img-activ"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-prod-catalog__reviews-wrp">
+                                                        <img src="icon/reviews-icon-card-prod-catalog.svg" alt="">
+                                                        <p class="card-prod-catalog__reviews-text">
+                                                            <span>4</span> отзыва
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__buy-price">
+                                                <div>
+                                                    <p class="card-prod-catalog__price">16 398,38 грн</p>
+                                                    <p class="card-prod-catalog__not-available">Нет в наличии</p>
+                                                </div>
+                                                <button class="card-prod-catalog__buy js-btn-buy-card-prod-catalog">
+                                                    <img class="card-prod-catalog__buy-img"
+                                                        src="icon/header-basket-icon.svg" alt="buy">
+                                                    <p class="card-prod-catalog__buy-text">Купить</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card-prod-catalog">
+                                        <div class="card-prod-catalog__wrp">
+                                            <div>
+                                                <div class="card-prod-catalog__nameplate-top-wrp">
+                                                    <p>
+                                                        Топ продаж
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-sale-wrp">
+                                                    <p>
+                                                        Акция
+                                                    </p>
+                                                </div>
+                                                <div class="card-prod-catalog__nameplate-new-wrp">
+                                                    <p>
+                                                        Новинка
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__icon-wrp">
+                                                <img src="icon/card-product-catalog-comparison-icon.svg" alt="">
+                                                <img src="icon/card-product-catalog-lick-icon.svg" alt="">
+                                            </div>
+                                            <img class="card-prod-catalog__img" src="img/produkt-catalog-img.png"
+                                                alt="Название товара">
+                                            <div class="card-prod-catalog__colors-wrp">
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-red js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-blue js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-black js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-green js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-orange js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-golden js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                                                    <span
+                                                        class="card-prod-catalog__colors-white js-card-catalog-color-item"></span>
+                                                </div>
+                                                <div class="card-prod-catalog__colors-item-wrp ">
+                                                    <p class="card-prod-catalog__colors-number">+2</p>
+                                                </div>
+                                            </div>
+                                            <h2 class="card-prod-catalog__title-text">Название товара какое-то очень
+                                                длинное
+                                            </h2>
+                                            <div class="card-prod-catalog__rating-reviews">
+                                                <div class="card-prod-catalog__rating-reviews-wrp">
+                                                    <div class="card-prod-catalog__rating-wrp">
+                                                        <img class="card-prod-catalog__rating-img-dise"
+                                                            src="icon/raitig-img-noactive.svg" alt="рейтинг">
+                                                        <div class="card-prod-catalog__rating-img-activ-wrp">
+                                                            <span class="card-prod-catalog__rating-img-activ"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-prod-catalog__reviews-wrp">
+                                                        <img src="icon/reviews-icon-card-prod-catalog.svg" alt="">
+                                                        <p class="card-prod-catalog__reviews-text">
+                                                            <span>4</span> отзыва
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-prod-catalog__buy-price">
+                                                <div>
+                                                    <p class="card-prod-catalog__price">16 398,38 грн</p>
+                                                    <p class="card-prod-catalog__not-available">Нет в наличии</p>
+                                                </div>
+                                                <button class="card-prod-catalog__buy js-btn-buy-card-prod-catalog">
+                                                    <img class="card-prod-catalog__buy-img"
+                                                        src="icon/header-basket-icon.svg" alt="buy">
+                                                    <p class="card-prod-catalog__buy-text">Купить</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="main-page-product__carousel-top-nav-wrp">
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-pagination main-page-product__carousel-top-pagination "></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- do not delete, this is a blur !!!!!!!!!!!!!!! Should be on every page-->
-        <div class="js-clacc-blur">
-        </div>
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     </main>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <div class="js-clacc-blur">
+    </div>
+
 </body>

@@ -1,0 +1,110 @@
+.main-page-product {
+  @include padding-mob;
+  &__title-text-wrp {
+    margin-bottom: 60px;
+    column-gap: 12px;
+    @include text(
+      $size: 20px,
+      $textAlign: center,
+      $fontWeight: 600,
+      $lineHeight: 32px
+    );
+    text-transform: uppercase;
+    @extend %centre-flex;
+    @include __860 {
+      @include text($size: 16px, $lineHeight: 24px);
+    }
+  }
+  &__title-text-item {
+    min-width: 204px;
+    cursor: pointer;
+    @include __860 {
+      min-width: auto;
+    }
+  }
+  &__title-text {
+    padding: 12px 20px;
+    @include __860 {
+      padding: 4px;
+    }
+  }
+  &__title-line {
+    width: 0;
+    height: 2px;
+    display: flex;
+    background-color: $color-red;
+    border-radius: 8px;
+    transition: 0.3s ease-out;
+    &.active {
+      width: 100%;
+      transition: 0.3s ease-in;
+    }
+  }
+  &__carousel {
+    max-width: 1344px;
+    width: 100%;
+    @extend %size-page;
+    margin-bottom: 80px;
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  &__carousel-top-pagination {
+    &.swiper-pagination {
+      padding-top: 40px;
+      position: relative;
+      display: contents;
+      @include text(
+        $size: 16px,
+        $textAlign: center,
+        $fontWeight: 700,
+        $lineHeight: 20px
+      );
+    }
+    & .swiper-pagination-bullet {
+      padding-right: 16px;
+      background: $color-white;
+      color: $color-black;
+      opacity: 1;
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+    & .swiper-pagination-bullet-active {
+      background: $color-white;
+      color: $color-red;
+    }
+  }
+  &__carousel-top-wrp {
+    & .card-prod-catalog__wrp {
+      @extend %centre-marg;
+    }
+  }
+  &__carousel-top-nav-wrp {
+    height: 40px;
+    @extend %centre-flex;
+    & > .swiper-button-prev,
+    .swiper-button-next {
+      position: relative;
+    }
+    & > .swiper-button-prev {
+      left: -25px;
+    }
+    & > .swiper-button-next {
+      right: -16px;
+    }
+    & > .swiper-button-next::before {
+      width: 30px;
+      height: 44px;
+      background-image: url("../icon/arrow-main-porduct-slider-right.svg");
+      background-repeat: no-repeat;
+    }
+    & > .swiper-button-prev::before {
+      width: 30px;
+      height: 44px;
+      background-image: url("../icon/arrow-main-porduct-slider-left.svg");
+      background-repeat: no-repeat;
+    }
+  }
+}
