@@ -10,9 +10,12 @@ window.onload = function () {
     const mainCont = document.querySelector('.js-main');
     const blurMenu = document.querySelector('.js-clacc-blur');
 
-    console.log(window.getComputedStyle(bodyCont, null).height);
+    if(blurMenu != null) {
     window.getComputedStyle(blurMenu).getPropertyValue('--height-page');
     blurMenu.style.setProperty('--height-page', (bodyCont.scrollHeight * 1.5) + 'px');
+    } 
+
+    
     
     let widthScreen = window.innerWidth;
     let hidthSizePage = document.documentElement.clientHeight;
@@ -197,30 +200,34 @@ window.onload = function () {
         }
     }
     //слайдер swiper
-    const mainSlider =  new Swiper('.main-slider', {
-        //Стрелки
-        navigation: {
-            // nextEl: '.btn-next',
-            // prevEl: '.btn-prev'
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        //Навигация
-        //пргресс бар
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-            spaceBetween: 10,
-            // dynamicBullets: true,
-        },
-        grabCursor: true,
-        loop: true,
-        autoplay: {
-            delay: 5000,
-            stopOnLastSlide: true,
-            disableOnInteraction: true,
-        }
-    });
+    const sliderWrpMainPage = document.querySelector('.main-slider');
+    if(sliderWrpMainPage != null) {
+        const mainSlider =  new Swiper('.main-slider', {
+            //Стрелки
+            navigation: {
+                // nextEl: '.btn-next',
+                // prevEl: '.btn-prev'
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            //Навигация
+            //пргресс бар
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                spaceBetween: 10,
+                // dynamicBullets: true,
+            },
+            grabCursor: true,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                stopOnLastSlide: true,
+                disableOnInteraction: true,
+            }
+        });
+    }
+    
 
     //кнопки слайдера их растояние от экрана 
 

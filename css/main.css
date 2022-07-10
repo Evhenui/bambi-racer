@@ -128,7 +128,7 @@ label {
   --my-variable-hiadth: 10px;
 }
 
-.header__btn-catalog-wrp, .header__btn-catalog, .header__search-form-wrp, .header__right-item, .header__right-item-phone, .header__menu-work-time-timeline-mob, .main-slider .wrp-cont, .card-prod-catalog__img, .card-prod-catalog__reviews-wrp, .card-prod-catalog__rating-reviews-wrp, .card-prod-catalog__colors-item-wrp, .main-page-product__title-text-wrp, .main-page-product__carousel-top-nav-wrp {
+.header__btn-catalog-wrp, .header__btn-catalog, .header__search-form-wrp, .header__right-item, .header__right-item-phone, .header__menu-work-time-timeline-mob, .search-modal__text-wrp, .search-modal__total-text, .main-slider .wrp-cont, .card-prod-catalog__img, .card-prod-catalog__reviews-wrp, .card-prod-catalog__rating-reviews-wrp, .card-prod-catalog__colors-item-wrp, .main-page-product__title-text-wrp, .main-page-product__carousel-top-nav-wrp {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -140,7 +140,7 @@ label {
           justify-content: center;
 }
 
-.header__menu-work-time-timeline {
+.header__menu-work-time-timeline, .main-page-about-company__text-wrp {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -171,7 +171,7 @@ label {
   margin-right: auto;
 }
 
-.header__wrp, .header__wrp-left-cont, .header__languages-wrp, .header__wrp-right-cont, .header__catalog-item-wrp, .header__menu-item-link, .header__menu-name-categoty-wrp, .header__menu-work-time-timeline-wrp, .header__menu-social, .header__phone-menu-schedule, .header__phone-menu-schedule-link, .header__menu-personal-wrp, .header__menu-personal-login, .header__menu-personal-basket, .header__menu-personal-comparison, .footer-content, .footer-content__social-wrp, .footer-special-documents__wrp, .card-prod-catalog__colors-wrp, .card-prod-catalog__buy-price, .card-prod-catalog__buy {
+.header__wrp, .header__wrp-left-cont, .header__languages-wrp, .header__wrp-right-cont, .header__catalog-item-wrp, .header__menu-item-link, .header__menu-name-categoty-wrp, .header__menu-work-time-timeline-wrp, .header__menu-social, .header__phone-menu-schedule, .header__phone-menu-schedule-link, .header__menu-personal-wrp, .header__menu-personal-login, .header__menu-personal-basket, .header__menu-personal-comparison, .search-modal__item-wrp, .footer-content, .footer-content__social-wrp, .footer-special-documents__wrp, .card-prod-catalog__colors-wrp, .card-prod-catalog__buy-price, .card-prod-catalog__buy {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -183,14 +183,14 @@ label {
           align-items: center;
 }
 
-.footer__wrp, .footer-special-documents__wrp, .main-slider__text-btn, .main-slider__text-btn-wrt, .main-slider__nav-btn-wrp, .main-page-product__carousel {
+.footer__wrp, .footer-special-documents__wrp, .main-slider__text-btn, .main-slider__text-btn-wrt, .main-slider__nav-btn-wrp, .main-page-product__carousel, .main-page-about-company__text-wrp {
   max-width: 1440px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
-.header__wrp, .footer__wrp, .footer-special-documents__wrp, .main-slider__text-btn-wrt {
+.header__wrp, .footer__wrp, .footer-special-documents__wrp, .main-slider__text-btn-wrt, .main-page-about-company__text-wrp {
   padding-left: 48px;
   padding-right: 48px;
 }
@@ -1232,6 +1232,82 @@ label {
   max-width: 74px;
 }
 
+.search-modal {
+  margin-top: 200px;
+  margin-left: 200px;
+  max-width: 558px;
+  width: 100%;
+  font-family: "Mulish", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+  color: #ffffff;
+  background-color: #1a1919;
+  -webkit-filter: drop-shadow(0px 4px 22px rgba(0, 0, 0, 0.1));
+          filter: drop-shadow(0px 4px 22px rgba(0, 0, 0, 0.1));
+}
+
+.search-modal__item-wrp {
+  width: 100%;
+  height: 40px;
+  padding-left: 44px;
+  padding-right: 40px;
+  position: relative;
+  cursor: pointer;
+}
+
+.search-modal__item-wrp:hover > .red-diamonds {
+  opacity: 1;
+}
+
+.search-modal__item-wrp:hover {
+  background-color: #212121;
+}
+
+.search-modal__text-wrp {
+  -webkit-column-gap: 12px;
+          column-gap: 12px;
+  position: relative;
+}
+
+.search-modal__text-icon {
+  position: absolute;
+  left: -28px;
+}
+
+.search-modal__text-name {
+  font-family: "Mulish", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+  color: #cecaca;
+}
+
+.search-modal__text-article {
+  font-family: "Mulish", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.search-modal__total-wrp {
+  height: 40px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search-modal__total-text {
+  -webkit-column-gap: 22px;
+          column-gap: 22px;
+}
+
 .footer {
   padding-top: 24px;
   background-color: #090102;
@@ -2075,5 +2151,67 @@ label {
   height: 44px;
   background-image: url("../icon/arrow-main-porduct-slider-left.svg");
   background-repeat: no-repeat;
+}
+
+.main-page-about-company {
+  height: 800px;
+  position: relative;
+  background-color: #1a1919;
+}
+
+.main-page-about-company__text-wrp {
+  height: 100%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: absolute;
+  font-family: "Mulish", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 44px;
+  text-align: left;
+  color: #ffffff;
+}
+
+@media (max-width: 860px) {
+  .main-page-about-company__text-wrp {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.main-page-about-company__text-title {
+  margin-bottom: 56px;
+}
+
+.main-page-about-company__text {
+  max-width: 640px;
+  margin-bottom: 40px;
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.main-page-about-company__img-wrp {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.main-page-about-company__img-triangle {
+  width: 116%;
+  height: 200px;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: -95px;
+  left: 0;
+  background-color: #090102;
+  -webkit-transform: rotate(-7deg);
+          transform: rotate(-7deg);
 }
 /*# sourceMappingURL=main.css.map */

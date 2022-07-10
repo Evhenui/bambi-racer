@@ -658,3 +658,65 @@
     max-width: 74px;
   }
 }
+
+.search-modal {
+  // для разработки удалить на проде
+  margin-top: 200px;
+  margin-left: 200px;
+  // !!
+  max-width: 558px;
+  width: 100%;
+  @include text(
+    $textAlign: left,
+    $color: $color-white,
+    $fontWeight: 700,
+    $lineHeight: 24px
+  );
+  background-color: $color-gray-100;
+  filter: drop-shadow(0px 4px 22px rgba(0, 0, 0, 0.1));
+  &__item-wrp {
+    width: 100%;
+    height: 40px;
+    padding-left: 44px;
+    padding-right: 40px;
+    position: relative;
+    cursor: pointer;
+    @extend %centre-space-between;
+    &:hover > .red-diamonds {
+      opacity: 1;
+    }
+    &:hover {
+      background-color: $color-gray-95;
+    }
+  }
+  &__text-wrp {
+    @extend %centre-flex;
+    column-gap: 12px;
+    position: relative;
+  }
+  &__text-icon {
+    position: absolute;
+    left: -28px;
+  }
+  &__text-name {
+    @include text($fontWeight: 400, $color: $color-gray-30);
+  }
+  &__text-article {
+    @include text(
+      $textAlign: left,
+      $color: $color-white,
+      $fontWeight: 700,
+      $lineHeight: 24px
+    );
+  }
+  &__total-wrp {
+    height: 40px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    display: flex;
+  }
+  &__total-text {
+    column-gap: 22px;
+    @extend %centre-flex;
+  }
+}

@@ -108,3 +108,56 @@
     }
   }
 }
+
+.main-page-about-company {
+  height: 800px;
+  position: relative;
+  background-color: $color-gray-100;
+  &__text-wrp {
+    height: 100%;
+    @extend %size-page;
+    @extend %padding-country;
+    @extend %centre-flex-columb;
+    align-items: flex-start;
+    position: absolute;
+    @include text(
+      $size: 32px,
+      $textAlign: left,
+      $color: $color-white,
+      $fontWeight: 600,
+      $lineHeight: 44px
+    );
+    @include __860 {
+      @include padding-mob;
+    }
+  }
+  &__text-title {
+    margin-bottom: 56px;
+  }
+  &__text {
+    max-width: 640px;
+    margin-bottom: 40px;
+    @include text(
+      $size: 16px,
+      $fontWeight: 500,
+      $textAlign: left,
+      $color: $color-white,
+      $lineHeight: 28px
+    );
+  }
+  &__img-wrp {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+  }
+  &__img-triangle {
+    width: 116%;
+    height: 200px;
+    position: absolute;
+    display: flex;
+    bottom: -95px;
+    left: 0;
+    background-color: $color-black;
+    transform: rotate(-7deg);
+  }
+}
