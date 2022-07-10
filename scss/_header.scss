@@ -622,6 +622,7 @@
 .js-clacc-blur {
   &.active {
     height: var(--height-page);
+    // height: 100%;
     backdrop-filter: blur(10px);
     background-color: #03020e3d;
     z-index: 20;

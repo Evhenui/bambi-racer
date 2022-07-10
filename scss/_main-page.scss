@@ -161,3 +161,220 @@
     transform: rotate(-7deg);
   }
 }
+
+.main-page-range {
+  height: 800px;
+  @extend %padding-country;
+  padding-top: 100px;
+  @extend %centre-space-between;
+  background-color: $color-white;
+  @include __860 {
+    @include padding-mob;
+    // margin-right: 16px;
+    height: auto;
+  }
+  &__wrp {
+    @extend %size-page;
+    @extend %centre-space-between;
+    column-gap: 16px;
+    @include __860 {
+      // @include padding-mob;
+      flex-direction: column;
+      height: auto;
+    }
+  }
+  &__slider-wrp {
+    display: flex;
+    @include __640 {
+      transform: rotate(-90deg);
+    }
+  }
+  &__age {
+    min-width: 68px;
+    @include text($textAlign: center, $fontWeight: 700, $lineHeight: 24px);
+  }
+  &__slider-nav {
+    margin-right: 22px;
+    &:first-child {
+      padding-top: 6px;
+    }
+  }
+  &__title-text {
+    margin-bottom: 56px;
+    @include text(
+      $size: 32px,
+      $textAlign: left,
+      $fontWeight: 800,
+      $lineHeight: 44px
+    );
+    @include __860 {
+      margin-bottom: 40px;
+    }
+  }
+  &__text {
+    margin-bottom: 24px;
+    @include text(
+      $size: 16px,
+      $textAlign: left,
+      $fontWeight: 500,
+      $lineHeight: 28px
+    );
+    @include __860 {
+      margin-bottom: 16px;
+    }
+    @include __640 {
+      display: none;
+      &.activ {
+        display: flex;
+      }
+    }
+  }
+  &__text-wrp {
+    max-width: 476px;
+    width: 100%;
+
+    @include __1280 {
+      max-width: 340px;
+    }
+    @include __960 {
+      max-width: 310px;
+    }
+    @include __860 {
+      max-width: 100%;
+    }
+  }
+  &__circle-big {
+    height: 12px;
+    width: 12px;
+    // margin-bottom: 14px;
+    display: flex;
+    position: relative;
+    border-radius: 50%;
+    background-color: $color-red;
+    z-index: 10;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+    &.active {
+      height: 16px;
+      width: 16px;
+      transition: 0.3s ease-in;
+    }
+  }
+  &__circle-smoll-wrp {
+    height: 16px;
+    width: 16px;
+    margin-bottom: 14px;
+    @extend %centre-flex;
+  }
+  &__circle-smoll {
+    height: 6px;
+    width: 6px;
+    display: flex;
+    position: relative;
+    border-radius: 50%;
+    background-color: $color-red;
+    z-index: 10;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+    &.active {
+      height: 10px;
+      width: 10px;
+      transition: 0.3s ease-in;
+    }
+  }
+  &__circle-line {
+    position: absolute;
+    width: 2px;
+    height: 36px;
+    top: -8px;
+    display: flex;
+    background-color: $color-red-20;
+    z-index: 9;
+  }
+  &__img-wrp {
+    width: 100%;
+    column-gap: 16px;
+    @extend %centre-space-between;
+    justify-content: space-around;
+    @include __640 {
+      flex-direction: column;
+    }
+  }
+  &__circle-item-list {
+    position: relative;
+    @extend %centre-flex;
+    &:hover > .js-main-page-range-circle-wrp {
+      opacity: 0.4;
+    }
+  }
+  &__img {
+    max-width: 544px;
+    width: 100%;
+    position: absolute;
+    transition: 0.3s ease-out;
+    opacity: 0;
+    &.active {
+      opacity: 1;
+      transition: 0.3s ease-in;
+    }
+    @include __640 {
+      top: 0;
+      left: 0;
+      right: 0;
+      border: 0;
+    }
+  }
+  &__img-wrp-position {
+    max-width: 544px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    @include __640 {
+      height: 343px;
+    }
+  }
+  &__circle {
+    opacity: 0;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    border: 1px solid $color-red;
+    border-radius: 50%;
+    top: -8px;
+    left: -8px;
+    z-index: 222;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+    &.active {
+      opacity: 1;
+      transition: 0.3s ease-out;
+    }
+  }
+  &__slider-circle {
+    @include __640 {
+      overflow: auto;
+      padding-top: 40px;
+      display: flex;
+    }
+  }
+}
+
+.js-main-page-range {
+  transition: 0.3s ease-in;
+  // &.active {
+  //   &::after {
+  //     content: "";
+  //     width: 32px;
+  //     height: 32px;
+  //     position: absolute;
+  //     border: 1px solid $color-red;
+  //     border-radius: 50%;
+  //     top: -8px;
+  //     left: -8px;
+  //     z-index: 222;
+  //     cursor: pointer;
+  //     transition: 0.3s ease-in;
+  //   }
+  // }
+}

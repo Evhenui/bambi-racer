@@ -4,6 +4,9 @@ import {cardProdCatalog} from './card-prod-catalog.js';
 import {mainPageProductSlider}  from './main-page-product-slider.js';
         mainPageProductSlider()      
 
+import {mainPageRangeFun}  from './main-page-range-slider.js';
+mainPageRangeFun()  
+
 window.onload = function () {
 
     const bodyCont = document.getElementById('body-cont');
