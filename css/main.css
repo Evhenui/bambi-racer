@@ -2217,6 +2217,7 @@ label {
 
 .main-page-range {
   height: 800px;
+  margin-bottom: 800px;
   padding-top: 100px;
   background-color: #ffffff;
 }
@@ -2248,6 +2249,7 @@ label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 
 @media (max-width: 640px) {
@@ -2267,12 +2269,24 @@ label {
   color: #090102;
 }
 
+@media (max-width: 640px) {
+  .main-page-range__age-text {
+    display: none;
+  }
+}
+
 .main-page-range__slider-nav {
   margin-right: 22px;
 }
 
 .main-page-range__slider-nav:first-child {
   padding-top: 6px;
+}
+
+@media (max-width: 640px) {
+  .main-page-range__slider-nav {
+    margin-right: 14px;
+  }
 }
 
 .main-page-range__title-text {
@@ -2369,6 +2383,12 @@ label {
   margin-bottom: 14px;
 }
 
+@media (max-width: 640px) {
+  .main-page-range__circle-smoll-wrp {
+    margin-bottom: 8px;
+  }
+}
+
 .main-page-range__circle-smoll {
   height: 6px;
   width: 6px;
@@ -2445,10 +2465,8 @@ label {
 
 @media (max-width: 640px) {
   .main-page-range__img {
-    top: 0;
-    left: 0;
-    right: 0;
-    border: 0;
+    position: relative;
+    opacity: 1;
   }
 }
 
@@ -2466,7 +2484,7 @@ label {
 
 @media (max-width: 640px) {
   .main-page-range__img-wrp-position {
-    height: 343px;
+    overflow-x: auto;
   }
 }
 
@@ -2491,13 +2509,50 @@ label {
   transition: 0.3s ease-out;
 }
 
+.main-page-range__slider-circle {
+  position: relative;
+}
+
 @media (max-width: 640px) {
   .main-page-range__slider-circle {
-    overflow: auto;
-    padding-top: 40px;
+    width: 376px;
+    height: 78px;
+    padding-left: 6px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    overflow: auto;
+  }
+}
+
+.main-page-range__slider-text-wrp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 18px;
+}
+
+.main-page-range__slider-text {
+  width: 94px;
+  font-family: "Mulish", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+  color: #090102;
+}
+
+.main-page-range__slider-circle-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 640px) {
+  .main-page-range__slider-circle-cont {
+    position: absolute;
+    top: -76px;
   }
 }
 
