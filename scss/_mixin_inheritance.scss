@@ -132,3 +132,9 @@
     @content;
   }
 }
+
+@mixin __380 {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
