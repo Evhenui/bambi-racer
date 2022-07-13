@@ -12,7 +12,7 @@ export let mainPageProductSlider = function() {
                 productSliderContent[index].classList.add('active')
                 el.querySelector('.js-product-slider-line').classList.add('active');
             })
-        })
+        });
         function delActive(param) {
             param.forEach((item) => {
                 item.classList.remove('active')
@@ -51,6 +51,6 @@ export let mainPageProductSlider = function() {
                     // spaceBetween: 8,
                 }
             }
-        })
+        });
     }
 }

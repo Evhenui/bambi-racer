@@ -183,14 +183,14 @@ label {
           align-items: center;
 }
 
-.footer__wrp, .footer-special-documents__wrp, .main-slider__text-btn, .main-slider__text-btn-wrt, .main-slider__nav-btn-wrp, .main-page-product__carousel, .main-page-about-company__text-wrp, .main-page-range__wrp {
+.footer__wrp, .footer-special-documents__wrp, .main-slider__text-btn, .main-slider__text-btn-wrt, .main-slider__nav-btn-wrp, .main-page-product__carousel, .main-page-about-company__text-wrp, .main-page-range__wrp, .catalog-directory, .product-catalog {
   max-width: 1440px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
-.header__wrp, .footer__wrp, .footer-special-documents__wrp, .main-slider__text-btn-wrt, .main-page-about-company__text-wrp, .main-page-range {
+.header__wrp, .footer__wrp, .footer-special-documents__wrp, .main-slider__text-btn-wrt, .main-page-about-company__text-wrp, .main-page-range, .catalog-directory, .product-catalog {
   padding-left: 48px;
   padding-right: 48px;
 }
@@ -289,6 +289,16 @@ label {
   font-size: 40px;
   font-weight: 900;
   line-height: 60px;
+  text-align: center;
+  color: #090102;
+  text-transform: uppercase;
+}
+
+.text-h4 {
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
   text-align: center;
   color: #090102;
   text-transform: uppercase;
@@ -2449,6 +2459,7 @@ label {
 }
 
 .main-page-range__img {
+  max-width: 544px;
   position: absolute;
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
@@ -2463,6 +2474,7 @@ label {
 
 @media (max-width: 640px) {
   .main-page-range__img {
+    max-width: 600px;
     position: relative;
     opacity: 1;
     width: 100%;
@@ -2477,6 +2489,9 @@ label {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
 }
 
@@ -2514,19 +2529,14 @@ label {
 
 @media (max-width: 640px) {
   .main-page-range__slider-circle {
-    width: 376px;
+    width: 500px;
+    max-width: 100%;
     height: 78px;
     padding-left: 6px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     overflow: auto;
-  }
-}
-
-@media (max-width: 480px) {
-  .main-page-range__slider-circle {
-    width: 356px;
   }
 }
 
@@ -2591,5 +2601,120 @@ label {
 .js-main-page-range {
   -webkit-transition: 0.3s ease-in;
   transition: 0.3s ease-in;
+}
+
+@media (max-width: 860px) {
+  .catalog-directory {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.catalog-directory__title-text {
+  margin-bottom: 60px;
+  text-align: left;
+}
+
+.catalog-directory__catalog-wrp {
+  margin-bottom: 132px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 48px;
+          column-gap: 48px;
+  row-gap: 40px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-image: url("../img/category-directory-back.png");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+}
+
+@media (max-width: 860px) {
+  .catalog-directory__catalog-wrp {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .catalog-directory__catalog-wrp {
+    background-image: none;
+  }
+}
+
+.catalog-directory__category-wrp {
+  max-width: 300px;
+  width: 100%;
+  padding: 28px 12px 12px 12px;
+  background-color: #ffffff;
+}
+
+.catalog-directory__category-text {
+  min-height: 48px;
+  margin-bottom: 4px;
+}
+
+.catalog-directory__category-text:hover {
+  color: #c12125;
+}
+
+.catalog-directory__description-wrp {
+  margin-bottom: 100px;
+  font-family: "Mulish", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: #9c9696;
+}
+
+.catalog-directory__description-wrp h3 {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.catalog-directory__description-wrp p {
+  margin-bottom: 12px;
+}
+
+.bread-crumbs {
+  padding-top: 24px;
+  margin-bottom: 16px;
+  font-family: "Mulish", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  color: #4e4b4b;
+}
+
+.bread-crumbs__item-wrp {
+  margin-right: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 4px;
+          column-gap: 4px;
+}
+
+.bread-crumbs__wrp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 860px) {
+  .product-catalog {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.product-catalog__title {
+  margin-bottom: 24;
+  text-align: left;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,18 @@
+.bread-crumbs {
+  padding-top: 24px;
+  margin-bottom: 16px;
+  @include text(
+    $size: 12px,
+    $textAlign: left,
+    $color: $color-gray-80,
+    $lineHeight: 20px
+  );
+  &__item-wrp {
+    margin-right: 4px;
+    display: flex;
+    column-gap: 4px;
+  }
+  &__wrp {
+    display: flex;
+  }
+}

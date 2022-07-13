@@ -69,6 +69,11 @@ html {
   text-transform: uppercase;
 }
 
+.text-h4 {
+  @include text($size: 16px, $fontWeight: 700, $lineHeight: 24px);
+  text-transform: uppercase;
+}
+
 .red-diamonds {
   width: 6px;
   height: 6px;

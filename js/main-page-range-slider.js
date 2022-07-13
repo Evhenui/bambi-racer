@@ -8,20 +8,6 @@ export let mainPageRangeFun = function() {
         const widthSliderTotal = mainPageRange.querySelector('.js-width-slid');
         let width;
         let count = 0;
-        // document.addEventListener("DOMContentLoaded", function(){
-        //     window.setTimeout(function(){
-        //         // do {
-        //         //     setTimeout(function(){
-        //         //         count++
-        //         //     // if(count > (mainPageRangeImgArr.length -1)) {
-        //         //     //     count = 0;
-        //         //     // }
-        //         //     roolSlider();
-        //         //     }, 300)
-                
-        //         // } while(count < 20)
-        //     }, 300)
-        // });
         mainPageRangeArr.forEach((el, index) => {
             el.addEventListener('click', function() {
                 delActivRange(mainPageRangeCircle);
@@ -45,8 +31,6 @@ export let mainPageRangeFun = function() {
 
         // моб логика
         
-        console.log(width);
-        
         function init() {
             width = mainPageRange.querySelector('.js-width-slid-wrp').offsetWidth;
             roolSlider();
@@ -61,11 +45,52 @@ export let mainPageRangeFun = function() {
         }
         window.addEventListener('resize', init);
         init()
-
         function roolSlider() {
-            console.log(count);
             widthSliderTotal.style.transform = 'translate(-'+count*width+'px)';
         }
+        widthSliderTotal.addEventListener('touchstart', handleTouchStart, false);
+        widthSliderTotal.addEventListener('touchmove', handleTouchMove, false);
+        widthSliderTotal.addEventListener('touchend', handleTouchEnd, false)
+
+        let x1 = null;
+        let y1 = null;
+
+        function handleTouchStart(event) {
+            const firstTouch = event.touches[0]
+            x1 = firstTouch.clientX;
+        }
+        let xDiffObj = {}
+
+        function handleTouchMove(event) {
+            if(!x1) {
+                return false;
+            }
+            let x2 =  event.touches[0].clientX;
+            let xDiff = x2 - x1;
+            xDiffObj.xDiff = xDiff;
+            x1 = null;
+        }
         
+        function handleTouchEnd() {
+            if(xDiffObj.xDiff > 0) {
+                if(count >= 0) {
+                    delActivRange(mainPageRangeCircle);
+                    count--;
+                    console.log(count);
+                    if(count != undefined) {
+                        mainPageRangeCircle[count].classList.add('active')
+                        roolSlider()
+                    }   
+                }
+            } else {
+                if(count < (mainPageRangeImgArr.length - 1))
+                delActivRange(mainPageRangeCircle);
+                count++;
+                if(count != undefined) {
+                    mainPageRangeCircle[count].classList.add('active')
+                }
+                roolSlider();
+            }
+        }
     }
 }

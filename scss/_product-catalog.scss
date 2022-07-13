@@ -1,0 +1,11 @@
+.product-catalog {
+  @extend %padding-country;
+  @extend %size-page;
+  @include __860 {
+    @include padding-mob;
+  }
+  &__title {
+    margin-bottom: 24;
+    text-align: left;
+  }
+}
