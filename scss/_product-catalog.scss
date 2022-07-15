@@ -9,3 +9,208 @@
     text-align: left;
   }
 }
+.product-catalog-filters {
+  @extend %padding-country;
+  @extend %size-page;
+  @include __860 {
+    @include padding-mob;
+  }
+}
+
+.product-catalog-filters {
+  padding-top: 24px;
+  margin-left: 0;
+
+  @include text($size: 12px, $lineHeight: 20px, $color: $color-gray-80);
+
+  &__title-text-wrp {
+    max-width: 324px;
+    width: 100%;
+    height: 40px;
+
+    margin-bottom: 24px;
+
+    @extend %centre-space-between;
+
+    border-right: 1px solid $color-red-40;
+  }
+  &__title-text {
+    @include text(
+      $size: 20px,
+      $textAlign: left,
+      $fontWeight: 600,
+      $lineHeight: 32px
+    );
+    text-transform: uppercase;
+  }
+  &__title-text-icon {
+    margin-right: 24px;
+
+    cursor: pointer;
+  }
+  &__selected-wrp {
+    max-width: 290px;
+    width: 100%;
+
+    margin-bottom: 20px;
+
+    gap: 12px;
+
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  &__selected {
+    padding: 0 12px;
+
+    @extend %centre-flex;
+    display: inline-flex;
+    column-gap: 4px;
+
+    background-color: $color-white;
+
+    border: 1px solid $color-gray-30;
+    border-radius: 20px;
+
+    &.product-catalog-filters__selected-del {
+      color: $color-red;
+
+      border: 1px solid $color-white;
+
+      cursor: pointer;
+    }
+  }
+  &__selected-icon {
+    cursor: pointer;
+  }
+  &__container {
+    max-width: 300px;
+    width: 100%;
+
+    @extend %centre-flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    padding-left: 8px;
+    row-gap: 4px;
+
+    background-color: $color-white;
+
+    & + .product-catalog-filters__container {
+      margin-top: 24px;
+    }
+  }
+  &__checkbox-wrp {
+    width: 100%;
+    min-height: 40px;
+
+    padding-left: 12px;
+
+    display: flex;
+    text-align: left;
+    position: relative;
+
+    &:hover {
+      background-color: $color-red-10;
+    }
+    &:hover > .custom-checkbox + label {
+      color: $color-black;
+    }
+    &:hover > .custom-checkbox + label::before {
+      border: 1px solid $color-black;
+    }
+  }
+  &__price-wrp {
+    width: 100%;
+
+    padding: 14px 12px;
+  }
+  &__price {
+    width: 100%;
+
+    @extend %centre-space-between;
+  }
+  &__container-text {
+    @include text(
+      $size: 16px,
+      $textAlign: left,
+      $fontWeight: 700,
+      $lineHeight: 20px
+    );
+  }
+  &__container-icon {
+    margin-right: 6px;
+  }
+  &__price-slider-wrp {
+    position: relative;
+
+    padding-top: 34px;
+    margin-bottom: 44px;
+  }
+  &__price-slider-line {
+    height: 2px;
+    width: 100%;
+
+    display: flex;
+
+    background-color: $color-gray-20;
+  }
+  &__price-slider-line-active {
+    height: 2px;
+    width: 100%;
+
+    display: flex;
+    position: absolute;
+
+    background-color: $color-red;
+  }
+  &__price-slider-line-active-circle {
+    width: 16px;
+    height: 16px;
+
+    position: absolute;
+    top: -7px;
+
+    border: 3px solid $color-red;
+    border-radius: 50%;
+    background-color: $color-white;
+
+    transition: 0.3s ease-out;
+    &:hover {
+      width: 24px;
+      height: 24px;
+      top: -11px;
+
+      transition: 0.3s ease-in;
+    }
+  }
+  &__price-slider-line-active-circle-l {
+    left: 0;
+
+    cursor: pointer;
+  }
+  &__price-slider-line-active-circle-r {
+    right: 0;
+
+    cursor: pointer;
+  }
+  & .input-wrp__text {
+    background-color: $color-white;
+  }
+  & .input-wrp {
+    max-width: 112px;
+
+    border: 1px solid $color-black;
+
+    &:hover {
+      border: 1px solid $color-black;
+    }
+  }
+  &__price-slider-input-wrp {
+    @extend %centre-space-between;
+  }
+
+  input::placeholder {
+    color: $color-black;
+  }
+}

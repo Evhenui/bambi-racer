@@ -1,5 +1,7 @@
 .bread-crumbs {
-  padding-top: 24px;
+  @extend %size-page;
+  // @extend %padding-country;
+  padding-top: 100px;
   margin-bottom: 16px;
   @include text(
     $size: 12px,
