@@ -7,6 +7,9 @@ import {mainPageProductSlider}  from './main-page-product-slider.js';
 import {mainPageRangeFun}  from './main-page-range-slider.js';
 mainPageRangeFun()  
 
+import {filters}  from './filter.js';
+filters()  
+
 window.onload = function () {
 
     const bodyCont = document.getElementById('body-cont');

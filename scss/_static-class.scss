@@ -37,13 +37,13 @@ html {
   &:hover {
     background-color: $color-red-60;
     @include __860 {
-      background-color: #991a1d00;
+      background-color: $color-red-60;
     }
   }
   &:active {
     background-color: $color-red-80;
     @include __860 {
-      background-color: #991a1d00;
+      // background-color: #991a1d00;
     }
   }
 }
@@ -62,6 +62,19 @@ html {
   height: 44px;
   background-color: $color-gray-50;
   @include text($color: $color-white, $fontWeight: 700);
+}
+
+.btn-gray {
+  max-width: 160px;
+  width: 100%;
+  height: 44px;
+
+  @include text($color: $color-red, $fontWeight: 700);
+  background-color: $color-gray-10;
+
+  &:hover {
+    background-color: $color-red-20;
+  }
 }
 
 .text-h1 {
@@ -171,4 +184,69 @@ html {
 /* стили для чекбокса, находящегося в состоянии disabled */
 .custom-checkbox:disabled + label::before {
   background-color: $color-gray-50;
+}
+
+.lunge {
+  width: 260px;
+
+  position: absolute;
+  top: 56px;
+
+  row-gap: 4px;
+
+  background-color: $color-white;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease-in;
+  &__item {
+    height: 40px;
+
+    padding: 0 12px;
+
+    @extend %centre-space-between;
+
+    position: relative;
+    cursor: pointer;
+    z-index: 200;
+    &:hover .red-diamonds {
+      opacity: 1;
+
+      transition: 0.3s ease-in;
+    }
+
+    &:hover {
+      background-color: $color-red-10;
+    }
+
+    &.active > .lunge__item-text {
+      @include text($color: $color-black);
+    }
+
+    &.active > .red-diamonds {
+      background-color: $color-red-40;
+      opacity: 1;
+    }
+  }
+  &__item-text {
+    @include text(
+      $size: 14px,
+      $textAlign: center,
+      $color: $color-gray-80,
+      $fontWeight: 400,
+      $lineHeight: 22px
+    );
+  }
+  &__cube {
+    width: 16px;
+    height: 16px;
+
+    position: absolute;
+    top: -6px;
+    right: 16px;
+
+    transform: rotate(-45deg);
+
+    background-color: $color-white;
+    z-index: 199;
+  }
 }

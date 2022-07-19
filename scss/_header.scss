@@ -43,6 +43,13 @@
     width: 100%;
     position: relative;
     @extend %centre-flex;
+    @include __860 {
+      & .btn-red {
+        &:hover {
+          background-color: #c1212500;
+        }
+      }
+    }
   }
   &__btn-catalog-text {
     @include __860 {
