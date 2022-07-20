@@ -34,4 +34,8 @@ $color-background: #f8f7f7;
 
 :root {
   --my-variable-hiadth: 10px;
+  --row-gap: 16px;
+  --gap: 16px;
 }
+
+$product-gallery-margin: Var(--row-gap, Var(--gap, 1%));

@@ -1,7 +1,18 @@
 .card-prod-catalog {
+  max-width: 324px;
+  width: 100%;
+  @include __1458 {
+    max-width: 100%;
+    width: 24%;
+  }
+  @include __1324 {
+    max-width: 100%;
+    width: 32%;
+  }
+  @include __960 {
+    width: 49%;
+  }
   &__wrp {
-    max-width: 324px;
-    width: 100%;
     padding: 0 12px;
     background-color: $color-white;
     position: relative;
