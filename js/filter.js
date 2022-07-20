@@ -8,6 +8,7 @@ export let filters = function () {
         const filterActive = filterWrp.querySelector('.js-filter-active');
         filterBntOpen.addEventListener('click', function (event) {
             filterWrpContent.classList.toggle('active');
+            // filterWrp.querySelector('.product-catalog-filters__selected-wrp').classList.toggle('active')
             if (filterWrp.querySelector('.product-catalog-wrp-prod').classList.contains('active')) {
                 setTimeout(function() {
                     filterWrp.querySelector('.product-catalog-wrp-prod').classList.remove('active');
@@ -16,7 +17,7 @@ export let filters = function () {
                 filterWrp.querySelector('.product-catalog-wrp-prod').classList.add('active');
             }
             
-            filterWrp.querySelector('.product-catalog-filters-static').classList.toggle('active');
+            // filterWrp.querySelector('.product-catalog-filters-static').classList.toggle('active');
             if(filterDefault.classList.contains('active')) {
                 filterDefault.classList.remove('active');
                 filterActive.classList.remove('active');

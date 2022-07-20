@@ -3,14 +3,19 @@
   width: 100%;
   @include __1458 {
     max-width: 100%;
-    width: 24%;
+    width: 23%;
+  }
+  @include __1356 {
+    width: 32%;
   }
   @include __1324 {
-    max-width: 100%;
-    width: 32%;
+    width: 31%;
   }
   @include __960 {
     width: 49%;
+  }
+  @include __860 {
+    width: 48%;
   }
   &__wrp {
     padding: 0 12px;

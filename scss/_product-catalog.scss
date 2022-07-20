@@ -28,13 +28,13 @@
     margin-right: 16px;
 
     overflow: hidden;
-    transition: 0.3s ease-out;
+    // transition: 0.3s ease-out;
     background-color: $color-background;
     &.active {
       height: 100%;
       overflow-y: clip;
       overflow-x: initial;
-      transition: 0.3s ease-in;
+      // transition: 0.3s ease-in;
     }
   }
 
@@ -79,11 +79,19 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+    // transition: 0.3s ease-in;
 
     &.active {
-      max-width: 100%;
-      width: 700px;
+      max-width: initial;
+      width: 200%;
+
       position: absolute;
+      top: 66px;
+      padding-bottom: 16px;
+      padding-top: 16px;
+      left: -2px;
+      background-color: $color-background;
+      // transition: 0.3s ease-in;
     }
   }
   &__selected {
@@ -326,6 +334,10 @@
   &__wrp {
     display: flex;
     z-index: 102;
+
+    @include __860 {
+      flex-direction: column;
+    }
   }
 }
 
@@ -440,8 +452,13 @@
 
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
   background-color: $color-background;
   z-index: 119;
+
+  @include __860 {
+    display: none;
+  }
 }
 
 .product-catalog-number-goods {
@@ -497,27 +514,54 @@
 }
 
 .product-catalog-wrp-prod {
+  width: 142%;
+
   display: flex;
   flex-wrap: wrap;
   position: relative;
   // @include set-cart-count-in-row(4);
   @extend %padding-country;
+  padding-right: 0;
 
   gap: 16px;
-  position: absolute;
-  right: 0;
-  top: 134px;
+  left: -374px;
+  top: 32px;
   justify-content: flex-start;
 
   z-index: 100;
+
+  @include __1440 {
+    // max-width: 100%;
+    width: 145%;
+  }
+
+  @include __1280 {
+    width: 149%;
+  }
+
+  @include __1090 {
+    width: 155%;
+  }
+
+  @include __1046 {
+    left: -320px;
+  }
+
+  @include __860 {
+    left: inherit;
+    width: 100%;
+    justify-content: center;
+    padding-left: 0;
+  }
   // transition: 0.3s ease-in;
   &.active {
-    max-width: 1018px;
+    max-width: 100%;
     padding-left: 0;
 
     position: relative;
 
-    top: 0;
+    top: 32px;
+    left: 14px;
 
     & .card-prod-catalog {
       width: 32%;
