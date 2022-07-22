@@ -17,6 +17,9 @@
   @include __860 {
     width: 48%;
   }
+  @include __480 {
+    width: 100%;
+  }
   &__wrp {
     padding: 0 12px;
     background-color: $color-white;

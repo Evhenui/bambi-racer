@@ -208,6 +208,9 @@ html {
     position: relative;
     cursor: pointer;
     z-index: 200;
+    @include __860 {
+      padding: 0 20px;
+    }
     &:hover .red-diamonds {
       opacity: 1;
 

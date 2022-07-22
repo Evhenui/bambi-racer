@@ -22,6 +22,9 @@
 
   background-color: $color-background;
   z-index: 120;
+  @include __860 {
+    max-width: 100%;
+  }
   &__wrp {
     height: 0;
 
@@ -38,17 +41,28 @@
     }
   }
 
+  &__menu {
+    margin-bottom: 24px;
+    @extend %centre-space-between;
+
+    @include __860 {
+      margin-bottom: 16px;
+    }
+  }
+
   &__title-text-wrp {
     // max-width: 324px;
     width: 100%;
-    height: 40px;
-
-    margin-bottom: 24px;
 
     @extend %centre-space-between;
 
     border-right: 1px solid $color-red-40;
     cursor: pointer;
+
+    @include __860 {
+      max-width: 280px;
+      border: 1px solid $color-red-40;
+    }
   }
   &__title-text {
     @include text(
@@ -58,6 +72,17 @@
       $lineHeight: 32px
     );
     text-transform: uppercase;
+    @include __860 {
+      padding-left: 16px;
+      text-transform: capitalize;
+    }
+  }
+
+  &__title-text-mob {
+    display: none;
+    @include __860 {
+      display: inline-block;
+    }
   }
   &__title-text-icon {
     margin-right: 24px;
@@ -67,6 +92,53 @@
     &.active {
       display: none;
     }
+
+    @include __860 {
+      margin-right: 16px;
+    }
+  }
+  &__title-text-icon-active {
+    margin-right: 30px;
+
+    display: none;
+    cursor: pointer;
+    &.active {
+      display: block;
+    }
+
+    @include __860 {
+      margin-right: 20px;
+    }
+  }
+  &__btn-tile-square {
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+
+    background-color: $color-red-30;
+    &.active {
+      background-color: $color-red;
+    }
+  }
+  &__btn-tile-lines {
+    width: 24px;
+    height: 10px;
+
+    display: flex;
+
+    background-color: $color-red-30;
+    &.active {
+      background-color: $color-red;
+    }
+  }
+  &__btn-tile-lines-wrp {
+    @extend %flex-columb;
+    row-gap: 6px;
+  }
+  &__btn-tile-wrp {
+    display: flex;
+    column-gap: 20px;
   }
   &__selected-wrp {
     max-width: 290px;
@@ -308,15 +380,6 @@
     border-radius: 0px 8px 8px 8px;
     background-color: $color-red-10;
   }
-  &__title-text-icon-active {
-    margin-right: 30px;
-
-    display: none;
-    cursor: pointer;
-    &.active {
-      display: block;
-    }
-  }
 }
 
 .product-catalog-content {
@@ -490,6 +553,19 @@
   & .lunge {
     width: 80px;
     right: 0;
+  }
+}
+
+.lunge {
+  @include __860 {
+    top: 0;
+
+    position: relative;
+    opacity: 1;
+    visibility: inherit;
+  }
+  &.js-content-item.active {
+    height: 100%;
   }
 }
 

@@ -300,14 +300,26 @@
         <section class="product-catalog-content js-filter-wrp">
             <div class="product-catalog-content__wrp">
                 <section class="product-catalog-filters">
-                    <div class="product-catalog-filters__title-text-wrp js-btn-filter-open">
-                        <p class="product-catalog-filters__title-text">Фильтры</p>
-                        <img class="product-catalog-filters__title-text-icon js-filter-default"
-                            src="icon/filter-icon.svg" alt="Фильтры">
-                        <img class="product-catalog-filters__title-text-icon-active js-filter-active"
-                            src="icon/filter-icon-active.svg" alt="Фильтры">
-                    </div>
+                    <div class="product-catalog-filters__menu">
+                        <div class="product-catalog-filters__title-text-wrp js-btn-filter-open">
+                            <p class="product-catalog-filters__title-text">Фильтры<span
+                                    class="product-catalog-filters__title-text-mob">/Сортировка</span></p>
+                            <img class="product-catalog-filters__title-text-icon js-filter-default"
+                                src="icon/filter-icon.svg" alt="Фильтры">
+                            <img class="product-catalog-filters__title-text-icon-active js-filter-active"
+                                src="icon/filter-icon-active.svg" alt="Фильтры">
+                        </div>
+                        <div class="product-catalog-filters__btn-tile-wrp">
+                            <div>
+                                <span class="product-catalog-filters__btn-tile-square active"></span>
+                            </div>
+                            <div class="product-catalog-filters__btn-tile-lines-wrp">
+                                <span class="product-catalog-filters__btn-tile-lines"></span>
+                                <span class="product-catalog-filters__btn-tile-lines"></span>
+                            </div>
+                        </div>
 
+                    </div>
                     <div class="product-catalog-filters__wrp js-filter-wrp-content">
                         <div class="product-catalog-filters__selected-wrp">
                             <section class="product-catalog-filters__selected">
@@ -330,48 +342,51 @@
                                 <img class="product-catalog-filters__selected-icon"
                                     src="icon/product-catalog-img-cross.svg" alt="">
                             </section>
-                            <section class="product-catalog-filters__selected">
-                                <p>Коробка передач: Да</p>
-                                <img class="product-catalog-filters__selected-icon"
-                                    src="icon/product-catalog-img-cross.svg" alt="">
-                            </section>
-                            <section class="product-catalog-filters__selected">
-                                <p>Коробка передач: Да</p>
-                                <img class="product-catalog-filters__selected-icon"
-                                    src="icon/product-catalog-img-cross.svg" alt="">
-                            </section>
-                            <section class="product-catalog-filters__selected">
-                                <p>Коробка передач: Да</p>
-                                <img class="product-catalog-filters__selected-icon"
-                                    src="icon/product-catalog-img-cross.svg" alt="">
-                            </section>
-                            <section class="product-catalog-filters__selected">
-                                <p>Коробка передач: Да</p>
-                                <img class="product-catalog-filters__selected-icon"
-                                    src="icon/product-catalog-img-cross.svg" alt="">
-                            </section>
-                            <section class="product-catalog-filters__selected">
-                                <p>Коробка передач: Да</p>
-                                <img class="product-catalog-filters__selected-icon"
-                                    src="icon/product-catalog-img-cross.svg" alt="">
-                            </section>
                             <section class="product-catalog-filters__selected product-catalog-filters__selected-del">
                                 <p>Очистить все</p>
                             </section>
                         </div>
+                        <div class="product-catalog-filters__container">
+                            <div class="product-catalog-filters__price">
+                                <p class="product-catalog-filters__container-text">Сортировка</p>
+                                <img class="product-catalog-filters__container-icon"
+                                    src="icon/filters-icom-container-active.svg" alt="">
+                            </div>
+                            <div class="lunge js-content-item">
+                                <span class="lunge__cube"></span>
+                                <ol>
+                                    <li class="lunge__item">
+                                        <p class="lunge__item-text">По названию от А до Я</p>
+                                        <!-- <span class="red-diamonds"></span> -->
+                                    </li>
+                                    <li class="lunge__item">
+                                        <p class="lunge__item-text">По названию от Я до А</p>
+                                        <!-- <span class="red-diamonds"></span> -->
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
                         <div class="product-catalog-filters__container active">
-                            <div class="product-catalog-filters__checkbox-wrp">
-                                <input type="checkbox" class="custom-checkbox" id="sale" name="happy" value="yes">
-                                <label for="sale">Акции</label>
+                            <div class="product-catalog-filters__price">
+                                <p class="product-catalog-filters__container-text">Фильтры</p>
+                                <img class="product-catalog-filters__container-icon"
+                                    src="icon/filters-icom-container-active.svg" alt="">
                             </div>
-                            <div class="product-catalog-filters__checkbox-wrp">
-                                <input type="checkbox" class="custom-checkbox" id="new" name="happy" value="yes">
-                                <label for="new">Новинки</label>
+                            <div class="js-content-item">
+                                <div class="product-catalog-filters__checkbox-wrp">
+                                    <input type="checkbox" class="custom-checkbox" id="sale" name="happy" value="yes">
+                                    <label for="sale">Акции</label>
+                                </div>
+                                <div class="product-catalog-filters__checkbox-wrp">
+                                    <input type="checkbox" class="custom-checkbox" id="new" name="happy" value="yes">
+                                    <label for="new">Новинки</label>
+                                </div>
+                                <div class="product-catalog-filters__checkbox-wrp">
+                                    <input type="checkbox" class="custom-checkbox" id="top" name="happy" value="yes">
+                                    <label for="top">Топ продаж</label>
+                                </div>
                             </div>
-                            <div class="product-catalog-filters__checkbox-wrp">
-                                <input type="checkbox" class="custom-checkbox" id="top" name="happy" value="yes">
-                                <label for="top">Топ продаж</label>
-                            </div>
+
                         </div>
                         <div class="product-catalog-filters__container">
                             <div class="product-catalog-filters__price">
