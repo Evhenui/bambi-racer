@@ -2,13 +2,22 @@ import {cardProdCatalog} from './card-prod-catalog.js';
         cardProdCatalog();
 
 import {mainPageProductSlider}  from './main-page-product-slider.js';
-        mainPageProductSlider()      
+        mainPageProductSlider();      
 
 import {mainPageRangeFun}  from './main-page-range-slider.js';
-mainPageRangeFun()  
+        mainPageRangeFun();  
 
 import {filters}  from './filter.js';
-filters()  
+        filters();  
+
+import {personalArea}  from './personal-area.js';
+        personalArea(); 
+
+import {compparisonSlider}  from './comparison-slider.js';
+        compparisonSlider(); 
+        
+import {inputValidate}  from './inputs-validate.js';
+        inputValidate(); 
 
 window.onload = function () {
 
