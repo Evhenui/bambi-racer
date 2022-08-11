@@ -1,0 +1,320 @@
+.card-prod-catalog {
+  max-width: 324px;
+  width: 100%;
+  @include __1458 {
+    max-width: 100%;
+    width: 23%;
+  }
+  @include __1356 {
+    width: 32%;
+  }
+  @include __1324 {
+    width: 31%;
+  }
+  @include __960 {
+    width: 48%;
+  }
+  @include __860 {
+    width: 48%;
+  }
+  @include __480 {
+    width: 100%;
+  }
+  &__wrp {
+    padding: 0 12px;
+    background-color: $color-white;
+    position: relative;
+  }
+  &__nameplate-top-wrp {
+    @include card-prod-cat-late;
+  }
+  &__nameplate-sale-wrp {
+    @include card-prod-cat-late($backgroundColor: $color-red);
+    display: none;
+  }
+  &__nameplate-new-wrp {
+    @include card-prod-cat-late($backgroundColor: $color-green);
+    display: none;
+  }
+  &__icon-wrp {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    @extend %flex-columb;
+    row-gap: 25px;
+  }
+  &__img {
+    @extend %centre-flex;
+    @extend %centre-marg;
+
+    @include __640 {
+      max-width: 126px;
+      width: 100%;
+    }
+  }
+  &__title-text {
+    margin-bottom: 4px;
+    @include text(
+      $size: 16px,
+      $textAlign: left,
+      $fontWeight: 700,
+      $lineHeight: 20px
+    );
+  }
+  &__rating-wrp {
+    width: 60px;
+    position: relative;
+  }
+  &__rating-img-activ-wrp {
+    width: 68%;
+    height: 12px;
+    display: flex;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &__rating-img-activ {
+    width: 100%;
+    height: 12px;
+    position: absolute;
+    background-image: url("../icon/raitig-img-active-smal.svg");
+    background-repeat: no-repeat;
+  }
+  &__reviews-wrp {
+    column-gap: 4px;
+    @extend %centre-flex;
+  }
+  &__reviews-text {
+    @include text(
+      $size: 10px,
+      $textAlign: left,
+      $fontWeight: 400,
+      $color: $color-gray-70,
+      $lineHeight: 12px
+    );
+  }
+  &__rating-reviews {
+    margin-bottom: 8px;
+    display: flex;
+  }
+  &__rating-reviews-wrp {
+    column-gap: 6px;
+    @extend %centre-flex;
+  }
+  &__price {
+    @include text(
+      $size: 16px,
+      $textAlign: left,
+      $fontWeight: 700,
+      $lineHeight: 20px
+    );
+  }
+  &__not-available {
+    display: none;
+    @include text(
+      $size: 16px,
+      $textAlign: left,
+      $color: $color-gray-60,
+      $fontWeight: 700,
+      $lineHeight: 20px
+    );
+  }
+  &__colors-wrp {
+    max-width: 264px;
+    width: 100%;
+    margin-bottom: 16px;
+    @extend %centre-space-between;
+    @extend %centre-marg;
+    @include __480 {
+      max-width: 106px;
+    }
+  }
+  &__colors-red {
+    @include color-card-prod;
+  }
+  &__colors-blue {
+    @include color-card-prod($backgroundColor: #1154ff);
+  }
+  &__colors-black {
+    @include color-card-prod($backgroundColor: $color-black);
+  }
+  &__colors-green {
+    @include color-card-prod($backgroundColor: $color-green);
+  }
+  &__colors-orange {
+    @include color-card-prod($backgroundColor: $color-orange);
+  }
+  &__colors-golden {
+    @include color-card-prod($backgroundColor: $color-golden);
+  }
+  &__colors-white {
+    @include color-card-prod($backgroundColor: $color-white);
+  }
+  &__colors-number {
+    @include text($color: $color-gray-60, $lineHeight: 24px, $fontWeight: 700);
+  }
+  &__colors-item-wrp {
+    width: 32px;
+    height: 32px;
+    @extend %centre-flex;
+    @include __480 {
+      &:first-child {
+        display: none;
+      }
+      &:nth-last-child(-n + 2) {
+        display: flex;
+      }
+      &:nth-child(2n + 2) {
+        display: none;
+      }
+      &:nth-child(2n + 4) {
+        display: none;
+      }
+    }
+    &:hover .js-card-catalog-color-item {
+      width: 20px;
+      height: 20px;
+
+      // border: 1px solid $color-black;
+    }
+    &:hover .js-card-catalog-color-item.active {
+      width: 16px;
+      height: 16px;
+
+      border: 0 solid $color-gray-10;
+    }
+  }
+  &__colors-item {
+  }
+  &__buy-price {
+    min-height: 44px;
+    padding-bottom: 12px;
+    @extend %centre-space-between;
+  }
+  &__buy {
+    height: 44px;
+    background-color: $color-red;
+    @extend %centre-space-between;
+  }
+  &__buy-img {
+    padding-left: 11px;
+    margin-right: 12px;
+  }
+  &__buy-text {
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in;
+    @include text($color: $color-white, $fontWeight: 700, $textAlign: left);
+    &.active {
+      width: 66px;
+      opacity: 1;
+      visibility: inherit;
+      transition: 0.3s ease-out;
+    }
+  }
+  &__icon {
+    // width: 36px;
+    // height: 20px;
+  }
+  &__icon-like-wrp {
+    &:hover .card-prod-catalog__icon-hov {
+      display: flex;
+    }
+    &:hover .card-prod-catalog__icon-hover-none {
+      display: none;
+    }
+  }
+  &__icon-hov {
+    display: none;
+  }
+  &__icon-active {
+    display: none;
+  }
+  &__icon-comparison-wrp {
+    &:hover .card-prod-catalog__icon-hov {
+      display: flex;
+    }
+    &:hover .card-prod-catalog__icon-hov-nane {
+      display: none;
+    }
+  }
+}
+
+.js-card-catalog-color {
+  cursor: pointer;
+  border-radius: 50%;
+  &.active > .card-prod-catalog__colors-item {
+    width: 24px;
+    height: 24px;
+    border: 1px solid $color-black;
+    border-radius: 50%;
+    @extend %centre-flex;
+    //   &:hover {
+    //     width: 24px;
+    //     height: 24px;
+    //     border: 0 solid #090102;
+    //   }
+  }
+}
+
+.js-card-catalog-color-item {
+  transition: 0.2s ease-in;
+  &:hover {
+    // width: 20px;
+    // height: 20px;
+    // transition: 0.2s ease-out;
+  }
+  &.active {
+    display: flex;
+    border: 1px solid $color-gray-30;
+  }
+}
+
+.horizontal-card {
+  & .card-prod-catalog {
+    @include __860 {
+      width: 100%;
+    }
+  }
+  & .card-prod-catalog__wrp {
+    padding: 0 4px;
+    column-gap: 9px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  & .card-prod-catalog__icon-wrp {
+    margin-right: 16px;
+
+    position: inherit;
+    top: inherit;
+    left: inherit;
+    right: inherit;
+  }
+  & .card-prod-catalog__horiz-wrp-title-price-wrp {
+    margin-bottom: 20px;
+    padding-top: 20px;
+
+    display: flex;
+    column-gap: 16px;
+  }
+  &.product-catalog-wrp-prod {
+    width: 100%;
+    top: inherit;
+    left: inherit;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-left: 0;
+    align-items: center;
+    margin: 0 auto;
+  }
+  &.product-catalog-wrp-prod.active > .card-prod-catalog {
+    @include __1280 {
+      width: 100%;
+    }
+  }
+}

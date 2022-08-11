@@ -1,0 +1,128 @@
+.footer {
+  padding-top: 24px;
+  background-color: $color-black;
+  &__wrp {
+    @extend %size-page;
+    @extend %padding-country;
+    @include __860 {
+      @include padding-mob;
+    }
+  }
+}
+
+.footer-content {
+  margin-bottom: 32px;
+  @include text($textAlign: left, $color: $color-white);
+  @extend %centre-space-between;
+  gap: 24px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  @include __1280 {
+    justify-content: space-around;
+  }
+  @include __640 {
+    flex-direction: column;
+  }
+  &__title-text-clock {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  &__title-text {
+    margin-bottom: 20px;
+    @include text(
+      $size: 16px,
+      $textAlign: left,
+      $color: $color-white,
+      $fontWeight: 700
+    );
+  }
+  &__form {
+    max-width: 300px;
+    width: 100%;
+    @include __640 {
+      max-width: 100%;
+    }
+  }
+  &__form-wrp {
+    @include __640 {
+      width: 100%;
+    }
+  }
+  &__input-wrp {
+    max-width: 300px;
+    margin-bottom: 20px;
+    @include __640 {
+      max-width: 100%;
+    }
+  }
+  &__input {
+    color: $color-white;
+  }
+  &__input-text {
+    background-color: $color-black;
+  }
+  &__form-btn {
+    max-width: 300px;
+    margin-bottom: 20px;
+    @include __640 {
+      max-width: 100%;
+    }
+  }
+  &__social-wrp {
+    @extend %centre-space-between;
+  }
+  &__social-link {
+    &:hover .footer-content__social-icon {
+      display: none;
+    }
+    &:hover .footer-content__social-icon-hov {
+      display: block;
+    }
+  }
+  &__social-icon-hov {
+    display: none;
+  }
+}
+
+.footer-logo {
+  margin-bottom: 28px;
+}
+
+.footer-text {
+  margin-bottom: 12px;
+  @include text($size: 14px, $color: $color-gray-40, $textAlign: left);
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:hover {
+    color: $color-white;
+  }
+}
+
+.footer-special-documents {
+  background-color: $color-gray-100;
+
+  @include text(
+    $size: 12px,
+    $textAlign: left,
+    $color: $color-gray-50,
+    $lineHeight: 20px
+  );
+  &__wrp {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    column-gap: 24px;
+    @extend %size-page;
+    @extend %padding-country;
+    @extend %centre-space-between;
+    flex-wrap: wrap;
+    @include __860 {
+      @include padding-mob;
+    }
+  }
+  &__text {
+    &:hover {
+      color: $color-white;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.catalog-directory {
+  @extend %size-page;
+  @extend %padding-country;
+  @include __860 {
+    @include padding-mob;
+  }
+  &__title-text {
+    margin-bottom: 60px;
+    text-align: left;
+  }
+  &__catalog-wrp {
+    margin-bottom: 132px;
+    display: flex;
+    column-gap: 48px;
+    row-gap: 40px;
+    flex-wrap: wrap;
+    background-image: url("../img/category-directory-back.png");
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+    @include __860 {
+      justify-content: center;
+    }
+    @include __640 {
+      background-image: none;
+    }
+  }
+  &__category-wrp {
+    max-width: 300px;
+    width: 100%;
+    padding: 28px 12px 12px 12px;
+    background-color: $color-white;
+  }
+  &__category-text {
+    min-height: 48px;
+    margin-bottom: 4px;
+    &:hover {
+      color: $color-red;
+    }
+  }
+  &__description-wrp {
+    margin-bottom: 100px;
+    @include text($textAlign: left, $color: $color-gray-50, $lineHeight: 24px);
+    & h3 {
+      margin-bottom: 12px;
+      font-size: 16px;
+    }
+    & p {
+      margin-bottom: 12px;
+    }
+  }
+}

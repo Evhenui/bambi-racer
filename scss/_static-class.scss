@@ -1,0 +1,255 @@
+html {
+  // overflow-x: hidden;
+  // margin-right: calc(-1 * (100vw - 100%));
+}
+:root {
+  --width-page: 1440px;
+  --height-monitor: 700px;
+  --height-page: 700px;
+}
+
+.width {
+  width: var(--width-page) px;
+}
+
+#body-cont {
+  background-color: $color-background;
+  overflow-x: hidden;
+  &.active {
+    overflow-y: hidden;
+    padding-right: 17px;
+    @include __860 {
+      padding-right: 0;
+    }
+  }
+}
+
+.main-wrp {
+  margin-top: 74px;
+}
+
+.btn-red {
+  max-width: 160px;
+  width: 100%;
+  height: 44px;
+  background-color: $color-red;
+  @include text($color: $color-white, $fontWeight: 700);
+  &:hover {
+    background-color: $color-red-60;
+    @include __860 {
+      background-color: $color-red-60;
+    }
+  }
+  &:active {
+    background-color: $color-red-80;
+    @include __860 {
+      // background-color: #991a1d00;
+    }
+  }
+}
+
+.btn-red-disabled {
+  max-width: 160px;
+  width: 100%;
+  height: 44px;
+  background-color: $color-gray-50;
+  @include text($color: $color-white, $fontWeight: 700);
+}
+
+.btn-red-white-background {
+  max-width: 160px;
+  width: 100%;
+  height: 44px;
+  background-color: $color-gray-50;
+  @include text($color: $color-white, $fontWeight: 700);
+}
+
+.btn-gray {
+  max-width: 160px;
+  width: 100%;
+  height: 44px;
+
+  @include text($color: $color-red, $fontWeight: 700);
+  background-color: $color-gray-10;
+
+  &:hover {
+    background-color: $color-red-20;
+  }
+}
+
+.text-h1 {
+  @include text($size: 40px, $fontWeight: 900, $lineHeight: 60px);
+  text-transform: uppercase;
+}
+
+.text-h4 {
+  @include text($size: 16px, $fontWeight: 700, $lineHeight: 24px);
+  text-transform: uppercase;
+}
+
+.red-diamonds {
+  width: 6px;
+  height: 6px;
+  display: flex;
+  background-color: $color-red;
+  transform: rotate(-45deg);
+  opacity: 0;
+  transition: 0.3s ease-in;
+}
+
+.input-wrp {
+  max-width: 240px;
+  width: 100%;
+  padding: 10px 20px;
+  position: relative;
+  border: 1px solid $color-gray-60;
+  &__text {
+    padding: 0 4px;
+    position: absolute;
+    top: -16px;
+    left: 16px;
+    background-color: $color-gray-100;
+    @include text($size: 12px, $color: $color-gray-60, $lineHeight: 20px);
+  }
+
+  &:hover {
+    border: 1px solid $color-white;
+  }
+
+  // <div class="header__phone-menu-schedule-input input-wrp">
+  //   <span class="input-wrp__text">Введите номер телефона</span>
+  //   <input type="tel" name="" id="" placeholder="+38(0__)___-__-__">
+  // </div>
+}
+
+.number-amount {
+  padding: 2px 4px;
+  background-color: $color-red;
+  @include text($size: 12px, $color: $color-white, $lineHeight: 12px);
+}
+
+.custom-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  top: 10px;
+  left: 8px;
+}
+
+.custom-checkbox + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  color: $color-gray-80;
+  font-size: 14px;
+}
+.custom-checkbox + label::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid $color-gray-80;
+  border-radius: 1px;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.custom-checkbox:checked + label::before {
+  border-color: $color-red;
+  background-color: $color-red;
+  background-image: url("../icon/checkbox-icon.svg");
+}
+
+/* стили при наведении курсора на checkbox */
+// .custom-checkbox:not(:disabled):not(:checked) + label:hover::before {
+//   border-color: #b3d7ff;
+// }
+/* стили для активного состояния чекбокса (при нажатии на него) */
+.custom-checkbox:not(:disabled):active + label::before {
+  background-color: $color-red;
+  border-color: $color-red;
+}
+/* стили для чекбокса, находящегося в фокусе */
+// .custom-checkbox:focus + label::before {
+//   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+// }
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+// .custom-checkbox:focus:not(:checked) + label::before {
+//   border-color: #80bdff;
+// }
+/* стили для чекбокса, находящегося в состоянии disabled */
+.custom-checkbox:disabled + label::before {
+  background-color: $color-gray-50;
+}
+
+.lunge {
+  width: 260px;
+
+  position: absolute;
+  top: 56px;
+
+  row-gap: 4px;
+
+  background-color: $color-white;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease-in;
+  &__item {
+    height: 40px;
+
+    padding: 0 12px;
+
+    @extend %centre-space-between;
+
+    position: relative;
+    cursor: pointer;
+    z-index: 200;
+    @include __860 {
+      padding: 0 20px;
+    }
+    &:hover .red-diamonds {
+      opacity: 1;
+
+      transition: 0.3s ease-in;
+    }
+
+    &:hover {
+      background-color: $color-red-10;
+    }
+
+    &.active > .lunge__item-text {
+      @include text($color: $color-black);
+    }
+
+    &.active > .red-diamonds {
+      background-color: $color-red-40;
+      opacity: 1;
+    }
+  }
+  &__item-text {
+    @include text(
+      $size: 14px,
+      $textAlign: center,
+      $color: $color-gray-80,
+      $fontWeight: 400,
+      $lineHeight: 22px
+    );
+  }
+  &__cube {
+    width: 16px;
+    height: 16px;
+
+    position: absolute;
+    top: -6px;
+    right: 16px;
+
+    transform: rotate(-45deg);
+
+    background-color: $color-white;
+    z-index: 199;
+  }
+}

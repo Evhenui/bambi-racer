@@ -1,0 +1,183 @@
+%centre-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%centre-flex-columb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+%flex-columb {
+  display: flex;
+  flex-direction: column;
+}
+
+%centre-marg {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%centre-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+%left-flex {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+%size-page {
+  max-width: $width-page;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%padding-country {
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+@mixin padding-mob {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+%modal-wrp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+@mixin text(
+  $size: 14px,
+  $textAlign: center,
+  $color: $color-black,
+  $fontWeight: 400,
+  $lineHeight: 22px
+) {
+  font-family: $font-main;
+  font-size: $size;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+  text-align: $textAlign;
+  color: $color;
+}
+
+@mixin card-prod-cat-late($backgroundColor: $color-orange) {
+  padding: 4px 8px;
+  position: absolute;
+  top: 8px;
+  left: 4px;
+  border-radius: 1px;
+  background-color: $backgroundColor;
+  @include text($size: 10px, $color: $color-white, $fontWeight: 700);
+  display: inline-flex;
+  text-transform: uppercase;
+  transform: rotate(-5deg);
+}
+
+@mixin color-card-prod($backgroundColor: $color-red) {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  border: 2px solid $color-gray-30;
+  background-color: $backgroundColor;
+}
+
+@mixin padding-mob {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@mixin __1458 {
+  @media (max-width: 1458px) {
+    @content;
+  }
+}
+
+@mixin __1440 {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin __1324 {
+  @media (max-width: 1324px) {
+    @content;
+  }
+}
+
+@mixin __1356 {
+  @media (max-width: 1356px) {
+    @content;
+  }
+}
+
+@mixin __1280 {
+  @media (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin __1090 {
+  @media (max-width: 1090px) {
+    @content;
+  }
+}
+
+@mixin __1046 {
+  @media (max-width: 1046px) {
+    @content;
+  }
+}
+
+@mixin __960 {
+  @media (max-width: 960px) {
+    @content;
+  }
+}
+
+@mixin __860 {
+  @media (max-width: 860px) {
+    @content;
+  }
+}
+
+@mixin __640 {
+  @media (max-width: 640px) {
+    @content;
+  }
+}
+
+@mixin __480 {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin __380 {
+  @media (max-width: 380px) {
+    @content;
+  }
+}
+
+/// $product-gallery-margin горизонтальный отступ между карточками: --row-gap перменная
+@mixin set-cart-count-in-row($count) {
+  width: Calc(
+    (100% - (#{($count - 1)} * #{$product-gallery-margin})) / #{$count}
+  );
+}
