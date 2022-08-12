@@ -41,7 +41,6 @@ export let personalArea = function () {
                   item.classList.remove("active");
                 });
                 tabsItems.forEach(function (item) {
-            
                   item.classList.remove("active");
                 });
                 item.classList.add("active");
