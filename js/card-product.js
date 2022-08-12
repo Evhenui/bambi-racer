@@ -6,10 +6,10 @@ export let cardProduct = function() {
              navigationShare = carProduct.querySelector('[data-navigation-share]'),
              buttonUp = carProduct.querySelector('[data-botton-up]'),
              hiddenNavigation = carProduct.querySelector('[data-hidden-navigation]'),
-             headerPages = carProduct.querySelector('[data-header-pages-hidden]'),
+             instruction = carProduct.querySelector('[data-download-instruction]'),
              headerWrapper = carProduct.querySelector('[data-header-wrapper-hidden]'),
              buttonLike = carProduct.querySelector('[data-navigation-like]');
-       //-----add class active------
+       //-----add class active groop------
         function addActiveClass(list) {
             list.forEach((item)=> {
                 item.addEventListener("click", function () {
@@ -40,10 +40,13 @@ export let cardProduct = function() {
             navigationShare.classList.remove('active');
         }
         })
-      //------active like-----
+      //------active-----
         buttonLike.addEventListener('click', function() {
         buttonLike.classList.toggle('active');
         })
+        instruction.addEventListener('click', function() {
+            instruction.classList.toggle('active');
+         })
       //------hidden header----
 
       window.addEventListener('scroll', function(){
@@ -55,6 +58,9 @@ export let cardProduct = function() {
        
       })
     }
+    //----slider main------
+
+    //----slider footer----
     new Swiper('.card-product-spare-parts__carousel', {
         navigation: {
             nextEl: '.swiper-button-next',

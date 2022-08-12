@@ -214,7 +214,6 @@
       line-height: 20px;
     }
   }
-
 //-----------------all information-----------------------------
   .card-product-all-info {
     margin-bottom: 100px;
@@ -361,12 +360,18 @@
     &__active-link.like:hover &__like-svg{
       fill: $color-red-40;
     }
+    .like.active:hover &__like-svg{
+      fill: $color-red;
+    }
     &__active-link.like:active &__like-svg{
       fill: $color-red;
     }
 //-------------svg effect share
     &__active-link.share:hover &__share-svg{
       fill: $color-red-40;
+    }
+    .share.active:hover &__share-svg{
+      fill: $color-red;
     }
     &__active-link.share:active &__share-svg{
       stroke: $color-red;
@@ -467,24 +472,39 @@
 
 		&__instruction {
       display: flex;
+      max-width: 172px;
+      width: 100%;
       align-items: center;
       font-size: 0;
       column-gap: 6px;
       margin-bottom: 22px;
 		}
+
+    &__instruction.active .download-instruction{
+      color:$color-green;
+    }
+    
+    &__instruction.active .card-product-all-info__instruction-svg{
+      fill:$color-green;
+    }
+    &__instruction.active &__instruction-loader::after{
+      border-top: 1px solid $color-green;
+      animation: spin 2s linear infinite;
+    }
+
     &__instruction-loader {
       position: relative;
     }
     &__instruction-loader::after {
       content: '';
       position: absolute;
-      top: -7px;
-      left: -9px;
-      width: 40px;
-      height: 40px;
-      border-top: 1px solid $color-green;
+      top: -5px;
+      left: -6px;
+      width: 35px;
+      height: 35px;
+      
       border-radius: 50%;
-      animation: spin 2s linear infinite;
+      
     }
     @keyframes spin {
       0% { transform: rotate(0deg); }
@@ -494,8 +514,14 @@
     &__instruction:hover &__instruction-svg {
       fill: $color-red;
     }
+    &__instruction.active:hover &__instruction-svg {
+      fill: $color-green;
+    }
     &__instruction:hover .card-product-description.download-instruction {
       color: $color-red;
+    }
+    &__instruction.active:hover .card-product-description.download-instruction {
+      color:$color-green;
     }
     .card-product-description.characteristic-paragraph {
       max-width: 688px;
@@ -540,6 +566,10 @@
   line-height: 24px;
   color: $color-gray-70;
 }
+
+//-----------main-slider----------------
+
+
 //-----------------characteristics------------------------------
 .card-product-characteristics {
   margin-bottom: 200px;
