@@ -5742,10 +5742,15 @@ body.lock {
 }
 
 .modal-on-click {
-  display: none;
+  z-index: 5;
+  opacity: 0;
+  visibility: hidden;
+  display: block;
+  transition: all 0.3s ease-in-out;
 }
 .modal-on-click.active {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 .modal-on-click__container {
   max-width: 460px;
@@ -5765,6 +5770,115 @@ body.lock {
   line-height: 28px;
   color: #090102;
 }
+.modal-on-click__main-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 56px 80px 80px 80px;
+}
+.modal-on-click__input-wrapper {
+  position: relative;
+  margin-bottom: 28px;
+}
+.modal-on-click__input-wrapper:last-child {
+  margin-bottom: 40px;
+}
+.modal-on-click__input {
+  display: block;
+  border: 1px solid #827d7d;
+  border-radius: 1px;
+  font-family: "Mulish", sans-serif;
+  font-size: 0.875rem;
+  padding: 12.2px 20px;
+  max-width: 300px;
+  width: 100%;
+}
+@media (max-width: 960px) {
+  .modal-on-click__input {
+    max-width: 327px;
+  }
+}
+.modal-on-click__input::-moz-placeholder {
+  color: #827d7d;
+}
+.modal-on-click__input:-ms-input-placeholder {
+  color: #827d7d;
+}
+.modal-on-click__input::placeholder {
+  color: #827d7d;
+}
+.modal-on-click__input:-moz-read-only {
+  color: #827d7d;
+  outline: 0;
+  outline-offset: 0;
+  cursor: auto;
+}
+.modal-on-click__input:-moz-read-write {
+  color: #827d7d;
+  outline: 0;
+  outline-offset: 0;
+  cursor: auto;
+}
+.modal-on-click__input:focus, .modal-on-click__input:active, .modal-on-click__input:read-only, .modal-on-click__input:read-write {
+  color: #827d7d;
+  outline: 0;
+  outline-offset: 0;
+  cursor: auto;
+}
+.modal-on-click__input.is-invalid {
+  border-color: #991a1d;
+}
+.modal-on-click__label {
+  background: #ffffff;
+  padding: 0 4px;
+  font-family: "Mulish", sans-serif;
+  font-size: 0.875rem;
+  color: #827d7d;
+  font-weight: 400;
+  position: absolute;
+  pointer-events: none;
+  left: 16px;
+  top: 13px;
+  transition: 0.2s ease all;
+}
+.modal-on-click__input:focus ~ .modal-on-click__label, .modal-on-click__input:valid ~ .modal-on-click__label {
+  left: 16px;
+  top: -10px;
+  font-size: 12px;
+  color: #827d7d;
+}
+.modal-on-click .modal-on-click__label.is-invalid {
+  color: #991a1d;
+}
+@keyframes inputHighlighter {
+  from {
+    background: #827d7d;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+.modal-on-click__button {
+  cursor: auto;
+  background: #9c9696;
+  max-width: 100%;
+}
+.modal-on-click__button:hover {
+  background: #9c9696;
+}
+.modal-on-click__button.active {
+  cursor: pointer;
+  background-color: #c12125;
+}
+.modal-on-click__button.active:hover {
+  cursor: pointer;
+  background-color: #991A1D;
+}
+.modal-on-click__button.active:active {
+  cursor: pointer;
+  background-color: #890019;
+}
+
 .novelty {
   position: absolute;
   right: -58px;

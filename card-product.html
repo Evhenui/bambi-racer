@@ -604,7 +604,7 @@
                                 <div data-modal-on-click-container class="modal-on-click__container modal-zoom__container">
                                  <header class="modal-on-click__header">
                                   <h1 class="modal-on-click__title">Купить в один клик</h1>
-                                  <button class="modal-zoom__button-close modal-on-click__button-close">
+                                  <button data-close-modal-on-click class="modal-zoom__button-close modal-on-click__button-close">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                       <path d="M0 1.45454L1.45454 0L16 14.5454L14.5454 16L0 1.45454Z" fill="#090102"/>
                                       <path d="M14.5459 2.97939e-05L16.0004 1.45457L1.455 16L0.000455369 14.5455L14.5459 2.97939e-05Z" fill="#090102"/>
@@ -613,18 +613,18 @@
                                  </header>
                                  <main class="modal-on-click__main">
                                   <div class="modal-on-click__main-wrapper">
-                                    <form action="" class="modal-on-click__form">
+                                    <form action="" class="modal-on-click__form" novalidate>
                                       <div class="modal-on-click__inputs">
-                                        <div class="personal-area-modal__input-wrapper name">      
+                                        <div class="modal-on-click__input-wrapper name">      
                                           <input data-modal-on-click-input-name class="modal-on-click__input js-modal-on-click-input" type="text" required>
                                           <label data-modal-on-click-label-name class="modal-on-click__label">Имя</label>
                                         </div>
-                                        <div class="personal-area-modal__input-wrapper phone">      
+                                        <div class="modal-on-click__input-wrapper phone">      
                                           <input data-modal-on-click-input-phone class="modal-on-click__input js-modal-on-click-input" type="tel" required>
                                           <label data-modal-on-click-label-phone class="modal-on-click__label">Номер телефона</label>
                                         </div>
                                       </div>
-                                      <button class="modal-on-click__button btn-red">Оформить заказ</button>
+                                      <button data-modal-on-click-button class="modal-on-click__button btn-red">Оформить заказ</button>
                                     </form>
                                   </div>
                                  </main>

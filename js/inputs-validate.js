@@ -1,7 +1,62 @@
 export let inputValidate = function() {
   const modalWindow = document.querySelector('[data-popup-modal]'),
-        personalArea = document.querySelector('[data-personal-area-section]');   
+        personalArea = document.querySelector('[data-personal-area-section]'),
+        carProduct = document.querySelector("[data-wrapper-car-product]");
   //------------------input validate---------------------
+    function validate(regex, input) {
+    return regex.test(input);
+    }
+    function valid(input, label, value) {
+    if (value) {
+        input.classList.remove("is-invalid");
+        label.classList.remove("is-invalid");
+    } else {
+        input.classList.add("is-invalid");
+        label.classList.add("is-invalid");
+    }
+    }
+    function validPassword(
+    password,
+    passwordRe,
+    labelPassword,
+    labelPasswordRepeat
+    ) {
+    if (password.value !== passwordRe.value) {
+        password.classList.add("is-invalid");
+        passwordRe.classList.add("is-invalid");
+        labelPassword.classList.add("is-invalid");
+        labelPasswordRepeat.classList.add("is-invalid");
+    } else {
+        password.classList.remove("is-invalid");
+        passwordRe.classList.remove("is-invalid");
+        labelPassword.classList.remove("is-invalid");
+        labelPasswordRepeat.classList.remove("is-invalid");
+    }
+    }
+    function exam(reg, label, input) {
+    if (!validate(reg, input.value) && input.value != "") {
+        valid(input, label, false);
+    } else {
+        valid(input, label, true);
+    }
+    }
+    function isActiveButton(inputList, button, buttonMobile) {
+      inputList.forEach(function(item) {
+        item.addEventListener('input', function(){
+        if(item.value !== '' || inputCheckbox.checked ) {
+          if(buttonMobile) {
+            buttonMobile.classList.add('active');
+          }
+          button.classList.add('active');
+        } else{
+          button.classList.remove('active');
+          if(buttonMobile) {
+            buttonMobile.classList.remove('active');
+          }
+        }
+        })
+      })
+    }
     if (personalArea != null || modalWindow != null) {
         const   inputName = personalArea.querySelector(".js-input-name"),
                 inputSurname = personalArea.querySelector(".js-input-surname"),
@@ -38,43 +93,6 @@ export let inputValidate = function() {
                   regText = /^([A-Za-z\-\']{1,50})|([А-Яа-я\-\']{1,50})$/,
                   regEmail = /[a-zA-Z0-9]+@[a-zA-Z0-9]+.[a-zA-Z0-9]/;
 
-                    function validate(regex, input) {
-                    return regex.test(input);
-                    }
-                    function valid(input, label, value) {
-                    if (value) {
-                        input.classList.remove("is-invalid");
-                        label.classList.remove("is-invalid");
-                    } else {
-                        input.classList.add("is-invalid");
-                        label.classList.add("is-invalid");
-                    }
-                    }
-                    function validPassword(
-                    password,
-                    passwordRe,
-                    labelPassword,
-                    labelPasswordRepeat
-                    ) {
-                    if (password.value !== passwordRe.value) {
-                        password.classList.add("is-invalid");
-                        passwordRe.classList.add("is-invalid");
-                        labelPassword.classList.add("is-invalid");
-                        labelPasswordRepeat.classList.add("is-invalid");
-                    } else {
-                        password.classList.remove("is-invalid");
-                        passwordRe.classList.remove("is-invalid");
-                        labelPassword.classList.remove("is-invalid");
-                        labelPasswordRepeat.classList.remove("is-invalid");
-                    }
-                    }
-                    function exam(reg, label, input) {
-                    if (!validate(reg, input.value) && input.value != "") {
-                        valid(input, label, false);
-                    } else {
-                        valid(input, label, true);
-                    }
-                    }
                     function inputValidate (button) {
                     button.addEventListener("click", function (event) {
                         event.preventDefault();
@@ -91,23 +109,7 @@ export let inputValidate = function() {
                     }
                     );
                     }
-                    function isActiveButton(inputList, button, buttonMobile) {
-                      inputList.forEach(function(item) {
-                        item.addEventListener('input', function(){
-                        if(item.value !== '' || inputCheckbox.checked ) {
-                          if(buttonMobile) {
-                            buttonMobile.classList.add('active');
-                          }
-                          button.classList.add('active');
-                        } else{
-                          button.classList.remove('active');
-                          if(buttonMobile) {
-                            buttonMobile.classList.remove('active');
-                          }
-                        }
-                        })
-                      })
-                    }
+                    
                     isActiveButton(inputs, inputButton, inputButtonMobile)
                     isActiveButton(inputsModal, inputButtonEnterModal);
                     isActiveButton(inputsModal, inputButtonRegisterModal);
@@ -117,6 +119,29 @@ export let inputValidate = function() {
 
                     inputValidate(inputButtonEnterModal);
                     inputValidate(inputButtonRegisterModal);
+    }
+    if(carProduct !== null ) {
+      const  inputNameModalOnClick = carProduct.querySelector("[data-modal-on-click-input-name]"),
+             inputPhoneModalOnClick = carProduct.querySelector("[data-modal-on-click-input-phone]"),
+             labelNameModalOnClick = carProduct.querySelector("[data-modal-on-click-label-name]"),
+             labelPhoneModalOnClick = carProduct.querySelector("[data-modal-on-click-label-phone]"),
+             inputsModalOnClick = carProduct.querySelectorAll(".js-modal-on-click-input"),
+             buttonModalOnClick = carProduct.querySelector("[data-modal-on-click-button]");
+
+      const  regPhone = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/,
+             regText = /^([A-Za-z\-\']{1,50})|([А-Яа-я\-\']{1,50})$/;
+
+             function inputValidate (button) {
+              button.addEventListener("click", function (event) {
+                  event.preventDefault();
+                  exam(regPhone, labelPhoneModalOnClick, inputPhoneModalOnClick);
+                  exam(regText, labelNameModalOnClick, inputNameModalOnClick);
+               }
+              );
+            }
+            isActiveButton(inputsModalOnClick, buttonModalOnClick);
+            inputValidate(buttonModalOnClick);
+
     }
    //------------------show password--------------------- 
    if (personalArea != null || modalWindow != null) {

@@ -55,7 +55,6 @@ export let cardProduct = function () {
       instruction.classList.toggle("active");
     });
     //------hidden header----
-
     window.addEventListener("scroll", function () {
       if (window.scrollY > 300) {
         headerWrapper.classList.add("active");
@@ -69,13 +68,9 @@ export let cardProduct = function () {
     //----------modal zoom--------------------
     if (modalZoom !== null) {
       const body = document.querySelector("#body-cont"),
-        buttonOpenModalZoom = carProduct.querySelector(
-          "[data-open-modal-zoom]"
-        ),
-        modalZoomContainer = carProduct.querySelector(
-          "[data-modal-zoom-container]"
-        ),
-        modalZoomClose = carProduct.querySelector("[data-modal-zoom-close]");
+            buttonOpenModalZoom = carProduct.querySelector("[data-open-modal-zoom]"),
+            modalZoomContainer = carProduct.querySelector("[data-modal-zoom-container]"),
+            modalZoomClose = carProduct.querySelector("[data-modal-zoom-close]");
 
       buttonOpenModalZoom.addEventListener("click", function () {
         modalZoom.classList.add("active");
@@ -95,10 +90,26 @@ export let cardProduct = function () {
     }
     //----------modal on click--------------------
     if(modalOnClick !== null) {
-       const buttonOpenModalOnClick = carProduct.querySelector('[data-by-on-click]');
+       const buttonOpenModalOnClick = carProduct.querySelector('[data-by-on-click]'),
+             buttonCloseModalOnClick = carProduct.querySelector('[data-close-modal-on-click]'),
+             modalOnClickContainer = carProduct.querySelector('[data-modal-on-click-container]'),
+             body = document.querySelector('#body-cont');
+             
        buttonOpenModalOnClick.addEventListener('click', function() {
         modalOnClick.classList.toggle('active');
-       })
+        body.classList.add("lock");
+       });
+       buttonCloseModalOnClick.addEventListener('click', function(){
+        modalOnClick.classList.remove('active');
+        body.classList.remove("lock");
+       });
+       modalOnClick.addEventListener("click", function (e) {
+        const click = e.composedPath().includes(modalOnClickContainer);
+        if (!click) {
+          modalOnClick.classList.remove("active");
+          body.classList.remove("lock");
+        }
+      });
     }
   }
   //----slider main------

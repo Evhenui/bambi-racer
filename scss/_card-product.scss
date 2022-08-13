@@ -247,9 +247,14 @@
 }
 //-----------------modal on click------------------------------
 .modal-on-click {
-  display: none;
+  z-index: 5;
+  opacity: 0;
+  visibility: hidden;
+  display: block;
+  transition: all .3s ease-in-out;
   &.active {
-    display: block;
+    opacity: 1;
+    visibility: visible;
   }
   &__mask {
   }
@@ -285,26 +290,111 @@
   }
 
   &__main-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 56px 80px 80px 80px;
   }
 
   &__form {
   }
 
   &__inputs {
+
+  }
+
+  &__input-wrapper {
+    position: relative;
+    margin-bottom: 28px;
+    &:last-child {
+      margin-bottom: 40px;
+    }
   }
 
   &__input {
+    display: block;
+    border: 1px solid $color-gray-60;
+    border-radius: 1px;
+    font-family: $font-main;
+    font-size: 0.875rem;
+    padding: 12.2px 20px;
+    max-width: 300px;
+    width: 100%;
+    @media (max-width: 960px) {
+      max-width: 327px;
+    }
+    &::placeholder {
+      color: $color-gray-60;
+    }
+    &:focus,
+    &:active,
+    &:read-only,
+    &:read-write {
+      color: $color-gray-60;
+      outline: 0;
+      outline-offset: 0;
+      cursor: auto;
+    }
+  }
+  &__input.is-invalid {
+    border-color: $color-red-60;
   }
 
   &__label {
+    background: #ffffff;
+    padding: 0 4px;
+    font-family: $font-main;
+    font-size: 0.875rem;
+    color: $color-gray-60;
+    font-weight: 400;
+    position: absolute;
+    pointer-events: none;
+    left: 16px;
+    top: 13px;
+    transition: 0.2s ease all;
+  }
+  
+  &__input:focus ~ &__label,
+  &__input:valid ~ &__label {
+    left: 16px;
+    top: -10px;
+    font-size: 12px;
+    color: #827d7d;
+  }
+  .modal-on-click__label.is-invalid {
+    color: $color-red-60;
   }
 
+  @keyframes inputHighlighter {
+    from {
+      background: #827d7d;
+    }
+    to {
+      width: 0;
+      background: transparent;
+    }
+  }
   &__button {
+    cursor: auto;
+    background: #9c9696;
+    max-width: 100%;
+  }
+  &__button:hover {
+    background: #9c9696;
+  }
+
+  &__button.active {
+    cursor: pointer;
+    background-color: #c12125;
+  }
+  &__button.active:hover {
+    cursor: pointer;
+    background-color: #991A1D;
+  }
+  &__button.active:active {
+    cursor: pointer;
+    background-color: #890019;
   }
 }
-
-
-
 //-----------------icon item name header-----------------------
   .novelty {
     position: absolute;
