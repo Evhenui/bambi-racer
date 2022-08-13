@@ -5513,6 +5513,10 @@ label {
   background-color: #ffffff;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .card-product-header-info {
   padding-top: 76px;
   background: #212121;
@@ -5644,6 +5648,123 @@ label {
   transition: all 0.3s;
 }
 
+.modal-zoom {
+  position: relative;
+  z-index: 5;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.modal-zoom.active {
+  visibility: visible;
+  opacity: 1;
+}
+.modal-zoom__mask {
+  position: fixed;
+  z-index: 9999999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  display: table;
+  transition: all 0.3s ease;
+}
+.modal-zoom__wrapper {
+  display: table-cell;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+.modal-zoom__container {
+  overflow: hidden;
+  box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 1320px;
+  width: 100%;
+  background-color: #FFFFFF;
+}
+.modal-zoom__main {
+  display: flex;
+  justify-content: space-between;
+  padding: 26px 26px 44px 24px;
+}
+.modal-zoom__slider {
+  max-width: 660px;
+  width: 100%;
+  height: 660px;
+  background-color: #4E4B4B;
+}
+.modal-zoom__navigation {
+  max-width: 336px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-zoom__navigation-close {
+  align-self: flex-end;
+  margin-bottom: 22px;
+}
+.modal-zoom__navigation-body {
+  align-self: flex-start;
+}
+.modal-zoom__title {
+  font-family: "Mulish", sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 32px;
+  text-transform: uppercase;
+  color: #090102;
+  margin-bottom: 33px;
+}
+.modal-zoom__discont {
+  padding-left: 30px;
+  display: flex;
+  -moz-column-gap: 4px;
+       column-gap: 4px;
+}
+.modal-zoom__discont .modal-zoom__full-price {
+  font-size: 12px;
+}
+.modal-zoom__full-prises {
+  padding-left: 10px;
+  margin-bottom: 32px;
+}
+.modal-zoom__button-buy {
+  margin-bottom: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+
+.modal-on-click {
+  display: none;
+}
+.modal-on-click.active {
+  display: block;
+}
+.modal-on-click__container {
+  max-width: 460px;
+  width: 100%;
+}
+.modal-on-click__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F3F2F2;
+  padding: 20px 26px 20px 80px;
+}
+.modal-on-click__title {
+  font-family: "Mulish", sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 28px;
+  color: #090102;
+}
 .novelty {
   position: absolute;
   right: -58px;
@@ -5740,6 +5861,38 @@ label {
   width: 100%;
   height: 500px;
   background-color: azure;
+  position: relative;
+}
+.card-product-all-info__slider-buttons-navigation {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 7px;
+  top: 23px;
+  row-gap: 28px;
+  align-items: center;
+}
+.card-product-all-info__slider-button-turn-around {
+  font-size: 0;
+  display: inline-block;
+}
+.card-product-all-info__slider-button-turn-around:hover .card-product-all-info__slider-svg {
+  fill: #C12125;
+}
+.card-product-all-info__slider-link-youtube {
+  font-size: 0;
+  display: inline-block;
+}
+.card-product-all-info__slider-link-youtube:hover .card-product-all-info__slider-svg {
+  fill: #C12125;
+}
+.card-product-all-info__slider-button-zoom {
+  position: absolute;
+  bottom: 14px;
+  right: 18px;
+}
+.card-product-all-info__slider-button-zoom:hover .card-product-all-info__slider-svg {
+  stroke: #C12125;
 }
 .card-product-all-info__vendor-code-section {
   display: flex;
@@ -5903,6 +6056,9 @@ label {
   font-weight: 700;
   color: #c12125;
 }
+.card-product-all-info__price .card-product-all-info__out-of-stock {
+  display: none;
+}
 .card-product-all-info__price-discount {
   display: flex;
   -moz-column-gap: 4px;
@@ -5933,6 +6089,18 @@ label {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.card-product-all-info__button-buy.inactive {
+  background-color: #9C9696;
+  cursor: default;
+}
+.card-product-all-info__button-buy-on-click.inactive {
+  cursor: default;
+  color: #827D7D;
+  border-color: #9C9696;
+}
+.card-product-all-info__button-buy-on-click.inactive:hover {
+  background-color: white;
 }
 .card-product-all-info__scroll-description {
   overflow-y: scroll;
@@ -6014,6 +6182,15 @@ label {
   line-height: 44px;
   text-transform: uppercase;
   color: #090102;
+}
+
+.card-product-title.out-of-stock {
+  font-family: "Mulish", sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 28px;
+  text-transform: none;
+  color: #827D7D;
 }
 
 .card-product-title.paragraph {
@@ -6314,7 +6491,7 @@ label {
   background-color: #F8F7F7;
 }
 .card-product-spare-parts__wrapper {
-  padding: 100px 48px 21px 48px;
+  padding: 100px 48px 100px 48px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6391,10 +6568,17 @@ label {
   fill: #C12125;
 }
 .card-product-button {
-  padding: 0 48px 48px 48px;
-  background-color: #F8F7F7;
-  display: flex;
-  justify-content: flex-end;
+  opacity: 0;
+  width: 0;
+  position: fixed;
+  bottom: 160px;
+  right: 4px;
+  transition: all 0.3s ease-in-out;
+}
+.card-product-button.active {
+  opacity: 1;
+  width: 40px;
+  transition: all 0.3s ease-in-out;
 }
 .card-product-button__button-up {
   padding: 9.5px 14px;

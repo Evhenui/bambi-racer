@@ -314,23 +314,23 @@
                 </div>
                 <nav class="card-product-navigation">
                       <ul class="card-product-navigation__menu">
-                          <li data-item-navigation-car-product class="card-product-navigation__item ">
-                              <a href="#" class="card-product-navigation__link">Всё о товаре</a>
+                          <li data-item-navigation-car-product class="card-product-navigation__item active">
+                              <a href="#card-product-all-info" class="card-product-navigation__link">Всё о товаре</a>
                           </li>
                           <li data-item-navigation-car-product class="card-product-navigation__item ">
-                              <a href="#" class="card-product-navigation__link">Характеристики</a>
+                              <a href="#card-product-characteristics" class="card-product-navigation__link">Характеристики</a>
                           </li>
                           <li data-item-navigation-car-product class="card-product-navigation__item ">
-                              <a href="#" class="card-product-navigation__link">Видео</a>
+                              <a href="#card-product-multimedia" class="card-product-navigation__link">Видео</a>
                           </li>
                           <li data-item-navigation-car-product class="card-product-navigation__item ">
-                              <a href="#" class="card-product-navigation__link">Отзывы (4)</a>
+                              <a href="#card-product-reviews" class="card-product-navigation__link">Отзывы (4)</a>
                           </li>
                           <li data-item-navigation-car-product class="card-product-navigation__item ">
-                              <a href="#" class="card-product-navigation__link">Галерея</a>
+                              <a href="#card-product-gallery" class="card-product-navigation__link">Галерея</a>
                           </li>
                           <li data-item-navigation-car-product class="card-product-navigation__item">
-                              <a href="#" class="card-product-navigation__link">Запчасти и Комплектующие</a>
+                              <a href="#card-product-spare-parts" class="card-product-navigation__link">Запчасти и Комплектующие</a>
                           </li>
                       </ul>
                 </nav>
@@ -355,10 +355,81 @@
                 </button>
               </section>
             </section>
-            <section class="card-product-all-info">
+            <section id="card-product-all-info" class="card-product-all-info">
                 <div class="card-product-all-info__wrapper">
                   <section class="card-product-all-info__slider">
-                   
+                      <section class="card-product-all-info__slider-buttons-navigation">
+                        <button class="card-product-all-info__slider-button-turn-around">
+                          <svg width="40" height="24" viewBox="0 0 40 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="card-product-all-info__slider-svg" d="M12.552 15.108C11.984 15.108 11.44 15.02 10.92 14.844C10.4 14.668 9.964 14.416 9.612 14.088L9.984 13.32C10.376 13.64 10.78 13.872 11.196 14.016C11.612 14.16 12.06 14.232 12.54 14.232C13.172 14.232 13.652 14.1 13.98 13.836C14.308 13.564 14.472 13.168 14.472 12.648C14.472 12.152 14.304 11.776 13.968 11.52C13.632 11.256 13.14 11.124 12.492 11.124H11.22V10.296H12.408C12.968 10.296 13.412 10.152 13.74 9.864C14.068 9.576 14.232 9.184 14.232 8.688C14.232 8.24 14.08 7.9 13.776 7.668C13.48 7.428 13.052 7.308 12.492 7.308C11.58 7.308 10.792 7.632 10.128 8.28L9.756 7.5C10.084 7.164 10.496 6.904 10.992 6.72C11.488 6.528 12.008 6.432 12.552 6.432C13.384 6.432 14.036 6.624 14.508 7.008C14.98 7.392 15.216 7.924 15.216 8.604C15.216 9.124 15.068 9.572 14.772 9.948C14.476 10.316 14.076 10.568 13.572 10.704V10.572C14.172 10.668 14.636 10.908 14.964 11.292C15.292 11.668 15.456 12.144 15.456 12.72C15.456 13.456 15.196 14.04 14.676 14.472C14.164 14.896 13.456 15.108 12.552 15.108ZM20.0713 15.108C19.0473 15.108 18.2553 14.748 17.6953 14.028C17.1433 13.3 16.8673 12.284 16.8673 10.98C16.8673 10.004 17.0073 9.18 17.2873 8.508C17.5673 7.828 17.9673 7.312 18.4873 6.96C19.0073 6.608 19.6353 6.432 20.3713 6.432C20.8113 6.432 21.2553 6.524 21.7033 6.708C22.1513 6.884 22.5193 7.132 22.8073 7.452L22.4473 8.22C22.1433 7.908 21.8113 7.68 21.4513 7.536C21.0913 7.384 20.7273 7.308 20.3593 7.308C19.5433 7.308 18.9153 7.6 18.4753 8.184C18.0433 8.76 17.8273 9.628 17.8273 10.788V11.904H17.7193C17.7753 11.448 17.9113 11.056 18.1273 10.728C18.3513 10.392 18.6433 10.136 19.0033 9.96C19.3633 9.784 19.7633 9.696 20.2033 9.696C20.7153 9.696 21.1673 9.808 21.5593 10.032C21.9513 10.256 22.2593 10.572 22.4833 10.98C22.7073 11.38 22.8193 11.84 22.8193 12.36C22.8193 12.888 22.7033 13.36 22.4713 13.776C22.2393 14.192 21.9153 14.52 21.4993 14.76C21.0833 14.992 20.6073 15.108 20.0713 15.108ZM19.9993 14.268C20.3673 14.268 20.6913 14.192 20.9713 14.04C21.2593 13.88 21.4793 13.66 21.6313 13.38C21.7913 13.092 21.8713 12.764 21.8713 12.396C21.8713 12.028 21.7913 11.704 21.6313 11.424C21.4793 11.144 21.2593 10.924 20.9713 10.764C20.6913 10.604 20.3673 10.524 19.9993 10.524C19.6313 10.524 19.3073 10.604 19.0273 10.764C18.7473 10.924 18.5273 11.144 18.3673 11.424C18.2153 11.704 18.1393 12.028 18.1393 12.396C18.1393 12.764 18.2153 13.092 18.3673 13.38C18.5273 13.66 18.7473 13.88 19.0273 14.04C19.3073 14.192 19.6313 14.268 19.9993 14.268ZM26.9906 15.108C26.0306 15.108 25.2946 14.736 24.7826 13.992C24.2706 13.248 24.0146 12.172 24.0146 10.764C24.0146 9.348 24.2706 8.272 24.7826 7.536C25.2946 6.8 26.0306 6.432 26.9906 6.432C27.9586 6.432 28.6946 6.8 29.1986 7.536C29.7106 8.272 29.9666 9.344 29.9666 10.752C29.9666 12.168 29.7106 13.248 29.1986 13.992C28.6866 14.736 27.9506 15.108 26.9906 15.108ZM26.9906 14.244C27.6626 14.244 28.1626 13.96 28.4906 13.392C28.8186 12.824 28.9826 11.944 28.9826 10.752C28.9826 9.552 28.8186 8.676 28.4906 8.124C28.1626 7.564 27.6626 7.284 26.9906 7.284C26.3266 7.284 25.8266 7.564 25.4906 8.124C25.1626 8.684 24.9986 9.56 24.9986 10.752C24.9986 11.944 25.1626 12.824 25.4906 13.392C25.8266 13.96 26.3266 14.244 26.9906 14.244Z" fill="#090102"/>
+                            <path class="card-product-all-info__slider-svg" d="M32.2991 19.6862C32.4307 19.4434 32.3406 19.1399 32.0978 19.0083L28.1417 16.8637C27.899 16.7321 27.5955 16.8222 27.4639 17.065C27.3323 17.3078 27.4224 17.6113 27.6652 17.7429L31.1817 19.6492L29.2754 23.1657C29.1438 23.4085 29.2339 23.712 29.4766 23.8436C29.7194 23.9752 30.0229 23.8851 30.1545 23.6423L32.2991 19.6862ZM18.3716 20.9738L18.3877 20.474L18.3716 20.9738ZM5.76992 18.613L5.96233 18.1515L5.76992 18.613ZM2.1138 16.3731L1.76273 16.7291H1.76273L2.1138 16.3731ZM1.00004 14.2005L1.50003 14.2037L1.00004 14.2005ZM2.14521 12.0222L2.49374 12.3807L2.14521 12.0222ZM36.5781 11.0235L36.8499 10.6038V10.6038L36.5781 11.0235ZM38.8118 13.3411L39.272 13.1455V13.1455L38.8118 13.3411ZM38.9955 14.3471L38.4966 14.3134V14.3134L38.9955 14.3471ZM38.6658 15.3809L38.2297 15.1364V15.1364L38.6658 15.3809ZM35.83 17.2743C35.5911 17.4127 35.5096 17.7186 35.648 17.9576C35.7864 18.1965 36.0923 18.278 36.3312 18.1396L35.83 17.2743ZM31.7172 18.9686C27.9576 20.0849 23.1961 20.6291 18.3877 20.474L18.3555 21.4735C23.2492 21.6313 28.1205 21.0797 32.0019 19.9272L31.7172 18.9686ZM18.3877 20.474C13.5742 20.3188 9.14039 19.4766 5.96233 18.1515L5.57751 19.0745C8.89992 20.4597 13.4617 21.3157 18.3555 21.4735L18.3877 20.474ZM5.96233 18.1515C4.37061 17.4879 3.20875 16.7506 2.46488 16.0171L1.76273 16.7291C2.62816 17.5825 3.91435 18.3811 5.57751 19.0745L5.96233 18.1515ZM2.46488 16.0171C1.71507 15.2777 1.49717 14.6569 1.50003 14.2037L0.500048 14.1974C0.494976 15.0009 0.886822 15.8654 1.76273 16.7291L2.46488 16.0171ZM1.50003 14.2037C1.50291 13.7476 1.73114 13.1221 2.49374 12.3807L1.79668 11.6637C0.909261 12.5264 0.505131 13.3922 0.500048 14.1974L1.50003 14.2037ZM2.49374 12.3807C3.24924 11.6463 4.42248 10.9102 6.0232 10.2493L5.64154 9.32497C3.96974 10.0153 2.67326 10.8115 1.79668 11.6637L2.49374 12.3807ZM31.7891 9.47893C33.6616 10.0405 35.181 10.7145 36.3064 11.4432L36.8499 10.6038C35.6232 9.80952 34.0104 9.10109 32.0764 8.52107L31.7891 9.47893ZM36.3064 11.4432C37.4517 12.1849 38.0888 12.9182 38.3516 13.5367L39.272 13.1455C38.9014 12.2738 38.0854 11.4038 36.8499 10.6038L36.3064 11.4432ZM38.3516 13.5367C38.4755 13.8281 38.5122 14.0826 38.4966 14.3134L39.4943 14.3808C39.5212 13.9834 39.4534 13.5723 39.272 13.1455L38.3516 13.5367ZM38.4966 14.3134C38.4807 14.5484 38.406 14.8219 38.2297 15.1364L39.102 15.6255C39.3421 15.1972 39.4673 14.7809 39.4943 14.3808L38.4966 14.3134ZM38.2297 15.1364C37.8637 15.7893 37.1031 16.537 35.83 17.2743L36.3312 18.1396C37.6908 17.3522 38.6162 16.4919 39.102 15.6255L38.2297 15.1364Z" fill="#090102"/>
+                          </svg> 
+                        </button>
+                        <a href="#" class="card-product-all-info__slider-link-youtube">
+                          <svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="path-1-inside-1_1000_23900" fill="white">
+                            <path d="M31.292 3.14343L31.332 3.39707C30.9453 2.06543 29.9014 1.0379 28.5747 0.6639L28.5467 0.657429C26.0521 1.77604e-05 16.0135 1.78847e-05 16.0135 1.78847e-05C16.0135 1.78847e-05 6.00032 -0.0129234 3.48035 0.657429C2.12837 1.0379 1.08305 2.06543 0.70305 3.3699L0.696384 3.39707C-0.235605 8.12189 -0.242271 13.7992 0.737717 18.8579L0.696384 18.6017C1.08305 19.9333 2.12703 20.9608 3.45368 21.3348L3.48168 21.3413C5.97365 22 16.0149 22 16.0149 22C16.0149 22 26.0267 22 28.548 21.3413C29.9014 20.9608 30.9467 19.9333 31.3267 18.6288L31.3333 18.6017C31.7573 16.4042 32 13.8755 32 11.2925C32 11.198 32 11.1022 31.9987 11.0065C32 10.9185 32 10.8137 32 10.7088C32 8.12448 31.7573 5.59578 31.292 3.14343ZM14.3021 14.8838C13.6355 15.2597 12.8109 14.7781 12.8109 14.0128V8.00145C12.8109 7.23555 13.6366 6.75395 14.3033 7.13106L19.6245 10.1413C20.3019 10.5244 20.3012 11.5004 19.6234 11.8827L14.3021 14.8838Z"/>
+                            </mask>
+                            <path class="card-product-all-info__slider-svg" d="M31.292 3.14343L32.2745 2.95701L30.3042 3.2992L31.292 3.14343ZM31.332 3.39707L30.3717 3.67592L32.3198 3.2413L31.332 3.39707ZM28.5747 0.6639L28.846 -0.298585L28.8231 -0.305053L28.7999 -0.31042L28.5747 0.6639ZM28.5467 0.657429L28.2919 1.62442L28.3067 1.62831L28.3215 1.63175L28.5467 0.657429ZM16.0135 1.78847e-05L16.0122 1.00002H16.0135V1.78847e-05ZM3.48035 0.657429L3.22327 -0.308962L3.21635 -0.307121L3.20946 -0.30518L3.48035 0.657429ZM0.70305 3.3699L-0.257044 3.09022L-0.263044 3.11082L-0.268155 3.13165L0.70305 3.3699ZM0.696384 3.39707L-0.274821 3.15883L-0.280279 3.18108L-0.284712 3.20355L0.696384 3.39707ZM0.737717 18.8579L-0.244031 19.0481L1.72495 18.6986L0.737717 18.8579ZM0.696384 18.6017L1.65672 18.3228L-0.290855 18.7609L0.696384 18.6017ZM3.45368 21.3348L3.18235 22.2973L3.2053 22.3038L3.22854 22.3092L3.45368 21.3348ZM3.48168 21.3413L3.73724 20.3745L3.72209 20.3705L3.70683 20.367L3.48168 21.3413ZM16.0149 22V21V22ZM28.548 21.3413L28.8008 22.3088L28.8098 22.3065L28.8187 22.304L28.548 21.3413ZM31.3267 18.6288L32.2868 18.9085L32.2928 18.8879L32.2979 18.8671L31.3267 18.6288ZM31.3333 18.6017L32.3046 18.8399L32.3105 18.8156L32.3152 18.7911L31.3333 18.6017ZM31.9987 11.0065L30.9988 10.9913L30.9986 11.0059L30.9988 11.0204L31.9987 11.0065ZM19.6245 10.1413L20.1169 9.27087L19.6245 10.1413ZM19.6234 11.8827L19.1322 11.0116L19.6234 11.8827ZM30.3042 3.2992L30.3442 3.55285L32.3198 3.2413L32.2798 2.98765L30.3042 3.2992ZM32.2923 3.11823C31.8088 1.45291 30.5028 0.168482 28.846 -0.298585L28.3034 1.62638C29.2999 1.90732 30.0819 2.67794 30.3717 3.67592L32.2923 3.11823ZM28.7999 -0.31042L28.7719 -0.316891L28.3215 1.63175L28.3495 1.63822L28.7999 -0.31042ZM28.8015 -0.309557C28.0753 -0.500954 26.8914 -0.628199 25.6074 -0.720086C24.2954 -0.813968 22.791 -0.876105 21.3737 -0.917382C19.9549 -0.958705 18.6156 -0.979341 17.6315 -0.989655C17.1393 -0.994814 16.7354 -0.997396 16.4543 -0.998688C16.3138 -0.999334 16.2039 -0.999657 16.129 -0.999819C16.0916 -0.9999 16.0629 -0.999941 16.0435 -0.999961C16.0337 -0.999972 16.0263 -0.999977 16.0213 -0.999979C16.0188 -0.999981 16.0169 -0.999981 16.0156 -0.999982C16.015 -0.999982 16.0145 -0.999982 16.0141 -0.999982C16.0139 -0.999982 16.0138 -0.999982 16.0137 -0.999982C16.0136 -0.999982 16.0135 -0.999982 16.0135 1.78847e-05C16.0135 1.00002 16.0135 1.00002 16.0136 1.00002C16.0136 1.00002 16.0137 1.00002 16.0139 1.00002C16.0141 1.00002 16.0145 1.00002 16.0151 1.00002C16.0162 1.00002 16.018 1.00002 16.0203 1.00002C16.025 1.00002 16.032 1.00003 16.0414 1.00004C16.0601 1.00006 16.088 1.0001 16.1247 1.00018C16.1981 1.00033 16.3063 1.00065 16.4452 1.00129C16.7228 1.00257 17.1227 1.00512 17.6106 1.01023C18.5866 1.02046 19.9129 1.04092 21.3155 1.08177C22.7198 1.12267 24.1927 1.1838 25.4646 1.27481C26.7644 1.36782 27.7708 1.48711 28.2919 1.62442L28.8015 -0.309557ZM16.0135 1.78847e-05C16.0148 -0.999981 16.0148 -0.999981 16.0146 -0.999982C16.0146 -0.999982 16.0144 -0.999982 16.0142 -0.999982C16.0139 -0.999982 16.0134 -0.999983 16.0127 -0.999984C16.0114 -0.999985 16.0095 -0.999987 16.007 -0.999989C16.002 -0.999992 15.9946 -0.999997 15.9849 -0.999999C15.9655 -1 15.9369 -0.999998 15.8995 -0.999963C15.8248 -0.999894 15.7152 -0.999704 15.5749 -0.999223C15.2945 -0.998262 14.8914 -0.996137 14.4001 -0.991485C13.4179 -0.982185 12.0808 -0.962766 10.6634 -0.92225C9.24754 -0.88178 7.74356 -0.820044 6.42999 -0.725517C5.14411 -0.632982 3.95663 -0.504047 3.22327 -0.308962L3.73743 1.62382C4.26405 1.48373 5.27321 1.3629 6.57355 1.26932C7.8462 1.17774 9.31802 1.11702 10.7205 1.07693C12.1214 1.03689 13.4451 1.01765 14.4191 1.00843C14.9058 1.00382 15.3048 1.00171 15.5818 1.00077C15.7203 1.00029 15.8282 1.0001 15.9014 1.00004C15.938 1 15.9659 0.999997 15.9845 1C15.9938 1 16.0009 1.00001 16.0055 1.00001C16.0078 1.00001 16.0096 1.00001 16.0107 1.00002C16.0112 1.00002 16.0117 1.00002 16.0119 1.00002C16.012 1.00002 16.0121 1.00002 16.0122 1.00002C16.0122 1.00002 16.0122 1.00002 16.0135 1.78847e-05ZM3.20946 -0.30518C1.53468 0.16613 0.222158 1.44519 -0.257044 3.09022L1.66314 3.64958C1.94393 2.68567 2.72206 1.90967 3.75124 1.62004L3.20946 -0.30518ZM-0.268155 3.13165L-0.274821 3.15883L1.66759 3.63532L1.67426 3.60814L-0.268155 3.13165ZM-0.284712 3.20355C-1.24256 8.05945 -1.2477 13.8671 -0.244031 19.0481L1.71946 18.6677C0.76316 13.7313 0.771346 8.18434 1.67748 3.5906L-0.284712 3.20355ZM1.72495 18.6986L1.68362 18.4424L-0.290855 18.7609L-0.249522 19.0171L1.72495 18.6986ZM-0.263952 18.8805C0.219596 20.5458 1.52557 21.8302 3.18235 22.2973L3.72502 20.3723C2.7285 20.0914 1.9465 19.3208 1.65672 18.3228L-0.263952 18.8805ZM3.22854 22.3092L3.25654 22.3156L3.70683 20.367L3.67883 20.3605L3.22854 22.3092ZM3.22613 22.3081C3.95208 22.5 5.1359 22.6275 6.41977 22.7195C7.73165 22.8136 9.2362 22.8759 10.6536 22.9172C12.0726 22.9586 13.4122 22.9793 14.3965 22.9897C14.8889 22.9948 15.2928 22.9974 15.5739 22.9987C15.7145 22.9994 15.8244 22.9997 15.8993 22.9998C15.9368 22.9999 15.9655 23 15.9849 23C15.9946 23 16.002 23 16.0071 23C16.0096 23 16.0115 23 16.0128 23C16.0134 23 16.0139 23 16.0143 23C16.0144 23 16.0146 23 16.0147 23C16.0148 23 16.0149 23 16.0149 22C16.0149 21 16.0149 21 16.0148 21C16.0147 21 16.0147 21 16.0145 21C16.0143 21 16.0139 21 16.0133 21C16.0122 21 16.0104 21 16.0081 21C16.0034 21 15.9964 21 15.987 21C15.9683 21 15.9403 20.9999 15.9037 20.9998C15.8303 20.9997 15.722 20.9994 15.5831 20.9987C15.3054 20.9974 14.9054 20.9949 14.4175 20.9898C13.4412 20.9795 12.1147 20.959 10.7119 20.9181C9.30753 20.8771 7.83453 20.8159 6.56281 20.7247C5.26309 20.6315 4.25727 20.512 3.73724 20.3745L3.22613 22.3081ZM16.0149 22C16.0149 23 16.0149 23 16.015 23C16.0151 23 16.0153 23 16.0154 23C16.0158 23 16.0163 23 16.0169 23C16.0182 23 16.0201 23 16.0226 23C16.0276 23 16.035 23 16.0447 23C16.0641 23 16.0927 22.9999 16.1301 22.9998C16.2048 22.9997 16.3144 22.9994 16.4546 22.9987C16.735 22.9974 17.1379 22.9948 17.6291 22.9897C18.6112 22.9793 19.948 22.9586 21.3652 22.9172C22.7808 22.8759 24.2843 22.8136 25.5975 22.7196C26.8836 22.6274 28.0693 22.4999 28.8008 22.3088L28.2953 20.3738C27.7662 20.512 26.7549 20.6315 25.4546 20.7247C24.1814 20.8159 22.7093 20.8771 21.3068 20.9181C19.9058 20.959 18.5821 20.9795 17.6081 20.9898C17.1213 20.9949 16.7224 20.9974 16.4454 20.9987C16.3069 20.9994 16.1989 20.9997 16.1257 20.9998C16.0892 20.9999 16.0613 21 16.0426 21C16.0333 21 16.0263 21 16.0216 21C16.0193 21 16.0176 21 16.0164 21C16.0159 21 16.0155 21 16.0152 21C16.0151 21 16.015 21 16.0149 21C16.0149 21 16.0149 21 16.0149 22ZM28.8187 22.304C30.4948 21.8327 31.8075 20.5537 32.2868 18.9085L30.3666 18.3492C30.0858 19.3129 29.3079 20.0889 28.2774 20.3786L28.8187 22.304ZM32.2979 18.8671L32.3046 18.8399L30.3621 18.3634L30.3555 18.3906L32.2979 18.8671ZM32.3152 18.7911C32.7521 16.5272 33 13.9349 33 11.2925H31C31 13.8162 30.7626 16.2813 30.3515 18.4122L32.3152 18.7911ZM33 11.2925C33 11.1991 33 11.0964 32.9986 10.9926L30.9988 11.0204C31 11.1081 31 11.1969 31 11.2925H33ZM32.9986 11.0216C33 10.9245 33 10.8114 33 10.7088H31C31 10.8159 31 10.9125 30.9988 10.9913L32.9986 11.0216ZM33 10.7088C33 8.06174 32.7514 5.47062 32.2745 2.95701L30.3095 3.32985C30.7632 5.72093 31 8.18723 31 10.7088H33ZM13.8109 14.0128V8.00145H11.8109V14.0128H13.8109ZM13.8109 8.00145L19.1322 11.0116L20.1169 9.27087L14.7956 6.26067L13.8109 8.00145ZM19.1322 11.0116L13.8109 14.0128L14.7934 15.7548L20.1146 12.7537L19.1322 11.0116ZM19.1322 11.0116L20.1146 12.7537C21.4703 11.9891 21.4716 10.0372 20.1169 9.27087L19.1322 11.0116ZM13.8109 8.00145H13.8109L14.7956 6.26067C13.4624 5.50646 11.8109 6.46965 11.8109 8.00145H13.8109ZM11.8109 14.0128C11.8109 15.5434 13.4602 16.5067 14.7934 15.7548L13.8109 14.0128L13.8109 14.0128H11.8109Z" fill="#090102" mask="url(#path-1-inside-1_1000_23900)"/>
+                          </svg>                              
+                        </a>
+                      </section>
+                      <button data-open-modal-zoom class="card-product-all-info__slider-button-zoom">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="card-product-all-info__slider-svg" d="M11.6667 22.3333C17.5577 22.3333 22.3333 17.5577 22.3333 11.6667C22.3333 5.77563 17.5577 1 11.6667 1C5.77563 1 1 5.77563 1 11.6667C1 17.5577 5.77563 22.3333 11.6667 22.3333Z" stroke="#090102" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path class="card-product-all-info__slider-svg" d="M25.0002 25L19.2002 19.2" stroke="#090102" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path class="card-product-all-info__slider-svg" d="M11.667 7.66663V15.6666" stroke="#090102" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path class="card-product-all-info__slider-svg" d="M7.66699 11.6667H15.667" stroke="#090102" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </button>
+                      <section data-modal-zoom class="modal-zoom">
+                        <div class="modal-zoom__mask">
+                          <div class="modal-zoom__wrapper">
+                            <div data-modal-zoom-container class="modal-zoom__container">
+                              <main class="modal-zoom__main">
+                                <section class="modal-zoom__slider"></section>
+                                <section class="modal-zoom__navigation">
+                                  <section data-modal-zoom-close class="modal-zoom__navigation-close">
+                                    <button class="modal-zoom__button-close">
+                                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 1.45454L1.45454 0L16 14.5454L14.5454 16L0 1.45454Z" fill="#090102"/>
+                                        <path d="M14.5459 2.97939e-05L16.0004 1.45457L1.455 16L0.000455369 14.5455L14.5459 2.97939e-05Z" fill="#090102"/>
+                                      </svg> 
+                                    </button>
+                                  </section>
+                                  <section class="modal-zoom__navigation-body">
+                                    <h1 class="modal-zoom__title">Джип M 3579EBLR-3</h1>
+                                    <section class="modal-zoom__price">
+                                      <div class="modal-zoom__discont">
+                                        <span class="card-product-description full-price modal-zoom__full-price">15 678</span>
+                                        <span class="card-product-description description-persent modal-zoom__full-price">-30%</span>
+                                      </div>
+                                      <div class="modal-zoom__full-prises">
+                                        <h1 class="card-product-title price">10 974,6</h1>
+                                      </div>
+                                      <section class="modal-zoom__buttons">
+                                        <button class="modal-zoom__button-buy btn-red">
+                                          <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.25 19C9.25 19.6904 8.69036 20.25 8 20.25C7.30964 20.25 6.75 19.6904 6.75 19C6.75 18.3096 7.30964 17.75 8 17.75C8.69036 17.75 9.25 18.3096 9.25 19Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M20.25 19C20.25 19.6904 19.6904 20.25 19 20.25C18.3096 20.25 17.75 19.6904 17.75 19C17.75 18.3096 18.3096 17.75 19 17.75C19.6904 17.75 20.25 18.3096 20.25 19Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1 1H4.3748L6.9059 15.7815H20.4051" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <mask id="path-4-inside-1_2415_3245" fill="white">
+                                            <path d="M6.00024 12.4067H20.0594C20.157 12.4068 20.2516 12.373 20.327 12.3112C20.4025 12.2494 20.4542 12.1633 20.4734 12.0677L21.992 4.47437C22.0043 4.41314 22.0028 4.34995 21.9877 4.28937C21.9725 4.22878 21.9442 4.17232 21.9046 4.12404C21.865 4.07576 21.8151 4.03687 21.7587 4.01019C21.7022 3.9835 21.6405 3.96968 21.5781 3.96973H5.21875"/>
+                                            </mask>
+                                            <path d="M6.00024 10.9067C5.17182 10.9067 4.50024 11.5783 4.50024 12.4067C4.50024 13.2352 5.17182 13.9067 6.00024 13.9067V10.9067ZM20.0594 12.4067L20.0605 10.9067H20.0594V12.4067ZM20.4734 12.0677L21.9442 12.362L21.9443 12.3618L20.4734 12.0677ZM21.992 4.47437L20.5212 4.17999L20.5212 4.18019L21.992 4.47437ZM21.5781 3.96973V5.46973L21.5791 5.46973L21.5781 3.96973ZM5.21875 2.46973C4.39032 2.46973 3.71875 3.1413 3.71875 3.96973C3.71875 4.79815 4.39032 5.46973 5.21875 5.46973V2.46973ZM6.00024 13.9067H20.0594V10.9067H6.00024V13.9067ZM20.0584 13.9067C20.5029 13.907 20.9337 13.7533 21.2775 13.4716L19.3765 11.1508C19.5694 10.9928 19.8111 10.9066 20.0605 10.9067L20.0584 13.9067ZM21.2775 13.4716C21.6214 13.19 21.857 12.7979 21.9442 12.362L19.0026 11.7733C19.0515 11.5288 19.1837 11.3088 19.3765 11.1508L21.2775 13.4716ZM21.9443 12.3618L23.4629 4.76854L20.5212 4.18019L19.0025 11.7735L21.9443 12.3618ZM23.4629 4.76874C23.5187 4.4898 23.5119 4.20194 23.443 3.92593L20.5324 4.6528C20.4937 4.49796 20.4899 4.33648 20.5212 4.17999L23.4629 4.76874ZM23.443 3.92593C23.3741 3.64992 23.2447 3.39266 23.0643 3.17273L20.7448 5.07535C20.6436 4.95197 20.571 4.80765 20.5324 4.6528L23.443 3.92593ZM23.0643 3.17273C22.8839 2.95279 22.6569 2.77563 22.3997 2.65406L21.1176 5.36632C20.9734 5.29811 20.846 5.19873 20.7448 5.07535L23.0643 3.17273ZM22.3997 2.65406C22.1425 2.53248 21.8615 2.46953 21.5771 2.46973L21.5791 5.46973C21.4196 5.46984 21.2619 5.43452 21.1176 5.36632L22.3997 2.65406ZM21.5781 2.46973H5.21875V5.46973H21.5781V2.46973Z" fill="white" mask="url(#path-4-inside-1_2415_3245)"/>
+                                          </svg>
+                                          <span class="card-product-all-info__button-text">Купить</span>
+                                        </button>
+                                        <button class="modal-zoom__button-buy-on-click btn-white">Купить в один клик</button>
+                                      </section>
+                                    </section>
+                                  </section>
+                                </section>
+                              </main>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
                   </section>
                   <section class="card-product-all-info__product-description">
                     <div class="card-product-all-info__product-description-wrapper">
@@ -507,8 +578,12 @@
                             <h1 class="card-product-title price">10 974,6</h1>
                             <span class="card-product-description currency">грн</span>
                           </section>
+                          <section class="card-product-all-info__out-of-stock">
+                            <h1 class="card-product-title out-of-stock">Нет в наличии</h1>
+                          </section>
                         </section>
                         <section class="card-product-all-info__buttons-buy">
+                          <!--add buttons class inactive if out of stock-->
                           <button class="card-product-all-info__button-buy btn-red">
                             <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M9.25 19C9.25 19.6904 8.69036 20.25 8 20.25C7.30964 20.25 6.75 19.6904 6.75 19C6.75 18.3096 7.30964 17.75 8 17.75C8.69036 17.75 9.25 18.3096 9.25 19Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -521,19 +596,54 @@
                             </svg>
                             <span class="card-product-all-info__button-text">Купить</span>
                           </button>
-                          <button class="card-product-all-info__button-buy-on-click btn-white">Купить в один клик</button>
+                          <button data-by-on-click class="card-product-all-info__button-buy-on-click btn-white">Купить в один клик</button>
+                          <!---------------------------------------------->
+                          <section data-modal-on-click class="modal-on-click">
+                            <div class="modal-on-click__mask modal-zoom__mask">
+                              <div class="modal-on-click__wrapper modal-zoom__wrapper">
+                                <div data-modal-on-click-container class="modal-on-click__container modal-zoom__container">
+                                 <header class="modal-on-click__header">
+                                  <h1 class="modal-on-click__title">Купить в один клик</h1>
+                                  <button class="modal-zoom__button-close modal-on-click__button-close">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M0 1.45454L1.45454 0L16 14.5454L14.5454 16L0 1.45454Z" fill="#090102"/>
+                                      <path d="M14.5459 2.97939e-05L16.0004 1.45457L1.455 16L0.000455369 14.5455L14.5459 2.97939e-05Z" fill="#090102"/>
+                                    </svg> 
+                                  </button>
+                                 </header>
+                                 <main class="modal-on-click__main">
+                                  <div class="modal-on-click__main-wrapper">
+                                    <form action="" class="modal-on-click__form">
+                                      <div class="modal-on-click__inputs">
+                                        <div class="personal-area-modal__input-wrapper name">      
+                                          <input data-modal-on-click-input-name class="modal-on-click__input js-modal-on-click-input" type="text" required>
+                                          <label data-modal-on-click-label-name class="modal-on-click__label">Имя</label>
+                                        </div>
+                                        <div class="personal-area-modal__input-wrapper phone">      
+                                          <input data-modal-on-click-input-phone class="modal-on-click__input js-modal-on-click-input" type="tel" required>
+                                          <label data-modal-on-click-label-phone class="modal-on-click__label">Номер телефона</label>
+                                        </div>
+                                      </div>
+                                      <button class="modal-on-click__button btn-red">Оформить заказ</button>
+                                    </form>
+                                  </div>
+                                 </main>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
                         </section>
                       </section>
                       <section class="card-product-all-info__brief-description">
                         <p class="card-product-title paragraph">Краткие характеристики:</p>
-                        <a data-download-instruction href="#" class="card-product-all-info__instruction"> 
+                        <button data-download-instruction class="card-product-all-info__instruction"> 
                           <div class="card-product-all-info__instruction-loader">
                             <svg class="card-product-all-info__instruction-svg-download" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path class="card-product-all-info__instruction-svg" fill-rule="evenodd" clip-rule="evenodd" d="M11.9999 22C9.17202 22 6.88365 19.7636 6.88365 17V6.54545H8.279V17C8.279 19.0091 9.94412 20.6364 11.9999 20.6364C14.0557 20.6364 15.7209 19.0091 15.7209 17V5.63636C15.7209 4.38182 14.679 3.36364 13.3953 3.36364C12.1116 3.36364 11.0697 4.38182 11.0697 5.63636V15.1818C11.0697 15.6818 11.4883 16.0909 11.9999 16.0909C12.5116 16.0909 12.9302 15.6818 12.9302 15.1818V6.54545H14.3255V15.1818C14.3255 16.4364 13.2837 17.4545 11.9999 17.4545C10.7162 17.4545 9.67435 16.4364 9.67435 15.1818V5.63636C9.67435 3.62727 11.3395 2 13.3953 2C15.4511 2 17.1162 3.62727 17.1162 5.63636V17C17.1162 19.7636 14.8278 22 11.9999 22Z" fill="#827D7D"/>
                             </svg>
                           </div>
                           <span data-instruction-title class="card-product-description download-instruction">Скачать инструкцию</span>
-                        </a>
+                        </button>
                         <section class="card-product-all-info__scroll-description">
                           <p class="card-product-description characteristic-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                           <p class="card-product-description characteristic-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -547,7 +657,7 @@
                   </section>
                 </div>
             </section>
-            <section class="card-product-characteristics">
+            <section id="card-product-characteristics" class="card-product-characteristics">
               <div class="card-product-characteristics__wrapper">
                 <h1 class="card-product-title card-product-characteristics__title">Характеристики</h1>
                 <section class="card-product-characteristics__detailed-information">
@@ -844,7 +954,7 @@
                 </section>
               </div>
             </section>
-            <section class="card-product-multimedia">
+            <section id="card-product-multimedia" class="card-product-multimedia">
               <div class="card-product-multimedia__wrapper">
                 <h1 class="card-product-title card-product-multimedia__title">Видео</h1>
                 <section class="card-product-multimedia__videos">
@@ -854,7 +964,7 @@
                 </section>
               </div>
             </section>
-            <section class="card-product-reviews">
+            <section id="card-product-reviews" class="card-product-reviews">
               <div class="card-product-reviews__wrapper">
                 <h1 class="card-product-title card-product-reviews__title">Отзывы</h1>
                 <section class="card-product-reviews__main-wrapper">
@@ -989,7 +1099,7 @@
                 <button class="card-product-reviews__button btn-white">Показать все отзывы</button>
               </div>
             </section>
-            <section class="card-product-gallery">
+            <section id="card-product-gallery" class="card-product-gallery">
               <div class="card-product-gallery__wrapper">
                 <h1 class="card-product-title card-product-gallery__title">Галерея</h1>
                 <section class="card-product-gallery__pictures">
@@ -1021,7 +1131,7 @@
                 </section>
               </div>
             </section>
-            <section class="card-product-spare-parts">
+            <section id="card-product-spare-parts" class="card-product-spare-parts">
               <div class="card-product-spare-parts__wrapper">
                 <h1 class="card-product-title card-product-spare-parts__title">Запчасти и Комплектующие</h1>
                 <section class="card-product-spare-parts__carousel-swiper">
@@ -1972,8 +2082,8 @@
                   </div>
               
             </section>
-            <section class="card-product-button">
-              <button data-botton-up class="card-product-button__button-up">
+            <section data-botton-up class="card-product-button">
+              <button class="card-product-button__button-up">
                 <svg width="12" height="17" viewBox="0 0 12 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path class="card-product-button__button-up-svg" d="M5 16C5 16.5523 5.44772 17 6 17C6.55228 17 7 16.5523 7 16H5ZM6 0L0.226497 10H11.7735L6 0ZM7 16V9H5V16H7Z" fill="#090102"/>
                 </svg>

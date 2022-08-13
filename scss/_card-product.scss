@@ -1,6 +1,9 @@
 .card-product__wrapper {
   background-color: #ffffff;
  }
+ body.lock {
+  overflow: hidden;
+ }
  //-----------------catalog header-----------------------------
 .card-product-header-info {
     padding-top: 76px;
@@ -95,6 +98,7 @@
       }
   }
  
+ 
     &__hidden-image{
       padding-top: 3px;
       align-self: center;
@@ -138,6 +142,169 @@
         transition: all .3s;
     }
   }
+//-----------------modal zoom----------------------------------
+.modal-zoom {
+  position: relative;
+  z-index: 5;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s ease-in-out;
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  &__mask {
+    position: fixed;
+    z-index: 9999999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    display: table;
+    transition: all 0.3s ease;
+  }
+
+  &__wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+  }
+
+  &__container {
+    overflow: hidden;
+    box-shadow: 0px 4px 22px rgb(0 0 0 / 10%);
+    margin: 0 auto;
+    max-width: 1320px;
+    width: 100%;
+    background-color: #FFFFFF;
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    padding: 26px 26px 44px 24px;
+  }
+
+  &__slider {
+    max-width: 660px;
+    width: 100%;
+    height: 660px;
+    background-color: #4E4B4B;
+  }
+
+  &__navigation {
+    max-width: 336px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__navigation-close {
+    align-self: flex-end;
+    margin-bottom: 22px;
+  }
+
+  &__navigation-body {
+    align-self: flex-start;
+  }
+
+  &__title {
+    font-family: $font-main;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: $color-black;
+    margin-bottom: 33px;
+  }
+
+  &__discont {
+    padding-left: 30px;
+    display: flex;
+    column-gap: 4px;
+    .modal-zoom__full-price {
+      font-size: 12px;
+    }
+  }
+  
+  &__full-prises {
+    padding-left: 10px;
+    margin-bottom: 32px;
+  }
+
+  &__button-buy {
+    margin-bottom: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 16px;
+  }
+
+}
+//-----------------modal on click------------------------------
+.modal-on-click {
+  display: none;
+  &.active {
+    display: block;
+  }
+  &__mask {
+  }
+
+  &__wrapper {
+  }
+
+  &__container {
+    max-width: 460px;
+    width: 100%;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #F3F2F2;
+    padding: 20px 26px 20px 80px;
+  }
+
+  &__title {
+    font-family: $font-main;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 28px;
+    color: #090102;
+  }
+
+  &__button-close {
+  }
+
+  &__main {
+  }
+
+  &__main-wrapper {
+  }
+
+  &__form {
+  }
+
+  &__inputs {
+  }
+
+  &__input {
+  }
+
+  &__label {
+  }
+
+  &__button {
+  }
+}
+
+
+
 //-----------------icon item name header-----------------------
   .novelty {
     position: absolute;
@@ -230,7 +397,45 @@
       width: 100%;
       height: 500px;
       background-color: azure;
+      position: relative;
 		}
+
+    &__slider-buttons-navigation {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      right: 7px;
+      top: 23px;
+      row-gap: 28px;
+      align-items: center;
+    }
+
+    &__slider-button-turn-around {
+      font-size: 0;
+      display: inline-block;
+    }
+    &__slider-button-turn-around:hover &__slider-svg{
+      fill: #C12125;
+    }
+
+    &__slider-link-youtube {
+      font-size: 0;
+      display: inline-block;
+    }
+    &__slider-link-youtube:hover .card-product-all-info__slider-svg {
+      fill: #C12125;
+    }
+
+    &__slider-button-zoom {
+      position: absolute;
+      bottom: 14px;
+      right: 18px;
+    }
+
+    &__slider-button-zoom:hover .card-product-all-info__slider-svg {
+      stroke: #C12125;
+    }
+  
 
 		&__product-description {
 		}
@@ -425,6 +630,9 @@
     }
 
 		&__price {
+      .card-product-all-info__out-of-stock {
+        display: none;
+      }
 		}
 
 		&__price-discount {
@@ -459,6 +667,20 @@
       align-items: center;
       justify-content: center;
 		}
+    //---------if out of stock-----------------
+    &__button-buy.inactive {
+      background-color: #9C9696;
+      cursor: default;
+    }
+    &__button-buy-on-click.inactive {
+      cursor: default;
+      color: #827D7D;
+      border-color: #9C9696;
+    }
+    &__button-buy-on-click.inactive:hover {
+      background-color: white;
+    }
+    //---------if out of stock-----------------
     &__scroll-description {
       overflow-y: scroll;
       height: 140px;
@@ -535,6 +757,14 @@
   line-height: 44px;
   text-transform: uppercase;
   color: $color-black;
+}
+.card-product-title.out-of-stock{
+  font-family: $font-main;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 28px;
+  text-transform: none;
+  color: #827D7D;
 }
 .card-product-title.paragraph {
   font-size: 1rem;
@@ -877,7 +1107,7 @@
   background-color: #F8F7F7;
 
   &__wrapper {
-    padding: 100px 48px 21px 48px;
+    padding: 100px 48px 100px 48px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -973,10 +1203,17 @@
 }
 //-----------------button up to top--------------------------------------
 .card-product-button {
-  padding: 0 48px 48px 48px;
-  background-color: #F8F7F7;
-  display: flex;
-  justify-content: flex-end;
+  opacity: 0;
+  width: 0;
+  position: fixed;
+  bottom: 160px;
+  right: 4px;
+  transition: all .3s ease-in-out;
+  &.active {
+    opacity: 1;
+    width: 40px;
+    transition: all .3s ease-in-out;
+  }
   &__button-up {
     padding: 9.5px 14px;
     background: #FFFFFF;
