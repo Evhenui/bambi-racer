@@ -426,6 +426,119 @@
     background-color: #890019;
   }
 }
+//-----------------modal basket------------------------------
+.modal-basket {
+
+  &__mask {
+  }
+
+  &__wrapper {
+  }
+
+  &__container {
+  }
+
+  &__header {
+  }
+
+  &__header-wrapper {
+    padding: 18px 40px;
+  }
+
+  &__title {
+    font-family: $font-main;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: $color-black;
+  }
+
+  &__buttons-header {
+  }
+
+  &__button-clean {
+  }
+
+  &__button-close {
+  }
+
+  &__main {
+  }
+
+  &__main-wrapper {
+  }
+
+  &__order {
+  }
+
+  &__order-wrapper {
+  }
+
+  &__order-img-wrapper {
+  }
+
+  &__order-img {
+  }
+
+  &__order-name-item {
+  }
+
+  &__amount-item {
+  }
+
+  &__button-minus {
+  }
+
+  &__amount {
+  }
+
+  &__button-plus {
+  }
+
+  &__price {
+  }
+
+  &__old-price {
+  }
+
+  &__new-price {
+  }
+
+  &__button-delete {
+  }
+
+  &__footer {
+  }
+
+  &__footer-wrapper {
+  }
+
+  &__button-continue {
+  }
+
+  &__checkout {
+  }
+
+  &__totla-price {
+  }
+
+  &__button-checkout {
+  }
+}
+.modal-zoom {
+
+  &__mask {
+  }
+
+  &__wrapper {
+  }
+}
+.btn-white {
+}
+.btn-red {
+}
+
 //-----------------icon item name header-----------------------
   .novelty {
     position: absolute;

@@ -5907,6 +5907,17 @@ body.lock {
   background-color: #890019;
 }
 
+.modal-basket__header-wrapper {
+  padding: 18px 40px;
+}
+.modal-basket__title {
+  font-family: "Mulish", sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 32px;
+  text-transform: uppercase;
+  color: #090102;
+}
 .novelty {
   position: absolute;
   right: -58px;
