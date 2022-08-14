@@ -5907,8 +5907,19 @@ body.lock {
   background-color: #890019;
 }
 
+.modal-basket__container {
+  max-width: 780px;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
 .modal-basket__header-wrapper {
   padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f3f2f2;
 }
 .modal-basket__title {
   font-family: "Mulish", sans-serif;
@@ -5917,6 +5928,40 @@ body.lock {
   line-height: 32px;
   text-transform: uppercase;
   color: #090102;
+}
+.modal-basket__buttons-header {
+  display: flex;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+  align-items: center;
+}
+.modal-basket__button-clean {
+  color: #c12125;
+  font-family: "Mulish", sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 20px;
+  text-align: center;
+  padding: 12px 19px;
+}
+.modal-basket__button-clean:hover {
+  color: #991a1d;
+}
+.modal-basket__button-clean:active {
+  color: #890019;
+}
+.modal-basket__button-close {
+  font-size: 0;
+}
+.modal-basket__button-close:hover .modal-basket__button-close-svg {
+  background-color: #e6e5e5;
+}
+.modal-basket__button-close:active .modal-basket__button-close-svg-line {
+  fill: #827d7d;
+}
+.modal-basket__button-close-svg {
+  border-radius: 50%;
+  transition: all 0.1s ease-in-out;
 }
 .novelty {
   position: absolute;
