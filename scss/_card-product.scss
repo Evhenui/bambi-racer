@@ -247,7 +247,7 @@
 }
 //-----------------modal on click------------------------------
 .modal-on-click {
-  z-index: 5;
+  z-index: 99999999;
   opacity: 0;
   visibility: hidden;
   display: block;
@@ -293,7 +293,38 @@
     display: flex;
     flex-direction: column;
     padding: 56px 80px 80px 80px;
+    min-height: 404px;
   }
+
+  &__container.done &__main-wrapper {
+    padding: 60px 80px 0 80px;
+  }
+  &__container.done  .title-done{
+    display: none;
+  }
+  &__container.done  &__header{
+    justify-content: flex-end;
+  }
+  &__container.done  &__form{
+    display: none;
+  }
+  &__container.done  &__done{
+    display: block;
+  }
+  &__done {
+    display: none;
+    text-align: center;
+  }
+
+  &__title.order {
+    cursor: auto;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 32px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
 
   &__form {
   }

@@ -603,7 +603,7 @@
                               <div class="modal-on-click__wrapper modal-zoom__wrapper">
                                 <div data-modal-on-click-container class="modal-on-click__container modal-zoom__container">
                                  <header class="modal-on-click__header">
-                                  <h1 class="modal-on-click__title">Купить в один клик</h1>
+                                  <h1 class="modal-on-click__title title-done">Купить в один клик</h1>
                                   <button data-close-modal-on-click class="modal-zoom__button-close modal-on-click__button-close">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                       <path d="M0 1.45454L1.45454 0L16 14.5454L14.5454 16L0 1.45454Z" fill="#090102"/>
@@ -612,8 +612,8 @@
                                   </button>
                                  </header>
                                  <main class="modal-on-click__main">
-                                  <div class="modal-on-click__main-wrapper">
-                                    <form action="" class="modal-on-click__form" novalidate>
+                                  <div data-main-modal-on-click class="modal-on-click__main-wrapper">
+                                    <form data-form-on-click action="" class="modal-on-click__form" novalidate>
                                       <div class="modal-on-click__inputs">
                                         <div class="modal-on-click__input-wrapper name">      
                                           <input data-modal-on-click-input-name class="modal-on-click__input js-modal-on-click-input" type="text" required>
@@ -626,6 +626,10 @@
                                       </div>
                                       <button data-modal-on-click-button class="modal-on-click__button btn-red">Оформить заказ</button>
                                     </form>
+                                    <section class="modal-on-click__done">
+                                      <h1 class="modal-on-click__title order">Ваш заказ №123 принят.</h1>
+                                      <p class="modal-on-click__title">В ближайшее время менеджер свяжется с Вами.</p>
+                                    </section>
                                   </div>
                                  </main>
                                 </div>

@@ -5742,7 +5742,7 @@ body.lock {
 }
 
 .modal-on-click {
-  z-index: 5;
+  z-index: 99999999;
   opacity: 0;
   visibility: hidden;
   display: block;
@@ -5774,6 +5774,34 @@ body.lock {
   display: flex;
   flex-direction: column;
   padding: 56px 80px 80px 80px;
+  min-height: 404px;
+}
+.modal-on-click__container.done .modal-on-click__main-wrapper {
+  padding: 60px 80px 0 80px;
+}
+.modal-on-click__container.done .title-done {
+  display: none;
+}
+.modal-on-click__container.done .modal-on-click__header {
+  justify-content: flex-end;
+}
+.modal-on-click__container.done .modal-on-click__form {
+  display: none;
+}
+.modal-on-click__container.done .modal-on-click__done {
+  display: block;
+}
+.modal-on-click__done {
+  display: none;
+  text-align: center;
+}
+.modal-on-click__title.order {
+  cursor: auto;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 32px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
 }
 .modal-on-click__input-wrapper {
   position: relative;

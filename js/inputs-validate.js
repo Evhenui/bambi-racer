@@ -126,22 +126,43 @@ export let inputValidate = function() {
              labelNameModalOnClick = carProduct.querySelector("[data-modal-on-click-label-name]"),
              labelPhoneModalOnClick = carProduct.querySelector("[data-modal-on-click-label-phone]"),
              inputsModalOnClick = carProduct.querySelectorAll(".js-modal-on-click-input"),
-             buttonModalOnClick = carProduct.querySelector("[data-modal-on-click-button]");
-
+             buttonModalOnClick = carProduct.querySelector("[data-modal-on-click-button]"),
+             modalOnClick = carProduct.querySelector('[data-modal-on-click-container]');
+             
       const  regPhone = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/,
              regText = /^([A-Za-z\-\']{1,50})|([А-Яа-я\-\']{1,50})$/;
 
-             function inputValidate (button) {
-              button.addEventListener("click", function (event) {
-                  event.preventDefault();
-                  exam(regPhone, labelPhoneModalOnClick, inputPhoneModalOnClick);
-                  exam(regText, labelNameModalOnClick, inputNameModalOnClick);
-               }
-              );
+            function validInput(regex, input) {
+              return regex.test(input.value);
             }
-            isActiveButton(inputsModalOnClick, buttonModalOnClick);
-            inputValidate(buttonModalOnClick);
 
+            function inputsChange(inputs, button) {
+              inputs.forEach((item)=>{
+                item.addEventListener('input', function() {
+                 if(inputs[0].value && inputs[1].value) {
+                  if(validInput(regText, inputNameModalOnClick) && validInput(regPhone, inputPhoneModalOnClick)){
+                    button.classList.add('active')
+                  } 
+                 }
+                })
+              })
+            }
+
+            inputNameModalOnClick.addEventListener('input', function(){
+              exam(regText, labelNameModalOnClick, inputNameModalOnClick)
+            });
+            inputPhoneModalOnClick.addEventListener('input', function(){
+              exam(regPhone, labelPhoneModalOnClick, inputPhoneModalOnClick)
+            });
+          
+            inputsChange(inputsModalOnClick, buttonModalOnClick);
+
+            buttonModalOnClick.addEventListener('click', function(event){
+              event.preventDefault();
+              if(validInput(regText, inputNameModalOnClick) && validInput(regPhone, inputPhoneModalOnClick)) {
+                modalOnClick.classList.add('done'); 
+              }
+            });
     }
    //------------------show password--------------------- 
    if (personalArea != null || modalWindow != null) {
