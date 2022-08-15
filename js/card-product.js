@@ -116,15 +116,25 @@ export let cardProduct = function () {
     if(modalBasket !== null) {
       const  buttonOpenModalBasket = carProduct.querySelector('[data-by-modal-basket]'),
              buttonCloseModalBasket = carProduct.querySelector('[data-close-modal-basket]'),
-             modalOnClickBasket = carProduct.querySelector('[data-modal-on-click-container]'),
+             modalBasketContainer = carProduct.querySelector('[data-modal-on-click-container]'),
              body = document.querySelector('#body-cont');
 
              buttonOpenModalBasket.addEventListener('click', function() {
               modalBasket.classList.add('active');
+              body.classList.add("lock");
              });
              buttonCloseModalBasket.addEventListener('click', function() {
               modalBasket.classList.remove('active');
+              body.classList.remove("lock");
              })
+
+             modalBasket.addEventListener("click", function (e) {
+              const click = e.composedPath().includes(modalBasketContainer);
+              if (!click) {
+                modalBasket.classList.remove("active");
+                body.classList.remove("lock");
+              }
+            });
     }
   }
   //----slider main------

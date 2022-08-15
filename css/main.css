@@ -155,7 +155,7 @@ label {
   align-items: center;
 }
 
-.card-product-gallery__wrapper, .card-product-reviews__wrapper, .card-product-multimedia__wrapper, .card-product-characteristics__wrapper, .card-product-all-info__wrapper, .card-product-navigation__wrapper, .card-product-header-info__name-pages-wrapper, .personal-area-comparison__wrapper, .personal-area-my-orders__wrapper, .personal-area-favorites__wrapper, .personal-area-private-data__wrapper, .personal-area-navigation__wrapper, .personal-area-header-info__wrapper, .product-catalog-content, .product-catalog, .bread-crumbs, .catalog-directory, .main-page-important-slider__text, .main-page-important-slider__wrp, .main-page-partner, .main-page-range__wrp, .main-page-about-company__img-wrp, .main-page-about-company__text, .main-page-product__carousel, .main-slider__nav-btn-wrp, .main-slider__text-btn-wrt, .main-slider__text-btn, .footer-special-documents__wrp, .footer__wrp {
+.card-product-gallery__wrapper, .card-product-reviews__wrapper, .card-product-multimedia__wrapper, .card-product-characteristics__wrapper, .card-product-all-info__wrapper, .card-product-navigation__wrapper, .card-product-header-info__name-pages-wrapper, .card-product-header-info.active .card-product-header-info__wrapper, .personal-area-comparison__wrapper, .personal-area-my-orders__wrapper, .personal-area-favorites__wrapper, .personal-area-private-data__wrapper, .personal-area-navigation__wrapper, .personal-area-header-info__wrapper, .product-catalog-content, .product-catalog, .bread-crumbs, .catalog-directory, .main-page-important-slider__text, .main-page-important-slider__wrp, .main-page-partner, .main-page-range__wrp, .main-page-about-company__img-wrp, .main-page-about-company__text, .main-page-product__carousel, .main-slider__nav-btn-wrp, .main-slider__text-btn-wrt, .main-slider__text-btn, .footer-special-documents__wrp, .footer__wrp {
   max-width: 1440px;
   width: 100%;
   margin-left: auto;
@@ -5537,10 +5537,15 @@ body.lock {
   z-index: 5;
 }
 .card-product-header-info.active {
+  background-color: #1a1919;
+}
+.card-product-header-info.active .card-product-navigation__wrapper {
+  padding: 0;
+}
+.card-product-header-info.active .card-product-header-info__wrapper {
   display: flex;
-  background: #1a1919;
   justify-content: space-between;
-  padding: 76px 48px 0 48px;
+  padding: 0 48px;
   align-items: center;
 }
 .card-product-header-info.active .card-product-header-info__wrapper-section {
@@ -5637,7 +5642,6 @@ body.lock {
 }
 .card-product-header-info__name-pages-wrapper {
   padding: 24px 0 16px 48px;
-  max-width: 1440px;
 }
 .card-product-header-info__page-title {
   font-family: "Mulish", sans-serif;
@@ -5765,6 +5769,7 @@ body.lock {
   visibility: visible;
 }
 .modal-on-click__container {
+  box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.1);
   max-width: 460px;
   width: 100%;
 }
@@ -6720,12 +6725,42 @@ body.lock {
   -moz-column-gap: 12px;
        column-gap: 12px;
 }
+.card-product-reviews__leave-feedback {
+  margin-bottom: 32px;
+}
 .card-product-reviews__title.register {
   font-size: 1rem;
-  margin-bottom: 32px;
   font-weight: 700;
   display: flex;
   justify-content: center;
+}
+.card-product-reviews__leave-feedback-wrapper {
+  display: flex;
+}
+.card-product-reviews__feedback-area-wrapper {
+  position: relative;
+}
+.card-product-reviews__form {
+  flex: 1 1 auto;
+}
+.card-product-reviews__feedback-area-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  cursor: auto;
+  font-family: "Mulish", sans-serif;
+  font-size: 0.75rem;
+  line-height: 20px;
+  color: #827d7d;
+}
+.card-product-reviews__feedback {
+  resize: none;
+  max-width: 664px;
+  width: 100%;
+  height: 116px;
+  border: 1px solid #090102;
+  border-radius: 1px;
 }
 .card-product-reviews__reviews {
   margin-bottom: 60px;

@@ -12,12 +12,18 @@
     top: 0;
     width: 100%;
     z-index: 5;
-    //-------scroll-----
     &.active {
+      background-color: $color-gray-100;
+    }
+    &.active .card-product-navigation__wrapper{
+      padding: 0;
+    }
+    //-------scroll-----
+    &.active &__wrapper {
+      @extend %size-page;
       display: flex;
-      background: #1a1919;
       justify-content: space-between;
-      padding: 76px 48px 0 48px;
+      padding: 0 48px;
       align-items: center;
     }
     &.active &__wrapper-section {
@@ -120,7 +126,6 @@
 
     &__name-pages-wrapper {
         padding: 24px 0 16px 48px;
-        max-width: 1440px;
         @extend %size-page;
     }
   
@@ -266,6 +271,7 @@
   }
 
   &__container {
+    box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.1);
     max-width: 460px;
     width: 100%;
   }
@@ -1339,14 +1345,61 @@
     display: flex;
     column-gap: 12px;
   }
+  &__leave-feedback {
+    margin-bottom: 32px;
+  }
 
   &__title.register {
     font-size: 1rem;
-    margin-bottom: 32px;
     font-weight: 700;
     display: flex;
     justify-content: center;
   }
+//-----if registred----------------------------
+
+&__leave-feedback-wrapper {
+  display: flex;
+}
+
+&__feedback-area-wrapper {
+  position: relative;
+}
+&__form {
+  flex: 1 1 auto;
+}
+&__feedback-area-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  cursor: auto;
+  font-family: $font-main;
+  font-size: 0.75rem;
+  line-height: 20px;
+  color: $color-gray-60;
+}
+
+&__feedback {
+  resize: none;
+  max-width: 664px;
+  width: 100%;
+  height: 116px;
+  border: 1px solid #090102;
+  border-radius: 1px;
+}
+
+&__feedback-stars {
+}
+
+&__star-active {
+}
+
+&__feedback-button {
+}
+
+//---------------------------------------------
+
+
 
   &__description {
   }
