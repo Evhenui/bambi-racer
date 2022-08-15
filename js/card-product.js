@@ -9,7 +9,8 @@ export let cardProduct = function () {
             headerWrapper = carProduct.querySelector("[data-header-wrapper-hidden]"),
             buttonLike = carProduct.querySelector("[data-navigation-like]"),
             modalOnClick = carProduct.querySelector('[data-modal-on-click]'),
-            modalZoom = carProduct.querySelector("[data-modal-zoom]");
+            modalZoom = carProduct.querySelector("[data-modal-zoom]"),
+            modalBasket = carProduct.querySelector("[data-modal-basket]");
 
     //-----add class active groop------
     function addActiveClass(list) {
@@ -110,6 +111,20 @@ export let cardProduct = function () {
           body.classList.remove("lock");
         }
       });
+    }
+    //----------modal basket----------------------
+    if(modalBasket !== null) {
+      const  buttonOpenModalBasket = carProduct.querySelector('[data-by-modal-basket]'),
+             buttonCloseModalBasket = carProduct.querySelector('[data-close-modal-basket]'),
+             modalOnClickBasket = carProduct.querySelector('[data-modal-on-click-container]'),
+             body = document.querySelector('#body-cont');
+
+             buttonOpenModalBasket.addEventListener('click', function() {
+              modalBasket.classList.add('active');
+             });
+             buttonCloseModalBasket.addEventListener('click', function() {
+              modalBasket.classList.remove('active');
+             })
     }
   }
   //----slider main------

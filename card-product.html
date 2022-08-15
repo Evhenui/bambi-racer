@@ -584,7 +584,7 @@
                         </section>
                         <section class="card-product-all-info__buttons-buy">
                           <!--add buttons class inactive if out of stock-->
-                          <button class="card-product-all-info__button-buy btn-red">
+                          <button data-by-modal-basket class="card-product-all-info__button-buy btn-red">
                             <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M9.25 19C9.25 19.6904 8.69036 20.25 8 20.25C7.30964 20.25 6.75 19.6904 6.75 19C6.75 18.3096 7.30964 17.75 8 17.75C8.69036 17.75 9.25 18.3096 9.25 19Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                               <path d="M20.25 19C20.25 19.6904 19.6904 20.25 19 20.25C18.3096 20.25 17.75 19.6904 17.75 19C17.75 18.3096 18.3096 17.75 19 17.75C19.6904 17.75 20.25 18.3096 20.25 19Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -596,7 +596,7 @@
                             </svg>
                             <span class="card-product-all-info__button-text">Купить</span>
                           </button>
-                          <section data-modal-basket class="modal-basket active">
+                          <section data-modal-basket class="modal-basket">
                             <div class="modal-zoom__mask modal-basket__mask">
                               <div class="modal-zoom__wrapper modal-basket__wrapper">
                                 <div data-modal-basket-container class="modal-basket__container">
@@ -618,35 +618,183 @@
                                     <div class="modal-basket__main-wrapper">
                                       <section class="modal-basket__order">
                                         <div class="modal-basket__order-wrapper">
-                                          <div class="modal-basket__order-img-wrapper">
-                                            <img class="modal-basket__order-img" src="" alt="car">
-                                          </div>
-                                          <p class="modal-basket__order-name-item">Название товара какое-то оооооооооочень длинное</p>
-                                          <section class="modal-basket__amount-item">
-                                            <button class="modal-basket__button-minus">
-                                              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="white"/>
-                                                <rect x="9" y="15" width="14" height="2" rx="1" fill="#CECACA"/>
-                                              </svg> 
-                                            </button>
-                                            <p class="modal-basket__amount">1</p>
-                                            <button class="modal-basket__button-plus">
-                                              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="white"/>
-                                              </svg> 
+                                          <section class="modal-basket__left-order-section">
+                                            <div class="modal-basket__order-img-wrapper">
+                                              <img class="modal-basket__order-img" src="img/basket-item_1.png" alt="car" width="60" height="60">
+                                            </div>
+                                            <p class="modal-basket__order-name-item">Название товара какое-то оооооооооочень длинное</p>
+                                            <button class="modal-basket__order-close-mobile">
+                                              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="22" cy="22" r="22" fill="white"/>
+                                                <path d="M18 26L26 18" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M18 18L26 26" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                                              </svg>  
                                             </button>
                                           </section>
-                                          <section class="modal-basket__price">
-                                            <span class="modal-basket__old-price">2796,76 грн</span>
-                                            <span class="modal-basket__new-price">1796,76 грн</span>
+                                          <section class="modal-basket__right-order-section">
+                                            <section class="modal-basket__amount-item">
+                                              <button class="modal-basket__button-minus">
+                                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="white"/>
+                                                  <rect x="9" y="15" width="14" height="2" rx="1" fill="#CECACA"/>
+                                                </svg> 
+                                              </button>
+                                              <p class="modal-basket__amount">1</p>
+                                              <button class="modal-basket__button-plus">
+                                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="white"/>
+                                                  <rect x="9" y="15" width="14" height="2" rx="1" fill="#C12125"/>
+                                                  <rect x="15" y="23" width="14" height="2" rx="1" transform="rotate(-90 15 23)" fill="#C12125"/>
+                                                </svg>
+                                              </button>
+                                            </section>
+                                            <section class="modal-basket__price">
+                                              <span class="modal-basket__old-price">2796,76 грн</span>
+                                              <span class="modal-basket__full-price discont">1796,76 грн</span>
+                                            </section>
+                                            <button class="modal-basket__button-delete">
+                                              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle class="modal-basket__button-delete-hover" cx="22" cy="22" r="22" fill="white"/>
+                                                <path class="modal-basket__button-delete-acitve" d="M18 26L26 18" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path class="modal-basket__button-delete-acitve" d="M18 18L26 26" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                                              </svg>
+                                            </button>
                                           </section>
-                                          <button class="modal-basket__button-delete">
-                                            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                              <circle cx="22" cy="22" r="22" fill="white"/>
-                                              <path d="M18 26L26 18" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
-                                              <path d="M18 18L26 26" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                          </button>
+                                        </div>
+                                      </section>
+                                      <section class="modal-basket__order">
+                                        <div class="modal-basket__order-wrapper">
+                                          <section class="modal-basket__left-order-section">
+                                            <div class="modal-basket__order-img-wrapper">
+                                              <img class="modal-basket__order-img" src="img/basket-item_2.png" alt="car" width="60" height="60">
+                                            </div>
+                                            <p class="modal-basket__order-name-item">Название товара какое-то оооооооооочень длинное</p>
+                                            <button class="modal-basket__order-close-mobile">
+                                              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="22" cy="22" r="22" fill="white"/>
+                                                <path d="M18 26L26 18" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M18 18L26 26" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                                              </svg>  
+                                            </button>
+                                          </section>
+                                          <section class="modal-basket__right-order-section">
+                                            <section class="modal-basket__amount-item">
+                                              <button class="modal-basket__button-minus">
+                                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="white"/>
+                                                  <rect x="9" y="15" width="14" height="2" rx="1" fill="#CECACA"/>
+                                                </svg> 
+                                              </button>
+                                              <p class="modal-basket__amount">2</p>
+                                              <button class="modal-basket__button-plus">
+                                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="white"/>
+                                                  <rect x="9" y="15" width="14" height="2" rx="1" fill="#C12125"/>
+                                                  <rect x="15" y="23" width="14" height="2" rx="1" transform="rotate(-90 15 23)" fill="#C12125"/>
+                                                </svg>
+                                              </button>
+                                            </section>
+                                            <section class="modal-basket__price">
+                                              <span class="modal-basket__full-price">1234,76 грн</span>
+                                            </section>
+                                            <button class="modal-basket__button-delete">
+                                              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle class="modal-basket__button-delete-hover" cx="22" cy="22" r="22" fill="white"/>
+                                                <path class="modal-basket__button-delete-acitve" d="M18 26L26 18" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path class="modal-basket__button-delete-acitve" d="M18 18L26 26" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                                              </svg>
+                                            </button>
+                                          </section>
+                                        </div>
+                                      </section>
+                                      <section class="modal-basket__order">
+                                        <div class="modal-basket__order-wrapper">
+                                          <section class="modal-basket__left-order-section">
+                                            <div class="modal-basket__order-img-wrapper">
+                                              <img class="modal-basket__order-img" src="img/basket-item_3.png" alt="car" width="60" height="60">
+                                            </div>
+                                            <p class="modal-basket__order-name-item">Название товара какое-то оооооооооочень длинное</p>
+                                            <button class="modal-basket__order-close-mobile">
+                                              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="22" cy="22" r="22" fill="white"/>
+                                                <path d="M18 26L26 18" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M18 18L26 26" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                                              </svg>  
+                                            </button>
+                                          </section>
+                                          <section class="modal-basket__right-order-section">
+                                            <section class="modal-basket__amount-item">
+                                              <button class="modal-basket__button-minus">
+                                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="white"/>
+                                                  <rect x="9" y="15" width="14" height="2" rx="1" fill="#CECACA"/>
+                                                </svg> 
+                                              </button>
+                                              <p class="modal-basket__amount">1</p>
+                                              <button class="modal-basket__button-plus">
+                                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="white"/>
+                                                  <rect x="9" y="15" width="14" height="2" rx="1" fill="#C12125"/>
+                                                  <rect x="15" y="23" width="14" height="2" rx="1" transform="rotate(-90 15 23)" fill="#C12125"/>
+                                                </svg>
+                                              </button>
+                                            </section>
+                                            <section class="modal-basket__price">
+                                              <span class="modal-basket__full-price">567,76 грн</span>
+                                            </section>
+                                            <button class="modal-basket__button-delete">
+                                              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle class="modal-basket__button-delete-hover" cx="22" cy="22" r="22" fill="white"/>
+                                                <path class="modal-basket__button-delete-acitve" d="M18 26L26 18" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path class="modal-basket__button-delete-acitve" d="M18 18L26 26" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                                              </svg>
+                                            </button>
+                                          </section>
+                                        </div>
+                                      </section>
+                                      <section class="modal-basket__order">
+                                        <div class="modal-basket__order-wrapper">
+                                          <section class="modal-basket__left-order-section">
+                                            <div class="modal-basket__order-img-wrapper">
+                                              <img class="modal-basket__order-img" src="img/basket-item_4.png" alt="car" width="60" height="60">
+                                            </div>
+                                            <p class="modal-basket__order-name-item">Название товара какое-то оооооооооочень длинное</p>
+                                            <button class="modal-basket__order-close-mobile">
+                                              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="22" cy="22" r="22" fill="white"/>
+                                                <path d="M18 26L26 18" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M18 18L26 26" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                                              </svg>  
+                                            </button>
+                                          </section>
+                                          <section class="modal-basket__right-order-section">
+                                            <section class="modal-basket__amount-item">
+                                              <button class="modal-basket__button-minus">
+                                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="white"/>
+                                                  <rect x="9" y="15" width="14" height="2" rx="1" fill="#CECACA"/>
+                                                </svg> 
+                                              </button>
+                                              <p class="modal-basket__amount">1</p>
+                                              <button class="modal-basket__button-plus">
+                                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="white"/>
+                                                  <rect x="9" y="15" width="14" height="2" rx="1" fill="#C12125"/>
+                                                  <rect x="15" y="23" width="14" height="2" rx="1" transform="rotate(-90 15 23)" fill="#C12125"/>
+                                                </svg>
+                                              </button>
+                                            </section>
+                                            <section class="modal-basket__price">
+                                              <span class="modal-basket__full-price">11567,76 грн</span>
+                                            </section>
+                                            <button class="modal-basket__button-delete">
+                                              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle class="modal-basket__button-delete-hover" cx="22" cy="22" r="22" fill="white"/>
+                                                <path class="modal-basket__button-delete-acitve" d="M18 26L26 18" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path class="modal-basket__button-delete-acitve" d="M18 18L26 26" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                                              </svg>
+                                            </button>
+                                          </section>
                                         </div>
                                       </section>
                                     </div>
