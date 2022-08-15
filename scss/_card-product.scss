@@ -39,6 +39,7 @@
     }
     &.active &__name-pages-wrapper {
       padding: 0;
+      
     }
     &.active &__hidden-image {
       width: 80px;
@@ -119,6 +120,8 @@
 
     &__name-pages-wrapper {
         padding: 24px 0 16px 48px;
+        max-width: 1440px;
+        @extend %size-page;
     }
   
     &__page-title {
@@ -692,13 +695,17 @@
 //-----------------navigation header---------------------------
   .card-product-navigation {
     background-color: $color-gray-100;
-    padding: 0 60px;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    overflow-y: hidden;
-    @media (max-width: 960px) {
-      padding: 0;
+    
+    &__wrapper {
+      @extend %size-page;
+      padding: 0 60px;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      overflow-y: hidden;
+      @media (max-width: 960px) {
+        padding: 0;
+      }
     }
     &__menu {
       display: flex;
@@ -752,6 +759,7 @@
       padding: 44px 48px 0 48px;
       display: flex;
       column-gap: 50px;
+      @extend %size-page;
 		}
 
 		&__slider {
@@ -1168,6 +1176,7 @@
 
   &__wrapper {
     padding: 0 48px;
+    @extend %size-page;
   }
 
   &__title {
@@ -1253,6 +1262,7 @@
 .card-product-multimedia {
   margin-bottom: 100px;
   &__wrapper {
+    @extend %size-page;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1288,6 +1298,7 @@
 .card-product-reviews {
 
   &__wrapper {
+    @extend %size-page;
     display: flex;
     flex-direction: column;
     padding: 0 48px 100px 48px;
@@ -1418,6 +1429,7 @@
   background-color: #F8F7F7;
 
   &__wrapper {
+    @extend %size-page;
     padding: 100px 48px 100px 48px;
     display: flex;
     flex-direction: column;

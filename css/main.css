@@ -155,7 +155,7 @@ label {
   align-items: center;
 }
 
-.personal-area-comparison__wrapper, .personal-area-my-orders__wrapper, .personal-area-favorites__wrapper, .personal-area-private-data__wrapper, .personal-area-navigation__wrapper, .personal-area-header-info__wrapper, .product-catalog-content, .product-catalog, .bread-crumbs, .catalog-directory, .main-page-important-slider__text, .main-page-important-slider__wrp, .main-page-partner, .main-page-range__wrp, .main-page-about-company__img-wrp, .main-page-about-company__text, .main-page-product__carousel, .main-slider__nav-btn-wrp, .main-slider__text-btn-wrt, .main-slider__text-btn, .footer-special-documents__wrp, .footer__wrp {
+.card-product-gallery__wrapper, .card-product-reviews__wrapper, .card-product-multimedia__wrapper, .card-product-characteristics__wrapper, .card-product-all-info__wrapper, .card-product-navigation__wrapper, .card-product-header-info__name-pages-wrapper, .personal-area-comparison__wrapper, .personal-area-my-orders__wrapper, .personal-area-favorites__wrapper, .personal-area-private-data__wrapper, .personal-area-navigation__wrapper, .personal-area-header-info__wrapper, .product-catalog-content, .product-catalog, .bread-crumbs, .catalog-directory, .main-page-important-slider__text, .main-page-important-slider__wrp, .main-page-partner, .main-page-range__wrp, .main-page-about-company__img-wrp, .main-page-about-company__text, .main-page-product__carousel, .main-slider__nav-btn-wrp, .main-slider__text-btn-wrt, .main-slider__text-btn, .footer-special-documents__wrp, .footer__wrp {
   max-width: 1440px;
   width: 100%;
   margin-left: auto;
@@ -4600,13 +4600,13 @@ label {
 
 .order__buttom-wrapper {
   position: absolute;
-  top: 36px;
-  right: 40px;
+  top: 22px;
+  right: 24px;
 }
 @media (max-width: 960px) {
   .order__buttom-wrapper {
-    top: 26px;
-    right: 24px;
+    top: 8px;
+    right: 8px;
   }
 }
 
@@ -5637,6 +5637,7 @@ body.lock {
 }
 .card-product-header-info__name-pages-wrapper {
   padding: 24px 0 16px 48px;
+  max-width: 1440px;
 }
 .card-product-header-info__page-title {
   font-family: "Mulish", sans-serif;
@@ -6130,6 +6131,8 @@ body.lock {
 }
 .card-product-navigation {
   background-color: #1a1919;
+}
+.card-product-navigation__wrapper {
   padding: 0 60px;
   white-space: nowrap;
   display: flex;
@@ -6137,7 +6140,7 @@ body.lock {
   overflow-y: hidden;
 }
 @media (max-width: 960px) {
-  .card-product-navigation {
+  .card-product-navigation__wrapper {
     padding: 0;
   }
 }
