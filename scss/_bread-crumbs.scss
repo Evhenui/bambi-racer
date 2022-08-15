@@ -1,6 +1,6 @@
 .bread-crumbs {
   @extend %size-page;
-  // @extend %padding-country;
+  @extend %padding-country;
   padding-top: 100px;
   margin-bottom: 16px;
   @include text(
@@ -9,10 +9,16 @@
     $color: $color-gray-80,
     $lineHeight: 20px
   );
+  @include __860 {
+    @include padding-mob;
+  }
   &__item-wrp {
     margin-right: 4px;
     display: flex;
     column-gap: 4px;
+    &:hover {
+      color: $color-black;
+    }
   }
   &__wrp {
     display: flex;

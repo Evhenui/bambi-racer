@@ -11,6 +11,7 @@
   width: 100%;
   z-index: 5;
   &__wrapper {
+    @extend %size-page;
     padding: 24px 0 24px 48px;
     @media (max-width: 960px) {
       display: none;
@@ -27,11 +28,14 @@
 //------------------------navigation--------------------//
 .personal-area-navigation {
   background-color: $color-gray-100;
-  padding: 0 48px;
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-  overflow-y: hidden;
+  &__wrapper {
+    @extend %size-page;
+    padding: 0 48px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    overflow-y: hidden;
+  }
   @media (max-width: 960px) {
     padding: 0;
   }
@@ -128,6 +132,7 @@
   }
 
   &__wrapper {
+    @extend %size-page;
     padding: 60px 0 100px 48px;
     background: $color-background;
     @media (max-width: 960px) {
@@ -369,6 +374,7 @@
   }
 
   &__wrapper {
+    @extend %size-page;
     padding: 22px 48px 100px 48px;
     @media (max-width: 960px) {
       padding: 24px 16px 80px 16px;
@@ -878,6 +884,7 @@
 .personal-area-my-orders {
   display: none;
   padding-top: 188px;
+  background-color: #e5e5e5;
   @media (max-width: 960px) {
     padding-top: 120px;
   }
@@ -885,8 +892,8 @@
     display: block;
   }
   &__wrapper {
+    @extend %size-page;
     padding: 60px 24px 100px 48px;
-    background-color: #e5e5e5;
     @media (max-width: 960px) {
       padding: 60px 16px 100px 16px;
     }
@@ -1276,6 +1283,7 @@
     flex-direction: column;
   }
   &__wrapper {
+    @extend %size-page;
     position: relative;
     display: flex;
     padding: 60px 48px 100px 48px;
