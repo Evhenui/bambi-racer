@@ -174,4 +174,47 @@ export let cardProduct = function () {
       },
     },
   });
+
+const sliderThumbs = new Swiper('.slider__thumbs .swiper-container', {
+	direction: 'vertical',
+	slidesPerView: 6, 
+	spaceBetween: 12, 
+	navigation: { 
+		nextEl: '.slider__next', 
+		prevEl: '.slider__prev'
+	},
+	freeMode: true, 
+	breakpoints: { 
+		0: { 
+			direction: 'horizontal',
+		},
+		768: { 
+			direction: 'vertical', 
+		}
+	}
+});
+// Инициализация слайдера изображений
+const sliderImages = new Swiper('.slider__images .swiper-container', { // ищем слайдер превью по селектору
+	// задаем параметры
+	direction: 'horizontal', // вертикальная прокрутка
+	slidesPerView: 1, // показывать по 1 изображению
+	spaceBetween: 32, // расстояние между слайдами
+	mousewheel: true, // можно прокручивать изображения колёсиком мыши
+	navigation: { // задаем кнопки навигации
+		nextEl: '.slider__next', // кнопка Next
+		prevEl: '.slider__prev' // кнопка Prev
+	},
+	grabCursor: true, // менять иконку курсора
+	thumbs: { // указываем на превью слайдер
+		swiper: sliderThumbs // указываем имя превью слайдера
+	},
+	breakpoints: { // условия для разных размеров окна браузера
+		0: { // при 0px и выше
+			direction: 'horizontal', // горизонтальная прокрутка
+		},
+		768: { // при 768px и выше
+			direction: 'horizontal', // вертикальная прокрутка
+		}
+	}
+});
 };
