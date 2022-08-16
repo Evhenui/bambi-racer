@@ -1362,15 +1362,20 @@
 }
 
 &__feedback-area-wrapper {
-  position: relative;
+  margin-right: 16px;
+  font-size: 0;
 }
 &__form {
+  position: relative;
   flex: 1 1 auto;
 }
 &__feedback-area-label {
+  max-width: 219px;
+  width: 100%;
+  text-align: center;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -12px;
+  left: 16px;
   background-color: #FFFFFF;
   cursor: auto;
   font-family: $font-main;
@@ -1380,18 +1385,29 @@
 }
 
 &__feedback {
+  padding: 10px 20px;
   resize: none;
   max-width: 664px;
   width: 100%;
   height: 116px;
   border: 1px solid #090102;
   border-radius: 1px;
+  font-family: $font-main;
+  font-size: 0.875rem;
+  line-height: 24px;
+  color: $color-gray-100;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  &::-webkit-scrollbar { width: 0; } 
 }
 
 &__feedback-stars {
+  margin-right: 46px;
 }
 
 &__star-active {
+  font-size: 0;
+  display: inline-block;
 }
 
 &__feedback-button {

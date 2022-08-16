@@ -6738,15 +6738,20 @@ body.lock {
   display: flex;
 }
 .card-product-reviews__feedback-area-wrapper {
-  position: relative;
+  margin-right: 16px;
+  font-size: 0;
 }
 .card-product-reviews__form {
+  position: relative;
   flex: 1 1 auto;
 }
 .card-product-reviews__feedback-area-label {
+  max-width: 219px;
+  width: 100%;
+  text-align: center;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -12px;
+  left: 16px;
   background-color: #FFFFFF;
   cursor: auto;
   font-family: "Mulish", sans-serif;
@@ -6755,12 +6760,29 @@ body.lock {
   color: #827d7d;
 }
 .card-product-reviews__feedback {
+  padding: 10px 20px;
   resize: none;
   max-width: 664px;
   width: 100%;
   height: 116px;
   border: 1px solid #090102;
   border-radius: 1px;
+  font-family: "Mulish", sans-serif;
+  font-size: 0.875rem;
+  line-height: 24px;
+  color: #1a1919;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+}
+.card-product-reviews__feedback::-webkit-scrollbar {
+  width: 0;
+}
+.card-product-reviews__feedback-stars {
+  margin-right: 46px;
+}
+.card-product-reviews__star-active {
+  font-size: 0;
+  display: inline-block;
 }
 .card-product-reviews__reviews {
   margin-bottom: 60px;
