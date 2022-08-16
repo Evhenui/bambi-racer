@@ -174,45 +174,86 @@ export let cardProduct = function () {
       },
     },
   });
-
-const sliderThumbs = new Swiper('.slider__thumbs .swiper-container', {
-	direction: 'vertical',
-	slidesPerView: 6, 
-	spaceBetween: 12, 
-	navigation: { 
-		nextEl: '.slider__next', 
-		prevEl: '.slider__prev'
-	},
-	freeMode: true, 
-	breakpoints: { 
-		0: { 
-			direction: 'horizontal',
-		},
-		768: { 
-			direction: 'vertical', 
-		}
-	}
+  //----slider main----
+  const sliderThumbs = new Swiper('.main-slider__nav-slider .swiper-container', {
+    direction: 'vertical',
+    slidesPerView: 6, 
+    spaceBetween: 12, 
+    navigation: { 
+      nextEl: '.main-slider__button-next', 
+      prevEl: '.main-slider__button-prev'
+    },
+    freeMode: true, 
+    breakpoints: { 
+      0: { 
+        direction: 'horizontal',
+      },
+      768: { 
+        direction: 'vertical', 
+      }
+    }
+  });
+  const sliderImages = new Swiper('.main-slider__basic-slider .swiper-container', {
+    direction: 'horizontal',
+    slidesPerView: 1,
+    spaceBetween: 32,
+    mousewheel: true,
+    navigation: {
+      nextEl: '.main-slider__button-next', 
+      prevEl: '.main-slider__button-prev'
+    },
+    grabCursor: true,
+    thumbs: { 
+      swiper: sliderThumbs 
+    },
+    breakpoints: {
+      0: { 
+        direction: 'horizontal',
+      },
+      768: { 
+        direction: 'horizontal',
+      }
+    }
+  });
+//----slider zoom----
+const sliderNavZoom = new Swiper('.modal-zoom__container-navigation', {
+  direction: 'vertical',
+  slidesPerView: 6, 
+  spaceBetween: 12, 
+  navigation: { 
+    nextEl: '.modal-zoom__button-next', 
+    prevEl: '.modal-zoom__button-prev'
+  },
+  freeMode: true, 
+  breakpoints: { 
+    0: { 
+      direction: 'horizontal',
+    },
+    768: { 
+      direction: 'vertical', 
+    }
+  }
 });
-const sliderImages = new Swiper('.slider__images .swiper-container', {
-	direction: 'horizontal',
-	slidesPerView: 1,
-	spaceBetween: 32,
-	mousewheel: true,
-	navigation: {
-		nextEl: '.slider__next',
-		prevEl: '.slider__prev'
-	},
-	grabCursor: true,
-	thumbs: { 
-		swiper: sliderThumbs 
-	},
-	breakpoints: {
-		0: { 
-			direction: 'horizontal',
-		},
-		768: { 
-			direction: 'horizontal',
-		}
-	}
+const sliderMainZoom = new Swiper('.modal-zoom__container-basic', {
+  direction: 'horizontal',
+  slidesPerView: 1,
+  spaceBetween: 32,
+  mousewheel: true,
+  navigation: {
+    nextEl: '.modal-zoom__button-next', 
+    prevEl: '.modal-zoom__button-prev'
+  },
+  grabCursor: true,
+  thumbs: { 
+    swiper: sliderNavZoom 
+  },
+  breakpoints: {
+    0: { 
+      direction: 'horizontal',
+    },
+    768: { 
+      direction: 'horizontal',
+    }
+  }
 });
 };

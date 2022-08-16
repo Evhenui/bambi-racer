@@ -153,7 +153,7 @@
 //-----------------modal zoom----------------------------------
 .modal-zoom {
   position: relative;
-  z-index: 5;
+  z-index: 999999;
   visibility: hidden;
   opacity: 0;
   transition: all .3s ease-in-out;
@@ -197,10 +197,8 @@
   }
 
   &__slider {
-    max-width: 660px;
-    width: 100%;
     height: 660px;
-    background-color: #4E4B4B;
+    overflow: hidden;
   }
 
   &__navigation {
@@ -1673,6 +1671,7 @@
 //-----------------main slider-------------------------------------------
 .main-slider {
   color: rgb(224, 16, 16);
+  height: 500px;
   &__wrapper {
     display: flex;
     align-items: flex-start;
@@ -1706,45 +1705,41 @@
   &__slide.preview {
     flex: 0;
   }
+  & .swiper-container {
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+  }
+  & .swiper-slide-thumb-active &__image {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+    border: 1px solid #C12125;
+    border-radius: 1px;
+  }
+  &__image {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+  }
+  &__image.preview {
+    width: 64px;
+    height: 64px;
+  }
+  &__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  &__button-prev:hover &__arrow-prev{
+    stroke: #C12125;
+  }
+  &__button-next:hover &__arrow-next{
+    stroke: #C12125;
+  }
 }
-.slider .swiper-container {
-  width: 500px;
-  height: 500px;
-  overflow: hidden;
-}
-
-.slider__thumbs .slider__image {
-  transition: 0.25s;
-  filter: grayscale(100%);
-}
-
-.slider__thumbs .swiper-slide-thumb-active .slider__image {
-  -webkit-filter: grayscale(0%);
-  filter: grayscale(0%);
-  border: 1px solid #C12125;
-  border-radius: 1px;
-}
-
-.slider__images {
-  height: 500px;
-}
-
-.slider__image {
-  width: 100%;
-  height: 500px;
-  overflow: hidden;
-}
-.slider__image.preview {
-  width: 64px;
-  height: 64px;
-}
-.slider__image img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-}
+/*
 @media (max-width: 767.98px) {
   .slider__flex {
     flex-direction: column-reverse;
@@ -1766,13 +1761,76 @@
   }
 
 }
+*/
+//----------------modal zoom slider----------
+.modal-zoom {
 
-.btn-slider-prev:hover .btn-slider-arrow-prev {
-  stroke: #C12125;
+  &__slider {
+    max-width: 768px;
+    width: 100%;
+  }
+
+  &__slider-container {
+  }
+
+  &__slider-wrapper {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__slider-navigation {
+    margin-right: 74px;
+  }
+
+  &__nav-slider {
+    display: flex;
+    flex-direction: column;
+    width: 84px;
+    height: 660px;
+    overflow: hidden;
+  }
+
+  &__container-navigation {
+    width: 660px;
+    height: 660px;
+    overflow: hidden;
+  }
+
+  &__navigation-wrapper {
+  }
+
+  &__slide {
+  }
+
+  &__image {
+  }
+
+  &__basic-slider {
+    height: 660px;
+  }
+
+  &__button-prev {
+  }
+
+  &__basic-slider-wrapper {
+  }
+
+  &__container-basic {
+    overflow: hidden;
+  }
+
+  &__basic-wrapper {
+  }
+
+  &__button-next {
+  }
 }
-.btn-slider-next:hover .btn-slider-arrow-next { 
-  stroke: #C12125;
+.swiper-container {
 }
-
-
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.preview {
+}
 
