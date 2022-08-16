@@ -193,27 +193,25 @@ const sliderThumbs = new Swiper('.slider__thumbs .swiper-container', {
 		}
 	}
 });
-// Инициализация слайдера изображений
-const sliderImages = new Swiper('.slider__images .swiper-container', { // ищем слайдер превью по селектору
-	// задаем параметры
-	direction: 'horizontal', // вертикальная прокрутка
-	slidesPerView: 1, // показывать по 1 изображению
-	spaceBetween: 32, // расстояние между слайдами
-	mousewheel: true, // можно прокручивать изображения колёсиком мыши
-	navigation: { // задаем кнопки навигации
-		nextEl: '.slider__next', // кнопка Next
-		prevEl: '.slider__prev' // кнопка Prev
+const sliderImages = new Swiper('.slider__images .swiper-container', {
+	direction: 'horizontal',
+	slidesPerView: 1,
+	spaceBetween: 32,
+	mousewheel: true,
+	navigation: {
+		nextEl: '.slider__next',
+		prevEl: '.slider__prev'
 	},
-	grabCursor: true, // менять иконку курсора
-	thumbs: { // указываем на превью слайдер
-		swiper: sliderThumbs // указываем имя превью слайдера
+	grabCursor: true,
+	thumbs: { 
+		swiper: sliderThumbs 
 	},
-	breakpoints: { // условия для разных размеров окна браузера
-		0: { // при 0px и выше
-			direction: 'horizontal', // горизонтальная прокрутка
+	breakpoints: {
+		0: { 
+			direction: 'horizontal',
 		},
-		768: { // при 768px и выше
-			direction: 'horizontal', // вертикальная прокрутка
+		768: { 
+			direction: 'horizontal',
 		}
 	}
 });
