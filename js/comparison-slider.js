@@ -9,10 +9,11 @@ export let compparisonSlider = function() {
                 personalAreaCompListBody = personalComparisonWrp.querySelector('[data-personal-area-comp-list-body]'),
                 slider = personalComparisonWrp.querySelector('.js-slider');
         let counter = 0;
+        let paddings = 16;
         let space = (personalAreaCompItem.length-1)*8;
         const sectionSize = 260;
         let max = sectionSize * (personalAreaCompItem.length);
-        let maxWidthSlider = `${sectionSize * personalAreaCompItem.length + space}px`;
+        let maxWidthSlider = `${sectionSize * personalAreaCompItem.length + space + paddings}px`;
 
         slider.style.maxWidth = maxWidthSlider;
         if(slider.style.maxWidth === maxWidthSlider){

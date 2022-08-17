@@ -1527,6 +1527,10 @@ label {
 .card-prod-catalog {
   max-width: 324px;
   width: 100%;
+  transition: all 0.1s ease-in-out;
+}
+.card-prod-catalog:hover {
+  box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.1);
 }
 @media (max-width: 1458px) {
   .card-prod-catalog {
@@ -3582,13 +3586,19 @@ label {
 }
 .personal-area-private-data__input {
   display: block;
-  border: 1px solid #090102;
+  border: 1px solid #827D7D;
   border-radius: 1px;
   font-family: "Mulish", sans-serif;
   font-size: 0.875rem;
   padding: 12.2px 20px;
   max-width: 340px;
   width: 100%;
+}
+.personal-area-private-data__input:hover {
+  border-color: #991A1D;
+}
+.personal-area-private-data__input:active, .personal-area-private-data__input:focus {
+  border-color: #090102;
 }
 @media (max-width: 960px) {
   .personal-area-private-data__input {
@@ -3627,7 +3637,7 @@ label {
   padding: 0 4px;
   font-family: "Mulish", sans-serif;
   font-size: 0.875rem;
-  color: #1a1919;
+  color: #827D7D;
   font-weight: 400;
   position: absolute;
   pointer-events: none;
@@ -3662,24 +3672,25 @@ label {
 .personal-area-private-data .personal-area-private-data__label.is-invalid {
   color: #991a1d;
 }
-.personal-area-private-data__password-active {
-  display: none;
-}
 .personal-area-private-data__show-password-button {
   position: absolute;
   top: 12px;
   right: 14px;
   cursor: pointer;
+  font-size: 0;
 }
 .personal-area-private-data__show-password-button:hover .personal-area-private-data__password-calm {
   transition: all 0.2s;
   border-radius: 50%;
   background-color: #f3f2f2;
 }
-.personal-area-private-data.active .personal-area-private-data__password-active {
+.personal-area-private-data__show-password-button.active .personal-area-private-data__password-active {
   display: block;
 }
-.personal-area-private-data.active .personal-area-private-data__password-calm {
+.personal-area-private-data__show-password-button.active .personal-area-private-data__password-calm {
+  display: none;
+}
+.personal-area-private-data__password-active {
   display: none;
 }
 .personal-area-private-data__wrapper-input {
@@ -3697,6 +3708,9 @@ label {
 .personal-area-private-data__wrapper-input-checkbox {
   min-height: 20px;
   margin: 0;
+}
+.personal-area-private-data__wrapper-input-checkbox:hover .custom-checkbox + label::before {
+  border-color: #C12125;
 }
 .personal-area-private-data__checkbox {
   top: 0;
@@ -3817,6 +3831,10 @@ label {
 }
 .button-grey:active {
   background: #e8c1be;
+}
+.button-grey:disabled {
+  color: #9c9696;
+  background: #f3f2f2;
 }
 
 .personal-area-favorites__sorting-navigation {
@@ -4213,6 +4231,9 @@ label {
 .buttom-section__button-wrapper:active {
   background: #890019;
 }
+.buttom-section__button-wrapper:disabled {
+  background: #9C9696;
+}
 
 .top-section__button-wrapper {
   transition: 0.2s;
@@ -4286,9 +4307,13 @@ label {
   background-color: #ffffff;
   border-radius: 8px;
   overflow: hidden;
+  transition: all 0.1s ease-in-out;
 }
 .order:hover .js-order__arrow {
   fill: #C12125;
+}
+.order:hover {
+  box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.1);
 }
 .order .js-order__arrow.active {
   fill: #C12125;
@@ -4471,6 +4496,9 @@ label {
   width: 100%;
   height: auto;
 }
+.order__buttom-wrapper {
+  font-size: 0;
+}
 @media (max-width: 960px) {
   .order__buttom-wrapper {
     position: absolute;
@@ -4583,7 +4611,11 @@ label {
   background-color: #991a1d;
 }
 .order__repeat-buttom:active {
-  background-color: #890019;
+  background-color: #991a1d;
+}
+.order__repeat-buttom:disabled {
+  color: #9c9696;
+  background: #9c9696;
 }
 .order__item-description-mobile {
   border-bottom: 1px solid #e6e5e5;
@@ -4693,8 +4725,8 @@ label {
 .personal-area-comparison__wrapper {
   position: relative;
   display: flex;
-  padding: 60px 48px 100px 48px;
-  gap: 16px 11px;
+  padding: 48px 40px 100px 48px;
+  gap: 16px 4px;
 }
 @media (max-width: 960px) {
   .personal-area-comparison__wrapper {
@@ -4704,7 +4736,7 @@ label {
   }
 }
 .personal-area-comparison__main-wrapper {
-  padding-bottom: 14px;
+  padding: 12px 8px 14px 8px;
   overflow-x: auto;
 }
 .personal-area-comparison__button-prev, .personal-area-comparison__button-next {
@@ -4725,10 +4757,10 @@ label {
   fill: #890019;
 }
 .personal-area-comparison__button-prev {
-  left: 0x;
+  left: 0;
 }
 .personal-area-comparison__button-next {
-  right: 0px;
+  right: 0;
 }
 .personal-area-comparison__menu-items {
   overflow: hidden;
@@ -4782,10 +4814,13 @@ label {
   transition: 0.3s ease-in;
 }
 .personal-area-comparison__menu-item {
-  box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.1);
+  transition: all 0.1s ease-in-out;
   max-width: 260px;
   width: 100%;
   flex: 0 0 auto;
+}
+.personal-area-comparison__menu-item:hover {
+  box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.1);
 }
 .personal-area-comparison__body-wrapper {
   display: flex;
@@ -5047,6 +5082,7 @@ label {
   display: flex;
   flex-direction: column;
   row-gap: 16px;
+  padding-top: 12px;
 }
 .personal-area-comparison .compare-parameters-buttons {
   margin-bottom: 28px;
@@ -5055,6 +5091,8 @@ label {
   border-radius: 4px;
   background: #ffffff;
   padding: 20px 12px 16px 12px;
+  max-width: 260px;
+  width: 100%;
 }
 @media (max-width: 960px) {
   .personal-area-comparison__characteristics-item {
@@ -5100,7 +5138,7 @@ label {
 }
 .personal-area-modal__mask {
   position: fixed;
-  z-index: 5;
+  z-index: 999999;
   top: 0;
   left: 0;
   width: 100%;
@@ -5275,14 +5313,23 @@ label {
   line-height: 16px;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+  color: #cecaca;
+}
+.personal-area-modal__subtitle-link:hover {
   color: #df9793;
+}
+.personal-area-modal__subtitle-link:active {
+  color: #c12125;
+}
+.personal-area-modal__subtitle-link:disabled {
+  color: #9c9696;
 }
 .personal-area-modal__button {
   cursor: auto;
   max-width: 300px;
   width: 100%;
   padding: 12px 0;
-  font-family: "Mulish";
+  font-family: "Mulish", sans-serif;
   font-weight: 700;
   font-size: 0.875rem;
   line-height: 20px;
@@ -5305,6 +5352,9 @@ label {
 }
 .personal-area-modal__button.active:active {
   background: #890019;
+}
+.personal-area-modal__button.active:disabled {
+  background: #9c9696;
 }
 .personal-area-modal__register {
   display: none;
@@ -5331,6 +5381,12 @@ label {
   padding: 12.2px 20px;
   max-width: 340px;
   width: 100%;
+}
+.personal-area-modal__input:hover {
+  border-color: #991a1d;
+}
+.personal-area-modal__input:active, .personal-area-modal__input:focus {
+  border-color: #090102;
 }
 @media (max-width: 960px) {
   .personal-area-modal__input {
@@ -5406,20 +5462,21 @@ label {
   top: 12px;
   right: 14px;
   cursor: pointer;
+  font-size: 0;
 }
 .personal-area-modal__show-password-button:hover .personal-area-modal__password-calm {
-  transition: all 0.2s;
+  transition: all 0.2s ease-in-out;
   border-radius: 50%;
   background-color: #f3f2f2;
 }
-.personal-area-modal__show-password-button.active .personal-area-modal__password-active {
-  display: block;
+.personal-area-modal__password-active {
+  display: none;
 }
 .personal-area-modal__show-password-button.active .personal-area-modal__password-calm {
   display: none;
 }
-.personal-area-modal__password-active {
-  display: none;
+.personal-area-modal__show-password-button.active .personal-area-modal__password-active {
+  display: block;
 }
 .personal-area-modal__footer {
   padding: 24px 0 60px 0;
@@ -5476,6 +5533,9 @@ label {
 }
 .personal-area-modal__button-social-network:active {
   background: #e8c1be;
+}
+.personal-area-modal__button-social-network:disabled {
+  border-color: #9c9696;
 }
 .personal-area-modal__button-text {
   font-family: "Mulish", sans-serif;
