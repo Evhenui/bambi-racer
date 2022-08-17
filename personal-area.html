@@ -454,11 +454,7 @@
                 </div>
 
                 <div class="personal-area-private-data__wrapper-input">
-                  <input
-                    type="tel"
-                    class="personal-area-private-data__input js-input-phone js-input"
-                    required
-                  />
+                  <input data-tel-input maxlength="19" type="tel" class="personal-area-private-data__input js-input-phone js-input" required/>
                   <label
                     class="personal-area-private-data__label js-label-phone"
                     >Номер телефона</label
@@ -4670,7 +4666,7 @@
                       </div>
 
                       <div class="personal-area-modal__input-wrapper phone">      
-                        <input data-modal-input-phone class="personal-area-modal__input js-modal-input" type="tel" required>
+                        <input data-modal-input-phone data-tel-input maxlength="19" class="personal-area-modal__input js-modal-input" type="tel" required>
                         <label data-modal-label-phone class="personal-area-modal__label">Номер телефона</label>
                       </div>
 
