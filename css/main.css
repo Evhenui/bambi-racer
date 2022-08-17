@@ -4287,6 +4287,12 @@ label {
   border-radius: 8px;
   overflow: hidden;
 }
+.order:hover .js-order__arrow {
+  fill: #C12125;
+}
+.order .js-order__arrow.active {
+  fill: #C12125;
+}
 .order__abbreviated-information {
   position: relative;
   padding: 12px 100px 12px 18px;
@@ -5688,6 +5694,9 @@ body.lock {
   display: table;
   transition: all 0.3s ease;
 }
+.modal-zoom__main-slider-wrapper {
+  padding-top: 38px;
+}
 .modal-zoom__wrapper {
   display: table-cell;
   vertical-align: middle;
@@ -5702,6 +5711,7 @@ body.lock {
   background-color: #FFFFFF;
 }
 .modal-zoom__main {
+  min-height: 768px;
   display: flex;
   justify-content: space-between;
   padding: 26px 26px 44px 24px;
@@ -7027,12 +7037,15 @@ body.lock {
   height: 444px;
   overflow: hidden;
 }
+.main-slider__container-navigation {
+  width: 64px;
+  overflow: hidden;
+}
 .main-slider__slide.preview {
   flex: 0;
 }
-.main-slider .swiper-container {
+.main-slider__container-basic {
   width: 500px;
-  height: 500px;
   overflow: hidden;
 }
 .main-slider .swiper-slide-thumb-active .main-slider__image {
@@ -7086,16 +7099,12 @@ body.lock {
 
 }
 */
-.modal-zoom__slider {
-  max-width: 768px;
-  width: 100%;
-}
 .modal-zoom__slider-wrapper {
   display: flex;
   align-items: flex-start;
 }
 .modal-zoom__slider-navigation {
-  margin-right: 74px;
+  margin-right: 60px;
 }
 .modal-zoom__nav-slider {
   display: flex;
@@ -7105,12 +7114,49 @@ body.lock {
   overflow: hidden;
 }
 .modal-zoom__container-navigation {
-  width: 660px;
   height: 660px;
   overflow: hidden;
 }
+.modal-zoom__slide.preview {
+  flex: 0;
+}
+.modal-zoom .swiper-slide-thumb-active .modal-zoom__image {
+  border: 1px solid #C12125;
+  border-radius: 1px;
+}
+.modal-zoom__image.preview {
+  max-width: 84px;
+  width: 100%;
+}
+.modal-zoom__image.preview img {
+  width: 100%;
+  height: auto;
+}
 .modal-zoom__basic-slider {
+  display: flex;
+  align-items: center;
   height: 660px;
+}
+.modal-zoom__basic-slider-wrapper {
+  max-width: 660px;
+  height: 660px;
+  width: 100%;
+}
+.modal-zoom__button-prev, .modal-zoom__button-next {
+  cursor: pointer;
+  font-size: 0;
+}
+.modal-zoom__button-prev:hover .modal-zoom__button-prev-svg {
+  fill: #C12125;
+}
+.modal-zoom__button-prev:active .modal-zoom__button-prev-svg {
+  fill: #C12125;
+}
+.modal-zoom__button-next:hover .modal-zoom__button-next-svg {
+  fill: #C12125;
+}
+.modal-zoom__button-next:active .modal-zoom__button-next-svg {
+  fill: #C12125;
 }
 .modal-zoom__container-basic {
   overflow: hidden;

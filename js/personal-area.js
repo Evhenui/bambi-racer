@@ -102,7 +102,9 @@ if (accordion != null) {
     item.addEventListener('click', function(event) {
      const self = event.currentTarget;
      const accordionContent = self.querySelector('[data-accordion-content]');
-     this.classList.toggle('active')
+     const accordionArrow = self.querySelector('[data-accordion-arrow]');
+     this.classList.toggle('active');
+     accordionArrow.classList.toggle('active');
      if(this.classList.contains('active')){
       accordionContent.style.height = accordionContent.scrollHeight + 'px';
      } else {

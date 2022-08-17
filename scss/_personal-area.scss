@@ -908,6 +908,12 @@
   border-radius: 8px;
   overflow: hidden;
   
+  &:hover .js-order__arrow {
+    fill: #C12125;
+  }
+  .js-order__arrow.active {
+    fill: #C12125;
+  }
   &__abbreviated-information {
     position: relative;
     padding: 12px 100px 12px 18px;
