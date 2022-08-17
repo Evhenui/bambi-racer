@@ -3151,58 +3151,61 @@
         <div class="personal-area-my-orders__wrapper">
           <section data-accordion-item class="order in-the-pocess">
             <div class="order__abbreviated-information">
-              <section class="order__left-data-section">
-                <section class="order__data-section">
-                  <div class="order__data">
-                    <div>
-                      <span class="order__item-description">Заказ №021097</span>
-                      <span class="order__item-description"
-                        >от 24 марта 2022</span
-                      >
+              <div class="order__abbreviated-information-wrapper">
+                <section class="order__left-data-section">
+                  <section class="order__data-section">
+                    <div class="order__data">
+                      <div>
+                        <span class="order__item-description">Заказ №021097</span>
+                        <span class="order__item-description"
+                          >от 24 марта 2022</span
+                        >
+                      </div>
                     </div>
-                  </div>
-                  <div class="order__status">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle cx="12" cy="12" r="9.5" stroke="#FFC702" />
-                      <path
-                        d="M11.14 17V9.89958H12.274V17H11.14ZM11 8.28713V7H12.4V8.28713H11Z"
-                        fill="#FFC702"
+                    <div class="order__status">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="12" cy="12" r="9.5" stroke="#FFC702" />
+                        <path
+                          d="M11.14 17V9.89958H12.274V17H11.14ZM11 8.28713V7H12.4V8.28713H11Z"
+                          fill="#FFC702"
+                        />
+                      </svg>
+                      <span class="order__item-title">В процессе</span>
+                    </div>
+                  </section>
+                  <section class="order__price js-order-price">
+                    <span class="order__item-description">Сумма заказа</span>
+                    <span class="order__item-title">13 812 грн</span>
+                  </section>
+                </section>
+                <section class="order__right-data-section">
+                  <section class="order__items-images js-order-images">
+                    <div class="order__image-wrapper">
+                      <img
+                        src="img/order-car.svg"
+                        alt="car"
+                        class="order__image"
                       />
-                    </svg>
-                    <span class="order__item-title">В процессе</span>
-                  </div>
+                    </div>
+                    <div class="order-in-the-process__image-wrapper">
+                      <img src="img/order-car.svg" alt="car" />
+                    </div>
+                    <div class="order-in-the-process__image-wrapper">
+                      <img src="img/order-car.svg" alt="car" />
+                    </div>
+                    <div class="order-in-the-process__image-wrapper">
+                      <img src="img/order-car.svg" alt="car" />
+                    </div>
+                  </section>
                 </section>
-                <section class="order__price js-order-price">
-                  <span class="order__item-description">Сумма заказа</span>
-                  <span class="order__item-title">13 812 грн</span>
-                </section>
-              </section>
-              <section class="order__right-data-section">
-                <section class="order__items-images js-order-images">
-                  <div class="order__image-wrapper">
-                    <img
-                      src="img/order-car.svg"
-                      alt="car"
-                      class="order__image"
-                    />
-                  </div>
-                  <div class="order-in-the-process__image-wrapper">
-                    <img src="img/order-car.svg" alt="car" />
-                  </div>
-                  <div class="order-in-the-process__image-wrapper">
-                    <img src="img/order-car.svg" alt="car" />
-                  </div>
-                  <div class="order-in-the-process__image-wrapper">
-                    <img src="img/order-car.svg" alt="car" />
-                  </div>
-                </section>
-              </section>
+              </div>
+              
               <section class="order__buttom-wrapper">
                 <a class="order__arrow-buttom js-accordion-arrow">
                   <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -3503,56 +3506,58 @@
           </section>
           <section data-accordion-item class="order canceled">
             <div class="order__abbreviated-information">
-              <section class="order__left-data-section">
-                <section class="order__data-section">
-                  <div class="order__data">
-                    <span class="order__item-description">Заказ №021097</span>
-                    <span class="order__item-description"
-                      >от 24 марта 2022</span
-                    >
-                  </div>
-                  <div class="order__status">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle cx="12" cy="12" r="9.5" stroke="#C12125" />
-                      <path
-                        d="M15.8537 8.14629C15.6586 7.95124 15.3458 7.95124 15.1507 8.14629L12 11.2966L8.84932 8.14629C8.65424 7.95124 8.34138 7.95124 8.14631 8.14629C7.95123 8.34135 7.95123 8.65417 8.14631 8.84922L11.297 11.9995L8.14631 15.1499C7.95123 15.3449 7.95123 15.6577 8.14631 15.8528C8.24201 15.9485 8.37083 16 8.49597 16C8.62112 16 8.74994 15.9522 8.84564 15.8528L11.9963 12.7025L15.147 15.8528C15.2427 15.9485 15.3715 16 15.4967 16C15.6255 16 15.7506 15.9522 15.8463 15.8528C16.0414 15.6577 16.0414 15.3449 15.8463 15.1499L12.703 11.9995L15.8537 8.84922C16.0488 8.65417 16.0488 8.34135 15.8537 8.14629Z"
-                        fill="#C12125"
+              <div class="order__abbreviated-information-wrapper">
+                <section class="order__left-data-section">
+                  <section class="order__data-section">
+                    <div class="order__data">
+                      <span class="order__item-description">Заказ №021097</span>
+                      <span class="order__item-description"
+                        >от 24 марта 2022</span
+                      >
+                    </div>
+                    <div class="order__status">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="12" cy="12" r="9.5" stroke="#C12125" />
+                        <path
+                          d="M15.8537 8.14629C15.6586 7.95124 15.3458 7.95124 15.1507 8.14629L12 11.2966L8.84932 8.14629C8.65424 7.95124 8.34138 7.95124 8.14631 8.14629C7.95123 8.34135 7.95123 8.65417 8.14631 8.84922L11.297 11.9995L8.14631 15.1499C7.95123 15.3449 7.95123 15.6577 8.14631 15.8528C8.24201 15.9485 8.37083 16 8.49597 16C8.62112 16 8.74994 15.9522 8.84564 15.8528L11.9963 12.7025L15.147 15.8528C15.2427 15.9485 15.3715 16 15.4967 16C15.6255 16 15.7506 15.9522 15.8463 15.8528C16.0414 15.6577 16.0414 15.3449 15.8463 15.1499L12.703 11.9995L15.8537 8.84922C16.0488 8.65417 16.0488 8.34135 15.8537 8.14629Z"
+                          fill="#C12125"
+                        />
+                      </svg>
+                      <span class="order__item-title">Отменен</span>
+                    </div>
+                  </section>
+                  <section class="order__price js-order-price">
+                    <span class="order__item-description">Сумма заказа</span>
+                    <span class="order__item-title">13 812 грн</span>
+                  </section>
+                </section>
+                <section class="order__right-data-section">
+                  <section class="order__items-images js-order-images">
+                    <div class="order__image-wrapper">
+                      <img
+                        src="img/order-car.svg"
+                        alt="car"
+                        class="order__image"
                       />
-                    </svg>
-                    <span class="order__item-title">Отменен</span>
-                  </div>
+                    </div>
+                    <div class="order-in-the-process__image-wrapper">
+                      <img src="img/order-car.svg" alt="car" />
+                    </div>
+                    <div class="order-in-the-process__image-wrapper">
+                      <img src="img/order-car.svg" alt="car" />
+                    </div>
+                    <div class="order-in-the-process__image-wrapper">
+                      <img src="img/order-car.svg" alt="car" />
+                    </div>
+                  </section>
                 </section>
-                <section class="order__price js-order-price">
-                  <span class="order__item-description">Сумма заказа</span>
-                  <span class="order__item-title">13 812 грн</span>
-                </section>
-              </section>
-              <section class="order__right-data-section">
-                <section class="order__items-images js-order-images">
-                  <div class="order__image-wrapper">
-                    <img
-                      src="img/order-car.svg"
-                      alt="car"
-                      class="order__image"
-                    />
-                  </div>
-                  <div class="order-in-the-process__image-wrapper">
-                    <img src="img/order-car.svg" alt="car" />
-                  </div>
-                  <div class="order-in-the-process__image-wrapper">
-                    <img src="img/order-car.svg" alt="car" />
-                  </div>
-                  <div class="order-in-the-process__image-wrapper">
-                    <img src="img/order-car.svg" alt="car" />
-                  </div>
-                </section>
-              </section>
+              </div>
               <section class="order__buttom-wrapper">
                 <a class="order__arrow-buttom js-accordion-arrow">
                   <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -3853,59 +3858,62 @@
           </section>
           <section data-accordion-item class="order completed">
             <div class="order__abbreviated-information">
-              <section class="order__left-data-section">
-                <section class="order__data-section">
-                  <div class="order__data">
-                    <span class="order__item-description">Заказ №021097</span>
-                    <span class="order__item-description"
-                      >от 24 марта 2022</span
-                    >
-                  </div>
-                  <div class="order__status">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle cx="12" cy="12" r="9.5" stroke="#51B900" />
-                      <path
-                        d="M8 11.8182L11 16L16 8"
-                        stroke="#51B900"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+              <div class="order__abbreviated-information-wrapper">
+                <section class="order__left-data-section">
+                  <section class="order__data-section">
+                    <div class="order__data">
+                      <span class="order__item-description">Заказ №021097</span>
+                      <span class="order__item-description"
+                        >от 24 марта 2022</span
+                      >
+                    </div>
+                    <div class="order__status">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="12" cy="12" r="9.5" stroke="#51B900" />
+                        <path
+                          d="M8 11.8182L11 16L16 8"
+                          stroke="#51B900"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+  
+                      <span class="order__item-title">Выполнен</span>
+                    </div>
+                  </section>
+                  <section class="order__price js-order-price">
+                    <span class="order__item-description">Сумма заказа</span>
+                    <span class="order__item-title">11 412 грн</span>
+                  </section>
+                </section>
+                <section class="order__right-data-section">
+                  <section class="order__items-images js-order-images">
+                    <div class="order__image-wrapper">
+                      <img
+                        src="img/order-car.svg"
+                        alt="car"
+                        class="order__image"
                       />
-                    </svg>
-
-                    <span class="order__item-title">Выполнен</span>
-                  </div>
+                    </div>
+                    <div class="order-in-the-process__image-wrapper">
+                      <img src="img/order-car.svg" alt="car" />
+                    </div>
+                    <div class="order-in-the-process__image-wrapper">
+                      <img src="img/order-car.svg" alt="car" />
+                    </div>
+                    <div class="order-in-the-process__image-wrapper number">
+                      <span class="order-in-the-process__image-number">+2</span>
+                    </div>
+                  </section>
                 </section>
-                <section class="order__price js-order-price">
-                  <span class="order__item-description">Сумма заказа</span>
-                  <span class="order__item-title">11 412 грн</span>
-                </section>
-              </section>
-              <section class="order__right-data-section">
-                <section class="order__items-images js-order-images">
-                  <div class="order__image-wrapper">
-                    <img
-                      src="img/order-car.svg"
-                      alt="car"
-                      class="order__image"
-                    />
-                  </div>
-                  <div class="order-in-the-process__image-wrapper">
-                    <img src="img/order-car.svg" alt="car" />
-                  </div>
-                  <div class="order-in-the-process__image-wrapper">
-                    <img src="img/order-car.svg" alt="car" />
-                  </div>
-                  <div class="order-in-the-process__image-wrapper">
-                    <img src="img/order-car.svg" alt="car" />
-                  </div>
-                </section>
-              </section>
+              </div>
+              
               <section class="order__buttom-wrapper">
                 <a class="order__arrow-buttom js-accordion-arrow">
                   <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -4206,58 +4214,61 @@
           </section>
           <section data-accordion-item class="order completed">
             <div class="order__abbreviated-information">
-              <section class="order__left-data-section">
-                <section class="order__data-section">
-                  <div class="order__data">
-                    <span class="order__item-description">Заказ №021097</span>
-                    <span class="order__item-description"
-                      >от 24 марта 2022</span
-                    >
-                  </div>
-                  <div class="order__status">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle cx="12" cy="12" r="9.5" stroke="#51B900" />
-                      <path
-                        d="M8 11.8182L11 16L16 8"
-                        stroke="#51B900"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+              <div class="order__abbreviated-information-wrapper">
+                <section class="order__left-data-section">
+                  <section class="order__data-section">
+                    <div class="order__data">
+                      <span class="order__item-description">Заказ №021097</span>
+                      <span class="order__item-description"
+                        >от 24 марта 2022</span
+                      >
+                    </div>
+                    <div class="order__status">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle cx="12" cy="12" r="9.5" stroke="#51B900" />
+                        <path
+                          d="M8 11.8182L11 16L16 8"
+                          stroke="#51B900"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      <span class="order__item-title">Выполнен</span>
+                    </div>
+                  </section>
+                  <section class="order__price js-order-price">
+                    <span class="order__item-description">Сумма заказа</span>
+                    <span class="order__item-title">13 812 грн</span>
+                  </section>
+                </section>
+                <section class="order__right-data-section">
+                  <section class="order__items-images js-order-images">
+                    <div class="order__image-wrapper">
+                      <img
+                        src="img/order-car.svg"
+                        alt="car"
+                        class="order__image"
                       />
-                    </svg>
-                    <span class="order__item-title">Выполнен</span>
-                  </div>
+                    </div>
+                    <div class="order-in-the-process__image-wrapper">
+                      <img src="img/order-car.svg" alt="car" />
+                    </div>
+                    <div class="order-in-the-process__image-wrapper">
+                      <img src="img/order-car.svg" alt="car" />
+                    </div>
+                    <div class="order-in-the-process__image-wrapper">
+                      <img src="img/order-car.svg" alt="car" />
+                    </div>
+                  </section>
                 </section>
-                <section class="order__price js-order-price">
-                  <span class="order__item-description">Сумма заказа</span>
-                  <span class="order__item-title">13 812 грн</span>
-                </section>
-              </section>
-              <section class="order__right-data-section">
-                <section class="order__items-images js-order-images">
-                  <div class="order__image-wrapper">
-                    <img
-                      src="img/order-car.svg"
-                      alt="car"
-                      class="order__image"
-                    />
-                  </div>
-                  <div class="order-in-the-process__image-wrapper">
-                    <img src="img/order-car.svg" alt="car" />
-                  </div>
-                  <div class="order-in-the-process__image-wrapper">
-                    <img src="img/order-car.svg" alt="car" />
-                  </div>
-                  <div class="order-in-the-process__image-wrapper">
-                    <img src="img/order-car.svg" alt="car" />
-                  </div>
-                </section>
-              </section>
+              </div>
+             
               <section class="order__buttom-wrapper">
                 <a class="order__arrow-buttom js-accordion-arrow">
                   <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -4566,10 +4577,10 @@
               <header class="personal-area-modal__header">
                 <div class="personal-area-modal__close-modal">
                   <button data-close-modal class="personal-area-modal__close-button mobile">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 1.45454L1.45454 0L16 14.5454L14.5454 16L0 1.45454Z" fill="#090102"/>
-                        <path d="M14.5459 2.97939e-05L16.0004 1.45457L1.455 16L0.000455369 14.5455L14.5459 2.97939e-05Z" fill="#090102"/>
-                      </svg>  
+                    <svg class="personal-area-modal__close-button-svg" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="personal-area-modal__close-button-svg-line" d="M14 15.4545L15.4545 14L30 28.5454L28.5454 30L14 15.4545Z" fill="#090102"/>
+                      <path class="personal-area-modal__close-button-svg-line" d="M28.5459 14L30.0004 15.4546L15.455 30L14.0005 28.5455L28.5459 14Z" fill="#090102"/>
+                    </svg>  
                   </button>
                 </div>
                 <div class="personal-area-modal__header-wrapper">
@@ -4583,11 +4594,10 @@
                       </li>
                     </ul>
                     <button data-close-modal class="personal-area-modal__close-button">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 1.45454L1.45454 0L16 14.5454L14.5454 16L0 1.45454Z" fill="#090102"/>
-                        <path d="M14.5459 2.97939e-05L16.0004 1.45457L1.455 16L0.000455369 14.5455L14.5459 2.97939e-05Z" fill="#090102"/>
-                      </svg>
-                        
+                      <svg class="personal-area-modal__close-button-svg" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="personal-area-modal__close-button-svg-line" d="M14 15.4545L15.4545 14L30 28.5454L28.5454 30L14 15.4545Z" fill="#090102"/>
+                        <path class="personal-area-modal__close-button-svg-line" d="M28.5459 14L30.0004 15.4546L15.455 30L14.0005 28.5455L28.5459 14Z" fill="#090102"/>
+                      </svg>  
                     </button>
                   </nav>
                 </div>
