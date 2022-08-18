@@ -71,8 +71,13 @@ export let cardProduct = function () {
       const body = document.querySelector("#body-cont"),
             buttonOpenModalZoom = carProduct.querySelector("[data-open-modal-zoom]"),
             modalZoomContainer = carProduct.querySelector("[data-modal-zoom-container]"),
-            modalZoomClose = carProduct.querySelector("[data-modal-zoom-close]");
+            modalZoomClose = carProduct.querySelector("[data-modal-zoom-close]"),
+            modalZoomButtonBuy = carProduct.querySelector("[data-modal-zoom__buy]"),
+            modalZoomButtonBuyOnClick = carProduct.querySelector("[data-modal-zoom__buy-on-click]"),
+            modalBasketOpen = carProduct.querySelector("[data-modal-basket]"),
+            modalBuyOnClickOpen = carProduct.querySelector("[data-modal-on-click]");
 
+            
       buttonOpenModalZoom.addEventListener("click", function () {
         modalZoom.classList.add("active");
         body.classList.add("lock");
@@ -88,6 +93,14 @@ export let cardProduct = function () {
           body.classList.remove("lock");
         }
       });
+      modalZoomButtonBuy.addEventListener('click',function() {
+        modalZoom.classList.remove("active");
+        modalBasketOpen.classList.add("active");
+      })
+      modalZoomButtonBuyOnClick.addEventListener('click', function() {
+        modalZoom.classList.remove("active");
+        modalBuyOnClickOpen.classList.add("active");
+      })
     }
     //----------modal on click--------------------
     if(modalOnClick !== null) {
@@ -116,7 +129,7 @@ export let cardProduct = function () {
     if(modalBasket !== null) {
       const  buttonOpenModalBasket = carProduct.querySelector('[data-by-modal-basket]'),
              buttonCloseModalBasket = carProduct.querySelector('[data-close-modal-basket]'),
-             modalBasketContainer = carProduct.querySelector('[data-modal-on-click-container]'),
+             modalBasketContainer = carProduct.querySelector('[data-modal-basket-container]'),
              body = document.querySelector('#body-cont');
 
              buttonOpenModalBasket.addEventListener('click', function() {

@@ -542,11 +542,11 @@
                                 
                                 <section class="modal-zoom__navigation">
                                   <section data-modal-zoom-close class="modal-zoom__navigation-close">
-                                    <button class="modal-zoom__button-close">
-                                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0 1.45454L1.45454 0L16 14.5454L14.5454 16L0 1.45454Z" fill="#090102"/>
-                                        <path d="M14.5459 2.97939e-05L16.0004 1.45457L1.455 16L0.000455369 14.5455L14.5459 2.97939e-05Z" fill="#090102"/>
-                                      </svg> 
+                                    <button class="modal-basket__button-close">
+                                      <svg class="modal-basket__button-close-svg" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="modal-basket__button-close-svg-line" d="M14 15.4545L15.4545 14L30 28.5454L28.5454 29.9999L14 15.4545Z" fill="#090102"/>
+                                        <path class="modal-basket__button-close-svg-line" d="M28.5459 14L30.0004 15.4545L15.455 30L14.0005 28.5454L28.5459 14Z" fill="#090102"/>
+                                      </svg>  
                                     </button>
                                   </section>
                                   <section class="modal-zoom__navigation-body">
@@ -560,7 +560,7 @@
                                         <h1 class="card-product-title price">10 974,6</h1>
                                       </div>
                                       <section class="modal-zoom__buttons">
-                                        <button class="modal-zoom__button-buy btn-red">
+                                        <button data-modal-zoom__buy class="modal-zoom__button-buy btn-red">
                                           <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M9.25 19C9.25 19.6904 8.69036 20.25 8 20.25C7.30964 20.25 6.75 19.6904 6.75 19C6.75 18.3096 7.30964 17.75 8 17.75C8.69036 17.75 9.25 18.3096 9.25 19Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M20.25 19C20.25 19.6904 19.6904 20.25 19 20.25C18.3096 20.25 17.75 19.6904 17.75 19C17.75 18.3096 18.3096 17.75 19 17.75C19.6904 17.75 20.25 18.3096 20.25 19Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -572,7 +572,7 @@
                                           </svg>
                                           <span class="card-product-all-info__button-text">Купить</span>
                                         </button>
-                                        <button class="modal-zoom__button-buy-on-click btn-white">Купить в один клик</button>
+                                        <button data-modal-zoom__buy-on-click class="modal-zoom__button-buy-on-click btn-white">Купить в один клик</button>
                                       </section>
                                     </section>
                                   </section>
@@ -693,6 +693,7 @@
                           <div class="card-product-all-info__color-selection">
                             <!--"card-prod-catalog__colors-item-wrp" hidden class "enabled"-->
                             <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                            <!--------------------------------------------------------------->
                               <span class="card-prod-catalog__colors-red js-card-catalog-color-item"></span>
                               <svg class="card-prod-catalog__done-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="7" cy="7" r="6.5" fill="#51B900" stroke="white"/>
@@ -746,7 +747,7 @@
                           </section>
                         </section>
                         <section class="card-product-all-info__buttons-buy">
-                          <!--add buttons class inactive if out of stock-->
+                          <!--add buttons class "inactive" if out of stock-->
                           <button data-by-modal-basket class="card-product-all-info__button-buy btn-red">
                             <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M9.25 19C9.25 19.6904 8.69036 20.25 8 20.25C7.30964 20.25 6.75 19.6904 6.75 19C6.75 18.3096 7.30964 17.75 8 17.75C8.69036 17.75 9.25 18.3096 9.25 19Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -759,10 +760,13 @@
                             </svg>
                             <span class="card-product-all-info__button-text">Купить</span>
                           </button>
+                          <!------------------------------------------------>
                           <section data-modal-basket class="modal-basket">
                             <div class="modal-zoom__mask modal-basket__mask">
                               <div class="modal-zoom__wrapper modal-basket__wrapper">
+                                 <!--add div class "empty" if out of stock-->
                                 <div data-modal-basket-container class="modal-basket__container">
+                                  <!---------------------------------------->
                                   <header class="modal-basket__header">
                                       <div class="modal-basket__header-wrapper">
                                         <h1 class="modal-basket__title">корзина</h1>
@@ -799,7 +803,7 @@
                                               <button class="modal-basket__button-minus">
                                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                   <path d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="white"/>
-                                                  <rect x="9" y="15" width="14" height="2" rx="1" fill="#CECACA"/>
+                                                  <rect class="modal-basket__button-minus-svg" x="9" y="15" width="14" height="2" rx="1" fill="#CECACA"/>
                                                 </svg> 
                                               </button>
                                               <p class="modal-basket__amount">1</p>
@@ -845,7 +849,7 @@
                                               <button class="modal-basket__button-minus">
                                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                   <path d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="white"/>
-                                                  <rect x="9" y="15" width="14" height="2" rx="1" fill="#CECACA"/>
+                                                  <rect class="modal-basket__button-minus-svg active" x="9" y="15" width="14" height="2" rx="1" fill="#CECACA"/>
                                                 </svg> 
                                               </button>
                                               <p class="modal-basket__amount">2</p>
@@ -890,7 +894,7 @@
                                               <button class="modal-basket__button-minus">
                                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                   <path d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="white"/>
-                                                  <rect x="9" y="15" width="14" height="2" rx="1" fill="#CECACA"/>
+                                                  <rect class="modal-basket__button-minus-svg" x="9" y="15" width="14" height="2" rx="1" fill="#CECACA"/>
                                                 </svg> 
                                               </button>
                                               <p class="modal-basket__amount">1</p>
@@ -935,7 +939,7 @@
                                               <button class="modal-basket__button-minus">
                                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                   <path d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="white"/>
-                                                  <rect x="9" y="15" width="14" height="2" rx="1" fill="#CECACA"/>
+                                                  <rect class="modal-basket__button-minus-svg" x="9" y="15" width="14" height="2" rx="1" fill="#CECACA"/>
                                                 </svg> 
                                               </button>
                                               <p class="modal-basket__amount">1</p>
@@ -958,6 +962,17 @@
                                               </svg>
                                             </button>
                                           </section>
+                                        </div>
+                                      </section>
+                                      <section class="modal-basket__no-order">
+                                        <div class="modal-basket__no-order-wrapper">
+                                          <div class="modal-basket__no-order-img-wrapper">
+                                            <img class="modal-basket__no-order-img" src="img/modal-basket-empty.png" alt="basket" width="386" height="228">
+                                          </div>
+                                          <h1 class="modal-basket__empty-title">Корзина пуста</h1>
+                                          <div class="modal-basket__empty-subtitle-wrapper">
+                                            <p class="modal-basket__empty-subtitle">Перейдите на <a class="modal-basket__empty-subtitle-link" href="#">Главную страницу </a>или в <a class="modal-basket__empty-subtitle-link" href="#">Каталог</a></p>
+                                          </div>
                                         </div>
                                       </section>
                                     </div>
@@ -983,11 +998,12 @@
                                 <div data-modal-on-click-container class="modal-on-click__container modal-zoom__container">
                                  <header class="modal-on-click__header">
                                   <h1 class="modal-on-click__title title-done">Купить в один клик</h1>
-                                  <button data-close-modal-on-click class="modal-zoom__button-close modal-on-click__button-close">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path d="M0 1.45454L1.45454 0L16 14.5454L14.5454 16L0 1.45454Z" fill="#090102"/>
-                                      <path d="M14.5459 2.97939e-05L16.0004 1.45457L1.455 16L0.000455369 14.5455L14.5459 2.97939e-05Z" fill="#090102"/>
-                                    </svg> 
+    
+                                  <button data-close-modal-on-click class="modal-basket__button-close">
+                                    <svg class="modal-basket__button-close-svg" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path class="modal-basket__button-close-svg-line" d="M14 15.4545L15.4545 14L30 28.5454L28.5454 29.9999L14 15.4545Z" fill="#090102"/>
+                                      <path class="modal-basket__button-close-svg-line" d="M28.5459 14L30.0004 15.4545L15.455 30L14.0005 28.5454L28.5459 14Z" fill="#090102"/>
+                                    </svg>  
                                   </button>
                                  </header>
                                  <main class="modal-on-click__main">
@@ -999,7 +1015,7 @@
                                           <label data-modal-on-click-label-name class="modal-on-click__label">Имя</label>
                                         </div>
                                         <div class="modal-on-click__input-wrapper phone">      
-                                          <input data-modal-on-click-input-phone class="modal-on-click__input js-modal-on-click-input" type="tel" required>
+                                          <input data-modal-on-click-input-phone data-tel-input class="modal-on-click__input js-modal-on-click-input " type="tel" required>
                                           <label data-modal-on-click-label-phone class="modal-on-click__label">Номер телефона</label>
                                         </div>
                                       </div>
@@ -1058,7 +1074,7 @@
                     <section class="card-product-characteristics__section-characteristics">
                       <h1 class="card-product-title paragraph characteristics">Размеры мобиля</h1>
                       <div class="card-product-characteristics__characteristics-description">
-                        <div class="card-product-characteristics__characteristics-title-names">
+                       <div class="card-product-characteristics__characteristics-title-names">
                           <div class="card-product-description__wrapper">
                             <span class="card-product-description name">Длина</span>
                             <span class="card-product-description__line"></span>
@@ -1077,6 +1093,8 @@
                           <span class="card-product-description characteristics-items">100см/86см</span>
                           <span class="card-product-description characteristics-items">67,5см</span>
                         </div>
+                        
+
                       </div>
                     </section>
                     <section class="card-product-characteristics__section-characteristics">
