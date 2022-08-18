@@ -22,6 +22,9 @@ import {inputValidate}  from './inputs-validate.js';
 import {cardProduct}  from './card-product.js';
         cardProduct(); 
 
+import {cardProductSliders}  from './card-product-sliders.js';
+        cardProductSliders(); 
+
 window.onload = function () {
 
     const bodyCont = document.getElementById('body-cont');

@@ -691,31 +691,42 @@
                         <section class="card-product-all-info__change-color">
                           <span class="card-product-description">Цвет</span>
                           <div class="card-product-all-info__color-selection">
-                            <a data-select-color href="#" class="card-product-all-info__color">
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="8" cy="8" r="7.5" fill="#C12125" stroke="#CECACA"/>
+                            <!--"card-prod-catalog__colors-item-wrp" hidden class "enabled"-->
+                            <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                              <span class="card-prod-catalog__colors-red js-card-catalog-color-item"></span>
+                              <svg class="card-prod-catalog__done-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="7" cy="7" r="6.5" fill="#51B900" stroke="white"/>
+                                <path d="M4 7.5L6.4 10L10 5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                               </svg>
-                            </a>
-                            <a data-select-color href="#" class="card-product-all-info__color active">
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="8" cy="8" r="7.5" fill="white" stroke="#F3F2F2"/>
+                            </div>
+                            <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                              <span class="card-prod-catalog__colors-white js-card-catalog-color-item"></span>
+                              <svg class="card-prod-catalog__done-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="7" cy="7" r="6.5" fill="#51B900" stroke="white"/>
+                                <path d="M4 7.5L6.4 10L10 5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                               </svg>
-                            </a>
-                            <a data-select-color href="#" class="card-product-all-info__color">
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="8" cy="8" r="7.5" fill="#0B40FF" stroke="#CECACA"/>
+                            </div>
+                            <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                              <span class="card-prod-catalog__colors-blue js-card-catalog-color-item"></span>
+                              <svg class="card-prod-catalog__done-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="7" cy="7" r="6.5" fill="#51B900" stroke="white"/>
+                                <path d="M4 7.5L6.4 10L10 5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                               </svg>
-                            </a>
-                            <a data-select-color href="#" class="card-product-all-info__color">
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="8" cy="8" r="7.5" fill="#ED7200" stroke="#CECACA"/>
-                              </svg> 
-                            </a>
-                            <a data-select-color href="#" class="card-product-all-info__color">
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="8" cy="8" r="7.5" fill="#469409" stroke="#CECACA"/>
-                              </svg>  
-                            </a>
+                            </div>
+                            <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                              <span class="card-prod-catalog__colors-orange js-card-catalog-color-item"></span>
+                              <svg class="card-prod-catalog__done-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="7" cy="7" r="6.5" fill="#51B900" stroke="white"/>
+                                <path d="M4 7.5L6.4 10L10 5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </div>
+                            <div class="card-prod-catalog__colors-item-wrp js-card-catalog-color">
+                              <span class="card-prod-catalog__colors-green js-card-catalog-color-item"></span>
+                              <svg class="card-prod-catalog__done-svg" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="7" cy="7" r="6.5" fill="#51B900" stroke="white"/>
+                                <path d="M4 7.5L6.4 10L10 5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </div>     
                           </div>
                         </section>
                         <span class="card-product-all-info__subtitle">Белый или какое-то другое длинное название</span>
@@ -1010,8 +1021,18 @@
                         <p class="card-product-title paragraph">Краткие характеристики:</p>
                         <button data-download-instruction class="card-product-all-info__instruction"> 
                           <div class="card-product-all-info__instruction-loader">
-                            <svg class="card-product-all-info__instruction-svg-download" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path class="card-product-all-info__instruction-svg" fill-rule="evenodd" clip-rule="evenodd" d="M11.9999 22C9.17202 22 6.88365 19.7636 6.88365 17V6.54545H8.279V17C8.279 19.0091 9.94412 20.6364 11.9999 20.6364C14.0557 20.6364 15.7209 19.0091 15.7209 17V5.63636C15.7209 4.38182 14.679 3.36364 13.3953 3.36364C12.1116 3.36364 11.0697 4.38182 11.0697 5.63636V15.1818C11.0697 15.6818 11.4883 16.0909 11.9999 16.0909C12.5116 16.0909 12.9302 15.6818 12.9302 15.1818V6.54545H14.3255V15.1818C14.3255 16.4364 13.2837 17.4545 11.9999 17.4545C10.7162 17.4545 9.67435 16.4364 9.67435 15.1818V5.63636C9.67435 3.62727 11.3395 2 13.3953 2C15.4511 2 17.1162 3.62727 17.1162 5.63636V17C17.1162 19.7636 14.8278 22 11.9999 22Z" fill="#827D7D"/>
+                            <svg class="card-product-all-info__instruction-svg" width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path class="card-product-all-info__instruction-svg-hover" fill-rule="evenodd" clip-rule="evenodd" d="M5.99993 20C3.17202 20 0.883653 17.7636 0.883653 15V4.54545H2.279V15C2.279 17.0091 3.94412 18.6364 5.99993 18.6364C8.05575 18.6364 9.72086 17.0091 9.72086 15V3.63636C9.72086 2.38182 8.679 1.36364 7.39528 1.36364C6.11156 1.36364 5.0697 2.38182 5.0697 3.63636V13.1818C5.0697 13.6818 5.4883 14.0909 5.99993 14.0909C6.51156 14.0909 6.93016 13.6818 6.93016 13.1818V4.54545H8.32551V13.1818C8.32551 14.4364 7.28365 15.4545 5.99993 15.4545C4.71621 15.4545 3.67435 14.4364 3.67435 13.1818V3.63636C3.67435 1.62727 5.33947 0 7.39528 0C9.45109 0 11.1162 1.62727 11.1162 3.63636V15C11.1162 17.7636 8.82784 20 5.99993 20Z" fill="#827D7D"/>
+                            </svg>
+                            <svg class="card-product-all-info__instruction-svg-download" width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M5.99993 20C3.17202 20 0.883653 17.7636 0.883653 15V4.54545H2.279V15C2.279 17.0091 3.94412 18.6364 5.99993 18.6364C8.05575 18.6364 9.72086 17.0091 9.72086 15V3.63636C9.72086 2.38182 8.679 1.36364 7.39528 1.36364C6.11156 1.36364 5.0697 2.38182 5.0697 3.63636V13.1818C5.0697 13.6818 5.4883 14.0909 5.99993 14.0909C6.51156 14.0909 6.93016 13.6818 6.93016 13.1818V4.54545H8.32551V13.1818C8.32551 14.4364 7.28365 15.4545 5.99993 15.4545C4.71621 15.4545 3.67435 14.4364 3.67435 13.1818V3.63636C3.67435 1.62727 5.33947 0 7.39528 0C9.45109 0 11.1162 1.62727 11.1162 3.63636V15C11.1162 17.7636 8.82784 20 5.99993 20Z" fill="#827D7D"/>
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M5.99993 20C3.17202 20 0.883653 17.7636 0.883653 15V4.54545H2.279V15C2.279 17.0091 3.94412 18.6364 5.99993 18.6364C8.05575 18.6364 9.72086 17.0091 9.72086 15V3.63636C9.72086 2.38182 8.679 1.36364 7.39528 1.36364C6.11156 1.36364 5.0697 2.38182 5.0697 3.63636V13.1818C5.0697 13.6818 5.4883 14.0909 5.99993 14.0909C6.51156 14.0909 6.93016 13.6818 6.93016 13.1818V4.54545H8.32551V13.1818C8.32551 14.4364 7.28365 15.4545 5.99993 15.4545C4.71621 15.4545 3.67435 14.4364 3.67435 13.1818V3.63636C3.67435 1.62727 5.33947 0 7.39528 0C9.45109 0 11.1162 1.62727 11.1162 3.63636V15C11.1162 17.7636 8.82784 20 5.99993 20Z" fill="url(#paint0_linear_1621_44009)"/>
+                              <defs>
+                              <linearGradient id="paint0_linear_1621_44009" x1="5.99993" y1="0" x2="5.99993" y2="20" gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#51B900"/>
+                              <stop offset="1" stop-color="#51B900" stop-opacity="0"/>
+                              </linearGradient>
+                              </defs>
                             </svg>
                           </div>
                           <span data-instruction-title class="card-product-description download-instruction">Скачать инструкцию</span>
@@ -1547,946 +1568,923 @@
             <section id="card-product-spare-parts" class="card-product-spare-parts">
               <div class="card-product-spare-parts__wrapper">
                 <h1 class="card-product-title card-product-spare-parts__title">Запчасти и Комплектующие</h1>
-                <section class="card-product-spare-parts__carousel-swiper">
-                  <div class="card-product-spare-parts__carousel-wrapper swiper-container">
-                        <div class="swiper card-product-spare-parts__carousel">
-                            <div class="card-product-spare-parts__swiper-wrapper swiper-wrapper">
-                                <!-- Slides -->
-                                <div class="swiper-slide">
-                                    <div class="card-prod-catalog">
-                                        <div class="card-prod-catalog__wrp">
-                                          <div>
-                                            <div class="card-prod-catalog__nameplate-top-wrp">
-                                              <p>Топ продаж</p>
-                                            </div>
-                                            <div class="card-prod-catalog__nameplate-sale-wrp">
-                                              <p>Акция</p>
-                                            </div>
-                                            <div class="card-prod-catalog__nameplate-new-wrp">
-                                              <p>Новинка</p>
-                                            </div>
-                                          </div>
-                                          <div class="card-prod-catalog__icon-wrp">
-                                            <a href="#" class="card-product-all-info__active-link comparison">
-                                              <svg class="card-product-all-info__comparison-svg" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="card-product-all-info__comparison-svg" d="M11 5V1" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-svg" d="M5 7L11 5.5L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-svg" d="M13 14L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-svg" d="M21 14L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-svg" d="M9 17L5 7" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-svg" d="M1 17L5 7" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-hover" fill-rule="evenodd" clip-rule="evenodd" d="M5 21C7.20915 21 9 19.2092 9 17H1C1 19.2092 2.79086 21 5 21Z" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-hover" fill-rule="evenodd" clip-rule="evenodd" d="M17 18C19.2092 18 21 16.2092 21 14H13C13 16.2092 14.7908 18 17 18Z" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                              </svg>  
-                                            </a>
-                                            <a href="#" class="card-product-all-info__active-link like">
-                                              <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="card-product-all-info__like-svg" d="M18.3845 1.67109C17.3373 0.598987 15.9508 0.0130215 14.4711 0.0130215C12.9913 0.0130215 11.6006 0.603328 10.5533 1.67543L10.0064 2.23535L9.45092 1.66675C8.40365 0.594647 7.0087 0 5.52895 0C4.05344 0 2.66273 0.590306 1.61969 1.65807C0.57242 2.73017 -0.00421676 4.15385 2.32169e-05 5.66868C2.32169e-05 7.18351 0.580899 8.60285 1.62817 9.67495L9.59084 17.8264C9.70108 17.9392 9.84948 18 9.99364 18C10.1378 18 10.2862 17.9436 10.3964 17.8307L18.3761 9.69231C19.4233 8.62021 20 7.19653 20 5.6817C20.0042 4.16687 19.4318 2.74319 18.3845 1.67109Z" fill="#FFFFFF"/>
-                                                <path class="card-product-all-info__like-svg" d="M18.3845 1.67109C17.3373 0.598987 15.9508 0.0130215 14.4711 0.0130215C12.9913 0.0130215 11.6006 0.603328 10.5533 1.67543L10.0064 2.23535L9.45092 1.66675C8.40365 0.594647 7.0087 0 5.52895 0C4.05344 0 2.66273 0.590306 1.61969 1.65807C0.57242 2.73017 -0.00421676 4.15385 2.32169e-05 5.66868C2.32169e-05 7.18351 0.5809 8.60285 1.62817 9.67495L9.59084 17.8264C9.70108 17.9392 9.84948 18 9.99364 18C10.1378 18 10.2862 17.9436 10.3964 17.8307L18.3761 9.69231C19.4233 8.62021 20 7.19653 20 5.6817C20.0042 4.16687 19.4318 2.74319 18.3845 1.67109ZM17.5705 8.86328L9.99364 16.5893L2.43377 8.85025C1.60273 7.99952 1.14482 6.87099 1.14482 5.66868C1.14482 4.46636 1.59849 3.33783 2.42953 2.49144C3.25632 1.64504 4.35872 1.17627 5.52895 1.17627C6.70342 1.17627 7.81005 1.64504 8.64109 2.49578L9.59932 3.47673C9.82404 3.70678 10.1844 3.70678 10.4092 3.47673L11.3589 2.50446C12.1899 1.65373 13.2966 1.18495 14.4668 1.18495C15.637 1.18495 16.7394 1.65373 17.5705 2.50012C18.4015 3.35086 18.8552 4.47938 18.8552 5.6817C18.8594 6.88401 18.4015 8.01254 17.5705 8.86328Z" fill="#DF9793"/>
-                                              </svg>     
-                                            </a>
-                                          </div>
-                                          <img
-                                            class="card-prod-catalog__img"
-                                            src="img/produkt-catalog-img.png"
-                                            alt="Название товара"
-                                          />
-                                          <div class="card-prod-catalog__colors-wrp">
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-red js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-blue js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-black js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-green js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-orange js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-golden js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-golden js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-white js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div class="card-prod-catalog__colors-item-wrp">
-                                              <p class="card-prod-catalog__colors-number">+2</p>
-                                            </div>
-                                          </div>
-                                          <h2 class="card-prod-catalog__title-text">
-                                            Название товара какое-то очень длинное
-                                          </h2>
-                                          <div class="card-prod-catalog__rating-reviews">
-                                            <div class="card-prod-catalog__rating-reviews-wrp">
-                                              <div class="card-prod-catalog__rating-wrp">
-                                                <img
-                                                  class="card-prod-catalog__rating-img-dise"
-                                                  src="icon/raitig-img-noactive.svg"
-                                                  alt="рейтинг"
-                                                />
-                                                <div class="card-prod-catalog__rating-img-activ-wrp">
-                                                  <span
-                                                    class="card-prod-catalog__rating-img-activ"
-                                                  ></span>
-                                                </div>
-                                              </div>
-                                              <div class="card-prod-catalog__reviews-wrp">
-                                                <img
-                                                  src="icon/reviews-icon-card-prod-catalog.svg"
-                                                  alt=""
-                                                />
-                                                <p class="card-prod-catalog__reviews-text">
-                                                  <span>4</span> отзыва
-                                                </p>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="card-prod-catalog__buy-price">
-                                            <div>
-                                              <p class="card-prod-catalog__price">16 398,38 грн</p>
-                                              <p class="card-prod-catalog__not-available">
-                                                Нет в наличии
-                                              </p>
-                                            </div>
-                                            <button
-                                              class="card-prod-catalog__buy js-btn-buy-card-prod-catalog"
-                                            >
-                                              <img
-                                                class="card-prod-catalog__buy-img"
-                                                src="icon/header-basket-icon.svg"
-                                                alt="buy"
-                                              />
-                                              <span class="card-prod-catalog__buy-text">Купить</span>
-                                            </button>
-                                          </div>
-                                        </div>
-                                      </div>
+                <section class="card-product-spare-parts__slider">
+                  <div class="card-product-spare-parts__slider-wrapper">
+                    <div class="card-product-spare-parts__slider-footer">
+                      <div class="swiper-container card-product-spare-parts__slider-container">
+                        <div class="swiper-wrapper card-product-spare-parts__slider-wrapper">
+                          <div class="swiper-slide card-product-spare-parts__slide">
+                            <div class="card-prod-catalog">
+                              <div class="card-prod-catalog__wrp">
+                                <div>
+                                  <div class="card-prod-catalog__nameplate-top-wrp">
+                                    <p>Топ продаж</p>
+                                  </div>
+                                  <div class="card-prod-catalog__nameplate-sale-wrp">
+                                    <p>Акция</p>
+                                  </div>
+                                  <div class="card-prod-catalog__nameplate-new-wrp">
+                                    <p>Новинка</p>
+                                  </div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class="card-prod-catalog">
-                                        <div class="card-prod-catalog__wrp">
-                                          <div>
-                                            <div class="card-prod-catalog__nameplate-top-wrp">
-                                              <p>Топ продаж</p>
-                                            </div>
-                                            <div class="card-prod-catalog__nameplate-sale-wrp">
-                                              <p>Акция</p>
-                                            </div>
-                                            <div class="card-prod-catalog__nameplate-new-wrp">
-                                              <p>Новинка</p>
-                                            </div>
-                                          </div>
-                                          <div class="card-prod-catalog__icon-wrp">
-                                            <a href="#" class="card-product-all-info__active-link comparison">
-                                              <svg class="card-product-all-info__comparison-svg" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="card-product-all-info__comparison-svg" d="M11 5V1" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-svg" d="M5 7L11 5.5L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-svg" d="M13 14L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-svg" d="M21 14L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-svg" d="M9 17L5 7" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-svg" d="M1 17L5 7" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-hover" fill-rule="evenodd" clip-rule="evenodd" d="M5 21C7.20915 21 9 19.2092 9 17H1C1 19.2092 2.79086 21 5 21Z" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-hover" fill-rule="evenodd" clip-rule="evenodd" d="M17 18C19.2092 18 21 16.2092 21 14H13C13 16.2092 14.7908 18 17 18Z" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                              </svg>  
-                                            </a>
-                                            <a href="#" class="card-product-all-info__active-link like">
-                                              <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="card-product-all-info__like-svg" d="M18.3845 1.67109C17.3373 0.598987 15.9508 0.0130215 14.4711 0.0130215C12.9913 0.0130215 11.6006 0.603328 10.5533 1.67543L10.0064 2.23535L9.45092 1.66675C8.40365 0.594647 7.0087 0 5.52895 0C4.05344 0 2.66273 0.590306 1.61969 1.65807C0.57242 2.73017 -0.00421676 4.15385 2.32169e-05 5.66868C2.32169e-05 7.18351 0.580899 8.60285 1.62817 9.67495L9.59084 17.8264C9.70108 17.9392 9.84948 18 9.99364 18C10.1378 18 10.2862 17.9436 10.3964 17.8307L18.3761 9.69231C19.4233 8.62021 20 7.19653 20 5.6817C20.0042 4.16687 19.4318 2.74319 18.3845 1.67109Z" fill="#FFFFFF"/>
-                                                <path class="card-product-all-info__like-svg" d="M18.3845 1.67109C17.3373 0.598987 15.9508 0.0130215 14.4711 0.0130215C12.9913 0.0130215 11.6006 0.603328 10.5533 1.67543L10.0064 2.23535L9.45092 1.66675C8.40365 0.594647 7.0087 0 5.52895 0C4.05344 0 2.66273 0.590306 1.61969 1.65807C0.57242 2.73017 -0.00421676 4.15385 2.32169e-05 5.66868C2.32169e-05 7.18351 0.5809 8.60285 1.62817 9.67495L9.59084 17.8264C9.70108 17.9392 9.84948 18 9.99364 18C10.1378 18 10.2862 17.9436 10.3964 17.8307L18.3761 9.69231C19.4233 8.62021 20 7.19653 20 5.6817C20.0042 4.16687 19.4318 2.74319 18.3845 1.67109ZM17.5705 8.86328L9.99364 16.5893L2.43377 8.85025C1.60273 7.99952 1.14482 6.87099 1.14482 5.66868C1.14482 4.46636 1.59849 3.33783 2.42953 2.49144C3.25632 1.64504 4.35872 1.17627 5.52895 1.17627C6.70342 1.17627 7.81005 1.64504 8.64109 2.49578L9.59932 3.47673C9.82404 3.70678 10.1844 3.70678 10.4092 3.47673L11.3589 2.50446C12.1899 1.65373 13.2966 1.18495 14.4668 1.18495C15.637 1.18495 16.7394 1.65373 17.5705 2.50012C18.4015 3.35086 18.8552 4.47938 18.8552 5.6817C18.8594 6.88401 18.4015 8.01254 17.5705 8.86328Z" fill="#DF9793"/>
-                                              </svg>     
-                                            </a>
-                                          </div>
-                                          <img
-                                            class="card-prod-catalog__img"
-                                            src="img/produkt-catalog-img.png"
-                                            alt="Название товара"
-                                          />
-                                          <div class="card-prod-catalog__colors-wrp">
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-red js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-blue js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-black js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-green js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-orange js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-golden js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-golden js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-white js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div class="card-prod-catalog__colors-item-wrp">
-                                              <p class="card-prod-catalog__colors-number">+2</p>
-                                            </div>
-                                          </div>
-                                          <h2 class="card-prod-catalog__title-text">
-                                            Название товара какое-то очень длинное
-                                          </h2>
-                                          <div class="card-prod-catalog__rating-reviews">
-                                            <div class="card-prod-catalog__rating-reviews-wrp">
-                                              <div class="card-prod-catalog__rating-wrp">
-                                                <img
-                                                  class="card-prod-catalog__rating-img-dise"
-                                                  src="icon/raitig-img-noactive.svg"
-                                                  alt="рейтинг"
-                                                />
-                                                <div class="card-prod-catalog__rating-img-activ-wrp">
-                                                  <span
-                                                    class="card-prod-catalog__rating-img-activ"
-                                                  ></span>
-                                                </div>
-                                              </div>
-                                              <div class="card-prod-catalog__reviews-wrp">
-                                                <img
-                                                  src="icon/reviews-icon-card-prod-catalog.svg"
-                                                  alt=""
-                                                />
-                                                <p class="card-prod-catalog__reviews-text">
-                                                  <span>4</span> отзыва
-                                                </p>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="card-prod-catalog__buy-price">
-                                            <div>
-                                              <p class="card-prod-catalog__price">16 398,38 грн</p>
-                                              <p class="card-prod-catalog__not-available">
-                                                Нет в наличии
-                                              </p>
-                                            </div>
-                                            <button
-                                              class="card-prod-catalog__buy js-btn-buy-card-prod-catalog"
-                                            >
-                                              <img
-                                                class="card-prod-catalog__buy-img"
-                                                src="icon/header-basket-icon.svg"
-                                                alt="buy"
-                                              />
-                                              <span class="card-prod-catalog__buy-text">Купить</span>
-                                            </button>
-                                          </div>
-                                        </div>
-                                      </div>
+                                <div class="card-prod-catalog__icon-wrp">
+                                  <a href="#" class="card-product-all-info__active-link comparison">
+                                    <svg class="card-product-all-info__comparison-svg" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path class="card-product-all-info__comparison-svg" d="M11 5V1" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-svg" d="M5 7L11 5.5L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-svg" d="M13 14L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-svg" d="M21 14L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-svg" d="M9 17L5 7" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-svg" d="M1 17L5 7" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-hover" fill-rule="evenodd" clip-rule="evenodd" d="M5 21C7.20915 21 9 19.2092 9 17H1C1 19.2092 2.79086 21 5 21Z" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-hover" fill-rule="evenodd" clip-rule="evenodd" d="M17 18C19.2092 18 21 16.2092 21 14H13C13 16.2092 14.7908 18 17 18Z" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>  
+                                  </a>
+                                  <a href="#" class="card-product-all-info__active-link like">
+                                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path class="card-product-all-info__like-svg" d="M18.3845 1.67109C17.3373 0.598987 15.9508 0.0130215 14.4711 0.0130215C12.9913 0.0130215 11.6006 0.603328 10.5533 1.67543L10.0064 2.23535L9.45092 1.66675C8.40365 0.594647 7.0087 0 5.52895 0C4.05344 0 2.66273 0.590306 1.61969 1.65807C0.57242 2.73017 -0.00421676 4.15385 2.32169e-05 5.66868C2.32169e-05 7.18351 0.580899 8.60285 1.62817 9.67495L9.59084 17.8264C9.70108 17.9392 9.84948 18 9.99364 18C10.1378 18 10.2862 17.9436 10.3964 17.8307L18.3761 9.69231C19.4233 8.62021 20 7.19653 20 5.6817C20.0042 4.16687 19.4318 2.74319 18.3845 1.67109Z" fill="#FFFFFF"/>
+                                      <path class="card-product-all-info__like-svg" d="M18.3845 1.67109C17.3373 0.598987 15.9508 0.0130215 14.4711 0.0130215C12.9913 0.0130215 11.6006 0.603328 10.5533 1.67543L10.0064 2.23535L9.45092 1.66675C8.40365 0.594647 7.0087 0 5.52895 0C4.05344 0 2.66273 0.590306 1.61969 1.65807C0.57242 2.73017 -0.00421676 4.15385 2.32169e-05 5.66868C2.32169e-05 7.18351 0.5809 8.60285 1.62817 9.67495L9.59084 17.8264C9.70108 17.9392 9.84948 18 9.99364 18C10.1378 18 10.2862 17.9436 10.3964 17.8307L18.3761 9.69231C19.4233 8.62021 20 7.19653 20 5.6817C20.0042 4.16687 19.4318 2.74319 18.3845 1.67109ZM17.5705 8.86328L9.99364 16.5893L2.43377 8.85025C1.60273 7.99952 1.14482 6.87099 1.14482 5.66868C1.14482 4.46636 1.59849 3.33783 2.42953 2.49144C3.25632 1.64504 4.35872 1.17627 5.52895 1.17627C6.70342 1.17627 7.81005 1.64504 8.64109 2.49578L9.59932 3.47673C9.82404 3.70678 10.1844 3.70678 10.4092 3.47673L11.3589 2.50446C12.1899 1.65373 13.2966 1.18495 14.4668 1.18495C15.637 1.18495 16.7394 1.65373 17.5705 2.50012C18.4015 3.35086 18.8552 4.47938 18.8552 5.6817C18.8594 6.88401 18.4015 8.01254 17.5705 8.86328Z" fill="#DF9793"/>
+                                    </svg>     
+                                  </a>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class="card-prod-catalog">
-                                        <div class="card-prod-catalog__wrp">
-                                          <div>
-                                            <div class="card-prod-catalog__nameplate-top-wrp">
-                                              <p>Топ продаж</p>
-                                            </div>
-                                            <div class="card-prod-catalog__nameplate-sale-wrp">
-                                              <p>Акция</p>
-                                            </div>
-                                            <div class="card-prod-catalog__nameplate-new-wrp">
-                                              <p>Новинка</p>
-                                            </div>
-                                          </div>
-                                          <div class="card-prod-catalog__icon-wrp">
-                                            <a href="#" class="card-product-all-info__active-link comparison">
-                                              <svg class="card-product-all-info__comparison-svg" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="card-product-all-info__comparison-svg" d="M11 5V1" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-svg" d="M5 7L11 5.5L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-svg" d="M13 14L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-svg" d="M21 14L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-svg" d="M9 17L5 7" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-svg" d="M1 17L5 7" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-hover" fill-rule="evenodd" clip-rule="evenodd" d="M5 21C7.20915 21 9 19.2092 9 17H1C1 19.2092 2.79086 21 5 21Z" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-hover" fill-rule="evenodd" clip-rule="evenodd" d="M17 18C19.2092 18 21 16.2092 21 14H13C13 16.2092 14.7908 18 17 18Z" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                              </svg>  
-                                            </a>
-                                            <a href="#" class="card-product-all-info__active-link like">
-                                              <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="card-product-all-info__like-svg" d="M18.3845 1.67109C17.3373 0.598987 15.9508 0.0130215 14.4711 0.0130215C12.9913 0.0130215 11.6006 0.603328 10.5533 1.67543L10.0064 2.23535L9.45092 1.66675C8.40365 0.594647 7.0087 0 5.52895 0C4.05344 0 2.66273 0.590306 1.61969 1.65807C0.57242 2.73017 -0.00421676 4.15385 2.32169e-05 5.66868C2.32169e-05 7.18351 0.580899 8.60285 1.62817 9.67495L9.59084 17.8264C9.70108 17.9392 9.84948 18 9.99364 18C10.1378 18 10.2862 17.9436 10.3964 17.8307L18.3761 9.69231C19.4233 8.62021 20 7.19653 20 5.6817C20.0042 4.16687 19.4318 2.74319 18.3845 1.67109Z" fill="#FFFFFF"/>
-                                                <path class="card-product-all-info__like-svg" d="M18.3845 1.67109C17.3373 0.598987 15.9508 0.0130215 14.4711 0.0130215C12.9913 0.0130215 11.6006 0.603328 10.5533 1.67543L10.0064 2.23535L9.45092 1.66675C8.40365 0.594647 7.0087 0 5.52895 0C4.05344 0 2.66273 0.590306 1.61969 1.65807C0.57242 2.73017 -0.00421676 4.15385 2.32169e-05 5.66868C2.32169e-05 7.18351 0.5809 8.60285 1.62817 9.67495L9.59084 17.8264C9.70108 17.9392 9.84948 18 9.99364 18C10.1378 18 10.2862 17.9436 10.3964 17.8307L18.3761 9.69231C19.4233 8.62021 20 7.19653 20 5.6817C20.0042 4.16687 19.4318 2.74319 18.3845 1.67109ZM17.5705 8.86328L9.99364 16.5893L2.43377 8.85025C1.60273 7.99952 1.14482 6.87099 1.14482 5.66868C1.14482 4.46636 1.59849 3.33783 2.42953 2.49144C3.25632 1.64504 4.35872 1.17627 5.52895 1.17627C6.70342 1.17627 7.81005 1.64504 8.64109 2.49578L9.59932 3.47673C9.82404 3.70678 10.1844 3.70678 10.4092 3.47673L11.3589 2.50446C12.1899 1.65373 13.2966 1.18495 14.4668 1.18495C15.637 1.18495 16.7394 1.65373 17.5705 2.50012C18.4015 3.35086 18.8552 4.47938 18.8552 5.6817C18.8594 6.88401 18.4015 8.01254 17.5705 8.86328Z" fill="#DF9793"/>
-                                              </svg>     
-                                            </a>
-                                          </div>
-                                          <img
-                                            class="card-prod-catalog__img"
-                                            src="img/produkt-catalog-img.png"
-                                            alt="Название товара"
-                                          />
-                                          <div class="card-prod-catalog__colors-wrp">
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-red js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-blue js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-black js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-green js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-orange js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-golden js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-golden js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-white js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div class="card-prod-catalog__colors-item-wrp">
-                                              <p class="card-prod-catalog__colors-number">+2</p>
-                                            </div>
-                                          </div>
-                                          <h2 class="card-prod-catalog__title-text">
-                                            Название товара какое-то очень длинное
-                                          </h2>
-                                          <div class="card-prod-catalog__rating-reviews">
-                                            <div class="card-prod-catalog__rating-reviews-wrp">
-                                              <div class="card-prod-catalog__rating-wrp">
-                                                <img
-                                                  class="card-prod-catalog__rating-img-dise"
-                                                  src="icon/raitig-img-noactive.svg"
-                                                  alt="рейтинг"
-                                                />
-                                                <div class="card-prod-catalog__rating-img-activ-wrp">
-                                                  <span
-                                                    class="card-prod-catalog__rating-img-activ"
-                                                  ></span>
-                                                </div>
-                                              </div>
-                                              <div class="card-prod-catalog__reviews-wrp">
-                                                <img
-                                                  src="icon/reviews-icon-card-prod-catalog.svg"
-                                                  alt=""
-                                                />
-                                                <p class="card-prod-catalog__reviews-text">
-                                                  <span>4</span> отзыва
-                                                </p>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="card-prod-catalog__buy-price">
-                                            <div>
-                                              <p class="card-prod-catalog__price">16 398,38 грн</p>
-                                              <p class="card-prod-catalog__not-available">
-                                                Нет в наличии
-                                              </p>
-                                            </div>
-                                            <button
-                                              class="card-prod-catalog__buy js-btn-buy-card-prod-catalog"
-                                            >
-                                              <img
-                                                class="card-prod-catalog__buy-img"
-                                                src="icon/header-basket-icon.svg"
-                                                alt="buy"
-                                              />
-                                              <span class="card-prod-catalog__buy-text">Купить</span>
-                                            </button>
-                                          </div>
-                                        </div>
-                                      </div>
+                                <img
+                                  class="card-prod-catalog__img"
+                                  src="img/produkt-catalog-img.png"
+                                  alt="Название товара"
+                                />
+                                <div class="card-prod-catalog__colors-wrp">
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-red js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-blue js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-black js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-green js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-orange js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-golden js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-golden js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-white js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div class="card-prod-catalog__colors-item-wrp">
+                                    <p class="card-prod-catalog__colors-number">+2</p>
+                                  </div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class="card-prod-catalog">
-                                        <div class="card-prod-catalog__wrp">
-                                          <div>
-                                            <div class="card-prod-catalog__nameplate-top-wrp">
-                                              <p>Топ продаж</p>
-                                            </div>
-                                            <div class="card-prod-catalog__nameplate-sale-wrp">
-                                              <p>Акция</p>
-                                            </div>
-                                            <div class="card-prod-catalog__nameplate-new-wrp">
-                                              <p>Новинка</p>
-                                            </div>
-                                          </div>
-                                          <div class="card-prod-catalog__icon-wrp">
-                                            <a href="#" class="card-product-all-info__active-link comparison">
-                                              <svg class="card-product-all-info__comparison-svg" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="card-product-all-info__comparison-svg" d="M11 5V1" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-svg" d="M5 7L11 5.5L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-svg" d="M13 14L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-svg" d="M21 14L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-svg" d="M9 17L5 7" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-svg" d="M1 17L5 7" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-hover" fill-rule="evenodd" clip-rule="evenodd" d="M5 21C7.20915 21 9 19.2092 9 17H1C1 19.2092 2.79086 21 5 21Z" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-hover" fill-rule="evenodd" clip-rule="evenodd" d="M17 18C19.2092 18 21 16.2092 21 14H13C13 16.2092 14.7908 18 17 18Z" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                              </svg>  
-                                            </a>
-                                            <a href="#" class="card-product-all-info__active-link like">
-                                              <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="card-product-all-info__like-svg" d="M18.3845 1.67109C17.3373 0.598987 15.9508 0.0130215 14.4711 0.0130215C12.9913 0.0130215 11.6006 0.603328 10.5533 1.67543L10.0064 2.23535L9.45092 1.66675C8.40365 0.594647 7.0087 0 5.52895 0C4.05344 0 2.66273 0.590306 1.61969 1.65807C0.57242 2.73017 -0.00421676 4.15385 2.32169e-05 5.66868C2.32169e-05 7.18351 0.580899 8.60285 1.62817 9.67495L9.59084 17.8264C9.70108 17.9392 9.84948 18 9.99364 18C10.1378 18 10.2862 17.9436 10.3964 17.8307L18.3761 9.69231C19.4233 8.62021 20 7.19653 20 5.6817C20.0042 4.16687 19.4318 2.74319 18.3845 1.67109Z" fill="#FFFFFF"/>
-                                                <path class="card-product-all-info__like-svg" d="M18.3845 1.67109C17.3373 0.598987 15.9508 0.0130215 14.4711 0.0130215C12.9913 0.0130215 11.6006 0.603328 10.5533 1.67543L10.0064 2.23535L9.45092 1.66675C8.40365 0.594647 7.0087 0 5.52895 0C4.05344 0 2.66273 0.590306 1.61969 1.65807C0.57242 2.73017 -0.00421676 4.15385 2.32169e-05 5.66868C2.32169e-05 7.18351 0.5809 8.60285 1.62817 9.67495L9.59084 17.8264C9.70108 17.9392 9.84948 18 9.99364 18C10.1378 18 10.2862 17.9436 10.3964 17.8307L18.3761 9.69231C19.4233 8.62021 20 7.19653 20 5.6817C20.0042 4.16687 19.4318 2.74319 18.3845 1.67109ZM17.5705 8.86328L9.99364 16.5893L2.43377 8.85025C1.60273 7.99952 1.14482 6.87099 1.14482 5.66868C1.14482 4.46636 1.59849 3.33783 2.42953 2.49144C3.25632 1.64504 4.35872 1.17627 5.52895 1.17627C6.70342 1.17627 7.81005 1.64504 8.64109 2.49578L9.59932 3.47673C9.82404 3.70678 10.1844 3.70678 10.4092 3.47673L11.3589 2.50446C12.1899 1.65373 13.2966 1.18495 14.4668 1.18495C15.637 1.18495 16.7394 1.65373 17.5705 2.50012C18.4015 3.35086 18.8552 4.47938 18.8552 5.6817C18.8594 6.88401 18.4015 8.01254 17.5705 8.86328Z" fill="#DF9793"/>
-                                              </svg>     
-                                            </a>
-                                          </div>
-                                          <img
-                                            class="card-prod-catalog__img"
-                                            src="img/produkt-catalog-img.png"
-                                            alt="Название товара"
-                                          />
-                                          <div class="card-prod-catalog__colors-wrp">
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-red js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-blue js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-black js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-green js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-orange js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-golden js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-golden js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-white js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div class="card-prod-catalog__colors-item-wrp">
-                                              <p class="card-prod-catalog__colors-number">+2</p>
-                                            </div>
-                                          </div>
-                                          <h2 class="card-prod-catalog__title-text">
-                                            Название товара какое-то очень длинное
-                                          </h2>
-                                          <div class="card-prod-catalog__rating-reviews">
-                                            <div class="card-prod-catalog__rating-reviews-wrp">
-                                              <div class="card-prod-catalog__rating-wrp">
-                                                <img
-                                                  class="card-prod-catalog__rating-img-dise"
-                                                  src="icon/raitig-img-noactive.svg"
-                                                  alt="рейтинг"
-                                                />
-                                                <div class="card-prod-catalog__rating-img-activ-wrp">
-                                                  <span
-                                                    class="card-prod-catalog__rating-img-activ"
-                                                  ></span>
-                                                </div>
-                                              </div>
-                                              <div class="card-prod-catalog__reviews-wrp">
-                                                <img
-                                                  src="icon/reviews-icon-card-prod-catalog.svg"
-                                                  alt=""
-                                                />
-                                                <p class="card-prod-catalog__reviews-text">
-                                                  <span>4</span> отзыва
-                                                </p>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="card-prod-catalog__buy-price">
-                                            <div>
-                                              <p class="card-prod-catalog__price">16 398,38 грн</p>
-                                              <p class="card-prod-catalog__not-available">
-                                                Нет в наличии
-                                              </p>
-                                            </div>
-                                            <button
-                                              class="card-prod-catalog__buy js-btn-buy-card-prod-catalog"
-                                            >
-                                              <img
-                                                class="card-prod-catalog__buy-img"
-                                                src="icon/header-basket-icon.svg"
-                                                alt="buy"
-                                              />
-                                              <span class="card-prod-catalog__buy-text">Купить</span>
-                                            </button>
-                                          </div>
-                                        </div>
+                                <h2 class="card-prod-catalog__title-text">
+                                  Название товара какое-то очень длинное
+                                </h2>
+                                <div class="card-prod-catalog__rating-reviews">
+                                  <div class="card-prod-catalog__rating-reviews-wrp">
+                                    <div class="card-prod-catalog__rating-wrp">
+                                      <img
+                                        class="card-prod-catalog__rating-img-dise"
+                                        src="icon/raitig-img-noactive.svg"
+                                        alt="рейтинг"
+                                      />
+                                      <div class="card-prod-catalog__rating-img-activ-wrp">
+                                        <span
+                                          class="card-prod-catalog__rating-img-activ"
+                                        ></span>
                                       </div>
+                                    </div>
+                                    <div class="card-prod-catalog__reviews-wrp">
+                                      <img
+                                        src="icon/reviews-icon-card-prod-catalog.svg"
+                                        alt=""
+                                      />
+                                      <p class="card-prod-catalog__reviews-text">
+                                        <span>4</span> отзыва
+                                      </p>
+                                    </div>
+                                  </div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class="card-prod-catalog">
-                                        <div class="card-prod-catalog__wrp">
-                                          <div>
-                                            <div class="card-prod-catalog__nameplate-top-wrp">
-                                              <p>Топ продаж</p>
-                                            </div>
-                                            <div class="card-prod-catalog__nameplate-sale-wrp">
-                                              <p>Акция</p>
-                                            </div>
-                                            <div class="card-prod-catalog__nameplate-new-wrp">
-                                              <p>Новинка</p>
-                                            </div>
-                                          </div>
-                                          <div class="card-prod-catalog__icon-wrp">
-                                            <a href="#" class="card-product-all-info__active-link comparison">
-                                              <svg class="card-product-all-info__comparison-svg" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="card-product-all-info__comparison-svg" d="M11 5V1" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-svg" d="M5 7L11 5.5L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-svg" d="M13 14L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-svg" d="M21 14L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-svg" d="M9 17L5 7" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-svg" d="M1 17L5 7" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-hover" fill-rule="evenodd" clip-rule="evenodd" d="M5 21C7.20915 21 9 19.2092 9 17H1C1 19.2092 2.79086 21 5 21Z" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-hover" fill-rule="evenodd" clip-rule="evenodd" d="M17 18C19.2092 18 21 16.2092 21 14H13C13 16.2092 14.7908 18 17 18Z" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                              </svg>  
-                                            </a>
-                                            <a href="#" class="card-product-all-info__active-link like">
-                                              <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="card-product-all-info__like-svg" d="M18.3845 1.67109C17.3373 0.598987 15.9508 0.0130215 14.4711 0.0130215C12.9913 0.0130215 11.6006 0.603328 10.5533 1.67543L10.0064 2.23535L9.45092 1.66675C8.40365 0.594647 7.0087 0 5.52895 0C4.05344 0 2.66273 0.590306 1.61969 1.65807C0.57242 2.73017 -0.00421676 4.15385 2.32169e-05 5.66868C2.32169e-05 7.18351 0.580899 8.60285 1.62817 9.67495L9.59084 17.8264C9.70108 17.9392 9.84948 18 9.99364 18C10.1378 18 10.2862 17.9436 10.3964 17.8307L18.3761 9.69231C19.4233 8.62021 20 7.19653 20 5.6817C20.0042 4.16687 19.4318 2.74319 18.3845 1.67109Z" fill="#FFFFFF"/>
-                                                <path class="card-product-all-info__like-svg" d="M18.3845 1.67109C17.3373 0.598987 15.9508 0.0130215 14.4711 0.0130215C12.9913 0.0130215 11.6006 0.603328 10.5533 1.67543L10.0064 2.23535L9.45092 1.66675C8.40365 0.594647 7.0087 0 5.52895 0C4.05344 0 2.66273 0.590306 1.61969 1.65807C0.57242 2.73017 -0.00421676 4.15385 2.32169e-05 5.66868C2.32169e-05 7.18351 0.5809 8.60285 1.62817 9.67495L9.59084 17.8264C9.70108 17.9392 9.84948 18 9.99364 18C10.1378 18 10.2862 17.9436 10.3964 17.8307L18.3761 9.69231C19.4233 8.62021 20 7.19653 20 5.6817C20.0042 4.16687 19.4318 2.74319 18.3845 1.67109ZM17.5705 8.86328L9.99364 16.5893L2.43377 8.85025C1.60273 7.99952 1.14482 6.87099 1.14482 5.66868C1.14482 4.46636 1.59849 3.33783 2.42953 2.49144C3.25632 1.64504 4.35872 1.17627 5.52895 1.17627C6.70342 1.17627 7.81005 1.64504 8.64109 2.49578L9.59932 3.47673C9.82404 3.70678 10.1844 3.70678 10.4092 3.47673L11.3589 2.50446C12.1899 1.65373 13.2966 1.18495 14.4668 1.18495C15.637 1.18495 16.7394 1.65373 17.5705 2.50012C18.4015 3.35086 18.8552 4.47938 18.8552 5.6817C18.8594 6.88401 18.4015 8.01254 17.5705 8.86328Z" fill="#DF9793"/>
-                                              </svg>     
-                                            </a>
-                                          </div>
-                                          <img
-                                            class="card-prod-catalog__img"
-                                            src="img/produkt-catalog-img.png"
-                                            alt="Название товара"
-                                          />
-                                          <div class="card-prod-catalog__colors-wrp">
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-red js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-blue js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-black js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-green js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-orange js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-golden js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-golden js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-white js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div class="card-prod-catalog__colors-item-wrp">
-                                              <p class="card-prod-catalog__colors-number">+2</p>
-                                            </div>
-                                          </div>
-                                          <h2 class="card-prod-catalog__title-text">
-                                            Название товара какое-то очень длинное
-                                          </h2>
-                                          <div class="card-prod-catalog__rating-reviews">
-                                            <div class="card-prod-catalog__rating-reviews-wrp">
-                                              <div class="card-prod-catalog__rating-wrp">
-                                                <img
-                                                  class="card-prod-catalog__rating-img-dise"
-                                                  src="icon/raitig-img-noactive.svg"
-                                                  alt="рейтинг"
-                                                />
-                                                <div class="card-prod-catalog__rating-img-activ-wrp">
-                                                  <span
-                                                    class="card-prod-catalog__rating-img-activ"
-                                                  ></span>
-                                                </div>
-                                              </div>
-                                              <div class="card-prod-catalog__reviews-wrp">
-                                                <img
-                                                  src="icon/reviews-icon-card-prod-catalog.svg"
-                                                  alt=""
-                                                />
-                                                <p class="card-prod-catalog__reviews-text">
-                                                  <span>4</span> отзыва
-                                                </p>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="card-prod-catalog__buy-price">
-                                            <div>
-                                              <p class="card-prod-catalog__price">16 398,38 грн</p>
-                                              <p class="card-prod-catalog__not-available">
-                                                Нет в наличии
-                                              </p>
-                                            </div>
-                                            <button
-                                              class="card-prod-catalog__buy js-btn-buy-card-prod-catalog"
-                                            >
-                                              <img
-                                                class="card-prod-catalog__buy-img"
-                                                src="icon/header-basket-icon.svg"
-                                                alt="buy"
-                                              />
-                                              <span class="card-prod-catalog__buy-text">Купить</span>
-                                            </button>
-                                          </div>
-                                        </div>
-                                      </div>
+                                <div class="card-prod-catalog__buy-price">
+                                  <div>
+                                    <p class="card-prod-catalog__price">16 398,38 грн</p>
+                                    <p class="card-prod-catalog__not-available">
+                                      Нет в наличии
+                                    </p>
+                                  </div>
+                                  <button
+                                    class="card-prod-catalog__buy js-btn-buy-card-prod-catalog"
+                                  >
+                                    <img
+                                      class="card-prod-catalog__buy-img"
+                                      src="icon/header-basket-icon.svg"
+                                      alt="buy"
+                                    />
+                                    <span class="card-prod-catalog__buy-text">Купить</span>
+                                  </button>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class="card-prod-catalog">
-                                        <div class="card-prod-catalog__wrp">
-                                          <div>
-                                            <div class="card-prod-catalog__nameplate-top-wrp">
-                                              <p>Топ продаж</p>
-                                            </div>
-                                            <div class="card-prod-catalog__nameplate-sale-wrp">
-                                              <p>Акция</p>
-                                            </div>
-                                            <div class="card-prod-catalog__nameplate-new-wrp">
-                                              <p>Новинка</p>
-                                            </div>
-                                          </div>
-                                          <div class="card-prod-catalog__icon-wrp">
-                                            <a href="#" class="card-product-all-info__active-link comparison">
-                                              <svg class="card-product-all-info__comparison-svg" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="card-product-all-info__comparison-svg" d="M11 5V1" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-svg" d="M5 7L11 5.5L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-svg" d="M13 14L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-svg" d="M21 14L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-svg" d="M9 17L5 7" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-svg" d="M1 17L5 7" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-hover" fill-rule="evenodd" clip-rule="evenodd" d="M5 21C7.20915 21 9 19.2092 9 17H1C1 19.2092 2.79086 21 5 21Z" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path class="card-product-all-info__comparison-hover" fill-rule="evenodd" clip-rule="evenodd" d="M17 18C19.2092 18 21 16.2092 21 14H13C13 16.2092 14.7908 18 17 18Z" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
-                                              </svg>  
-                                            </a>
-                                            <a href="#" class="card-product-all-info__active-link like">
-                                              <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="card-product-all-info__like-svg" d="M18.3845 1.67109C17.3373 0.598987 15.9508 0.0130215 14.4711 0.0130215C12.9913 0.0130215 11.6006 0.603328 10.5533 1.67543L10.0064 2.23535L9.45092 1.66675C8.40365 0.594647 7.0087 0 5.52895 0C4.05344 0 2.66273 0.590306 1.61969 1.65807C0.57242 2.73017 -0.00421676 4.15385 2.32169e-05 5.66868C2.32169e-05 7.18351 0.580899 8.60285 1.62817 9.67495L9.59084 17.8264C9.70108 17.9392 9.84948 18 9.99364 18C10.1378 18 10.2862 17.9436 10.3964 17.8307L18.3761 9.69231C19.4233 8.62021 20 7.19653 20 5.6817C20.0042 4.16687 19.4318 2.74319 18.3845 1.67109Z" fill="#FFFFFF"/>
-                                                <path class="card-product-all-info__like-svg" d="M18.3845 1.67109C17.3373 0.598987 15.9508 0.0130215 14.4711 0.0130215C12.9913 0.0130215 11.6006 0.603328 10.5533 1.67543L10.0064 2.23535L9.45092 1.66675C8.40365 0.594647 7.0087 0 5.52895 0C4.05344 0 2.66273 0.590306 1.61969 1.65807C0.57242 2.73017 -0.00421676 4.15385 2.32169e-05 5.66868C2.32169e-05 7.18351 0.5809 8.60285 1.62817 9.67495L9.59084 17.8264C9.70108 17.9392 9.84948 18 9.99364 18C10.1378 18 10.2862 17.9436 10.3964 17.8307L18.3761 9.69231C19.4233 8.62021 20 7.19653 20 5.6817C20.0042 4.16687 19.4318 2.74319 18.3845 1.67109ZM17.5705 8.86328L9.99364 16.5893L2.43377 8.85025C1.60273 7.99952 1.14482 6.87099 1.14482 5.66868C1.14482 4.46636 1.59849 3.33783 2.42953 2.49144C3.25632 1.64504 4.35872 1.17627 5.52895 1.17627C6.70342 1.17627 7.81005 1.64504 8.64109 2.49578L9.59932 3.47673C9.82404 3.70678 10.1844 3.70678 10.4092 3.47673L11.3589 2.50446C12.1899 1.65373 13.2966 1.18495 14.4668 1.18495C15.637 1.18495 16.7394 1.65373 17.5705 2.50012C18.4015 3.35086 18.8552 4.47938 18.8552 5.6817C18.8594 6.88401 18.4015 8.01254 17.5705 8.86328Z" fill="#DF9793"/>
-                                              </svg>     
-                                            </a>
-                                          </div>
-                                          <img
-                                            class="card-prod-catalog__img"
-                                            src="img/produkt-catalog-img.png"
-                                            alt="Название товара"
-                                          />
-                                          <div class="card-prod-catalog__colors-wrp">
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-red js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-blue js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-black js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-green js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-orange js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-golden js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-golden js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div
-                                              class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
-                                            >
-                                              <span
-                                                class="card-prod-catalog__colors-white js-card-catalog-color-item"
-                                              ></span>
-                                            </div>
-                                            <div class="card-prod-catalog__colors-item-wrp">
-                                              <p class="card-prod-catalog__colors-number">+2</p>
-                                            </div>
-                                          </div>
-                                          <h2 class="card-prod-catalog__title-text">
-                                            Название товара какое-то очень длинное
-                                          </h2>
-                                          <div class="card-prod-catalog__rating-reviews">
-                                            <div class="card-prod-catalog__rating-reviews-wrp">
-                                              <div class="card-prod-catalog__rating-wrp">
-                                                <img
-                                                  class="card-prod-catalog__rating-img-dise"
-                                                  src="icon/raitig-img-noactive.svg"
-                                                  alt="рейтинг"
-                                                />
-                                                <div class="card-prod-catalog__rating-img-activ-wrp">
-                                                  <span
-                                                    class="card-prod-catalog__rating-img-activ"
-                                                  ></span>
-                                                </div>
-                                              </div>
-                                              <div class="card-prod-catalog__reviews-wrp">
-                                                <img
-                                                  src="icon/reviews-icon-card-prod-catalog.svg"
-                                                  alt=""
-                                                />
-                                                <p class="card-prod-catalog__reviews-text">
-                                                  <span>4</span> отзыва
-                                                </p>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="card-prod-catalog__buy-price">
-                                            <div>
-                                              <p class="card-prod-catalog__price">16 398,38 грн</p>
-                                              <p class="card-prod-catalog__not-available">
-                                                Нет в наличии
-                                              </p>
-                                            </div>
-                                            <button
-                                              class="card-prod-catalog__buy js-btn-buy-card-prod-catalog"
-                                            >
-                                              <img
-                                                class="card-prod-catalog__buy-img"
-                                                src="icon/header-basket-icon.svg"
-                                                alt="buy"
-                                              />
-                                              <span class="card-prod-catalog__buy-text">Купить</span>
-                                            </button>
-                                          </div>
-                                        </div>
-                                      </div>
-                                </div>
+                              </div>
                             </div>
+                          </div>
+                          <div class="swiper-slide card-product-spare-parts__slide">
+                            <div class="card-prod-catalog">
+                              <div class="card-prod-catalog__wrp">
+                                <div>
+                                  <div class="card-prod-catalog__nameplate-top-wrp">
+                                    <p>Топ продаж</p>
+                                  </div>
+                                  <div class="card-prod-catalog__nameplate-sale-wrp">
+                                    <p>Акция</p>
+                                  </div>
+                                  <div class="card-prod-catalog__nameplate-new-wrp">
+                                    <p>Новинка</p>
+                                  </div>
+                                </div>
+                                <div class="card-prod-catalog__icon-wrp">
+                                  <a href="#" class="card-product-all-info__active-link comparison">
+                                    <svg class="card-product-all-info__comparison-svg" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path class="card-product-all-info__comparison-svg" d="M11 5V1" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-svg" d="M5 7L11 5.5L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-svg" d="M13 14L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-svg" d="M21 14L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-svg" d="M9 17L5 7" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-svg" d="M1 17L5 7" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-hover" fill-rule="evenodd" clip-rule="evenodd" d="M5 21C7.20915 21 9 19.2092 9 17H1C1 19.2092 2.79086 21 5 21Z" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-hover" fill-rule="evenodd" clip-rule="evenodd" d="M17 18C19.2092 18 21 16.2092 21 14H13C13 16.2092 14.7908 18 17 18Z" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>  
+                                  </a>
+                                  <a href="#" class="card-product-all-info__active-link like">
+                                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path class="card-product-all-info__like-svg" d="M18.3845 1.67109C17.3373 0.598987 15.9508 0.0130215 14.4711 0.0130215C12.9913 0.0130215 11.6006 0.603328 10.5533 1.67543L10.0064 2.23535L9.45092 1.66675C8.40365 0.594647 7.0087 0 5.52895 0C4.05344 0 2.66273 0.590306 1.61969 1.65807C0.57242 2.73017 -0.00421676 4.15385 2.32169e-05 5.66868C2.32169e-05 7.18351 0.580899 8.60285 1.62817 9.67495L9.59084 17.8264C9.70108 17.9392 9.84948 18 9.99364 18C10.1378 18 10.2862 17.9436 10.3964 17.8307L18.3761 9.69231C19.4233 8.62021 20 7.19653 20 5.6817C20.0042 4.16687 19.4318 2.74319 18.3845 1.67109Z" fill="#FFFFFF"/>
+                                      <path class="card-product-all-info__like-svg" d="M18.3845 1.67109C17.3373 0.598987 15.9508 0.0130215 14.4711 0.0130215C12.9913 0.0130215 11.6006 0.603328 10.5533 1.67543L10.0064 2.23535L9.45092 1.66675C8.40365 0.594647 7.0087 0 5.52895 0C4.05344 0 2.66273 0.590306 1.61969 1.65807C0.57242 2.73017 -0.00421676 4.15385 2.32169e-05 5.66868C2.32169e-05 7.18351 0.5809 8.60285 1.62817 9.67495L9.59084 17.8264C9.70108 17.9392 9.84948 18 9.99364 18C10.1378 18 10.2862 17.9436 10.3964 17.8307L18.3761 9.69231C19.4233 8.62021 20 7.19653 20 5.6817C20.0042 4.16687 19.4318 2.74319 18.3845 1.67109ZM17.5705 8.86328L9.99364 16.5893L2.43377 8.85025C1.60273 7.99952 1.14482 6.87099 1.14482 5.66868C1.14482 4.46636 1.59849 3.33783 2.42953 2.49144C3.25632 1.64504 4.35872 1.17627 5.52895 1.17627C6.70342 1.17627 7.81005 1.64504 8.64109 2.49578L9.59932 3.47673C9.82404 3.70678 10.1844 3.70678 10.4092 3.47673L11.3589 2.50446C12.1899 1.65373 13.2966 1.18495 14.4668 1.18495C15.637 1.18495 16.7394 1.65373 17.5705 2.50012C18.4015 3.35086 18.8552 4.47938 18.8552 5.6817C18.8594 6.88401 18.4015 8.01254 17.5705 8.86328Z" fill="#DF9793"/>
+                                    </svg>     
+                                  </a>
+                                </div>
+                                <img
+                                  class="card-prod-catalog__img"
+                                  src="img/produkt-catalog-img.png"
+                                  alt="Название товара"
+                                />
+                                <div class="card-prod-catalog__colors-wrp">
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-red js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-blue js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-black js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-green js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-orange js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-golden js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-golden js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-white js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div class="card-prod-catalog__colors-item-wrp">
+                                    <p class="card-prod-catalog__colors-number">+2</p>
+                                  </div>
+                                </div>
+                                <h2 class="card-prod-catalog__title-text">
+                                  Название товара какое-то очень длинное
+                                </h2>
+                                <div class="card-prod-catalog__rating-reviews">
+                                  <div class="card-prod-catalog__rating-reviews-wrp">
+                                    <div class="card-prod-catalog__rating-wrp">
+                                      <img
+                                        class="card-prod-catalog__rating-img-dise"
+                                        src="icon/raitig-img-noactive.svg"
+                                        alt="рейтинг"
+                                      />
+                                      <div class="card-prod-catalog__rating-img-activ-wrp">
+                                        <span
+                                          class="card-prod-catalog__rating-img-activ"
+                                        ></span>
+                                      </div>
+                                    </div>
+                                    <div class="card-prod-catalog__reviews-wrp">
+                                      <img
+                                        src="icon/reviews-icon-card-prod-catalog.svg"
+                                        alt=""
+                                      />
+                                      <p class="card-prod-catalog__reviews-text">
+                                        <span>4</span> отзыва
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-prod-catalog__buy-price">
+                                  <div>
+                                    <p class="card-prod-catalog__price">16 398,38 грн</p>
+                                    <p class="card-prod-catalog__not-available">
+                                      Нет в наличии
+                                    </p>
+                                  </div>
+                                  <button
+                                    class="card-prod-catalog__buy js-btn-buy-card-prod-catalog"
+                                  >
+                                    <img
+                                      class="card-prod-catalog__buy-img"
+                                      src="icon/header-basket-icon.svg"
+                                      alt="buy"
+                                    />
+                                    <span class="card-prod-catalog__buy-text">Купить</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide card-product-spare-parts__slide">
+                            <div class="card-prod-catalog">
+                              <div class="card-prod-catalog__wrp">
+                                <div>
+                                  <div class="card-prod-catalog__nameplate-top-wrp">
+                                    <p>Топ продаж</p>
+                                  </div>
+                                  <div class="card-prod-catalog__nameplate-sale-wrp">
+                                    <p>Акция</p>
+                                  </div>
+                                  <div class="card-prod-catalog__nameplate-new-wrp">
+                                    <p>Новинка</p>
+                                  </div>
+                                </div>
+                                <div class="card-prod-catalog__icon-wrp">
+                                  <a href="#" class="card-product-all-info__active-link comparison">
+                                    <svg class="card-product-all-info__comparison-svg" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path class="card-product-all-info__comparison-svg" d="M11 5V1" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-svg" d="M5 7L11 5.5L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-svg" d="M13 14L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-svg" d="M21 14L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-svg" d="M9 17L5 7" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-svg" d="M1 17L5 7" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-hover" fill-rule="evenodd" clip-rule="evenodd" d="M5 21C7.20915 21 9 19.2092 9 17H1C1 19.2092 2.79086 21 5 21Z" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-hover" fill-rule="evenodd" clip-rule="evenodd" d="M17 18C19.2092 18 21 16.2092 21 14H13C13 16.2092 14.7908 18 17 18Z" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>  
+                                  </a>
+                                  <a href="#" class="card-product-all-info__active-link like">
+                                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path class="card-product-all-info__like-svg" d="M18.3845 1.67109C17.3373 0.598987 15.9508 0.0130215 14.4711 0.0130215C12.9913 0.0130215 11.6006 0.603328 10.5533 1.67543L10.0064 2.23535L9.45092 1.66675C8.40365 0.594647 7.0087 0 5.52895 0C4.05344 0 2.66273 0.590306 1.61969 1.65807C0.57242 2.73017 -0.00421676 4.15385 2.32169e-05 5.66868C2.32169e-05 7.18351 0.580899 8.60285 1.62817 9.67495L9.59084 17.8264C9.70108 17.9392 9.84948 18 9.99364 18C10.1378 18 10.2862 17.9436 10.3964 17.8307L18.3761 9.69231C19.4233 8.62021 20 7.19653 20 5.6817C20.0042 4.16687 19.4318 2.74319 18.3845 1.67109Z" fill="#FFFFFF"/>
+                                      <path class="card-product-all-info__like-svg" d="M18.3845 1.67109C17.3373 0.598987 15.9508 0.0130215 14.4711 0.0130215C12.9913 0.0130215 11.6006 0.603328 10.5533 1.67543L10.0064 2.23535L9.45092 1.66675C8.40365 0.594647 7.0087 0 5.52895 0C4.05344 0 2.66273 0.590306 1.61969 1.65807C0.57242 2.73017 -0.00421676 4.15385 2.32169e-05 5.66868C2.32169e-05 7.18351 0.5809 8.60285 1.62817 9.67495L9.59084 17.8264C9.70108 17.9392 9.84948 18 9.99364 18C10.1378 18 10.2862 17.9436 10.3964 17.8307L18.3761 9.69231C19.4233 8.62021 20 7.19653 20 5.6817C20.0042 4.16687 19.4318 2.74319 18.3845 1.67109ZM17.5705 8.86328L9.99364 16.5893L2.43377 8.85025C1.60273 7.99952 1.14482 6.87099 1.14482 5.66868C1.14482 4.46636 1.59849 3.33783 2.42953 2.49144C3.25632 1.64504 4.35872 1.17627 5.52895 1.17627C6.70342 1.17627 7.81005 1.64504 8.64109 2.49578L9.59932 3.47673C9.82404 3.70678 10.1844 3.70678 10.4092 3.47673L11.3589 2.50446C12.1899 1.65373 13.2966 1.18495 14.4668 1.18495C15.637 1.18495 16.7394 1.65373 17.5705 2.50012C18.4015 3.35086 18.8552 4.47938 18.8552 5.6817C18.8594 6.88401 18.4015 8.01254 17.5705 8.86328Z" fill="#DF9793"/>
+                                    </svg>     
+                                  </a>
+                                </div>
+                                <img
+                                  class="card-prod-catalog__img"
+                                  src="img/produkt-catalog-img.png"
+                                  alt="Название товара"
+                                />
+                                <div class="card-prod-catalog__colors-wrp">
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-red js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-blue js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-black js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-green js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-orange js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-golden js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-golden js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-white js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div class="card-prod-catalog__colors-item-wrp">
+                                    <p class="card-prod-catalog__colors-number">+2</p>
+                                  </div>
+                                </div>
+                                <h2 class="card-prod-catalog__title-text">
+                                  Название товара какое-то очень длинное
+                                </h2>
+                                <div class="card-prod-catalog__rating-reviews">
+                                  <div class="card-prod-catalog__rating-reviews-wrp">
+                                    <div class="card-prod-catalog__rating-wrp">
+                                      <img
+                                        class="card-prod-catalog__rating-img-dise"
+                                        src="icon/raitig-img-noactive.svg"
+                                        alt="рейтинг"
+                                      />
+                                      <div class="card-prod-catalog__rating-img-activ-wrp">
+                                        <span
+                                          class="card-prod-catalog__rating-img-activ"
+                                        ></span>
+                                      </div>
+                                    </div>
+                                    <div class="card-prod-catalog__reviews-wrp">
+                                      <img
+                                        src="icon/reviews-icon-card-prod-catalog.svg"
+                                        alt=""
+                                      />
+                                      <p class="card-prod-catalog__reviews-text">
+                                        <span>4</span> отзыва
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-prod-catalog__buy-price">
+                                  <div>
+                                    <p class="card-prod-catalog__price">16 398,38 грн</p>
+                                    <p class="card-prod-catalog__not-available">
+                                      Нет в наличии
+                                    </p>
+                                  </div>
+                                  <button
+                                    class="card-prod-catalog__buy js-btn-buy-card-prod-catalog"
+                                  >
+                                    <img
+                                      class="card-prod-catalog__buy-img"
+                                      src="icon/header-basket-icon.svg"
+                                      alt="buy"
+                                    />
+                                    <span class="card-prod-catalog__buy-text">Купить</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide card-product-spare-parts__slide">
+                            <div class="card-prod-catalog">
+                              <div class="card-prod-catalog__wrp">
+                                <div>
+                                  <div class="card-prod-catalog__nameplate-top-wrp">
+                                    <p>Топ продаж</p>
+                                  </div>
+                                  <div class="card-prod-catalog__nameplate-sale-wrp">
+                                    <p>Акция</p>
+                                  </div>
+                                  <div class="card-prod-catalog__nameplate-new-wrp">
+                                    <p>Новинка</p>
+                                  </div>
+                                </div>
+                                <div class="card-prod-catalog__icon-wrp">
+                                  <a href="#" class="card-product-all-info__active-link comparison">
+                                    <svg class="card-product-all-info__comparison-svg" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path class="card-product-all-info__comparison-svg" d="M11 5V1" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-svg" d="M5 7L11 5.5L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-svg" d="M13 14L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-svg" d="M21 14L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-svg" d="M9 17L5 7" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-svg" d="M1 17L5 7" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-hover" fill-rule="evenodd" clip-rule="evenodd" d="M5 21C7.20915 21 9 19.2092 9 17H1C1 19.2092 2.79086 21 5 21Z" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-hover" fill-rule="evenodd" clip-rule="evenodd" d="M17 18C19.2092 18 21 16.2092 21 14H13C13 16.2092 14.7908 18 17 18Z" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>  
+                                  </a>
+                                  <a href="#" class="card-product-all-info__active-link like">
+                                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path class="card-product-all-info__like-svg" d="M18.3845 1.67109C17.3373 0.598987 15.9508 0.0130215 14.4711 0.0130215C12.9913 0.0130215 11.6006 0.603328 10.5533 1.67543L10.0064 2.23535L9.45092 1.66675C8.40365 0.594647 7.0087 0 5.52895 0C4.05344 0 2.66273 0.590306 1.61969 1.65807C0.57242 2.73017 -0.00421676 4.15385 2.32169e-05 5.66868C2.32169e-05 7.18351 0.580899 8.60285 1.62817 9.67495L9.59084 17.8264C9.70108 17.9392 9.84948 18 9.99364 18C10.1378 18 10.2862 17.9436 10.3964 17.8307L18.3761 9.69231C19.4233 8.62021 20 7.19653 20 5.6817C20.0042 4.16687 19.4318 2.74319 18.3845 1.67109Z" fill="#FFFFFF"/>
+                                      <path class="card-product-all-info__like-svg" d="M18.3845 1.67109C17.3373 0.598987 15.9508 0.0130215 14.4711 0.0130215C12.9913 0.0130215 11.6006 0.603328 10.5533 1.67543L10.0064 2.23535L9.45092 1.66675C8.40365 0.594647 7.0087 0 5.52895 0C4.05344 0 2.66273 0.590306 1.61969 1.65807C0.57242 2.73017 -0.00421676 4.15385 2.32169e-05 5.66868C2.32169e-05 7.18351 0.5809 8.60285 1.62817 9.67495L9.59084 17.8264C9.70108 17.9392 9.84948 18 9.99364 18C10.1378 18 10.2862 17.9436 10.3964 17.8307L18.3761 9.69231C19.4233 8.62021 20 7.19653 20 5.6817C20.0042 4.16687 19.4318 2.74319 18.3845 1.67109ZM17.5705 8.86328L9.99364 16.5893L2.43377 8.85025C1.60273 7.99952 1.14482 6.87099 1.14482 5.66868C1.14482 4.46636 1.59849 3.33783 2.42953 2.49144C3.25632 1.64504 4.35872 1.17627 5.52895 1.17627C6.70342 1.17627 7.81005 1.64504 8.64109 2.49578L9.59932 3.47673C9.82404 3.70678 10.1844 3.70678 10.4092 3.47673L11.3589 2.50446C12.1899 1.65373 13.2966 1.18495 14.4668 1.18495C15.637 1.18495 16.7394 1.65373 17.5705 2.50012C18.4015 3.35086 18.8552 4.47938 18.8552 5.6817C18.8594 6.88401 18.4015 8.01254 17.5705 8.86328Z" fill="#DF9793"/>
+                                    </svg>     
+                                  </a>
+                                </div>
+                                <img
+                                  class="card-prod-catalog__img"
+                                  src="img/produkt-catalog-img.png"
+                                  alt="Название товара"
+                                />
+                                <div class="card-prod-catalog__colors-wrp">
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-red js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-blue js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-black js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-green js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-orange js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-golden js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-golden js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-white js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div class="card-prod-catalog__colors-item-wrp">
+                                    <p class="card-prod-catalog__colors-number">+2</p>
+                                  </div>
+                                </div>
+                                <h2 class="card-prod-catalog__title-text">
+                                  Название товара какое-то очень длинное
+                                </h2>
+                                <div class="card-prod-catalog__rating-reviews">
+                                  <div class="card-prod-catalog__rating-reviews-wrp">
+                                    <div class="card-prod-catalog__rating-wrp">
+                                      <img
+                                        class="card-prod-catalog__rating-img-dise"
+                                        src="icon/raitig-img-noactive.svg"
+                                        alt="рейтинг"
+                                      />
+                                      <div class="card-prod-catalog__rating-img-activ-wrp">
+                                        <span
+                                          class="card-prod-catalog__rating-img-activ"
+                                        ></span>
+                                      </div>
+                                    </div>
+                                    <div class="card-prod-catalog__reviews-wrp">
+                                      <img
+                                        src="icon/reviews-icon-card-prod-catalog.svg"
+                                        alt=""
+                                      />
+                                      <p class="card-prod-catalog__reviews-text">
+                                        <span>4</span> отзыва
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-prod-catalog__buy-price">
+                                  <div>
+                                    <p class="card-prod-catalog__price">16 398,38 грн</p>
+                                    <p class="card-prod-catalog__not-available">
+                                      Нет в наличии
+                                    </p>
+                                  </div>
+                                  <button
+                                    class="card-prod-catalog__buy js-btn-buy-card-prod-catalog"
+                                  >
+                                    <img
+                                      class="card-prod-catalog__buy-img"
+                                      src="icon/header-basket-icon.svg"
+                                      alt="buy"
+                                    />
+                                    <span class="card-prod-catalog__buy-text">Купить</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide card-product-spare-parts__slide">
+                            <div class="card-prod-catalog">
+                              <div class="card-prod-catalog__wrp">
+                                <div>
+                                  <div class="card-prod-catalog__nameplate-top-wrp">
+                                    <p>Топ продаж</p>
+                                  </div>
+                                  <div class="card-prod-catalog__nameplate-sale-wrp">
+                                    <p>Акция</p>
+                                  </div>
+                                  <div class="card-prod-catalog__nameplate-new-wrp">
+                                    <p>Новинка</p>
+                                  </div>
+                                </div>
+                                <div class="card-prod-catalog__icon-wrp">
+                                  <a href="#" class="card-product-all-info__active-link comparison">
+                                    <svg class="card-product-all-info__comparison-svg" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path class="card-product-all-info__comparison-svg" d="M11 5V1" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-svg" d="M5 7L11 5.5L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-svg" d="M13 14L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-svg" d="M21 14L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-svg" d="M9 17L5 7" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-svg" d="M1 17L5 7" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-hover" fill-rule="evenodd" clip-rule="evenodd" d="M5 21C7.20915 21 9 19.2092 9 17H1C1 19.2092 2.79086 21 5 21Z" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-hover" fill-rule="evenodd" clip-rule="evenodd" d="M17 18C19.2092 18 21 16.2092 21 14H13C13 16.2092 14.7908 18 17 18Z" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>  
+                                  </a>
+                                  <a href="#" class="card-product-all-info__active-link like">
+                                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path class="card-product-all-info__like-svg" d="M18.3845 1.67109C17.3373 0.598987 15.9508 0.0130215 14.4711 0.0130215C12.9913 0.0130215 11.6006 0.603328 10.5533 1.67543L10.0064 2.23535L9.45092 1.66675C8.40365 0.594647 7.0087 0 5.52895 0C4.05344 0 2.66273 0.590306 1.61969 1.65807C0.57242 2.73017 -0.00421676 4.15385 2.32169e-05 5.66868C2.32169e-05 7.18351 0.580899 8.60285 1.62817 9.67495L9.59084 17.8264C9.70108 17.9392 9.84948 18 9.99364 18C10.1378 18 10.2862 17.9436 10.3964 17.8307L18.3761 9.69231C19.4233 8.62021 20 7.19653 20 5.6817C20.0042 4.16687 19.4318 2.74319 18.3845 1.67109Z" fill="#FFFFFF"/>
+                                      <path class="card-product-all-info__like-svg" d="M18.3845 1.67109C17.3373 0.598987 15.9508 0.0130215 14.4711 0.0130215C12.9913 0.0130215 11.6006 0.603328 10.5533 1.67543L10.0064 2.23535L9.45092 1.66675C8.40365 0.594647 7.0087 0 5.52895 0C4.05344 0 2.66273 0.590306 1.61969 1.65807C0.57242 2.73017 -0.00421676 4.15385 2.32169e-05 5.66868C2.32169e-05 7.18351 0.5809 8.60285 1.62817 9.67495L9.59084 17.8264C9.70108 17.9392 9.84948 18 9.99364 18C10.1378 18 10.2862 17.9436 10.3964 17.8307L18.3761 9.69231C19.4233 8.62021 20 7.19653 20 5.6817C20.0042 4.16687 19.4318 2.74319 18.3845 1.67109ZM17.5705 8.86328L9.99364 16.5893L2.43377 8.85025C1.60273 7.99952 1.14482 6.87099 1.14482 5.66868C1.14482 4.46636 1.59849 3.33783 2.42953 2.49144C3.25632 1.64504 4.35872 1.17627 5.52895 1.17627C6.70342 1.17627 7.81005 1.64504 8.64109 2.49578L9.59932 3.47673C9.82404 3.70678 10.1844 3.70678 10.4092 3.47673L11.3589 2.50446C12.1899 1.65373 13.2966 1.18495 14.4668 1.18495C15.637 1.18495 16.7394 1.65373 17.5705 2.50012C18.4015 3.35086 18.8552 4.47938 18.8552 5.6817C18.8594 6.88401 18.4015 8.01254 17.5705 8.86328Z" fill="#DF9793"/>
+                                    </svg>     
+                                  </a>
+                                </div>
+                                <img
+                                  class="card-prod-catalog__img"
+                                  src="img/produkt-catalog-img.png"
+                                  alt="Название товара"
+                                />
+                                <div class="card-prod-catalog__colors-wrp">
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-red js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-blue js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-black js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-green js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-orange js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-golden js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-golden js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-white js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div class="card-prod-catalog__colors-item-wrp">
+                                    <p class="card-prod-catalog__colors-number">+2</p>
+                                  </div>
+                                </div>
+                                <h2 class="card-prod-catalog__title-text">
+                                  Название товара какое-то очень длинное
+                                </h2>
+                                <div class="card-prod-catalog__rating-reviews">
+                                  <div class="card-prod-catalog__rating-reviews-wrp">
+                                    <div class="card-prod-catalog__rating-wrp">
+                                      <img
+                                        class="card-prod-catalog__rating-img-dise"
+                                        src="icon/raitig-img-noactive.svg"
+                                        alt="рейтинг"
+                                      />
+                                      <div class="card-prod-catalog__rating-img-activ-wrp">
+                                        <span
+                                          class="card-prod-catalog__rating-img-activ"
+                                        ></span>
+                                      </div>
+                                    </div>
+                                    <div class="card-prod-catalog__reviews-wrp">
+                                      <img
+                                        src="icon/reviews-icon-card-prod-catalog.svg"
+                                        alt=""
+                                      />
+                                      <p class="card-prod-catalog__reviews-text">
+                                        <span>4</span> отзыва
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-prod-catalog__buy-price">
+                                  <div>
+                                    <p class="card-prod-catalog__price">16 398,38 грн</p>
+                                    <p class="card-prod-catalog__not-available">
+                                      Нет в наличии
+                                    </p>
+                                  </div>
+                                  <button
+                                    class="card-prod-catalog__buy js-btn-buy-card-prod-catalog"
+                                  >
+                                    <img
+                                      class="card-prod-catalog__buy-img"
+                                      src="icon/header-basket-icon.svg"
+                                      alt="buy"
+                                    />
+                                    <span class="card-prod-catalog__buy-text">Купить</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide card-product-spare-parts__slide">
+                            <div class="card-prod-catalog">
+                              <div class="card-prod-catalog__wrp">
+                                <div>
+                                  <div class="card-prod-catalog__nameplate-top-wrp">
+                                    <p>Топ продаж</p>
+                                  </div>
+                                  <div class="card-prod-catalog__nameplate-sale-wrp">
+                                    <p>Акция</p>
+                                  </div>
+                                  <div class="card-prod-catalog__nameplate-new-wrp">
+                                    <p>Новинка</p>
+                                  </div>
+                                </div>
+                                <div class="card-prod-catalog__icon-wrp">
+                                  <a href="#" class="card-product-all-info__active-link comparison">
+                                    <svg class="card-product-all-info__comparison-svg" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path class="card-product-all-info__comparison-svg" d="M11 5V1" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-svg" d="M5 7L11 5.5L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-svg" d="M13 14L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-svg" d="M21 14L17 4" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-svg" d="M9 17L5 7" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-svg" d="M1 17L5 7" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-hover" fill-rule="evenodd" clip-rule="evenodd" d="M5 21C7.20915 21 9 19.2092 9 17H1C1 19.2092 2.79086 21 5 21Z" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path class="card-product-all-info__comparison-hover" fill-rule="evenodd" clip-rule="evenodd" d="M17 18C19.2092 18 21 16.2092 21 14H13C13 16.2092 14.7908 18 17 18Z" stroke="#DF9793" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>  
+                                  </a>
+                                  <a href="#" class="card-product-all-info__active-link like">
+                                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path class="card-product-all-info__like-svg" d="M18.3845 1.67109C17.3373 0.598987 15.9508 0.0130215 14.4711 0.0130215C12.9913 0.0130215 11.6006 0.603328 10.5533 1.67543L10.0064 2.23535L9.45092 1.66675C8.40365 0.594647 7.0087 0 5.52895 0C4.05344 0 2.66273 0.590306 1.61969 1.65807C0.57242 2.73017 -0.00421676 4.15385 2.32169e-05 5.66868C2.32169e-05 7.18351 0.580899 8.60285 1.62817 9.67495L9.59084 17.8264C9.70108 17.9392 9.84948 18 9.99364 18C10.1378 18 10.2862 17.9436 10.3964 17.8307L18.3761 9.69231C19.4233 8.62021 20 7.19653 20 5.6817C20.0042 4.16687 19.4318 2.74319 18.3845 1.67109Z" fill="#FFFFFF"/>
+                                      <path class="card-product-all-info__like-svg" d="M18.3845 1.67109C17.3373 0.598987 15.9508 0.0130215 14.4711 0.0130215C12.9913 0.0130215 11.6006 0.603328 10.5533 1.67543L10.0064 2.23535L9.45092 1.66675C8.40365 0.594647 7.0087 0 5.52895 0C4.05344 0 2.66273 0.590306 1.61969 1.65807C0.57242 2.73017 -0.00421676 4.15385 2.32169e-05 5.66868C2.32169e-05 7.18351 0.5809 8.60285 1.62817 9.67495L9.59084 17.8264C9.70108 17.9392 9.84948 18 9.99364 18C10.1378 18 10.2862 17.9436 10.3964 17.8307L18.3761 9.69231C19.4233 8.62021 20 7.19653 20 5.6817C20.0042 4.16687 19.4318 2.74319 18.3845 1.67109ZM17.5705 8.86328L9.99364 16.5893L2.43377 8.85025C1.60273 7.99952 1.14482 6.87099 1.14482 5.66868C1.14482 4.46636 1.59849 3.33783 2.42953 2.49144C3.25632 1.64504 4.35872 1.17627 5.52895 1.17627C6.70342 1.17627 7.81005 1.64504 8.64109 2.49578L9.59932 3.47673C9.82404 3.70678 10.1844 3.70678 10.4092 3.47673L11.3589 2.50446C12.1899 1.65373 13.2966 1.18495 14.4668 1.18495C15.637 1.18495 16.7394 1.65373 17.5705 2.50012C18.4015 3.35086 18.8552 4.47938 18.8552 5.6817C18.8594 6.88401 18.4015 8.01254 17.5705 8.86328Z" fill="#DF9793"/>
+                                    </svg>     
+                                  </a>
+                                </div>
+                                <img
+                                  class="card-prod-catalog__img"
+                                  src="img/produkt-catalog-img.png"
+                                  alt="Название товара"
+                                />
+                                <div class="card-prod-catalog__colors-wrp">
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-red js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-blue js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-black js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-green js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-orange js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-golden js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-golden js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="card-prod-catalog__colors-item-wrp js-card-catalog-color"
+                                  >
+                                    <span
+                                      class="card-prod-catalog__colors-white js-card-catalog-color-item"
+                                    ></span>
+                                  </div>
+                                  <div class="card-prod-catalog__colors-item-wrp">
+                                    <p class="card-prod-catalog__colors-number">+2</p>
+                                  </div>
+                                </div>
+                                <h2 class="card-prod-catalog__title-text">
+                                  Название товара какое-то очень длинное
+                                </h2>
+                                <div class="card-prod-catalog__rating-reviews">
+                                  <div class="card-prod-catalog__rating-reviews-wrp">
+                                    <div class="card-prod-catalog__rating-wrp">
+                                      <img
+                                        class="card-prod-catalog__rating-img-dise"
+                                        src="icon/raitig-img-noactive.svg"
+                                        alt="рейтинг"
+                                      />
+                                      <div class="card-prod-catalog__rating-img-activ-wrp">
+                                        <span
+                                          class="card-prod-catalog__rating-img-activ"
+                                        ></span>
+                                      </div>
+                                    </div>
+                                    <div class="card-prod-catalog__reviews-wrp">
+                                      <img
+                                        src="icon/reviews-icon-card-prod-catalog.svg"
+                                        alt=""
+                                      />
+                                      <p class="card-prod-catalog__reviews-text">
+                                        <span>4</span> отзыва
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-prod-catalog__buy-price">
+                                  <div>
+                                    <p class="card-prod-catalog__price">16 398,38 грн</p>
+                                    <p class="card-prod-catalog__not-available">
+                                      Нет в наличии
+                                    </p>
+                                  </div>
+                                  <button
+                                    class="card-prod-catalog__buy js-btn-buy-card-prod-catalog"
+                                  >
+                                    <img
+                                      class="card-prod-catalog__buy-img"
+                                      src="icon/header-basket-icon.svg"
+                                      alt="buy"
+                                    />
+                                    <span class="card-prod-catalog__buy-text">Купить</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                        <div class="card-product-spare-parts__navigation-buttons">
-                            <div class="swiper-button-prev card-product-spare-parts__button-prev">
-                                <svg
-                                width="13"
-                                height="24"
-                                viewBox="0 0 13 24"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M12.7071 1.70711C13.0976 1.31658 13.0976 0.683417 12.7071 0.292893C12.3166 -0.0976311 11.6834 -0.0976311 11.2929 0.292893L12.7071 1.70711ZM1 12L0.292893 11.2929C-0.0976311 11.6834 -0.0976311 12.3166 0.292893 12.7071L1 12ZM11.2929 23.7071C11.6834 24.0976 12.3166 24.0976 12.7071 23.7071C13.0976 23.3166 13.0976 22.6834 12.7071 22.2929L11.2929 23.7071ZM11.2929 0.292893L0.292893 11.2929L1.70711 12.7071L12.7071 1.70711L11.2929 0.292893ZM0.292893 12.7071L11.2929 23.7071L12.7071 22.2929L1.70711 11.2929L0.292893 12.7071Z"
-                                  fill="#090102"
-                                />
-                                <path class="card-product-spare-parts__swipper-button"
-                                  d="M11.2929 18.2929L5.70711 12.7071C5.31658 12.3166 5.31658 11.6834 5.70711 11.2929L11.2929 5.70711C11.9229 5.07714 13 5.52331 13 6.41421L13 17.5858C13 18.4767 11.9229 18.9229 11.2929 18.2929Z"
-                                  fill="#090102"
-                                />
-                                </svg>
-                            </div>
-                            <div class="swiper-pagination card-product-spare-parts__pagination"></div>
-                            <div class="swiper-button-next card-product-spare-parts__button-next">                             
-                                <svg
-                                width="13"
-                                height="24"
-                                viewBox="0 0 13 24"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M0.292893 22.2929C-0.0976315 22.6834 -0.0976315 23.3166 0.292893 23.7071C0.683417 24.0976 1.31658 24.0976 1.70711 23.7071L0.292893 22.2929ZM12 12L12.7071 12.7071C13.0976 12.3166 13.0976 11.6834 12.7071 11.2929L12 12ZM1.70711 0.292892C1.31658 -0.0976315 0.683417 -0.0976315 0.292893 0.292892C-0.0976315 0.683418 -0.0976315 1.31658 0.292893 1.70711L1.70711 0.292892ZM1.70711 23.7071L12.7071 12.7071L11.2929 11.2929L0.292893 22.2929L1.70711 23.7071ZM12.7071 11.2929L1.70711 0.292892L0.292893 1.70711L11.2929 12.7071L12.7071 11.2929Z"
-                                  fill="#090102"
-                                />
-                                <path class="card-product-spare-parts__swipper-button"
-                                  d="M1.70711 5.70711L7.29289 11.2929C7.68342 11.6834 7.68342 12.3166 7.29289 12.7071L1.70711 18.2929C1.07714 18.9229 0 18.4767 0 17.5858V6.41421C0 5.52331 1.07714 5.07714 1.70711 5.70711Z"
-                                  fill="#090102"
-                                />
-                                </svg>
-                            </div>
-                        </div>
+                      </div>
+                    </div>
+                    <div class="card-product-spare-parts__slider-navigation">
+                      <div class="card-product-spare-parts__button-prev">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M25.7071 9.70711C26.0976 9.31658 26.0976 8.68342 25.7071 8.29289C25.3166 7.90237 24.6834 7.90237 24.2929 8.29289L25.7071 9.70711ZM14 20L13.2929 19.2929C12.9024 19.6834 12.9024 20.3166 13.2929 20.7071L14 20ZM24.2929 31.7071C24.6834 32.0976 25.3166 32.0976 25.7071 31.7071C26.0976 31.3166 26.0976 30.6834 25.7071 30.2929L24.2929 31.7071ZM24.2929 8.29289L13.2929 19.2929L14.7071 20.7071L25.7071 9.70711L24.2929 8.29289ZM13.2929 20.7071L24.2929 31.7071L25.7071 30.2929L14.7071 19.2929L13.2929 20.7071Z" fill="#090102"/>
+                          <path class="card-product-spare-parts__button-prev-svg" d="M24.2929 26.2929L18.7071 20.7071C18.3166 20.3166 18.3166 19.6834 18.7071 19.2929L24.2929 13.7071C24.9229 13.0771 26 13.5233 26 14.4142V25.5858C26 26.4767 24.9229 26.9229 24.2929 26.2929Z" fill="#090102"/>
+                        </svg> 
+                      </div>
+                      <div class="card-product-spare-parts__pagination"></div>
+                      <div class="card-product-spare-parts__button-next">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M14.2929 30.2929C13.9024 30.6834 13.9024 31.3166 14.2929 31.7071C14.6834 32.0976 15.3166 32.0976 15.7071 31.7071L14.2929 30.2929ZM26 20L26.7071 20.7071C27.0976 20.3166 27.0976 19.6834 26.7071 19.2929L26 20ZM15.7071 8.29289C15.3166 7.90237 14.6834 7.90237 14.2929 8.29289C13.9024 8.68342 13.9024 9.31658 14.2929 9.70711L15.7071 8.29289ZM15.7071 31.7071L26.7071 20.7071L25.2929 19.2929L14.2929 30.2929L15.7071 31.7071ZM26.7071 19.2929L15.7071 8.29289L14.2929 9.70711L25.2929 20.7071L26.7071 19.2929Z" fill="#090102"/>
+                          <path class="card-product-spare-parts__button-next-svg" d="M15.7071 13.7071L21.2929 19.2929C21.6834 19.6834 21.6834 20.3166 21.2929 20.7071L15.7071 26.2929C15.0771 26.9229 14 26.4767 14 25.5858V14.4142C14 13.5233 15.0771 13.0771 15.7071 13.7071Z" fill="#090102"/>
+                        </svg> 
+                      </div>
+                    </div>
                   </div>
                 </section>
             </section>

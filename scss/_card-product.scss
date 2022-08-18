@@ -497,13 +497,17 @@
     line-height: 20px;
     text-align: center;
     padding: 12px 19px;
+    &:hover {
+      color: $color-red-60;
+    }
+    &:active {
+      color: $color-red-80;
+    }
+    &:disabled {
+      color: $color-gray-50;
+    }
   }
-  &__button-clean:hover {
-    color: $color-red-60;
-  }
-  &__button-clean:active {
-    color: $color-red-80;
-  }
+  
   &__button-close {
     font-size: 0;
   }
@@ -663,6 +667,7 @@
     max-width: 200px;
     padding-left: 43.5px;
     padding-right: 43.5px;
+
   }
 }
 .modal-zoom {
@@ -674,8 +679,15 @@
   }
 }
 .btn-white {
+  &:disabled {
+    color: $color-gray-60;
+    border-color: $color-gray-50;
+  }
 }
 .btn-red {
+  &:disabled {
+    background-color: $color-gray-50;
+  }
 }
 
 //-----------------icon item name header-----------------------
@@ -976,19 +988,54 @@
 
 		&__color-selection {
       display: flex;
-      column-gap: 8px;
-		}
+      .card-prod-catalog__colors-item-wrp{
+        width: 26px;
+        height: 26px;
+        position: relative;
+        
+      }
+      .card-prod-catalog__colors-item-wrp.enabled{
+        .js-card-catalog-color-item{
+          position: relative;
+          opacity: 0.5;
+          &::after {
+            content: '';
+            width: 22px;
+            height: 1px;
+            background: #E6E5E5;
+            transform: rotateZ(135deg);
+            position: absolute;
+            top: 6px;
+            left: -3px;
+            transition: top .2s ease-in-out;
+          }
+        }
+      }
+      .card-prod-catalog__colors-item-wrp.enabled:hover {
+        .js-card-catalog-color-item::after{
+          top: 8px;
+        }
+      }
+      .card-prod-catalog__done-svg {
+        position: absolute;
+        top: 0;
+        right: -3px;
+        display: none;
+      }
+      .js-card-catalog-color-item {
+        border: 1px solid #cecaca;
+      }
+      .card-prod-catalog__colors-item-wrp.active {
+        border-radius: 50%;
+        border: 1px solid #090102;
+        &:hover .js-card-catalog-color-item.active{
+          width: 16px;
+          height: 16px;
+          border: 1px solid #cecaca;
+        }
+      }
 
-		&__color {
-      display: inline-block;
-      font-size: 0;
-      padding: 4px;
-      border-radius: 50%;
-      
 		}
-    &__color.active {
-      outline: 1px solid $color-black;
-    }
 
 		&__buy {
       display: flex;
@@ -1079,16 +1126,27 @@
       column-gap: 6px;
       margin-bottom: 22px;
 		}
+    &__instruction-svg-download {
+      display: none;
+    }
 
     &__instruction.active .download-instruction{
       color:$color-green;
     }
+    &__instruction.active{
+      max-width: 180px;
+      column-gap: 13px;
+    }
     
-    &__instruction.active .card-product-all-info__instruction-svg{
-      fill:$color-green;
+    &__instruction.active &__instruction-svg{
+      display: none;
+    }
+    &__instruction.active &__instruction-svg-download{
+      display: block;
     }
     &__instruction.active &__instruction-loader::after{
       border-top: 1px solid $color-green;
+      border-right: 1px solid $color-green;
       animation: spin 2s linear infinite;
     }
 
@@ -1098,8 +1156,8 @@
     &__instruction-loader::after {
       content: '';
       position: absolute;
-      top: -5px;
-      left: -6px;
+      top: -6px;
+      left: -11px;
       width: 35px;
       height: 35px;
       
@@ -1111,7 +1169,7 @@
       100% { transform: rotate(360deg); }
   }
     
-    &__instruction:hover &__instruction-svg {
+    &__instruction:hover &__instruction-svg-hover {
       fill: $color-red;
     }
     &__instruction.active:hover &__instruction-svg {
@@ -1181,7 +1239,7 @@
 //-----------------characteristics------------------------------
 .card-product-characteristics {
   margin-bottom: 200px;
-
+  scroll-margin-top: 200px;
   &__wrapper {
     padding: 0 48px;
     @extend %size-page;
@@ -1268,6 +1326,7 @@
 }
 //-----------------multimedia-----------------------------------
 .card-product-multimedia {
+  scroll-margin-top: 200px;
   margin-bottom: 100px;
   &__wrapper {
     @extend %size-page;
@@ -1304,7 +1363,7 @@
 }
 //-----------------reviews--------------------------------------
 .card-product-reviews {
-
+  scroll-margin-top: 200px;
   &__wrapper {
     @extend %size-page;
     display: flex;
@@ -1498,7 +1557,7 @@
 //-----------------gallery--------------------------------------
 .card-product-gallery {
   background-color: #F8F7F7;
-
+  scroll-margin-top: 100px;
   &__wrapper {
     @extend %size-page;
     padding: 100px 48px 100px 48px;
@@ -1550,7 +1609,7 @@
 //-----------------spare part--------------------------------------------
 .card-product-spare-parts {
   background-color: #F8F7F7;
-
+  scroll-margin-top: 120px;
   &__wrapper {
     padding: 100px 48px 100px 48px;
     display: flex;
@@ -1699,6 +1758,11 @@
     -ms-user-select: none;
     user-select: none;
   }
+  &__button-next.swiper-button-disabled, &__button-prev.swiper-button-disabled {
+    opacity: .35;
+    cursor: auto;
+    pointer-events: none;
+  }
   &__nav-slider {
     height: 444px;
     overflow: hidden;
@@ -1728,6 +1792,10 @@
   &__image.preview {
     width: 64px;
     height: 64px;
+    &:hover {
+      border: 1px solid #C12125;
+      border-radius: 1px;
+    }
   }
   &__image img {
     display: block;
@@ -1817,6 +1885,10 @@
       width: 100%;
       height: auto;
     }
+    &:hover {
+      border: 1px solid #C12125;
+      border-radius: 1px;
+    }
   }
 
   &__basic-slider {
@@ -1834,6 +1906,11 @@
   &__button-prev, &__button-next {
     cursor: pointer;
     font-size: 0;
+  }
+  &__button-next.swiper-button-disabled, &__button-prev.swiper-button-disabled {
+    opacity: .35;
+    cursor: auto;
+    pointer-events: none;
   }
 
   &__button-prev:hover &__button-prev-svg{
@@ -1862,12 +1939,59 @@
 
  
 }
+//-----------swipper footer--------------
+.card-product-spare-parts {
+
+  &__slider {
+    max-width: 1440px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__slider-wrapper {
+  }
+
+  &__slider-footer {
+    margin-bottom: 52px;
+  }
+
+  &__slider-container {
+  }
+
+  &__slide {
+  }
+
+  &__slider-navigation {
+    @extend %centre-flex;
+  }
+
+  &__button-prev {
+    cursor: pointer;
+  }
+  &__button-prev:hover &__button-prev-svg{
+    fill: #C12125;
+  }
+  &__pagination {
+    max-width: 120px;
+    display: flex;
+    justify-content: center;
+    column-gap: 16px;
+    width: 100%;
+    .swiper-pagination-bullet {
+      text-align: center;
+    }
+  }
+  &__button-next {
+    cursor: pointer;
+  }
+  &__button-next:hover  &__button-next-svg{
+    fill: #C12125;
+  }
+}
 .swiper-container {
 }
 .swiper-wrapper {
 }
 .swiper-slide {
-}
-.preview {
 }
 
