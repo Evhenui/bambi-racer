@@ -57,7 +57,7 @@ export let cardProduct = function () {
     });
     //------hidden header----
     window.addEventListener("scroll", function () {
-      if (window.scrollY > 300 && window.innerWidth > 960) {
+      if (window.scrollY > 300) {
         headerWrapper.classList.add("active");
         buttonUp.classList.add("active");
       } else {
