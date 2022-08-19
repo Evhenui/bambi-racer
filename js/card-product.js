@@ -10,7 +10,8 @@ export let cardProduct = function () {
             buttonLike = carProduct.querySelector("[data-navigation-like]"),
             modalOnClick = carProduct.querySelector('[data-modal-on-click]'),
             modalZoom = carProduct.querySelector("[data-modal-zoom]"),
-            modalBasket = carProduct.querySelector("[data-modal-basket]");
+            modalBasket = carProduct.querySelector("[data-modal-basket]"),
+            sectionReviews = carProduct.querySelector('[data-card-product-reviews]');
 
     //-----add class active groop------
     function addActiveClass(list) {
@@ -149,5 +150,20 @@ export let cardProduct = function () {
               }
             });
     }
-  }
+    if(sectionReviews !== null) {
+      const textArea = sectionReviews.querySelector('[data-text-area-feedback]'),
+            textAreaLabel = sectionReviews.querySelector('[data-text-area-feedback-label]');
+            sectionReviews.addEventListener('click', (e)=> {
+              const click = e.composedPath().includes(textArea);
+              console.log(click)
+              if (!click) {
+                textAreaLabel.classList.remove('active');
+              }
+            })
+            textArea.addEventListener('click', ()=> {
+              textAreaLabel.classList.add('active');
+
+            })
+    }
+  }   
 };

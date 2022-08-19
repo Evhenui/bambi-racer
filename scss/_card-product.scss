@@ -1426,10 +1426,9 @@
 .card-product-characteristics {
   //--------------------------------------------
   display: none;
-  margin-bottom: 200px;
   scroll-margin-top: 200px;
   &__wrapper {
-    padding: 0 48px;
+    padding: 100px 48px;
     @extend %size-page;
   }
 
@@ -1515,19 +1514,15 @@
 //-----------------multimedia-----------------------------------
 .card-product-multimedia {
   scroll-margin-top: 200px;
-  margin-bottom: 100px;
   &__wrapper {
     @extend %size-page;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 48px;
-    @media (max-width: 960px) {
-      padding: 0 48px;
-    }
+    padding: 80px 48px;
     @media (max-width: 860px) {
-      padding: 0 16px;
+      padding: 80px 16px;
     }
   }
 
@@ -1558,16 +1553,17 @@
 }
 //-----------------reviews--------------------------------------
 .card-product-reviews {
-  display: none;
-  //---------------------------------------------
   scroll-margin-top: 200px;
   &__wrapper {
     @extend %size-page;
     display: flex;
     flex-direction: column;
-    padding: 0 48px 100px 48px;
+    padding: 100px 48px 100px 48px;
     justify-content: center;
     align-items: center;
+    @media (max-width: 860px) {
+      padding: 80px 16px;
+    }
   }
 
   &__main-wrapper {
@@ -1578,7 +1574,19 @@
   &__title {
     margin-bottom: 24px;
   }
+  &__title-wrapper {
+    @extend %centre-flex;
+  }
 
+  &__title.register {
+    font-size: 1rem;
+    font-weight: 700;
+    @media (max-width: 860px) {
+      line-height: 20px;
+      font-size: 0.875rem;
+    }
+  }
+  
   &__grade {
     align-self: flex-start;
     margin-bottom: 8px;
@@ -1607,26 +1615,32 @@
     margin-bottom: 32px;
   }
 
-  &__title.register {
-    font-size: 1rem;
-    font-weight: 700;
-    display: flex;
-    justify-content: center;
-  }
+ 
 //-----if registred----------------------------
 
 &__leave-feedback-wrapper {
   display: flex;
+  @media (max-width: 860px) {
+    flex-direction: column;
+  }
 }
 
 &__feedback-area-wrapper {
-  margin-right: 16px;
   font-size: 0;
+  &:hover .card-product-reviews__feedback-area-label{
+    color: $color-red-60;
+  }
+  &:hover .card-product-reviews__feedback-area-label.active{
+    color: $color-black;
+  }
 }
 &__form {
   position: relative;
-  flex: 1 1 auto;
+  margin-right: 16px;
+  width: 100%;
+  max-width: 664px;
 }
+
 &__feedback-area-label {
   max-width: 219px;
   width: 100%;
@@ -1641,26 +1655,43 @@
   line-height: 20px;
   color: $color-gray-60;
 }
+&__feedback-area-label.active {
+  color: $color-black;
+}
 
 &__feedback {
   padding: 10px 20px;
   resize: none;
-  max-width: 664px;
   width: 100%;
   height: 116px;
-  border: 1px solid #090102;
+  border: 1px solid $color-gray-60;
   border-radius: 1px;
   font-family: $font-main;
   font-size: 0.875rem;
   line-height: 24px;
-  color: $color-gray-100;
+  color: $color-gray-60;
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
   &::-webkit-scrollbar { width: 0; } 
+  &:hover {
+    border-color: $color-red-60;
+  }
+  &:active, &:focus {
+    border-color: $color-black;
+    color: $color-black;
+  }
+  @media (max-width: 480px) {
+    height: 44px;
+  }
+}
+&__feedback-buttons-wrapper {
+  display: flex;
+  flex: 0 0 359px;
+  column-gap: 25px;
 }
 
 &__feedback-stars {
-  margin-right: 46px;
+  flex: 0 0 auto;
 }
 
 &__star-active {
