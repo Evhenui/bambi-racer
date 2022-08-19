@@ -5644,6 +5644,12 @@ body.lock {
   -moz-column-gap: 32px;
        column-gap: 32px;
 }
+@media (max-width: 1200px) {
+  .card-product-header-info.active .card-product-header-info__wrapper-section {
+    -moz-column-gap: 5px;
+         column-gap: 5px;
+  }
+}
 .card-product-header-info.active .card-product-header-info__pages {
   height: 0;
   width: 0;
@@ -5652,6 +5658,12 @@ body.lock {
 }
 .card-product-header-info.active .card-product-header-info__main-item-title {
   font-size: 32px;
+}
+@media (max-width: 1200px) {
+  .card-product-header-info.active .card-product-navigation__menu {
+    -moz-column-gap: 3px;
+         column-gap: 3px;
+  }
 }
 .card-product-header-info.active .novelty {
   right: -96px;
@@ -5664,22 +5676,39 @@ body.lock {
   width: 80px;
   height: 80px;
 }
+@media (max-width: 960px) {
+  .card-product-header-info.active .card-product-header-info__hidden-image {
+    display: none;
+  }
+}
 .card-product-header-info.active .card-product-navigation {
   padding-left: 0;
 }
 .card-product-header-info.active .card-product-navigation__item {
   padding-top: 4px;
 }
+@media (max-width: 1200px) {
+  .card-product-header-info.active .card-product-navigation__item {
+    padding: 4px 8px 12px 8px;
+  }
+}
 .card-product-header-info.active .card-product-header-info__hidden-buttons {
   display: flex;
 }
 .card-product-header-info__hidden-buttons {
-  padding-top: 20px;
+  padding-top: 25px;
   display: none;
   -moz-column-gap: 20px;
        column-gap: 20px;
   max-width: 237px;
   width: 100%;
+}
+@media (max-width: 1200px) {
+  .card-product-header-info__hidden-buttons {
+    -moz-column-gap: 5px;
+         column-gap: 5px;
+    justify-content: end;
+  }
 }
 .card-product-header-info__hidden-price {
   display: flex;
@@ -5703,6 +5732,11 @@ body.lock {
   color: #ffffff;
   white-space: nowrap;
 }
+@media (max-width: 1200px) {
+  .card-product-header-info__hidden-new-price {
+    font-size: 0.875rem;
+  }
+}
 .card-product-header-info .card-product-all-info__hidden-button {
   display: flex;
   justify-content: center;
@@ -5713,6 +5747,17 @@ body.lock {
   max-width: 109px;
   width: 100%;
   flex: 1 0 auto;
+}
+@media (max-width: 1200px) {
+  .card-product-header-info .card-product-all-info__hidden-button .card-product-all-info__button-text {
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+  .card-product-header-info .card-product-all-info__hidden-button {
+    max-width: 44px;
+    flex: 1;
+  }
 }
 .card-product-header-info__hidden-image {
   padding-top: 3px;
@@ -5726,13 +5771,13 @@ body.lock {
   width: 210px;
   transition: height 0.3s;
 }
-@media (max-width: 960px) {
-  .card-product-header-info__pages {
-    display: none;
-  }
-}
 .card-product-header-info__name-pages-wrapper {
   padding: 24px 0 16px 48px;
+}
+@media (max-width: 960px) {
+  .card-product-header-info__name-pages-wrapper {
+    padding: 12px 0 16px 16px;
+  }
 }
 .card-product-header-info__page-title {
   font-family: "Mulish", sans-serif;
@@ -5753,6 +5798,15 @@ body.lock {
   text-transform: uppercase;
   color: #ffffff;
   transition: all 0.3s;
+}
+@media (max-width: 960px) {
+  .card-product-header-info__main-item-title {
+    font-size: 2rem;
+    line-height: 44px;
+    font-weight: 800;
+    max-width: 320px;
+    width: 100%;
+  }
 }
 
 .modal-zoom {
@@ -6280,6 +6334,12 @@ body.lock {
   top: -12px;
   transition: all 0.3s;
 }
+@media (max-width: 960px) {
+  .novelty {
+    right: 72px;
+    top: 28px;
+  }
+}
 .novelty__wrapper {
   padding: 2px 10px;
   border-radius: 1px;
@@ -6357,6 +6417,7 @@ body.lock {
 }
 
 .card-product-all-info {
+  display: none;
   margin-bottom: 100px;
   padding-top: 256px;
   background: #ffffff;
@@ -6780,6 +6841,7 @@ body.lock {
 }
 
 .card-product-characteristics {
+  display: none;
   margin-bottom: 200px;
   scroll-margin-top: 200px;
 }
@@ -6891,6 +6953,7 @@ body.lock {
 }
 
 .card-product-reviews {
+  display: none;
   scroll-margin-top: 200px;
 }
 .card-product-reviews__wrapper {
@@ -7055,6 +7118,7 @@ body.lock {
 }
 
 .card-product-gallery {
+  display: none;
   background-color: #F8F7F7;
   scroll-margin-top: 100px;
 }
@@ -7099,6 +7163,7 @@ body.lock {
 }
 
 .card-product-spare-parts {
+  display: none;
   background-color: #F8F7F7;
   scroll-margin-top: 120px;
 }

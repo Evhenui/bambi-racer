@@ -14,6 +14,7 @@
     z-index: 5;
     &.active {
       background-color: $color-gray-100;
+
     }
     &.active .card-product-navigation__wrapper{
       padding: 0;
@@ -25,10 +26,14 @@
       justify-content: space-between;
       padding: 0 48px;
       align-items: center;
+     
     }
     &.active &__wrapper-section {
       display: flex;
       column-gap: 32px;
+      @media (max-width: 1200px) {
+        column-gap: 5px;
+      }
     }
     &.active &__pages{
       height: 0;
@@ -38,6 +43,11 @@
     }
     &.active &__main-item-title {
       font-size: 32px;
+    }
+    &.active .card-product-navigation__menu {
+      @media (max-width: 1200px) {
+        column-gap: 3px;
+      }
     }
     &.active .novelty {
       right: -96px;
@@ -50,23 +60,33 @@
     &.active &__hidden-image {
       width: 80px;
       height: 80px;
+      @media (max-width: 960px) {
+        display: none;
+      }
     }
     &.active .card-product-navigation {
       padding-left: 0;
     }
     &.active .card-product-navigation__item {
       padding-top: 4px;
+      @media (max-width: 1200px) {
+        padding: 4px 8px 12px 8px;
+      }
     }
     &.active &__hidden-buttons {
       display: flex;
     }
     //------------------
     &__hidden-buttons {
-      padding-top: 20px;
+      padding-top: 25px;
       display: none;
       column-gap: 20px;
       max-width: 237px;
       width: 100%;
+      @media (max-width: 1200px) {
+        column-gap: 5px;
+        justify-content: end;
+      }
     }
 
     &__hidden-price {
@@ -91,8 +111,13 @@
       line-height: 20px;
       color: $color-white;
       white-space: nowrap;
+      @media (max-width: 1200px) {
+        font-size: 0.875rem;
+      }
     }
   .card-product-all-info {
+    //----------------------------------------------------
+   
       &__hidden-button {
         display: flex;
         justify-content: center;
@@ -102,6 +127,15 @@
         max-width: 109px;
         width: 100%;
         flex: 1 0 auto;
+        .card-product-all-info__button-text {
+          @media (max-width: 1200px) {
+            display: none;
+          }
+        }
+        @media (max-width: 1200px) {
+          max-width: 44px;
+          flex: 1;
+        }
       }
   }
  
@@ -119,7 +153,7 @@
         width: 210px;
         transition: height .3s;
       @media (max-width: 960px) {
-        display: none;
+   
       }
     }
 
@@ -127,6 +161,9 @@
     &__name-pages-wrapper {
         padding: 24px 0 16px 48px;
         @extend %size-page;
+        @media (max-width: 960px) {
+          padding: 12px 0 16px 16px;
+        }
     }
   
     &__page-title {
@@ -148,6 +185,13 @@
         text-transform: uppercase;
         color: $color-white;
         transition: all .3s;
+        @media (max-width: 960px) {
+          font-size: 2rem;
+          line-height: 44px;
+          font-weight: 800;
+          max-width: 320px;
+          width: 100%;
+        }
     }
   }
 //-----------------modal zoom----------------------------------
@@ -760,6 +804,10 @@
     right: -58px;
     top: -12px;
     transition: all .3s;
+    @media (max-width: 960px) {
+      right: 72px;
+      top: 28px;
+    }
     &__wrapper {
         padding: 2px 10px;
         border-radius: 1px;
@@ -836,6 +884,8 @@
   }
 //-----------------all information-----------------------------
   .card-product-all-info {
+    //----------------------------------------
+    display: none;
     margin-bottom: 100px;
     padding-top: 256px;
     background: $color-white;
@@ -1302,6 +1352,8 @@
 
 //-----------------characteristics------------------------------
 .card-product-characteristics {
+  //--------------------------------------------
+  display: none;
   margin-bottom: 200px;
   scroll-margin-top: 200px;
   &__wrapper {
@@ -1427,6 +1479,8 @@
 }
 //-----------------reviews--------------------------------------
 .card-product-reviews {
+  display: none;
+  //---------------------------------------------
   scroll-margin-top: 200px;
   &__wrapper {
     @extend %size-page;
@@ -1620,6 +1674,8 @@
 }
 //-----------------gallery--------------------------------------
 .card-product-gallery {
+  display: none;
+  //----------------------------------------------
   background-color: #F8F7F7;
   scroll-margin-top: 100px;
   &__wrapper {
@@ -1672,6 +1728,8 @@
 }
 //-----------------spare part--------------------------------------------
 .card-product-spare-parts {
+  display: none;
+  //--------------------------------------------
   background-color: #F8F7F7;
   scroll-margin-top: 120px;
   &__wrapper {
