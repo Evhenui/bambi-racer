@@ -94,6 +94,7 @@ export let cardProductSliders = function () {
           pagination: {
             el: ".card-product-spare-parts__pagination",
             clickable: true,
+            type: 'bullets',
             renderBullet: function (index, className) {
               return '<span class="' + className + '">' + (index + 1) + "</span>";
             },
@@ -106,15 +107,20 @@ export let cardProductSliders = function () {
             },
             680: {
               slidesPerView: 3,
+              pagination: {
+                el: ".card-product-spare-parts__pagination",
+                clickable: true,
+                bulletClass: `swiper-pagination-bullet swiper-pagination-testClass`
+               
+              },
+
             },
-            460: {
-              slidesPerView: 2,
+            640: {
+              slidesPerView: 2.2,
             },
-            440: {
-              slidesPerView: 1.2,
-            },
+           
             0: {
-              slidesPerView: 1.1,
+              slidesPerView: 1.5,
               spaceBetween: 16,
             },
           },

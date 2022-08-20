@@ -1963,16 +1963,16 @@
 }
 //-----------------spare part--------------------------------------------
 .card-product-spare-parts {
-  display: none;
-  //--------------------------------------------
   background-color: #F8F7F7;
   scroll-margin-top: 120px;
   &__wrapper {
     padding: 100px 48px 100px 48px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @extend %size-page;
+    @extend %centre-flex-columb;
+    @media (max-width: 1458px) {
+      @include padding-mob;
+    }
+    
   }
 
   &__title {
@@ -1994,6 +1994,11 @@
       align-items: center;
       min-height: 44px;
     }
+    &__img {
+      @media (max-width: 640px) {
+        max-width: 100%;
+      }
+    }
     &__button-next.swiper-button-next{
       position: static;
       display: block;
@@ -2010,12 +2015,21 @@
     }
     &__pagination.swiper-pagination {
       position: static;
-      max-width: 200px;
-      width: 100%;
       display: flex;
       align-items: baseline;
       justify-content: center;
       column-gap: 16px;
+    }
+    &__card-prod-catalog {
+      @media (max-width: 1458px) {
+        width: 100%;
+      }
+      @media (max-width: 1324px) {
+        width: 100%;
+      }
+    }
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+      width: auto;
     }
 
     &__pagination .swiper-pagination-bullet {
@@ -2070,6 +2084,7 @@
   bottom: 160px;
   right: 4px;
   transition: all .3s ease-in-out;
+  z-index: 1;
   &.active {
     opacity: 1;
     width: 40px;
@@ -2321,20 +2336,29 @@
 
   &__slider-navigation {
     @extend %centre-flex;
+    column-gap: 16px;
   }
 
   &__button-prev {
     cursor: pointer;
   }
+  &__button-prev, &__button-next {
+    @media (max-width: 680px) {
+      display: none;
+    }
+  }
+  &__button-prev.swiper-button-disabled, &__button-next.swiper-button-disabled {
+    opacity: 0.35;
+    cursor: auto;
+    pointer-events: none;
+  }
   &__button-prev:hover &__button-prev-svg{
     fill: #C12125;
   }
   &__pagination {
-    max-width: 120px;
     display: flex;
     justify-content: center;
     column-gap: 16px;
-    width: 100%;
     .swiper-pagination-bullet {
       text-align: center;
       &:hover {
@@ -2349,3 +2373,4 @@
     fill: #C12125;
   }
 }
+
