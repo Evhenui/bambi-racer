@@ -107,13 +107,6 @@ export let cardProductSliders = function () {
             },
             680: {
               slidesPerView: 3,
-              pagination: {
-                el: ".card-product-spare-parts__pagination",
-                clickable: true,
-                bulletClass: `swiper-pagination-bullet swiper-pagination-testClass`
-               
-              },
-
             },
             640: {
               slidesPerView: 2.2,
@@ -121,6 +114,34 @@ export let cardProductSliders = function () {
            
             0: {
               slidesPerView: 1.5,
+              spaceBetween: 16,
+            },
+          },
+      });
+      //-----slider picture---
+      const sliderPictures = new Swiper('.card-product-gallery__slider', {
+        pagination: {
+          el: ".card-product-gallery__slider-pagination",
+          clickable: true,
+          type: 'bullets',
+        },
+          slidesPerView: 4,
+          spaceBetween: 16,
+          breakpoints: {
+            640: {
+              slidesPerView: 3,
+              spaceBetween: 16,
+            },
+            480: {
+              slidesPerView: 2,
+              spaceBetween: 16,
+            },
+            376: {
+              slidesPerView: 1.5,
+              spaceBetween: 16,
+            },
+            0: {
+              slidesPerView: 1.1,
               spaceBetween: 16,
             },
           },

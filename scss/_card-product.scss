@@ -845,14 +845,7 @@
 
   }
 }
-.modal-zoom {
 
-  &__mask {
-  }
-
-  &__wrapper {
-  }
-}
 .btn-white {
   &:disabled {
     color: $color-gray-60;
@@ -956,8 +949,6 @@
   }
 //-----------------all information-----------------------------
   .card-product-all-info {
-    //----------------------------------------
-    display: none;
     margin-bottom: 100px;
     padding-top: 256px;
     background: $color-white;
@@ -1022,10 +1013,13 @@
     
 
 		&__vendor-code-section {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      @extend %centre-space-between;
       margin-bottom: 20px;
+      @media (max-width: 1050px) {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 8px;
+      }
 		}
 
 		&__product-code {
@@ -1070,6 +1064,9 @@
       align-items: center;
       padding-right: 12px;
       position: relative;
+      @media (max-width: 1180px) {
+        justify-content: flex-start;
+      }
 		}
     &__active-link.share.active .card-product-all-info__share-svg{
       fill: #C12125;
@@ -1085,6 +1082,10 @@
       top: 39px;
       right: 5px;
       transition: all .2s;
+      @media (max-width: 1180px) {
+        left: 0;
+        right: 0;
+      }
     }
     &__hidden-navigation.active {
       opacity: 1;
@@ -1164,6 +1165,9 @@
       flex-direction: column;
       row-gap: 8px;
       margin-bottom: 44px;
+      @media (max-width: 1324px) {
+        margin-bottom: 22px;
+      }
 		}
 
 		&__change-color {
@@ -1220,14 +1224,30 @@
           border: 1px solid #cecaca;
         }
       }
-
 		}
+
+    &__header-wrapper {
+      @media (max-width: 1324px) {
+      margin-bottom: 60px;
+      }
+      @media (max-width: 1180px) {
+        margin-bottom: 75px;
+      }
+    }
 
 		&__buy {
       display: flex;
       column-gap: 45px;
       align-items: center;
       margin-bottom: 36px;
+      @media (max-width: 1324px) {
+        column-gap: 20px;
+      }
+      @media (max-width: 1250px) {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 10px;
+      }
 		}
 
     .card-product-description.full-price {
@@ -1267,6 +1287,13 @@
       display: flex;
       align-items: center;
       column-gap: 24px;
+      @media (max-width: 1324px) {
+        column-gap: 10px;
+      }
+      @media (max-width: 1050px) {
+        flex-direction: column;
+        row-gap: 8px;
+      }
 		}
 
 		&__button-buy {
@@ -1282,6 +1309,9 @@
     &__button-buy.inactive {
       background-color: #9C9696;
       cursor: default;
+    }
+    &__button-buy-on-click {
+      white-space: nowrap;
     }
     &__button-buy-on-click.inactive {
       cursor: default;
@@ -1909,8 +1939,6 @@
 }
 //-----------------gallery--------------------------------------
 .card-product-gallery {
-  display: none;
-  //----------------------------------------------
   background-color: #F8F7F7;
   scroll-margin-top: 100px;
   &__wrapper {
@@ -1920,6 +1948,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media (max-width: 860px) {
+      @include padding-mob;
+    }
   }
 
   &__title {
@@ -1930,12 +1961,60 @@
     display: flex;
     justify-content: space-between;
     column-gap: 20px;
+    @media (max-width: 860px) {
+      display: none;
+    }
   }
+//--------------slider-------
+
+&__pictures-slider {
+  display: none;
+  width: 100%;
+  overflow: hidden;
+  @media (max-width: 860px) {
+    display: block;
+  }
+}
+
+&__pictures-slider-wrapper {
+}
+
+&__slider {
+}
+
+&__slider-wrapper {
+  margin-bottom: 20px;
+}
+
+&__slider-slide {
+}
+
+&__slider-slide-image-wrapper {
+  max-width: 324px;
+  width: 100%;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+&__slider-navigation {
+  
+}
+&__slider-pagination {
+  @extend %centre-flex;
+  .swiper-pagination-bullet-active {
+    background: $color-red;
+  }
+}
+
+
+
+//---------------------------
 
   &__big-pictures {
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 20px; 
   }
 
   &__big-picture-item-wrapper {
@@ -1972,7 +2051,9 @@
     @media (max-width: 1458px) {
       @include padding-mob;
     }
-    
+    @media (max-width: 960px) {
+      padding-top: 80px;
+    }
   }
 
   &__title {
