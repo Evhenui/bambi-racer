@@ -45,7 +45,7 @@ export let cardProductSliders = function () {
 
       //----slider main------
       const sliderMain = new Swiper('.main-slider__container-navigation', {
-        direction: 'vertical',
+        direction: 'horizontal',
         slidesPerView: 6, 
         spaceBetween: 12, 
         navigation: { 
@@ -55,9 +55,12 @@ export let cardProductSliders = function () {
         freeMode: true, 
         breakpoints: { 
         0: { 
+            slidesPerView: 4.6, 
+            spaceBetween: 8, 
             direction: 'horizontal',
         },
-        768: { 
+        960: { 
+            spaceBetween: 12, 
             direction: 'vertical', 
         }
         }
@@ -65,7 +68,6 @@ export let cardProductSliders = function () {
       const sliderMainNav = new Swiper('.main-slider__container-basic', {
         direction: 'horizontal',
         slidesPerView: 1,
-        spaceBetween: 32,
         mousewheel: true,
         navigation: {
         nextEl: '.main-slider__button-next', 
@@ -73,7 +75,7 @@ export let cardProductSliders = function () {
         },
         grabCursor: true,
         thumbs: { 
-        swiper: sliderMain 
+        swiper: sliderMain
         },
         breakpoints: {
         0: { 
@@ -84,7 +86,6 @@ export let cardProductSliders = function () {
         }
         }
       }); 
-
       //----slider footer----
       const sliderFooter = new Swiper('.card-product-spare-parts__slider-container', {
         navigation: {
@@ -146,6 +147,8 @@ export let cardProductSliders = function () {
             },
           },
       });
+
+
 
     }
 }
