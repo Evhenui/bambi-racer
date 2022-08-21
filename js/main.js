@@ -25,6 +25,9 @@ import {cardProduct}  from './card-product.js';
 import {cardProductSliders}  from './card-product-sliders.js';
         cardProductSliders(); 
 
+import {basket}  from './basket.js';
+        basket(); 
+
 window.onload = function () {
 
     const bodyCont = document.getElementById('body-cont');
@@ -55,7 +58,7 @@ window.onload = function () {
     //каталог в меню
     
     const btnCMenuCatalog = document.querySelectorAll('.js-menu-btn');
-    console.log(btnCMenuCatalog)
+    //console.log(btnCMenuCatalog)
     btnCMenuCatalog.forEach((el) => {
         el.addEventListener('click', function () {
             el.closest('.js-menu-wrp').querySelector('.header__menu-item-link-wrp').classList.toggle('active');

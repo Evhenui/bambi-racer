@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="icon/favicon-black.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script type="module" src="js/main.js"></script>
+    <title>Bambi racer</title>
+</head>
+
+<body id="body-cont">
+    <header class="header">
+        <div class="header__wrp">
+            <div class="header__wrp-left-cont js-mob-item-active-left">
+                <a class="header__wrp-left-cont-link-logo" href="#">
+                    <img class="header__left-img-logo js-mob-item-active" src="img/heder-logo-img.svg"
+                        alt="Bambi Racer">
+                    <img class="header__left-img-logo-mob js-mob-item" src="img/heder-logo-mob-img.svg"
+                        alt="Bambi Racer">
+                </a>
+                <div class="header__btn-catalog-wrp js-mob-item">
+                    <button class="header__btn-catalog btn-red js-header-btn-catalog">
+                        <img src="icon/header-catalog-icon.svg" alt="catalog">
+                        <span class="header__btn-catalog-text">Каталог</span>
+                    </button>
+                    <div class="header__catalog-wrp js-header-catalog">
+                        <div class="header__catalog-item-wrp">
+                            <a href="#">Электромобили</a>
+                            <span class="red-diamonds"></span>
+                        </div>
+                        <div class="header__catalog-item-wrp">
+                            <a href="#">Металлические квадроциклы</a>
+                            <span class="red-diamonds"></span>
+                        </div>
+                        <div class="header__catalog-item-wrp">
+                            <a href="#">Велокарты</a>
+                            <span class="red-diamonds"></span>
+                        </div>
+                        <div class="header__catalog-item-wrp">
+                            <a href="#">Каталки-толокары</a>
+                            <span class="red-diamonds"></span>
+                        </div>
+                        <div class="header__catalog-item-wrp">
+                            <a href="#">Запчасти и Комплектующие</a>
+                            <span class="red-diamonds"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__languages-wrp js-mob-item-active">
+                    <button class="header__languages-btn active js-header-languages">ru</button>
+                    <span class="header__languages-btn-line"></span>
+                    <button class="header__languages-btn js-header-languages">ua</button>
+                </div>
+            </div>
+            <div class="header__wrp-right-cont js-mob-item-active-right">
+                <form class="header__search-form-wrp js-search js-mob-item">
+                    <input class="header__search-input js-search-input" type="text">
+                    <button class="header__btn-search js-btn-search">
+                        <img class="header__btn-search-img" src="icon/header-search-icon.svg" alt="">
+                        <img class="header__btn-search-img-hov" src="icon/header-search-icon-hov.svg" alt="">
+                    </button>
+                    <div class="header__btn-search-close js-btn-search-mob-close">
+                        <span class="header__btn-search-close-line header__btn-search-close-line-r"></span>
+                        <span class="header__btn-search-close-line header__btn-search-close-line-l"></span>
+                    </div>
+                </form>
+                <div class="header__right-item js-mob-item js-phone">
+                    <a class="header__right-item-phone" href="#">
+                        <img class="header__right-item-icon header__right-item-phone-img js-mob-item"
+                            src="icon/header-phone-icon.svg" alt="">
+                    </a>
+                    <div class="header__phone-menu js-phone-menu">
+                        <div class="header__phone-menu-schedule">
+                            <p>Звоните</p>
+                            <div class="header__phone-menu-schedule-time">
+                                <p>с 08:00 до 17:00 </p>
+                                <p>Сб, Вс - выходные</p>
+
+                            </div>
+                        </div>
+                        <div class="header__phone-menu-schedule-link-wrp">
+                            <a class="header__phone-menu-schedule-link" href="tel:+380931234577">
+                                <img src="icon/header-phone-call-icon.svg" alt="">
+                                <span>+38(093)123-45-77</span>
+                            </a>
+                        </div>
+                        <p class="header__phone-menu-schedule-or">Или</p>
+                        <p class="header__phone-menu-schedule-text">Оставьте номер телефона и мы перезвоним</p>
+                        <form>
+                            <div class="header__phone-menu-schedule-input input-wrp">
+                                <span class="input-wrp__text">Введите номер телефона</span>
+                                <input type="tel" name="" id="" placeholder="+38(0__)___-__-__">
+                            </div>
+
+                            <button class="btn-red header__phone-menu-schedule-btn">Перезвоните мне</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- <a class="header__right-item" href="tel:+">
+                    <img class="header__right-item-icon js-mob-item" src="icon/header-phone-icon.svg" alt="">
+                </a> -->
+                <a class="header__right-item" href="#">
+                    <img class="header__right-item-icon header__right-item-icon-size js-mob-item"
+                        src="icon/header-comparison-icon.svg" alt="">
+                    <span class="header__right-item-amount number-amount">5</span>
+                </a>
+                <button class="header__right-item js-mob-item">
+                    <img class="header__right-item-icon header__right-item-icon-size" src="icon/header-basket-icon.svg"
+                        alt="">
+                    <span class="header__right-item-amount number-amount">5</span>
+                </button>
+                <button class="header__right-item">
+                    <img class="header__right-item-icon header__right-item-icon-size"
+                        src="icon/header-personal-area-icon.svg" alt="">
+                </button>
+                <div class="header__right-wrp-menu">
+                    <button class="header__menu-btn-wrp js-btn-menu">
+                        <span class="header__menu-btn-line"></span>
+                    </button>
+                    <div class="header__menu-wrp js-menu">
+                        <div class="header__menu-section-wrp">
+                            <div class="header__menu-personal-wrp">
+                                <img src="icon/header-personal-area-icon.svg" alt="personal">
+                                <div class="header__menu-personal-login">
+                                    <a href="#">Вход</a>
+                                    <span class="header__menu-personal-line-vertical"></span>
+                                    <a href="#">Регистрация</a>
+                                </div>
+
+                            </div>
+                            <span class="header__menu-personal-line"></span>
+                            <div class="header__menu-personal-basket-comparison">
+                                <a class="header__menu-personal-basket">
+                                    <img src="icon/header-basket-icon.svg" alt="basket">
+                                    <span>Корзина</span>
+                                    <span class="number-amount">500</span>
+                                </a>
+                                <a class="header__menu-personal-comparison">
+                                    <img src="icon/header-comparison-icon.svg" alt="basket">
+                                    <span>Сравнение</span>
+                                    <span class="number-amount">500</span>
+                                </a>
+                            </div>
+                            <span class="header__menu-personal-line"></span>
+                            <div class="header__menu-section-item">
+                                <div class="js-menu-wrp header__menu-section">
+                                    <div class="header__menu-name-categoty-wrp js-menu-btn">
+                                        <h2 class="header__menu-name-categoty">Каталог</h2>
+                                        <img class="header__menu-name-categoty-icon active"
+                                            src="icon/arrow-white-icon.svg" alt="">
+                                    </div>
+                                    <div class="header__menu-item-link-wrp active">
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Весь каталог</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Электромобили</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Металлические квадроциклы</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Велокарты</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Каталки-толокары</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="js-menu-wrp header__menu-section">
+                                    <div class="header__menu-name-categoty-wrp js-menu-btn">
+                                        <h2 class="header__menu-name-categoty">О компании</h2>
+                                        <img class="header__menu-name-categoty-icon" src="icon/arrow-white-icon.svg"
+                                            alt="">
+                                    </div>
+                                    <div class="header__menu-item-link-wrp">
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">О компании</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Оплата и доставка</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Гарантия и сервис</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Стать партнером</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Контакты</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Text</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="js-menu-wrp header__menu-section">
+                                    <div class="header__menu-name-categoty-wrp js-menu-btn">
+                                        <h2 class="header__menu-name-categoty">Сервис и поддержка</h2>
+                                        <img class="header__menu-name-categoty-icon" src="icon/arrow-white-icon.svg"
+                                            alt="">
+                                    </div>
+                                    <div class="header__menu-item-link-wrp">
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">FAQ</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Возврат и обмен</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Инструкции</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                        <a class="header__menu-item-link" href="#">
+                                            <p class="header__menu-item-text">Text</p>
+                                            <span class="header__menu-item-text-diamond red-diamonds"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="header__menu-section">
+                                    <div class="header__menu-name-categoty-wrp js-menu-btn">
+                                        <a href="#">
+                                            <h2 class="header__menu-name-categoty">Блог</h2>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="header__menu-work-time">
+                            <p class="header__menu-work-time-title-text">График работы</p>
+                            <div class="header__menu-work-time-timeline-wrp">
+                                <div class="header__menu-work-time-timeline">
+                                    <p>
+                                        с 08:00 до 17:00
+                                    </p>
+                                    <p>
+                                        Сб, Вс - выходные
+                                    </p>
+                                </div>
+                                <div class="header__menu-work-time-timeline">
+                                    <a href="tel:+380931234577">+38(093)123-45-77</a>
+                                    <a href="tel:+380931234577">+38(093)123-45-77</a>
+                                </div>
+                            </div>
+                            <div class="header__menu-social">
+                                <a href="#">
+                                    <img src="icon/header-faceboock-icon.svg" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="icon/header-telegram-icon.svg" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="icon/header-instogram-icon.svg" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="icon/header-youtube-icon.svg" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="icon/header-viber-icon.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <main class="js-main">
+      <section class="basket">
+        <div class="basket__wrapper">
+          <section class="basket__header">
+            <div class="basket__header-wrapper">
+              <h1 class="basket__title"></h1>
+            </div>
+          </section>
+
+          <section class="basket__ordering">
+            <div class="basket__ordering-wrapper">
+              <section class="basket__inputs-data">
+                <div class="basket__inputs-data-wrapper">
+                  <header class="basket__inputs-data-header">
+                    <div class="basket__inputs-data-header-wrapper">
+                      <nav class="basket__inputs-data-navigation">
+                        <ul class="basket__inputs-data-navigation-list">
+                          <li class="basket__inputs-data-navigation-item">
+                            <a class="basket__inputs-data-navigation-link" href="#">Новый покупатель</a>
+                          </li>
+                          <li class="basket__inputs-data-navigation-item">
+                            <a class="basket__inputs-data-navigation-link" href="#">Постоянный клиент</a>
+                          </li>
+                        </ul>
+                      </nav>                     
+                    </div>
+                  </header>
+                  <main class="basket__inputs-data-main">
+                    <div class="basket__inputs-data-main-wrapper">
+
+                      <section class="basket__inputs-contact-details">
+                        <div class="basket__inputs-contact-details-wrapper">
+                          <h1 class="basket__subtitle basket__inputs-tilte">1. Контактные данные</h1>
+                          <section class="basket__inputs">
+                            <div class="basket__inputs-wrapper">
+
+                              <div class="basket__wrapper-input personal-area-private-data__wrapper-input">
+                                <input data-input-name type="text" class="basket__input personal-area-private-data__input js-input" required/>
+                                <label data-label-name class="basket__label personal-area-private-data__label">Имя</label>
+                              </div>
+              
+                              <div class="basket__wrapper-input personal-area-private-data__wrapper-input">
+                                <input data-input-surname type="text" class="basket__input personal-area-private-data__input js-input" required/>
+                                <label data-label-surname class="basket__label personal-area-private-data__label">Фамилия</label>
+                              </div>
+              
+                              <div class="basket__wrapper-input personal-area-private-data__wrapper-input">
+                                <input data-input-tel maxlength="19" type="tel" class="basket__input personal-area-private-data__input js-input" required/>
+                                <label data-label-tel class="basket__label personal-area-private-data__label">Номер телефона</label>
+                              </div>
+              
+                              <div class="basket__wrapper-input personal-area-private-data__wrapper-input personal-area-private-data__wrapper-input-email">
+                                <input data-input-email type="text" class="basket__input personal-area-private-data__input js-input" required/>
+                                <label data-label-email class="basket__label personal-area-private-data__label" >Email</label>
+                              </div>
+
+                            </div>
+                          </section>
+                        </div>
+                      </section>
+
+                      <section class="basket__inputs-delivery">
+                        <div class="basket__inputs-delivery-wrapper">
+                          <h1 class="basket__subtitle basket__inputs-tilte">2. Способ доставки</h1>
+                          <section class="basket__inputs">
+                            <div class="basket__inputs-wrapper">
+
+                              <section class="basket__inputs-select-post">
+
+                                <div class="personal-area-private-data__wrapper-input-checkbox personal-area-private-data__wrapper-input">
+                                  <input class="personal-area-private-data__checkbox custom-checkbox js-input js-input-checkbox" type="checkbox" id="personal-area-private-data__checkbox"/>
+                                  <label for="personal-area-private-data__checkbox" class="personal-area-private-data__label personal-area-private-data__label-checkbox">Получать рассылку с акциями и новинками</label>
+                                </div>
+
+                                <div class="personal-area-private-data__wrapper-input-checkbox personal-area-private-data__wrapper-input">
+                                  <input class="personal-area-private-data__checkbox custom-checkbox js-input js-input-checkbox" type="checkbox" id="personal-area-private-data__checkbox"/>
+                                  <label for="personal-area-private-data__checkbox" class="personal-area-private-data__label personal-area-private-data__label-checkbox">Получать рассылку с акциями и новинками</label>
+                                </div>
+
+                              </section>
+                             
+                              <section class="basket__inputs-select-place">
+
+                              </section>
+                            </div>
+                          </section>
+                        </div>
+                      </section>
+                    </div>
+                  </main>
+                </div>
+              </section>
+              <section data-my-order-mobile-accordion class="my-order">
+                <div class="my-order__wrapper">
+                    <header class="my-order__header">
+                      <div class="my-order__header-wrapper">
+                        <h1 class="basket__title my-order">Корзина</h1>
+                        <a class="my-order__edit-order" href="#">Редактировать заказ</a>
+                        <div class="my-order__arrow-mobile">
+                          <button class="my-order__arrow">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M16.7071 17.2929L16 16.5858L14.5858 18L15.2929 18.7071L16.7071 17.2929ZM20 22L19.2929 22.7071L20 23.4142L20.7071 22.7071L20 22ZM24.7071 18.7071L25.4142 18L24 16.5858L23.2929 17.2929L24.7071 18.7071ZM15.2929 18.7071L19.2929 22.7071L20.7071 21.2929L16.7071 17.2929L15.2929 18.7071ZM20.7071 22.7071L24.7071 18.7071L23.2929 17.2929L19.2929 21.2929L20.7071 22.7071Z" fill="#4E4B4B"/>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </header>
+                    <section data-my-order-mobile-full-information class="my-order__main my-order__full-information">
+                      <div class="my-order__main-wrapper">
+                        <section class="my-order__items">
+                          <section class="my-order__order-item">
+                            <div class="my-order__order-item-wrapper">
+                              <div class="my-order__item-image-wrapper">
+                                <img class="my-order__item-image" src="img/basket-item_2.png" alt="name product" width="60" height="60">
+                              </div>
+                              <p class="basket__subtitle my-order__item-name">Название товара какое-то оооооооооочень длинное</p>
+                              <section class="my-order__price">
+                                <p class="basket__subtitle my-order__real-price">1234,76 грн</p>
+                              </section>
+                            </div>
+                          </section>
+                          <section class="my-order__order-item">
+                            <div class="my-order__order-item-wrapper">
+                              <div class="my-order__item-image-wrapper">
+                                <img class="my-order__item-image" src="img/basket-item_1.png" alt="name product" width="60" height="60">
+                              </div>
+                              <p class="basket__subtitle my-order__item-name">Название товара какое-то оооооооооочень длинное</p>
+                              <section class="my-order__price">
+                                <p class="basket__subtitle my-order__old-price">1234,76 грн</p>
+                                <p class="basket__subtitle my-order__real-price">1234,76 грн</p>
+                              </section>
+                            </div>
+                          </section>
+                          <section class="my-order__order-item">
+                            <div class="my-order__order-item-wrapper">
+                              <div class="my-order__item-image-wrapper">
+                                <img class="my-order__item-image" src="img/basket-item_3.png" alt="name product" width="60" height="60">
+                              </div>
+                              <p class="basket__subtitle my-order__item-name">Название товара какое-то оооооооооочень длинное</p>
+                              <section class="my-order__price">
+                                <p class="basket__subtitle my-order__real-price">1234,76 грн</p>
+                              </section>
+                            </div>
+                          </section>
+                          <section class="my-order__order-item">
+                            <div class="my-order__order-item-wrapper">
+                              <div class="my-order__item-image-wrapper">
+                                <img class="my-order__item-image" src="img/basket-item_4.png" alt="name product" width="60" height="60">
+                              </div>
+                              <p class="basket__subtitle my-order__item-name">Название товара какое-то оооооооооочень длинное</p>
+                              <section class="my-order__price">
+                                <p class="basket__subtitle my-order__real-price">1234,76 грн</p>
+                              </section>
+                            </div>
+                          </section>
+                        </section>
+                        <section class="my-order__footer">
+                          <div class="my-order__footer-wrapper">
+                            <section class="my-order__total-price">
+                              <span class="basket__subtitle my-order__total">Итого:</span>
+                              <span class="basket__subtitle my-order__total-price-text">32796,76 грн</span>
+                            </section>
+                          </div>
+                        </section>
+                      </div>
+                    </section>
+                </div> 
+              </section>
+            </div>
+          </section>
+          
+          <section data-modal-basket class="modal-basket">
+            <div class="modal-zoom__mask modal-basket__mask">
+              <div class="modal-zoom__wrapper modal-basket__wrapper">
+                 <!--add div class "empty" if out of stock-->
+                <div data-modal-basket-container class="modal-basket__container">
+                  <!---------------------------------------->
+                  <header class="modal-basket__header">
+                      <div class="modal-basket__header-wrapper">
+                        <h1 class="modal-basket__title">корзина</h1>
+                        <section class="modal-basket__buttons-header">
+                          <button class="modal-basket__button-clean">Очистить корзину</button>
+                          <button data-close-modal-basket class="modal-basket__button-close">
+                            <svg class="modal-basket__button-close-svg" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path class="modal-basket__button-close-svg-line" d="M14 15.4545L15.4545 14L30 28.5454L28.5454 29.9999L14 15.4545Z" fill="#090102"/>
+                              <path class="modal-basket__button-close-svg-line" d="M28.5459 14L30.0004 15.4545L15.455 30L14.0005 28.5454L28.5459 14Z" fill="#090102"/>
+                            </svg>  
+                          </button>
+                        </section>
+                      </div>
+                  </header>
+                  <main class="modal-basket__main">
+                    <div class="modal-basket__main-wrapper">
+                      <section class="modal-basket__order">
+                        <div class="modal-basket__order-wrapper">
+                          <section class="modal-basket__left-order-section">
+                            <div class="modal-basket__order-img-wrapper">
+                              <img class="modal-basket__order-img" src="img/basket-item_1.png" alt="car" width="60" height="60">
+                            </div>
+                            <p class="modal-basket__order-name-item">Название товара какое-то оооооооооочень длинное</p>
+                            <button class="modal-basket__button-delete mobile">
+                              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="modal-basket__button-delete-hover" cx="22" cy="22" r="22" fill="white"/>
+                                <path class="modal-basket__button-delete-acitve" d="M18 26L26 18" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path class="modal-basket__button-delete-acitve" d="M18 18L26 26" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </button>
+                          </section>
+                          <section class="modal-basket__right-order-section">
+                            <section class="modal-basket__amount-item">
+                              <button class="modal-basket__button-minus">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="white"/>
+                                  <rect class="modal-basket__button-minus-svg" x="9" y="15" width="14" height="2" rx="1" fill="#CECACA"/>
+                                </svg> 
+                              </button>
+                              <p class="modal-basket__amount">1</p>
+                              <button class="modal-basket__button-plus">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="white"/>
+                                  <rect x="9" y="15" width="14" height="2" rx="1" fill="#C12125"/>
+                                  <rect x="15" y="23" width="14" height="2" rx="1" transform="rotate(-90 15 23)" fill="#C12125"/>
+                                </svg>
+                              </button>
+                            </section>
+                            <section class="modal-basket__price">
+                              <span class="modal-basket__old-price">2796,76 грн</span>
+                              <span class="modal-basket__full-price discont">1796,76 грн</span>
+                            </section>
+                            <button class="modal-basket__button-delete">
+                              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="modal-basket__button-delete-hover" cx="22" cy="22" r="22" fill="white"/>
+                                <path class="modal-basket__button-delete-acitve" d="M18 26L26 18" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path class="modal-basket__button-delete-acitve" d="M18 18L26 26" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </button>
+                          </section>
+                        </div>
+                      </section>
+                      <section class="modal-basket__order">
+                        <div class="modal-basket__order-wrapper">
+                          <section class="modal-basket__left-order-section">
+                            <div class="modal-basket__order-img-wrapper">
+                              <img class="modal-basket__order-img" src="img/basket-item_2.png" alt="car" width="60" height="60">
+                            </div>
+                            <p class="modal-basket__order-name-item">Название товара какое-то оооооооооочень длинное</p>
+                            <button class="modal-basket__button-delete mobile">
+                              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="modal-basket__button-delete-hover" cx="22" cy="22" r="22" fill="white"/>
+                                <path class="modal-basket__button-delete-acitve" d="M18 26L26 18" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path class="modal-basket__button-delete-acitve" d="M18 18L26 26" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </button>
+                          </section>
+                          <section class="modal-basket__right-order-section">
+                            <section class="modal-basket__amount-item">
+                              <button class="modal-basket__button-minus">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="white"/>
+                                  <rect class="modal-basket__button-minus-svg active" x="9" y="15" width="14" height="2" rx="1" fill="#CECACA"/>
+                                </svg> 
+                              </button>
+                              <p class="modal-basket__amount">2</p>
+                              <button class="modal-basket__button-plus">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="white"/>
+                                  <rect x="9" y="15" width="14" height="2" rx="1" fill="#C12125"/>
+                                  <rect x="15" y="23" width="14" height="2" rx="1" transform="rotate(-90 15 23)" fill="#C12125"/>
+                                </svg>
+                              </button>
+                            </section>
+                            <section class="modal-basket__price">
+                              <span class="modal-basket__full-price">1234,76 грн</span>
+                            </section>
+                            <button class="modal-basket__button-delete">
+                              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="modal-basket__button-delete-hover" cx="22" cy="22" r="22" fill="white"/>
+                                <path class="modal-basket__button-delete-acitve" d="M18 26L26 18" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path class="modal-basket__button-delete-acitve" d="M18 18L26 26" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </button>
+                          </section>
+                        </div>
+                      </section>
+                      <section class="modal-basket__order">
+                        <div class="modal-basket__order-wrapper">
+                          <section class="modal-basket__left-order-section">
+                            <div class="modal-basket__order-img-wrapper">
+                              <img class="modal-basket__order-img" src="img/basket-item_3.png" alt="car" width="60" height="60">
+                            </div>
+                            <p class="modal-basket__order-name-item">Название товара какое-то оооооооооочень длинное</p>
+                            <button class="modal-basket__button-delete mobile">
+                              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="modal-basket__button-delete-hover" cx="22" cy="22" r="22" fill="white"/>
+                                <path class="modal-basket__button-delete-acitve" d="M18 26L26 18" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path class="modal-basket__button-delete-acitve" d="M18 18L26 26" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </button>
+                          </section>
+                          <section class="modal-basket__right-order-section">
+                            <section class="modal-basket__amount-item">
+                              <button class="modal-basket__button-minus">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="white"/>
+                                  <rect class="modal-basket__button-minus-svg" x="9" y="15" width="14" height="2" rx="1" fill="#CECACA"/>
+                                </svg> 
+                              </button>
+                              <p class="modal-basket__amount">1</p>
+                              <button class="modal-basket__button-plus">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="white"/>
+                                  <rect x="9" y="15" width="14" height="2" rx="1" fill="#C12125"/>
+                                  <rect x="15" y="23" width="14" height="2" rx="1" transform="rotate(-90 15 23)" fill="#C12125"/>
+                                </svg>
+                              </button>
+                            </section>
+                            <section class="modal-basket__price">
+                              <span class="modal-basket__full-price">567,76 грн</span>
+                            </section>
+                            <button class="modal-basket__button-delete">
+                              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="modal-basket__button-delete-hover" cx="22" cy="22" r="22" fill="white"/>
+                                <path class="modal-basket__button-delete-acitve" d="M18 26L26 18" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path class="modal-basket__button-delete-acitve" d="M18 18L26 26" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </button>
+                          </section>
+                        </div>
+                      </section>
+                      <section class="modal-basket__order">
+                        <div class="modal-basket__order-wrapper">
+                          <section class="modal-basket__left-order-section">
+                            <div class="modal-basket__order-img-wrapper">
+                              <img class="modal-basket__order-img" src="img/basket-item_4.png" alt="car" width="60" height="60">
+                            </div>
+                            <p class="modal-basket__order-name-item">Название товара какое-то оооооооооочень длинное</p>
+                            <button class="modal-basket__button-delete mobile">
+                              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="modal-basket__button-delete-hover" cx="22" cy="22" r="22" fill="white"/>
+                                <path class="modal-basket__button-delete-acitve" d="M18 26L26 18" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path class="modal-basket__button-delete-acitve" d="M18 18L26 26" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </button>
+                          </section>
+                          <section class="modal-basket__right-order-section">
+                            <section class="modal-basket__amount-item">
+                              <button class="modal-basket__button-minus">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="white"/>
+                                  <rect class="modal-basket__button-minus-svg" x="9" y="15" width="14" height="2" rx="1" fill="#CECACA"/>
+                                </svg> 
+                              </button>
+                              <p class="modal-basket__amount">1</p>
+                              <button class="modal-basket__button-plus">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="white"/>
+                                  <rect x="9" y="15" width="14" height="2" rx="1" fill="#C12125"/>
+                                  <rect x="15" y="23" width="14" height="2" rx="1" transform="rotate(-90 15 23)" fill="#C12125"/>
+                                </svg>
+                              </button>
+                            </section>
+                            <section class="modal-basket__price">
+                              <span class="modal-basket__full-price">11567,76 грн</span>
+                            </section>
+                            <button class="modal-basket__button-delete">
+                              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="modal-basket__button-delete-hover" cx="22" cy="22" r="22" fill="white"/>
+                                <path class="modal-basket__button-delete-acitve" d="M18 26L26 18" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path class="modal-basket__button-delete-acitve" d="M18 18L26 26" stroke="#4E4B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </button>
+                          </section>
+                        </div>
+                      </section>
+                      <section class="modal-basket__no-order">
+                        <div class="modal-basket__no-order-wrapper">
+                          <div class="modal-basket__no-order-img-wrapper">
+                            <img class="modal-basket__no-order-img" src="img/modal-basket-empty.png" alt="basket" width="386" height="228">
+                          </div>
+                          <h1 class="modal-basket__empty-title">Корзина пуста</h1>
+                          <div class="modal-basket__empty-subtitle-wrapper">
+                            <p class="modal-basket__empty-subtitle">Перейдите на <a class="modal-basket__empty-subtitle-link" href="#">Главную страницу </a>или в <a class="modal-basket__empty-subtitle-link" href="#">Каталог</a></p>
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </main>
+                  <footer class="modal-basket__footer">
+                    <div class="modal-basket__footer-wrapper">
+                      <button class="modal-basket__button-continue btn-white">Продолжить покупки</button>
+                      <section class="modal-basket__checkout">
+                        <h1 class="modal-basket__totla-price">32796,76 грн</h1>
+                        <button class="modal-basket__button-checkout btn-red">Оформить заказ</button>
+                      </section>
+                    </div>
+                  </footer>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__wrp">
+          <section class="footer-logo">
+            <a href="#">
+              <img src="img/heder-logo-img.svg" alt="Bambi Racer" />
+            </a>
+          </section>
+          <section class="footer-content">
+            <div>
+              <h3 class="footer-content__title-text-clock">График работы</h3>
+              <ul>
+                <li class="footer-text">с 08:00 до 17:00</li>
+                <li class="footer-text">Сб, Вс - выходные</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="footer-content__title-text">
+                <a href="#">Каталог</a>
+              </h3>
+              <ul>
+                <li class="footer-text">
+                  <a href="#"> Электромобили </a>
+                </li>
+                <li class="footer-text">
+                  <a href="#"> Металлические квадроциклы </a>
+                </li>
+                <li class="footer-text">
+                  <a href="#"> Велокарты </a>
+                </li>
+                <li class="footer-text">
+                  <a href="#"> Каталки-толокары </a>
+                </li>
+                <li class="footer-text">
+                  <a href="#"> Запчасти и Комплектующие </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="footer-content__title-text">
+                <a href="#">О компании</a>
+              </h3>
+              <ul>
+                <li class="footer-text">
+                  <a href="#"> Оплата и доставка </a>
+                </li>
+                <li class="footer-text">
+                  <a href="#"> Гарантия и сервис </a>
+                </li>
+                <li class="footer-text">
+                  <a href="#"> Стать партнером </a>
+                </li>
+                <li class="footer-text">
+                  <a href="#"> Контакты </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="footer-content__title-text">
+                <a href="#">Сервис и поддержка</a>
+              </h3>
+              <ul>
+                <li class="footer-text">
+                  <a href="#"> FAQ </a>
+                </li>
+                <li class="footer-text">
+                  <a href="#"> Возврат и обмен </a>
+                </li>
+                <li class="footer-text">
+                  <a href="#"> Инструкции </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="footer-content__title-text">
+                <a href="#">Блог</a>
+              </h3>
+            </div>
+            <div class="footer-content__form-wrp">
+              <form class="footer-content__form">
+                <div class="footer-content__input-wrp input-wrp">
+                  <span class="footer-content__input-text input-wrp__text"
+                    >Email</span
+                  >
+                  <input class="footer-content__input" type="email" />
+                </div>
+                <button class="footer-content__form-btn btn-red-disabled">
+                  Подписаться на рассылку
+                </button>
+              </form>
+              <div class="footer-content__social-wrp">
+                <a class="footer-content__social-link" href="#">
+                  <img
+                    class="footer-content__social-icon"
+                    src="icon/header-faceboock-icon.svg"
+                    alt="faceboock"
+                  />
+                  <img
+                    class="footer-content__social-icon-hov"
+                    src="icon/faceboock-icon-hov.svg"
+                    alt="faceboock"
+                  />
+                </a>
+                <a class="footer-content__social-link" href="#">
+                  <img
+                    class="footer-content__social-icon"
+                    src="icon/header-telegram-icon.svg"
+                    alt="telegram"
+                  />
+                  <img
+                    class="footer-content__social-icon-hov"
+                    src="icon/telegram-icon-hov.svg"
+                    alt="telegram"
+                  />
+                </a>
+                <a class="footer-content__social-link" href="#">
+                  <img
+                    class="footer-content__social-icon"
+                    src="icon/header-instogram-icon.svg"
+                    alt="instogram"
+                  />
+                  <img
+                    class="footer-content__social-icon-hov"
+                    src="icon/instogram-icon-hov.svg"
+                    alt="instogram"
+                  />
+                </a>
+                <a class="footer-content__social-link" href="#">
+                  <img
+                    class="footer-content__social-icon"
+                    src="icon/header-youtube-icon.svg"
+                    alt="youtube"
+                  />
+                  <img
+                    class="footer-content__social-icon-hov"
+                    src="icon/youtube-icon-hov.svg"
+                    alt="youtube"
+                  />
+                </a>
+                <a class="footer-content__social-link" href="#">
+                  <img
+                    class="footer-content__social-icon"
+                    src="icon/header-viber-icon.svg"
+                    alt="viber"
+                  />
+                  <img
+                    class="footer-content__social-icon-hov"
+                    src="icon/viber-icon-hov.svg"
+                    alt="viber"
+                  />
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+        <section class="footer-special-documents">
+          <div class="footer-special-documents__wrp">
+            <p>
+              <a class="footer-special-documents__text" href="#"
+                >Договор публичной оферты</a
+              >
+            </p>
+            <p>
+              <a class="footer-special-documents__text" href="#"
+                >Политика конфиденциальности</a
+              >
+            </p>
+          </div>
+        </section>
+    </footer>
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</html>
