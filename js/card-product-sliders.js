@@ -42,7 +42,6 @@ export let cardProductSliders = function () {
           }
         }
       });
-
       //----slider main------
       const sliderMain = new Swiper('.main-slider__container-navigation', {
         direction: 'horizontal',
@@ -147,8 +146,5 @@ export let cardProductSliders = function () {
             },
           },
       });
-
-
-
     }
 }
