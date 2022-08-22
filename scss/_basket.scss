@@ -40,14 +40,17 @@
         width: 100%;
     }
 
-    &__inputs-data-wrapper {
-    }
-
     &__inputs-data-header {
+        margin-bottom: 32px;
     }
 
-    &__inputs-data-header-wrapper {
-        padding-bottom: 12px;
+    &__inputs-wrapper {
+        padding: 20px;
+        background: $color-white;
+        border-radius: 8px;
+    }
+
+    &__inputs-data-header-wrapper {  
         border-bottom: 1px solid $color-gray-30;
     }
 
@@ -58,33 +61,61 @@
     &__inputs-data-navigation-list {
         display: flex;
         column-gap: 56px;
+        
     }
 
     &__inputs-data-navigation-item {
+        cursor: pointer;
+        padding-bottom: 12px;
         max-width: 211px;
         width: 100%;
         text-align: center;
         position: relative;
         &::after {
             content: '';
-            width: 100%;
+            width: 0;
             height: 4px;
             background-color: $color-black;
             position: absolute;
             bottom: 0;
             left: 0;
+            transition: all .3s ease-in-out;
+        }
+        &:hover {
+            
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+
+    &__inputs-data-navigation-item.active &__inputs-data-navigation-link {
+        color: $color-black;
+    }
+
+    &__inputs-data-navigation-item:hover &__inputs-data-navigation-link {
+        color: $color-black;
+    }
+
+    &__inputs-data-navigation-item.active{
+        &::after {
+            width: 100%;
         }
     }
 
     &__inputs-data-navigation-link {
+        transition: all .3s ease-out;
         display: inline-block;
-        @include text($size: 1.125rem, $color: $color-black, $fontWeight: 700, $lineHeight: 28px);
+        @include text($size: 1.125rem, $color: $color-gray-60, $fontWeight: 700, $lineHeight: 28px);
     }
 
     &__inputs-data-main {
     }
 
     &__inputs-data-main-wrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
     }
 
     &__inputs-contact-details {
@@ -97,7 +128,9 @@
         @include text($size: 0.875rem, $color: $color-black, $textAlign: left, $fontWeight: 400, $lineHeight: 24px);
     }
 
+
     &__inputs-tilte {
+        @include text($size: 1.125rem, $color: $color-black, $textAlign: left, $fontWeight: 700, $lineHeight: 28px);
     }
 
     &__inputs {

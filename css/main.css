@@ -8332,8 +8332,15 @@ body.lock {
   max-width: 664px;
   width: 100%;
 }
+.basket__inputs-data-header {
+  margin-bottom: 32px;
+}
+.basket__inputs-wrapper {
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+}
 .basket__inputs-data-header-wrapper {
-  padding-bottom: 12px;
   border-bottom: 1px solid #cecaca;
 }
 .basket__inputs-data-navigation-list {
@@ -8342,6 +8349,8 @@ body.lock {
        column-gap: 56px;
 }
 .basket__inputs-data-navigation-item {
+  cursor: pointer;
+  padding-bottom: 12px;
   max-width: 211px;
   width: 100%;
   text-align: center;
@@ -8349,27 +8358,54 @@ body.lock {
 }
 .basket__inputs-data-navigation-item::after {
   content: "";
-  width: 100%;
+  width: 0;
   height: 4px;
   background-color: #090102;
   position: absolute;
   bottom: 0;
   left: 0;
+  transition: all 0.3s ease-in-out;
+}
+.basket__inputs-data-navigation-item:hover::after {
+  width: 100%;
+}
+.basket__inputs-data-navigation-item.active .basket__inputs-data-navigation-link {
+  color: #090102;
+}
+.basket__inputs-data-navigation-item:hover .basket__inputs-data-navigation-link {
+  color: #090102;
+}
+.basket__inputs-data-navigation-item.active::after {
+  width: 100%;
 }
 .basket__inputs-data-navigation-link {
+  transition: all 0.3s ease-out;
   display: inline-block;
   font-family: "Mulish", sans-serif;
   font-size: 1.125rem;
   font-weight: 700;
   line-height: 28px;
   text-align: center;
-  color: #090102;
+  color: #827d7d;
+}
+.basket__inputs-data-main-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
 }
 .basket__subtitle {
   font-family: "Mulish", sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 24px;
+  text-align: left;
+  color: #090102;
+}
+.basket__inputs-tilte {
+  font-family: "Mulish", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 28px;
   text-align: left;
   color: #090102;
 }
