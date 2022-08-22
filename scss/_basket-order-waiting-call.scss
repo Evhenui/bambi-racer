@@ -1,0 +1,103 @@
+.order-waiting-call {
+
+    &__wrapper {
+        @extend %size-page;
+        padding: 124px 0 50px 0;
+        @extend %centre-flex-columb;
+    }
+
+    &__image-wrapper {
+        max-width: 194px;
+        width: 100%;
+        margin-bottom: 48px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__main {
+        @extend %centre-flex-columb;
+    }
+
+  
+    &__title {
+        margin-bottom: 36px;
+    }
+
+    &__button {
+        max-width: 200px;
+        width: 100%;
+        background: #82A848;
+        border-radius: 4px;
+        height: 44px;
+        margin-bottom: 48px;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+
+    &__subtitle {
+        margin-bottom: 8px;
+    }
+
+    &__subtitle.working-mode {
+        margin-bottom: 44px;
+    }
+
+    &__social-networks {
+    }
+
+    &__social-networks-wrapper {
+
+    }
+
+    &__social-networks-title {
+        margin-bottom: 20px;
+    }
+
+    &__social-networks-items {
+        display: flex;
+        @extend %centre-space-between;
+    }
+
+    &__social-networks-link {
+        font-size: 0;
+        display: inline-block;
+    }
+    
+    &__social-networks-link:hover &__social-networks-svg {
+        fill: $color-black;
+    }
+    &__social-networks-link:hover &__social-networks-svg-viber {
+        fill: $color-black;
+    }
+    &__social-networks-link:hover &__social-networks-svg-viber-hover {
+        fill: $color-white;
+        stroke: $color-white;
+    }
+    &__social-networks-link:active &__social-networks-svg {
+        fill: $color-red-20;
+    }
+    &__social-networks-link:active &__social-networks-svg-viber {
+        fill: $color-red-20;
+    }
+    &__social-networks-link:active &__social-networks-svg-viber-hover {
+        fill: $color-black;
+        stroke: $color-black;
+    }
+
+    &__social-networks-svg {
+        display: inline-block;
+    }
+}
+
+.waiting-title {
+    @include text($size: 2rem, $color: $color-green, $fontWeight: 800, $lineHeight: 44px);
+}
+.waiting-subtitle {
+    @include text($size: 1rem, $color: rgba(0, 0, 0, 0.9), $fontWeight: 500, $lineHeight: 28px);
+}
+.waiting-subtitle.working-mode {
+    font-weight: 700;
+}
