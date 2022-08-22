@@ -29,12 +29,15 @@
     }
 
     &__ordering-wrapper {
-        padding-top: 184px;
+        padding: 184px 0 140px 0;
         @extend %size-page; 
         display: flex;
+        justify-content: space-between;
     }
 
     &__inputs-data {
+        max-width: 664px;
+        width: 100%;
     }
 
     &__inputs-data-wrapper {
@@ -44,18 +47,38 @@
     }
 
     &__inputs-data-header-wrapper {
+        padding-bottom: 12px;
+        border-bottom: 1px solid $color-gray-30;
     }
 
     &__inputs-data-navigation {
+        
     }
 
     &__inputs-data-navigation-list {
+        display: flex;
+        column-gap: 56px;
     }
 
     &__inputs-data-navigation-item {
+        max-width: 211px;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        &::after {
+            content: '';
+            width: 100%;
+            height: 4px;
+            background-color: $color-black;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
     }
 
     &__inputs-data-navigation-link {
+        display: inline-block;
+        @include text($size: 1.125rem, $color: $color-black, $fontWeight: 700, $lineHeight: 28px);
     }
 
     &__inputs-data-main {
@@ -141,21 +164,30 @@
     }
 
     &__inputs-data-footer-wrapper {
+        padding-top: 56px;
+        @extend %centre-flex-columb;
     }
 
     &__button-confirm {
+        margin-bottom: 12px;
+        max-width: 200px;
     }
 
     &__conditions {
     }
 
     &__conditions-wrapper {
+        max-width: 360px;
+        width: 100%;
     }
 
     &__footer-text {
+        @include text( $color: $color-gray-60, $textAlign: center);
     }
 
     &__footer-link {
+        color: $color-red-40;
+        text-decoration: underline;
     }
 
     &__order-done {
@@ -233,13 +265,16 @@
     }
 
     &__header-wrapper {
-        padding: 32px 20px 20px 20px;
+        padding: 32px 20px 12px 20px;
         @extend %centre-space-between;
     }
 
     &__edit-order {
         @include text($size: 0.875rem, $color: $color-red-40, $fontWeight: 400, $lineHeight: 16px);
         text-decoration-line: underline;
+        &:active {
+            color: $color-red;
+        }
     }
 
     &__arrow-mobile {
@@ -256,7 +291,7 @@
     }
 
     &__main-wrapper {
-        padding: 8px 20px;
+        padding: 8px 20px 0 20px;
     }
 
     &__items {
@@ -267,11 +302,15 @@
         align-items: center;
         column-gap: 16px;
         border-top: 1px solid $color-gray-20;
-        padding: 22px 0;
+        padding: 21px 0 22px 0;
         &:last-child {
             border-bottom: 1px solid $color-gray-20;
         }
     }
+
+    &__order-item.discount {
+        padding: 7px 0 8px 0;
+    } 
 
     &__order-item-wrapper {
         
@@ -311,7 +350,7 @@
     }
 
     &__footer-wrapper {
-        padding: 22px 0 34px 0;
+        padding: 20px 0 32px 0;
         display: flex;
         justify-content: flex-end;
     }
