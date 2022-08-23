@@ -1,11 +1,13 @@
-.order-waiting-call {
+.order-waiting {
 
     &__wrapper {
         @extend %size-page;
-        padding: 124px 0 50px 0;
+        padding: 124px 48px 50px 48px;
         @extend %centre-flex-columb;
+        @media (max-width: 860px) {
+            @include padding-mob;
+        }
     }
-
     &__image-wrapper {
         max-width: 194px;
         width: 100%;
@@ -43,13 +45,6 @@
 
     &__subtitle.working-mode {
         margin-bottom: 44px;
-    }
-
-    &__social-networks {
-    }
-
-    &__social-networks-wrapper {
-
     }
 
     &__social-networks-title {

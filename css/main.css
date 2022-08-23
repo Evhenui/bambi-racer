@@ -132,7 +132,7 @@ label {
   justify-content: center;
 }
 
-.order-waiting-call__main, .order-waiting-call__wrapper, .basket__inputs-data-footer-wrapper, .card-product-spare-parts__wrapper, .card-product-gallery__wrapper, .card-product-reviews__wrapper, .card-product-multimedia__wrapper, .modal-basket__container.empty .modal-basket__main-wrapper, .main-page-about-company__text-wrp, .header__menu-work-time-timeline {
+.order-waiting__main, .order-waiting__wrapper, .basket__inputs-data-footer-wrapper, .card-product-spare-parts__wrapper, .card-product-gallery__wrapper, .card-product-reviews__wrapper, .card-product-multimedia__wrapper, .modal-basket__container.empty .modal-basket__main-wrapper, .main-page-about-company__text-wrp, .header__menu-work-time-timeline {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -149,13 +149,13 @@ label {
   margin-right: auto;
 }
 
-.order-waiting-call__social-networks-items, .my-order__header-wrapper, .card-product-all-info__vendor-code-section, .modal-basket__footer-wrapper, .modal-basket__header-wrapper, .modal-on-click__header, .card-product-header-info.active .card-product-header-info__wrapper, .personal-area-favorites__sorting-navigation .personal-area-favorites__sorting, .product-catalog-number-goods, .product-catalog-sorting, .product-catalog-filters__btn-wrp, .product-catalog-filters__price-slider-input-wrp, .product-catalog-filters__price, .product-catalog-filters__title-text-wrp, .product-catalog-filters__menu, .main-page-important-slider__wrp, .main-page-partner__drop-list-def, .main-page-partner, .main-page-range__img-wrp, .main-page-range__wrp, .main-page-range, .card-prod-catalog__buy, .card-prod-catalog__buy-price, .card-prod-catalog__colors-wrp, .footer-special-documents__wrp, .footer-content__social-wrp, .footer-content, .search-modal__item-wrp, .header__menu-personal-basket, .header__menu-personal-comparison, .header__menu-personal-login, .header__menu-personal-wrp, .header__phone-menu-schedule-link, .header__phone-menu-schedule, .header__menu-social, .header__menu-work-time-timeline-wrp, .header__menu-name-categoty-wrp, .header__menu-item-link, .header__catalog-item-wrp, .header__wrp-right-cont, .header__languages-wrp, .header__wrp-left-cont, .header__wrp, .lunge__item {
+.order-waiting__social-networks-items, .my-order__header-wrapper, .card-product-all-info__vendor-code-section, .modal-basket__footer-wrapper, .modal-basket__header-wrapper, .modal-on-click__header, .card-product-header-info.active .card-product-header-info__wrapper, .personal-area-favorites__sorting-navigation .personal-area-favorites__sorting, .product-catalog-number-goods, .product-catalog-sorting, .product-catalog-filters__btn-wrp, .product-catalog-filters__price-slider-input-wrp, .product-catalog-filters__price, .product-catalog-filters__title-text-wrp, .product-catalog-filters__menu, .main-page-important-slider__wrp, .main-page-partner__drop-list-def, .main-page-partner, .main-page-range__img-wrp, .main-page-range__wrp, .main-page-range, .card-prod-catalog__buy, .card-prod-catalog__buy-price, .card-prod-catalog__colors-wrp, .footer-special-documents__wrp, .footer-content__social-wrp, .footer-content, .search-modal__item-wrp, .header__menu-personal-basket, .header__menu-personal-comparison, .header__menu-personal-login, .header__menu-personal-wrp, .header__phone-menu-schedule-link, .header__phone-menu-schedule, .header__menu-social, .header__menu-work-time-timeline-wrp, .header__menu-name-categoty-wrp, .header__menu-item-link, .header__catalog-item-wrp, .header__wrp-right-cont, .header__languages-wrp, .header__wrp-left-cont, .header__wrp, .lunge__item {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.order-waiting-call__wrapper, .basket__ordering-wrapper, .basket__header-wrapper, .card-product-spare-parts__wrapper, .card-product-gallery__wrapper, .card-product-reviews__wrapper, .card-product-multimedia__wrapper, .card-product-characteristics__wrapper, .card-product-all-info__wrapper, .card-product-navigation__wrapper, .card-product-header-info__name-pages-wrapper, .card-product-header-info.active .card-product-header-info__wrapper, .personal-area-comparison__wrapper, .personal-area-my-orders__wrapper, .personal-area-favorites__wrapper, .personal-area-private-data__wrapper, .personal-area-navigation__wrapper, .personal-area-header-info__wrapper, .product-catalog-content, .product-catalog, .bread-crumbs, .catalog-directory, .main-page-important-slider__text, .main-page-important-slider__wrp, .main-page-partner, .main-page-range__wrp, .main-page-about-company__img-wrp, .main-page-about-company__text, .main-page-product__carousel, .main-slider__nav-btn-wrp, .main-slider__text-btn-wrt, .main-slider__text-btn, .footer-special-documents__wrp, .footer__wrp {
+.order-waiting__wrapper, .basket__ordering-wrapper, .basket__header-wrapper, .card-product-spare-parts__wrapper, .card-product-gallery__wrapper, .card-product-reviews__wrapper, .card-product-multimedia__wrapper, .card-product-characteristics__wrapper, .card-product-all-info__wrapper, .card-product-navigation__wrapper, .card-product-header-info__name-pages-wrapper, .card-product-header-info.active .card-product-header-info__wrapper, .personal-area-comparison__wrapper, .personal-area-my-orders__wrapper, .personal-area-favorites__wrapper, .personal-area-private-data__wrapper, .personal-area-navigation__wrapper, .personal-area-header-info__wrapper, .product-catalog-content, .product-catalog, .bread-crumbs, .catalog-directory, .main-page-important-slider__text, .main-page-important-slider__wrp, .main-page-partner, .main-page-range__wrp, .main-page-about-company__img-wrp, .main-page-about-company__text, .main-page-product__carousel, .main-slider__nav-btn-wrp, .main-slider__text-btn-wrt, .main-slider__text-btn, .footer-special-documents__wrp, .footer__wrp {
   max-width: 1440px;
   width: 100%;
   margin-left: auto;
@@ -8520,22 +8520,28 @@ body.lock {
   color: #090102;
 }
 
-.order-waiting-call__wrapper {
-  padding: 124px 0 50px 0;
+.order-waiting__wrapper {
+  padding: 124px 48px 50px 48px;
 }
-.order-waiting-call__image-wrapper {
+@media (max-width: 860px) {
+  .order-waiting__wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+.order-waiting__image-wrapper {
   max-width: 194px;
   width: 100%;
   margin-bottom: 48px;
 }
-.order-waiting-call__image-wrapper img {
+.order-waiting__image-wrapper img {
   width: 100%;
   height: auto;
 }
-.order-waiting-call__title {
+.order-waiting__title {
   margin-bottom: 36px;
 }
-.order-waiting-call__button {
+.order-waiting__button {
   max-width: 200px;
   width: 100%;
   background: #82A848;
@@ -8546,43 +8552,43 @@ body.lock {
   text-transform: uppercase;
   font-size: 16px;
 }
-.order-waiting-call__subtitle {
+.order-waiting__subtitle {
   margin-bottom: 8px;
 }
-.order-waiting-call__subtitle.working-mode {
+.order-waiting__subtitle.working-mode {
   margin-bottom: 44px;
 }
-.order-waiting-call__social-networks-title {
+.order-waiting__social-networks-title {
   margin-bottom: 20px;
 }
-.order-waiting-call__social-networks-items {
+.order-waiting__social-networks-items {
   display: flex;
 }
-.order-waiting-call__social-networks-link {
+.order-waiting__social-networks-link {
   font-size: 0;
   display: inline-block;
 }
-.order-waiting-call__social-networks-link:hover .order-waiting-call__social-networks-svg {
+.order-waiting__social-networks-link:hover .order-waiting__social-networks-svg {
   fill: #090102;
 }
-.order-waiting-call__social-networks-link:hover .order-waiting-call__social-networks-svg-viber {
+.order-waiting__social-networks-link:hover .order-waiting__social-networks-svg-viber {
   fill: #090102;
 }
-.order-waiting-call__social-networks-link:hover .order-waiting-call__social-networks-svg-viber-hover {
+.order-waiting__social-networks-link:hover .order-waiting__social-networks-svg-viber-hover {
   fill: #ffffff;
   stroke: #ffffff;
 }
-.order-waiting-call__social-networks-link:active .order-waiting-call__social-networks-svg {
+.order-waiting__social-networks-link:active .order-waiting__social-networks-svg {
   fill: #fff3ef;
 }
-.order-waiting-call__social-networks-link:active .order-waiting-call__social-networks-svg-viber {
+.order-waiting__social-networks-link:active .order-waiting__social-networks-svg-viber {
   fill: #fff3ef;
 }
-.order-waiting-call__social-networks-link:active .order-waiting-call__social-networks-svg-viber-hover {
+.order-waiting__social-networks-link:active .order-waiting__social-networks-svg-viber-hover {
   fill: #090102;
   stroke: #090102;
 }
-.order-waiting-call__social-networks-svg {
+.order-waiting__social-networks-svg {
   display: inline-block;
 }
 
