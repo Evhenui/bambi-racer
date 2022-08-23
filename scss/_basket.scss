@@ -44,10 +44,17 @@
         margin-bottom: 32px;
     }
 
-    &__inputs-wrapper {
+    &__inputs-wrapper-main {
         padding: 20px;
         background: $color-white;
         border-radius: 8px;
+    }
+
+    &__inputs-wrapper {
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px 24px;
     }
 
     &__inputs-data-header-wrapper {  
@@ -61,7 +68,6 @@
     &__inputs-data-navigation-list {
         display: flex;
         column-gap: 56px;
-        
     }
 
     &__inputs-data-navigation-item {
@@ -82,7 +88,6 @@
             transition: all .3s ease-in-out;
         }
         &:hover {
-            
             &::after {
                 width: 100%;
             }
@@ -130,6 +135,7 @@
 
 
     &__inputs-tilte {
+        margin-bottom: 28px;
         @include text($size: 1.125rem, $color: $color-black, $textAlign: left, $fontWeight: 700, $lineHeight: 28px);
     }
 
@@ -140,36 +146,196 @@
     }
 
     &__wrapper-input {
+        margin: 0;
+        flex: 1 1 300px;
+        position: relative;
     }
 
     &__input {
+        display: block;
+        border: 1px solid $color-gray-60;
+        border-radius: 1px;
+        @include text($size: 0.875rem, $color: $color-gray-60, $textAlign: left, $fontWeight: 400, $lineHeight: 24px);
+        padding: 8.9px 20px;
+        max-width: 300px;
+        width: 100%;
+        &:hover {
+            border-color: $color-red-60;
+          }
+          &:active, &:focus{
+            border-color: $color-black;
+          }
+          @media (max-width: 960px) {
+            max-width: 327px;
+          }
+          &::placeholder {
+            color: $color-gray-100;
+          }
+          &:focus,
+          &:active,
+          &:read-only,
+          &:read-write {
+            color: $color-gray-100;
+            outline: 0;
+            outline-offset: 0;
+            cursor: auto;
+          }
     }
 
     &__label {
+        background: $color-white;
+        padding: 0 4px;
+        @include text($size: 0.875rem, $color: $color-gray-60, $textAlign: left, $fontWeight: 400, $lineHeight: 24px);
+        position: absolute;
+        pointer-events: none;
+        left: 16px;
+        top: 11px;
+        transition: 0.2s ease all;
+    }
+
+    &__label.checkbox {
+        position: static;
+    }
+
+    
+    &__input:focus ~ &__label,
+    &__input:valid ~ &__label {
+        left: 16px;
+        top: -17px;
+        font-size: 0.75rem;
+    }
+
+    .personal-area-private-data__label.is-invalid {
+        color: $color-red-60;
     }
 
     &__inputs-delivery {
+
     }
 
     &__inputs-delivery-wrapper {
     }
 
     &__inputs-select-post {
+        display: flex;
+        column-gap: 60px;
+        margin-bottom: 28px;
+        overflow: hidden;
     }
 
     &__wrapper-input-checkbox {
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
     }
 
-    &__checkbox {
+    &__checkbox, &__checkbox-pay {
+        &:checked, 
+        &:not(:checked) 
+        {
+            position: absolute;
+            left: -100%;
+        }
     }
+    &__checkbox-label,  &__checkbox-label-pay{
+        @include text($size: 0.875rem, $color: $color-gray-60, $textAlign: left, $fontWeight: 400, $lineHeight: 18px);
+    }
+
+
+    &__checkbox:checked + &__checkbox-label, 
+    &__checkbox:not(:checked) + &__checkbox-label {
+        display: inline-block;
+        position: relative;
+        padding-left: 24px;
+        cursor: pointer;
+    }
+
+    &__checkbox:checked + &__checkbox-label:before, 
+    &__checkbox:not(:checked) + &__checkbox-label:before {
+        content: "";
+        position: absolute;
+        left: 3px;
+        top: 3px;
+        width: 12px;
+        height: 12px;
+        border: 1px solid $color-gray-70;
+        background-color: $color-white;
+        border-radius: 100%;
+    }
+
+    &__checkbox:checked + &__checkbox-label:after, 
+    &__checkbox:not(:checked) + &__checkbox-label:after {
+        content: "";
+        position: absolute;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        left: 5px;
+        top: 5px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: $color-red;
+    }
+
+    &__checkbox:not(:checked) + &__checkbox-label:after {
+        opacity: 0;
+    }
+    &__checkbox:checked + &__checkbox-label:after {
+        opacity: 1;
+    }
+    &__checkbox:checked + &__checkbox-label {
+        color: $color-black;
+    }
+    &__checkbox:checked + &__checkbox-label:before {
+        border-color: $color-red;
+    }
+    &__wrapper-input-checkbox:hover &__checkbox-label:before {
+        border-color: $color-red;
+    }
+
+
 
     &__inputs-select-place {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 32px;
+        gap: 32px 24px;
     }
 
     &__wrapper-select {
+       flex: 1 1 300px;
+    }
+    &__select::-ms-expand {
+        display: none;
+      }
+    &__select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        position: relative;
+        display: block;
+        border: 1px solid $color-gray-60;
+        border-radius: 1px;
+        @include text($size: 0.875rem, $color: $color-gray-80, $textAlign: left, $fontWeight: 400, $lineHeight: 24px);
+        padding: 8.9px 20px;
+        max-width: 300px;
+        width: 100%;
+        &:hover {
+            border-color: $color-red-60;
+          }
+          &:active, &:focus{
+            border-color: $color-black;
+          }
+
     }
 
-    &__select {
+    .hello {
+        option {
+            color: aqua;
+        }
+      
     }
 
     &__select-title {
@@ -178,19 +344,59 @@
     &__select-item {
     }
 
-    &__inputs-payment {
+
+    &__wrapper-input-checkbox-pay {
+
     }
+
+    &__checkbox-pay {
+
+    }
+
+    &__checkbox-label-pay {
+
+    }
+
+
 
     &__inputs-payment-wrapper {
     }
 
     &__explanation {
+        font-size: 0;
+        display: inline-block;
     }
 
+    &__explanation-wrapper {
+        position: relative;
+        font-size: 0;
+        display: inline-block;
+    }
+
+    &__explanation:hover &__explanation-svg {
+        fill: $color-red;
+    }
+
+    &__explanation-wrapper:hover &__explanation-hidden {
+        opacity: 1;
+        visibility: visible;
+    }
+
+
     &__explanation-svg {
+        
     }
 
     &__explanation-hidden {
+        z-index: 5;
+        font-size: 0.75rem;
+        position: absolute;
+        width: 300px;
+        display: inline-block;
+        background-color: $color-black;
+        color: $color-white;
+        opacity: 0;
+        visibility: hidden;
     }
 
     &__inputs-data-footer {
