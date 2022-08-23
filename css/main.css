@@ -8520,6 +8520,14 @@ body.lock {
   color: #090102;
 }
 
+.waiting-title.done-title {
+  margin-bottom: 0;
+}
+
+.waiting-title.done-call-title {
+  margin-bottom: 84px;
+}
+
 .order-waiting__wrapper {
   padding: 124px 48px 50px 48px;
 }
