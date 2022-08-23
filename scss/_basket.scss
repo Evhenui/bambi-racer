@@ -307,36 +307,6 @@
     &__wrapper-select {
        flex: 1 1 300px;
     }
-    &__select::-ms-expand {
-        display: none;
-      }
-    &__select {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        position: relative;
-        display: block;
-        border: 1px solid $color-gray-60;
-        border-radius: 1px;
-        @include text($size: 0.875rem, $color: $color-gray-80, $textAlign: left, $fontWeight: 400, $lineHeight: 24px);
-        padding: 8.9px 20px;
-        max-width: 300px;
-        width: 100%;
-        &:hover {
-            border-color: $color-red-60;
-          }
-          &:active, &:focus{
-            border-color: $color-black;
-          }
-
-    }
-
-    .hello {
-        option {
-            color: aqua;
-        }
-      
-    }
 
     &__select-title {
     }
@@ -573,4 +543,65 @@
 .done-order {
 }
 .working-mode {
+}
+
+
+
+.basket {
+
+    &__select {
+        position: relative;
+    }
+
+    &__select.active &__select-navigation {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__select-navigation {
+        max-width: 300px;
+        width: 100%;
+        
+    }
+
+    &__select.active{
+        
+    }
+    &__wrapper-input.region:hover &__input-arrow-hover{
+        fill: #991a1d;
+    }
+
+
+    &__input.region:focus ~ &__input-arrow ,
+    &__input.region:valid ~ &__input-arrow  {
+        transform: rotateZ(180deg);
+    }
+    &__input.region:focus ~ &__input-arrow > path ,
+    &__input.region:valid ~ &__input-arrow > path {
+        fill: #991a1d;
+    }
+
+    &__label {
+    }
+
+    &__input-arrow {
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: rotateZ(0deg);
+        transition: all .2s ease-out;
+    }
+
+    &__list {
+    }
+
+    &__list-item {
+    }
+}
+.personal-area-private-data {
+
+    &__wrapper-input {
+    }
+}
+.js-input {
 }

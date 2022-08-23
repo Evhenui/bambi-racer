@@ -8575,36 +8575,6 @@ body.lock {
 .basket__wrapper-select {
   flex: 1 1 300px;
 }
-.basket__select::-ms-expand {
-  display: none;
-}
-.basket__select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  position: relative;
-  display: block;
-  border: 1px solid #827d7d;
-  border-radius: 1px;
-  font-family: "Mulish", sans-serif;
-  font-size: 0.875rem;
-  font-weight: 400;
-  line-height: 24px;
-  text-align: left;
-  color: #4e4b4b;
-  padding: 8.9px 20px;
-  max-width: 300px;
-  width: 100%;
-}
-.basket__select:hover {
-  border-color: #991a1d;
-}
-.basket__select:active, .basket__select:focus {
-  border-color: #090102;
-}
-.basket .hello option {
-  color: aqua;
-}
 .basket__explanation {
   font-size: 0;
   display: inline-block;
@@ -8743,6 +8713,33 @@ body.lock {
   color: #090102;
 }
 
+.basket__select {
+  position: relative;
+}
+.basket__select.active .basket__select-navigation {
+  opacity: 1;
+  visibility: visible;
+}
+.basket__select-navigation {
+  max-width: 300px;
+  width: 100%;
+}
+.basket__wrapper-input.region:hover .basket__input-arrow-hover {
+  fill: #991a1d;
+}
+.basket__input.region:focus ~ .basket__input-arrow, .basket__input.region:valid ~ .basket__input-arrow {
+  transform: rotateZ(180deg);
+}
+.basket__input.region:focus ~ .basket__input-arrow > path, .basket__input.region:valid ~ .basket__input-arrow > path {
+  fill: #991a1d;
+}
+.basket__input-arrow {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: rotateZ(0deg);
+  transition: all 0.2s ease-out;
+}
 .waiting-title.done-title {
   margin-bottom: 0;
 }

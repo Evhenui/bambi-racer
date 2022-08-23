@@ -288,7 +288,7 @@
     </header>
 
     <main class="js-main">
-      <section class="basket">
+      <section data-basket-section class="basket">
         <div class="basket__wrapper">
           <header class="basket__header">
             <div class="basket__header-wrapper">
@@ -366,45 +366,38 @@
                                     <label class="basket__checkbox-label" for="rb3">Новая почта курьерская доставка</label>
                                   </div>
                                 </section>
-                               
+    
                                 <section class="basket__inputs-select-place">
-  
-                                  <div class="basket__wrapper-select">
-                                    <label class="basket__label">Область</label>
-                                    <select class="basket__select" name="region">
-                                      <option class="basket__select-title" disabled="disabled" selected="selected">Введите область</option>
-                                      <option class="basket__select-item" value="Odessa">Одесская</option>
-                                      <option class="basket__select-item" value="Lviv">Львовская</option>
-                                      <option class="basket__select-item" value="Kyiv">Киевская</option>
-                                    </select>
-                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path d="M16.7071 17.2929L16 16.5858L14.5858 18L15.2929 18.7071L16.7071 17.2929ZM20 22L19.2929 22.7071L20 23.4142L20.7071 22.7071L20 22ZM24.7071 18.7071L25.4142 18L24 16.5858L23.2929 17.2929L24.7071 18.7071ZM15.2929 18.7071L19.2929 22.7071L20.7071 21.2929L16.7071 17.2929L15.2929 18.7071ZM20.7071 22.7071L24.7071 18.7071L23.2929 17.2929L19.2929 21.2929L20.7071 22.7071Z" fill="#4E4B4B"/>
-                                    </svg> 
-                                  </div>
-  
-                                  <div class="basket__wrapper-select">
-                                    <label class="basket__label">Город</label>
-                                    <select class="basket__select" name="city">
-                                      <option class="basket__select-title" disabled="disabled" selected="selected">Введите город</option>
-                                      <option class="basket__select-item" value="Odessa">Одесса</option>
-                                      <option class="basket__select-item" value="Lviv">Львов</option>
-                                      <option class="basket__select-item" value="Kyiv">Киев</option>
-                                    </select>
-                                  </div>
-  
-                                  <div class="basket__wrapper-select">
-                                    <label class="basket__label">Номер отделения</label>
-                                    <select class="basket__select" name="post">
-                                      <option class="basket__select-title" disabled="disabled" selected="selected">Введите номер отделения</option>
-                                      <option class="basket__select-item" value="1">1</option>
-                                      <option class="basket__select-item" value="2">2</option>
-                                      <option class="basket__select-item" value="3">3</option>
-                                    </select>
-                                  </div>
-  
+                                  <section data-dropdown-region class="basket__select">                               
+                                      <div class="basket__wrapper-input region">
+                                        <input data-select-region type="text" class="basket__input region js-input" readonly required/>
+                                        <label class="basket__label">Фамилия</label>
+                                        <svg class="basket__input-arrow" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path class="basket__input-arrow-hover" d="M16.7071 17.2929L16 16.5858L14.5858 18L15.2929 18.7071L16.7071 17.2929ZM20 22L19.2929 22.7071L20 23.4142L20.7071 22.7071L20 22ZM24.7071 18.7071L25.4142 18L24 16.5858L23.2929 17.2929L24.7071 18.7071ZM15.2929 18.7071L19.2929 22.7071L20.7071 21.2929L16.7071 17.2929L15.2929 18.7071ZM20.7071 22.7071L24.7071 18.7071L23.2929 17.2929L19.2929 21.2929L20.7071 22.7071Z" fill="#4E4B4B"/>
+                                        </svg> 
+                                      </div>
+                                      <div class="basket__select-navigation personal-area-favorites__sorting-navigtion lunge sorting-navigation__lunge">
+                                        <div>
+                                          <span class="basket__select-cube personal-area-favorites__cube lunge__cube sorting-navigation__cube"></span>
+                                          <ul class="basket__select-list sorting-navigation__menu">
+                                            <li class="lunge__item sorting-navigation__item">
+                                              <p data-dropdown-region-item class="lunge__item-text sorting-navigation__item-title">Одесская</p>
+                                              <span class="red-diamonds sorting-navigation__red-diamonds"></span>
+                                            </li>
+                                            <li class="lunge__item sorting-navigation__item">
+                                              <p data-dropdown-region-item class="lunge__item-text sorting-navigation__item-title">Киевская</p>
+                                              <span class="red-diamonds sorting-navigation__red-diamonds"></span>
+                                            </li>
+                                            <li class="lunge__item sorting-navigation__item">
+                                              <p data-dropdown-region-item class="lunge__item-text sorting-navigation__item-title">Львовская</p>
+                                              <span class="red-diamonds sorting-navigation__red-diamonds"></span>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                      </div>                           
+                                  </section>
                                 </section>
                               </form>
-                           
                             </div>
                           </section>
                         </div>
