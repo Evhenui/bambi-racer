@@ -368,34 +368,91 @@
                                 </section>
     
                                 <section class="basket__inputs-select-place">
-                                  <section data-dropdown-region class="basket__select">                               
-                                      <div class="basket__wrapper-input region">
-                                        <input data-select-region type="text" class="basket__input region js-input" readonly required/>
-                                        <label class="basket__label">Фамилия</label>
-                                        <svg class="basket__input-arrow" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                          <path class="basket__input-arrow-hover" d="M16.7071 17.2929L16 16.5858L14.5858 18L15.2929 18.7071L16.7071 17.2929ZM20 22L19.2929 22.7071L20 23.4142L20.7071 22.7071L20 22ZM24.7071 18.7071L25.4142 18L24 16.5858L23.2929 17.2929L24.7071 18.7071ZM15.2929 18.7071L19.2929 22.7071L20.7071 21.2929L16.7071 17.2929L15.2929 18.7071ZM20.7071 22.7071L24.7071 18.7071L23.2929 17.2929L19.2929 21.2929L20.7071 22.7071Z" fill="#4E4B4B"/>
-                                        </svg> 
+
+                                  <section data-dropdown-region class="basket__dropdown region">
+                                    <div class="basket__dropdown-input region">
+                                      <span data-dropdown-region-label class="basket__dropdown-label">Область</span>
+                                      <span data-dropdown-region-selected class="basket__dropdown-selected-text"></span>
+                                      <svg class="basket__dropdown-arrow" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="basket__dropdown-arrow-hover" d="M16.7071 17.2929L16 16.5858L14.5858 18L15.2929 18.7071L16.7071 17.2929ZM20 22L19.2929 22.7071L20 23.4142L20.7071 22.7071L20 22ZM24.7071 18.7071L25.4142 18L24 16.5858L23.2929 17.2929L24.7071 18.7071ZM15.2929 18.7071L19.2929 22.7071L20.7071 21.2929L16.7071 17.2929L15.2929 18.7071ZM20.7071 22.7071L24.7071 18.7071L23.2929 17.2929L19.2929 21.2929L20.7071 22.7071Z" fill="#4E4B4B"/>
+                                      </svg> 
+                                    </div>
+                                    <div class="basket__dropdown-list lunge sorting-navigation__lunge">
+                                      <div>
+                                        <ul class="sorting-navigation__menu">
+                                          <li data-dropdown-region-item class="lunge__item sorting-navigation__item">
+                                            <p class="basket__dropdown-list-item lunge__item-text">Одесская</p>
+                                            <span class="red-diamonds"></span>
+                                          </li>
+                                          <li data-dropdown-region-item class="lunge__item sorting-navigation__item">
+                                            <p class="basket__dropdown-list-item lunge__item-text">Киевская</p>
+                                            <span class="red-diamonds"></span>
+                                          </li>
+                                          <li data-dropdown-region-item class="lunge__item sorting-navigation__item">
+                                            <p class="basket__dropdown-list-item lunge__item-text">Львовская</p>
+                                            <span class="red-diamonds"></span>
+                                          </li>
+                                        </ul>
                                       </div>
-                                      <div class="basket__select-navigation personal-area-favorites__sorting-navigtion lunge sorting-navigation__lunge">
-                                        <div>
-                                          <span class="basket__select-cube personal-area-favorites__cube lunge__cube sorting-navigation__cube"></span>
-                                          <ul class="basket__select-list sorting-navigation__menu">
-                                            <li class="lunge__item sorting-navigation__item">
-                                              <p data-dropdown-region-item class="lunge__item-text sorting-navigation__item-title">Одесская</p>
-                                              <span class="red-diamonds sorting-navigation__red-diamonds"></span>
-                                            </li>
-                                            <li class="lunge__item sorting-navigation__item">
-                                              <p data-dropdown-region-item class="lunge__item-text sorting-navigation__item-title">Киевская</p>
-                                              <span class="red-diamonds sorting-navigation__red-diamonds"></span>
-                                            </li>
-                                            <li class="lunge__item sorting-navigation__item">
-                                              <p data-dropdown-region-item class="lunge__item-text sorting-navigation__item-title">Львовская</p>
-                                              <span class="red-diamonds sorting-navigation__red-diamonds"></span>
-                                            </li>
-                                          </ul>
-                                        </div>
-                                      </div>                           
+                                    </div>
                                   </section>
+
+                                  <section data-dropdown-region class="basket__dropdown city">
+                                    <div class="basket__dropdown-input city">
+                                      <span data-dropdown-region-label class="basket__dropdown-label">Город</span>
+                                      <span data-dropdown-region-selected class="basket__dropdown-selected-text"></span>
+                                      <svg class="basket__dropdown-arrow" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="basket__dropdown-arrow-hover" d="M16.7071 17.2929L16 16.5858L14.5858 18L15.2929 18.7071L16.7071 17.2929ZM20 22L19.2929 22.7071L20 23.4142L20.7071 22.7071L20 22ZM24.7071 18.7071L25.4142 18L24 16.5858L23.2929 17.2929L24.7071 18.7071ZM15.2929 18.7071L19.2929 22.7071L20.7071 21.2929L16.7071 17.2929L15.2929 18.7071ZM20.7071 22.7071L24.7071 18.7071L23.2929 17.2929L19.2929 21.2929L20.7071 22.7071Z" fill="#4E4B4B"/>
+                                      </svg> 
+                                    </div>
+                                    <div class="basket__dropdown-list lunge sorting-navigation__lunge">
+                                      <div>
+                                        <ul class="sorting-navigation__menu">
+                                          <li data-dropdown-region-item class="lunge__item sorting-navigation__item">
+                                            <p class="basket__dropdown-list-item lunge__item-text">Одесса</p>
+                                            <span class="red-diamonds"></span>
+                                          </li>
+                                          <li data-dropdown-region-item class="lunge__item sorting-navigation__item">
+                                            <p class="basket__dropdown-list-item lunge__item-text">Киев</p>
+                                            <span class="red-diamonds"></span>
+                                          </li>
+                                          <li data-dropdown-region-item class="lunge__item sorting-navigation__item">
+                                            <p class="basket__dropdown-list-item lunge__item-text">Львов</p>
+                                            <span class="red-diamonds"></span>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </section>
+
+                                  <section data-dropdown-region class="basket__dropdown department-number">
+                                    <div class="basket__dropdown-input department-number">
+                                      <span data-dropdown-region-label class="basket__dropdown-label">Номер отделения</span>
+                                      <span data-dropdown-region-selected class="basket__dropdown-selected-text"></span>
+                                      <svg class="basket__dropdown-arrow" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="basket__dropdown-arrow-hover" d="M16.7071 17.2929L16 16.5858L14.5858 18L15.2929 18.7071L16.7071 17.2929ZM20 22L19.2929 22.7071L20 23.4142L20.7071 22.7071L20 22ZM24.7071 18.7071L25.4142 18L24 16.5858L23.2929 17.2929L24.7071 18.7071ZM15.2929 18.7071L19.2929 22.7071L20.7071 21.2929L16.7071 17.2929L15.2929 18.7071ZM20.7071 22.7071L24.7071 18.7071L23.2929 17.2929L19.2929 21.2929L20.7071 22.7071Z" fill="#4E4B4B"/>
+                                      </svg> 
+                                    </div>
+                                    <div class="basket__dropdown-list lunge sorting-navigation__lunge">
+                                      <div>
+                                        <ul class="sorting-navigation__menu">
+                                          <li data-dropdown-region-item class="lunge__item sorting-navigation__item">
+                                            <p class="basket__dropdown-list-item lunge__item-text">1</p>
+                                            <span class="red-diamonds"></span>
+                                          </li>
+                                          <li data-dropdown-region-item class="lunge__item sorting-navigation__item">
+                                            <p class="basket__dropdown-list-item lunge__item-text">2</p>
+                                            <span class="red-diamonds"></span>
+                                          </li>
+                                          <li data-dropdown-region-item class="lunge__item sorting-navigation__item">
+                                            <p class="basket__dropdown-list-item lunge__item-text">3</p>
+                                            <span class="red-diamonds"></span>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </section>
+                                
                                 </section>
                               </form>
                             </div>
@@ -419,7 +476,9 @@
                                       <path class="basket__explanation-svg" d="M6.97 10.0769V9.51748C6.97 9.07925 7.054 8.67366 7.222 8.3007C7.39 7.92774 7.67933 7.52214 8.09 7.08392C8.398 6.75758 8.61267 6.47319 8.734 6.23077C8.86467 5.97902 8.93 5.72727 8.93 5.47552C8.93 5.15851 8.80867 4.91142 8.566 4.73427C8.33267 4.55711 8.006 4.46853 7.586 4.46853C7.222 4.46853 6.86267 4.52448 6.508 4.63636C6.15333 4.74825 5.81733 4.89744 5.5 5.08392V3.57343C5.82667 3.38695 6.19533 3.24709 6.606 3.15385C7.026 3.05128 7.43667 3 7.838 3C8.38867 3 8.87867 3.08392 9.308 3.25175C9.74667 3.41026 10.0873 3.65734 10.33 3.99301C10.582 4.31935 10.708 4.73893 10.708 5.25175C10.708 5.55944 10.652 5.85781 10.54 6.14685C10.4373 6.42657 10.288 6.69697 10.092 6.95804C9.896 7.21911 9.65333 7.48019 9.364 7.74126C8.90667 8.14219 8.58933 8.49184 8.412 8.79021C8.23467 9.08858 8.12733 9.38695 8.09 9.68531L8.034 10.0769H6.97ZM6.522 13V11.0559H8.482V13H6.522Z" fill="#DF9793"/>
                                     </svg> 
                                   </a>
-                                  <span class="basket__explanation-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                                  <div class="basket__explanation-hidden">
+                                    <span class="basket__explanation-hidden-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                                  </div>
                                 </div>
                                </div>
 
@@ -433,8 +492,11 @@
                                       <path class="basket__explanation-svg" d="M6.97 10.0769V9.51748C6.97 9.07925 7.054 8.67366 7.222 8.3007C7.39 7.92774 7.67933 7.52214 8.09 7.08392C8.398 6.75758 8.61267 6.47319 8.734 6.23077C8.86467 5.97902 8.93 5.72727 8.93 5.47552C8.93 5.15851 8.80867 4.91142 8.566 4.73427C8.33267 4.55711 8.006 4.46853 7.586 4.46853C7.222 4.46853 6.86267 4.52448 6.508 4.63636C6.15333 4.74825 5.81733 4.89744 5.5 5.08392V3.57343C5.82667 3.38695 6.19533 3.24709 6.606 3.15385C7.026 3.05128 7.43667 3 7.838 3C8.38867 3 8.87867 3.08392 9.308 3.25175C9.74667 3.41026 10.0873 3.65734 10.33 3.99301C10.582 4.31935 10.708 4.73893 10.708 5.25175C10.708 5.55944 10.652 5.85781 10.54 6.14685C10.4373 6.42657 10.288 6.69697 10.092 6.95804C9.896 7.21911 9.65333 7.48019 9.364 7.74126C8.90667 8.14219 8.58933 8.49184 8.412 8.79021C8.23467 9.08858 8.12733 9.38695 8.09 9.68531L8.034 10.0769H6.97ZM6.522 13V11.0559H8.482V13H6.522Z" fill="#DF9793"/>
                                     </svg> 
                                   </a>
-                                  <span class="basket__explanation-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
-                                </div></div>
+                                  <div class="basket__explanation-hidden">
+                                    <span class="basket__explanation-hidden-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                                  </div>
+                                </div>
+                              </div>
 
                               <div class="basket__wrapper-input-checkbox">
                                 <input class="basket__checkbox" type="radio" name="pay" id="bank-transfer"> 
@@ -446,7 +508,9 @@
                                       <path class="basket__explanation-svg" d="M6.97 10.0769V9.51748C6.97 9.07925 7.054 8.67366 7.222 8.3007C7.39 7.92774 7.67933 7.52214 8.09 7.08392C8.398 6.75758 8.61267 6.47319 8.734 6.23077C8.86467 5.97902 8.93 5.72727 8.93 5.47552C8.93 5.15851 8.80867 4.91142 8.566 4.73427C8.33267 4.55711 8.006 4.46853 7.586 4.46853C7.222 4.46853 6.86267 4.52448 6.508 4.63636C6.15333 4.74825 5.81733 4.89744 5.5 5.08392V3.57343C5.82667 3.38695 6.19533 3.24709 6.606 3.15385C7.026 3.05128 7.43667 3 7.838 3C8.38867 3 8.87867 3.08392 9.308 3.25175C9.74667 3.41026 10.0873 3.65734 10.33 3.99301C10.582 4.31935 10.708 4.73893 10.708 5.25175C10.708 5.55944 10.652 5.85781 10.54 6.14685C10.4373 6.42657 10.288 6.69697 10.092 6.95804C9.896 7.21911 9.65333 7.48019 9.364 7.74126C8.90667 8.14219 8.58933 8.49184 8.412 8.79021C8.23467 9.08858 8.12733 9.38695 8.09 9.68531L8.034 10.0769H6.97ZM6.522 13V11.0559H8.482V13H6.522Z" fill="#DF9793"/>
                                     </svg> 
                                   </a>
-                                  <span class="basket__explanation-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                                  <div class="basket__explanation-hidden">
+                                    <span class="basket__explanation-hidden-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                                  </div>
                                 </div></div>
                             </div> 
                           </section>  

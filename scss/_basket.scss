@@ -296,7 +296,6 @@
     }
 
 
-
     &__inputs-select-place {
         display: flex;
         flex-wrap: wrap;
@@ -367,6 +366,26 @@
         color: $color-white;
         opacity: 0;
         visibility: hidden;
+        transition: all .3s ease-in-out;
+        padding: 8px 12px;
+        top: -120px;
+        left: -138px;
+    }
+
+    &__explanation-hidden-text {
+        position: relative;
+        @include text($size: 0.75rem, $color: $color-white, $textAlign: left, $fontWeight: 400, $lineHeight: 20px);
+        &::after {
+            content: '';
+            width: 12px;
+            height: 4px;
+            background-repeat: no-repeat;
+            background-image: url('/img/arrow-down.png');
+            position: absolute;
+            bottom: -17px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 
     &__inputs-data-footer {
@@ -398,6 +417,85 @@
         color: $color-red-40;
         text-decoration: underline;
     }
+
+    &__dropdown {
+        position: relative;
+    }
+
+    &__dropdown.active {
+        
+    }
+
+    &__dropdown:hover &__dropdown-input{
+        border-color: $color-red-60;
+    }
+
+    &__dropdown:hover &__dropdown-arrow-hover{
+        fill: $color-red-60;
+    }
+
+    &__dropdown:hover &__dropdown-label.active{
+        color: $color-red-60;
+    }
+
+    &__dropdown.active &__dropdown-arrow{
+        transform: rotateZ(180deg);
+    }
+
+    &__dropdown.active &__dropdown-arrow-hover{
+        fill: $color-red-60;
+    }
+
+    &__dropdown-label.active{
+        font-size: 0.75rem;
+        top: -17px;
+    }
+
+    &__dropdown.active &__dropdown-list{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__dropdown-input {
+        border: 1px solid $color-gray-60;
+        border-radius: 1px;
+        padding: 10px 20px;
+        width: 300px;
+        height: 44px;
+        padding: 10px 16px 10px 20px;
+        display: flex;
+        @extend %centre-space-between;
+    }
+
+    &__dropdown-label {
+        display: inline-block;
+        padding: 0 4px;
+        position: absolute;
+        left: 16px;
+        top: 11px;
+        @include text($size: 0.875rem, $color: $color-gray-60, $textAlign: center, $fontWeight: 400, $lineHeight: 24px);
+        background-color: $color-white;
+        transition: all .2s ease-in-out;
+    }
+
+    &__dropdown-selected-text {
+        @include text($size: 0.875rem, $color: $color-gray-80, $textAlign: left, $fontWeight: 400, $lineHeight: 24px);
+    }
+
+    &__dropdown-arrow {
+        transform: rotateZ(0deg);
+        transition: all .2s ease-in-out;
+    }
+
+    &__dropdown-list {
+        z-index: 2;
+        width: 100%;
+        top: 44px;
+    }
+
+    &__dropdown-list-item {
+    }
+
 
    
 }
@@ -585,11 +683,7 @@
     }
 
     &__input-arrow {
-        position: absolute;
-        right: 0;
-        top: 0;
-        transform: rotateZ(0deg);
-        transition: all .2s ease-out;
+
     }
 
     &__list {
@@ -605,3 +699,7 @@
 }
 .js-input {
 }
+
+
+
+
