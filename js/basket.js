@@ -4,8 +4,14 @@ export let basket = function () {
     if(basket !== null) {
         const dropdownRegion = basket.querySelector('[data-dropdown-region]'),
               dropdownCity = basket.querySelector('[data-dropdown-city]'),
-              dropdownDepartmentNumber = basket.querySelector('[data-dropdown-department-number]');
-
+              dropdownDepartmentNumber = basket.querySelector('[data-dropdown-department-number]'),
+              dropdowns = basket.querySelectorAll('[data-dropdown]');
+              
+            function delActive (params) {
+                params.forEach((el) => {
+                    el.classList.remove('active');
+                  })
+            }         
             function changeLable (items, dropdown) {
                 items.forEach((item)=> {
                     item.addEventListener('click', ()=> {
@@ -13,11 +19,11 @@ export let basket = function () {
                     })
                 })
             }
-            function closeMenu (section ,selected, label) {
+            function closeMenu (section, dropdown ,selected, label) {
                 section.addEventListener('click', function(e) {
-                    const click = e.composedPath().includes(this);
+                    const click = e.composedPath().includes(dropdown);
                     if(!click) {
-                        this.classList.remove('active');
+                        dropdown.classList.remove('active');
                         if(selected.innerText === '') {
                             label.classList.remove('active');
                         }   
@@ -33,12 +39,19 @@ export let basket = function () {
                   dropdownRegionLabel = basket.querySelector('[data-dropdown-region-label]');
 
             dropdownRegion.addEventListener('click', function() {
-                this.classList.toggle('active');
+                if (this.classList.contains('active')) {
+                    this.classList.remove('active');
+                }
+                else {
+                    delActive(dropdowns);
+                    this.classList.add('active');
+                }
+                
                 if(dropdownRegionSelected.innerText === '') {
                     dropdownRegionLabel.classList.toggle('active');
                 } 
                 //close
-                closeMenu(basket, dropdownRegionSelected, dropdownRegionLabel)
+                closeMenu(basket, dropdownRegion, dropdownRegionSelected, dropdownRegionLabel)
             })
             changeLable(dropdownRegionSelectItems, dropdownRegionSelected)
         }
@@ -50,12 +63,18 @@ export let basket = function () {
                   dropdownRegionLabel = basket.querySelector('[data-dropdown-city-label]');
 
                   dropdownCity.addEventListener('click', function() {
-                this.classList.toggle('active');
+                    if (this.classList.contains('active')) {
+                        this.classList.remove('active');
+                    }
+                    else {
+                        delActive(dropdowns);
+                        this.classList.add('active');
+                    }
                 if(dropdownRegionSelected.innerText === '') {
                     dropdownRegionLabel.classList.toggle('active');
                 } 
                 //close
-                closeMenu(basket, dropdownRegionSelected, dropdownRegionLabel)
+                closeMenu(basket, dropdownCity, dropdownRegionSelected, dropdownRegionLabel)
             })
             changeLable(dropdownRegionSelectItems, dropdownRegionSelected)
         }
@@ -66,13 +85,20 @@ export let basket = function () {
                   dropdownRegionSelected = basket.querySelector('[data-dropdown-department-number-selected]'),
                   dropdownRegionLabel = basket.querySelector('[data-dropdown-department-number-label]');
 
-                dropdownDepartmentNumber.addEventListener('click', function() {
-                this.classList.toggle('active');
+                dropdownDepartmentNumber.addEventListener('click', function() {               
+                    if (this.classList.contains('active')) {
+                        this.classList.remove('active');
+                    }
+                    else {
+                        delActive(dropdowns);
+                        this.classList.add('active');
+                    }
+                    
                 if(dropdownRegionSelected.innerText === '') {
                     dropdownRegionLabel.classList.toggle('active');
                 } 
                 //close
-                closeMenu(basket, dropdownRegionSelected, dropdownRegionLabel)
+                closeMenu(basket, dropdownDepartmentNumber, dropdownRegionSelected, dropdownRegionLabel)
             })
             changeLable(dropdownRegionSelectItems, dropdownRegionSelected)
         }
