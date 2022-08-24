@@ -9,20 +9,10 @@ export let basket = function () {
 
         const buttonConfirm = basket.querySelector('[data-button-confirm]');
         const inputs = basket.querySelectorAll('[data-input]');
-        const inputsCheckbox = basket.querySelectorAll('[data-input-checkbox]');
         const inputsSelected = basket.querySelectorAll ('[data-input-selected]');
 
-        inputs.forEach((item)=> {
-            item.addEventListener('input', function() {
-                console.log(item.value)
-            })
-        })
-        
 
-
-
-
-              
+         
             function delActive (params) {
                 params.forEach((el) => {
                     el.classList.remove('active');

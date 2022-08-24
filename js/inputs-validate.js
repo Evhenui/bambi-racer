@@ -1,7 +1,8 @@
 export let inputValidate = function() {
   const modalWindow = document.querySelector('[data-popup-modal]'),
         personalArea = document.querySelector('[data-personal-area-section]'),
-        carProduct = document.querySelector("[data-wrapper-car-product]");   
+        carProduct = document.querySelector("[data-wrapper-car-product]"),
+        basket = document.querySelector("[data-basket-section]");
   //------------------input validate---------------------
     function validate(regex, input) {
     return regex.test(input);
@@ -166,6 +167,54 @@ export let inputValidate = function() {
               }
             });
 
+
+    }
+    if(basket !== null ) {
+      const  inputName = basket.querySelector("[data-input-name]"),
+             inputSurname = basket.querySelector("[data-input-surname]"),
+             inputPhone = basket.querySelector("[data-input-tel]"),
+             inputEmail = basket.querySelector("[data-input-email]"),
+             labelName = basket.querySelector("[data-label-name]"),
+             labelSurname = basket.querySelector("[data-label-surname]"),
+             labelPhone = basket.querySelector("[data-label-tel]"),
+             labelEmail = basket.querySelector("[data-label-email]"),
+             inputs = basket.querySelectorAll("[data-input]"),
+             button = basket.querySelector('[data-button-confirm]');
+    
+             
+      const  regPhone = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/,
+             regText = /^([A-Za-z\-\']{1,50})|([А-Яа-я\-\']{1,50})$/,
+             regEmail = /[a-zA-Z0-9]+@[a-zA-Z0-9]+.[a-zA-Z0-9]/;
+            function validInput(regex, input) {
+              return regex.test(input.value);
+            }
+
+            function inputsChange(inputs, button) {
+              inputs.forEach((item)=>{
+                item.addEventListener('input', function() {
+                 if(inputs[0].value && inputs[1].value && inputs[2].value && inputs[3].value) {
+                  if(validInput(regText, inputName) && validInput(regPhone, inputPhone) && validInput(regText, inputSurname) && validInput(regEmail, inputEmail)){
+                    button.disabled = false;
+                  } 
+                 }
+                })
+              })
+            }
+
+            inputName.addEventListener('input', function(){
+              exam(regText, labelName, inputName)
+            });
+            inputSurname.addEventListener('input', function(){
+              exam(regText, labelSurname, inputSurname)
+            });
+            inputPhone.addEventListener('input', function(){
+              exam(regPhone, labelPhone, inputPhone)
+            });
+            inputEmail.addEventListener('input', function(){
+              exam(regEmail, labelEmail, inputEmail)
+            });
+          
+            inputsChange(inputs, button);
 
     }
    //------------------show password--------------------- 

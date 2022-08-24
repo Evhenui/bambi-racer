@@ -35,6 +35,17 @@
         justify-content: space-between;
     }
 
+    &__input.is-invalid {
+        &:focus, &:active,
+        &:read-only, &:read-write {
+            border-color: $color-red-60;
+        }
+    }
+    &__label.is-invalid {
+        color: $color-red-60
+    }
+
+
     &__inputs-data {
         max-width: 664px;
         width: 100%;
@@ -470,6 +481,10 @@
         @extend %centre-space-between;
     }
 
+    &__dropdown-input.is-invalid {
+        border-color: $color-red-60;
+    }
+
     &__dropdown-label {
         display: inline-block;
         padding: 0 4px;
@@ -501,28 +516,6 @@
 
 
    
-}
-.personal-area-private-data {
-
-    &__wrapper-input {
-    }
-
-    &__input {
-    }
-
-    &__label {
-    }
-
-    &__wrapper-input-email {
-    }
-}
-.js-input {
-}
-.custom-checkbox {
-}
-.checkbox {
-}
-.btn-red {
 }
 .my-order {
     max-width: 469px;
