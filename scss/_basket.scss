@@ -14,14 +14,31 @@
     &__header-wrapper {
         @extend %size-page;       
         padding: 24px 48px;
+        @media (max-width: 960px) {
+            padding: 32px 48px;  
+        }
+        @media (max-width: 860px) {
+            padding: 32px 16px; 
+        }
     }
 
     &__title {
         @include text($size: 2.5rem, $color: $color-white, $textAlign: left, $fontWeight: 900, $lineHeight: 60px);
         text-transform: uppercase;
+        @media (max-width: 960px) {
+            font-size: 2rem;
+            max-width: 325px;
+            width: 100%;
+            line-height: 44px;
+        }
     }
     &__title.order-header {
         @include text($size: 1.25rem, $color: $color-black, $textAlign: left, $fontWeight: 600, $lineHeight: 32px);
+        @include __960 {
+            max-width: 159px;
+            @include text($size: 1rem, $fontWeight: 700, $textAlign: left, $lineHeight: 24px);
+            margin-right: 59px;
+        }
     }
 
     &__ordering {
@@ -29,10 +46,20 @@
     }
 
     &__ordering-wrapper {
-        padding: 184px 0 140px 0;
+        padding: 148px 48px 140px 48px;
         @extend %size-page; 
         display: flex;
         justify-content: space-between;
+        column-gap: 15px;
+        @media (max-width: 960px) {
+            padding: 188px 48px 100px 48px;
+            flex-direction: column-reverse;
+            align-items: center;
+            row-gap: 32px;
+        }
+        @media (max-width: 860px) {
+            padding: 188px 16px 100px 16px;
+        }   
     }
 
     &__input.is-invalid {
@@ -62,10 +89,20 @@
     }
 
     &__inputs-wrapper {
-
         display: flex;
         flex-wrap: wrap;
-        gap: 32px 24px;
+        gap: 32px 24px;  
+        @include __960 {
+            flex-direction: column;
+            gap: 32px 0;
+        }
+    }
+
+    &__inputs-wrapper.payment {
+        @media (max-width: 1105px) {
+            flex-direction: column;
+            row-gap: 28px;
+        }
     }
 
     &__inputs-data-header-wrapper {  
@@ -79,6 +116,9 @@
     &__inputs-data-navigation-list {
         display: flex;
         column-gap: 56px;
+        @media (max-width: 960px) {
+            justify-content: center;
+        }
     }
 
     &__inputs-data-navigation-item {
@@ -88,6 +128,9 @@
         width: 100%;
         text-align: center;
         position: relative;
+        @media (max-width: 960px) {
+            max-width: 165px;  
+        }
         &::after {
             content: '';
             width: 0;
@@ -123,6 +166,10 @@
         transition: all .3s ease-out;
         display: inline-block;
         @include text($size: 1.125rem, $color: $color-gray-60, $fontWeight: 700, $lineHeight: 28px);
+        @media (max-width: 960px) {
+          line-height: 24px;  
+          font-size: 0.875rem;
+        }
     }
 
     &__inputs-data-main {
@@ -146,7 +193,7 @@
 
 
     &__inputs-tilte {
-        margin-bottom: 28px;
+        margin-bottom: 36px;
         @include text($size: 1.125rem, $color: $color-black, $textAlign: left, $fontWeight: 700, $lineHeight: 28px);
     }
 
@@ -160,6 +207,9 @@
         margin: 0;
         flex: 1 1 300px;
         position: relative;
+        @include __960 {
+            flex: 1;
+        }
     }
 
     &__input {
@@ -232,6 +282,19 @@
         column-gap: 60px;
         margin-bottom: 28px;
         overflow: hidden;
+        @media (max-width: 1174px) {
+            flex-direction: column;
+            row-gap: 28px;
+            margin-bottom: 36px;
+        }
+    }
+
+    .lunge {
+        @media (max-width: 860px) {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+        }
     }
 
     &__wrapper-input-checkbox {
@@ -312,6 +375,10 @@
         flex-wrap: wrap;
         row-gap: 32px;
         gap: 32px 24px;
+        @include __960 {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 
     &__wrapper-select {
@@ -520,18 +587,47 @@
 .my-order {
     max-width: 469px;
     width: 100%;
+    @media (max-width: 1250px) {
+        max-width: 400px;
+    }
     &__wrapper {  
         box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
         background-color: $color-white;
+        @include __960 {
+            box-shadow: none;
+            transition: all .2s ease-in-out;
+            &.active {
+                box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.1); 
+            }
+        }
     }
 
-    &__header {
+    &__wrapper.active &__arrow-mobile {
+        transform: rotateZ(180deg);
     }
+
+    &__wrapper.active &__header-wrapper {
+        padding-top: 20px;
+    }
+
+    &__wrapper.active &__edit-order.mobile {
+        visibility: visible;
+        opacity: 1;
+    }
+
 
     &__header-wrapper {
+        transition: all .2s ease-in-out;
         padding: 32px 20px 12px 20px;
         @extend %centre-space-between;
+        @media (max-width: 1250px) {
+            padding: 32px 15px 12px 15px; 
+        }
+        @include __960 {
+            padding: 4px 8px 4px 8px;
+            column-gap: 12px;
+        }
     }
 
     &__edit-order {
@@ -540,23 +636,58 @@
         &:active {
             color: $color-red;
         }
+        @include __960 {
+            display: none;
+        }
     }
 
-    &__arrow-mobile {
+    &__edit-order.mobile {
         display: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .2s ease-in-out;
+            @include __960 {
+                display: block;
+            }
+        }
+    
+
+    &__arrow-mobile {
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        display: none;
+        font-size: 0;
+        transition: all .2s ease-in-out;
+        transform: rotateZ(0deg);
+        @include __960 {
+            display: inline-block;
+        }
     }
 
     &__arrow {
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        font-size: 0;
     }
 
     &__main {
     }
 
+    
     &__full-information {
+        @include __960 {
+            height: 0;
+            overflow: hidden;
+            transition: all .2s ease-in-out;
+        }  
     }
 
     &__main-wrapper {
         padding: 8px 20px 0 20px;
+        @media (max-width: 1250px) {
+            padding: 8px 15px 0 15px;
+        }
+        @include __960 {
+            padding: 8px 8px 0 8px;
+        }
     }
 
     &__items {
@@ -571,10 +702,19 @@
         &:last-child {
             border-bottom: 1px solid $color-gray-20;
         }
+        @media (max-width: 1250px) {
+            column-gap: 8px;
+        }
+        @include __960 {
+            padding: 8px 0 8px 0;
+        }
     }
 
     &__order-item.discount {
         padding: 7px 0 8px 0;
+        @include __960 {
+            padding: 8px 0 8px 0;
+        }
     } 
 
     &__order-item-wrapper {
@@ -584,6 +724,9 @@
     &__item-image-wrapper {
         max-width: 60px;
         width: 100%;
+        @include __960 {
+            max-width: 44px;
+        }
     }
 
     &__item-image {
@@ -594,6 +737,9 @@
     &__item-name {
         max-width: 254px;
         width: 100%;
+        @include __960 {
+            max-width: 185px;
+        }
     }
 
     &__price {
@@ -601,6 +747,9 @@
 
     &__real-price {
         font-weight: 700;
+        @media (max-width: 1250px) {
+            text-align: center;
+        }
     }
     &__real-price.discount {
         color: $color-red;
@@ -618,6 +767,9 @@
         padding: 20px 0 32px 0;
         display: flex;
         justify-content: flex-end;
+        @include __960 {
+            padding: 20px 0;
+        }
     }
 
     &__total-price {

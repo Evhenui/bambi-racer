@@ -5,7 +5,8 @@ export let basket = function () {
         const dropdownRegion = basket.querySelector('[data-dropdown-region]'),
               dropdownCity = basket.querySelector('[data-dropdown-city]'),
               dropdownDepartmentNumber = basket.querySelector('[data-dropdown-department-number]'),
-              dropdowns = basket.querySelectorAll('[data-dropdown]');
+              dropdowns = basket.querySelectorAll('[data-dropdown]'),
+              accordion = basket.querySelector('[data-order-accordion]');
 
         const buttonConfirm = basket.querySelector('[data-button-confirm]');
         const inputs = basket.querySelectorAll('[data-input]');
@@ -38,6 +39,23 @@ export let basket = function () {
                 
             }
 
+
+
+        if(accordion !== null) {
+            const content = accordion.querySelector('[data-my-order-mobile-full-information]');
+            window.addEventListener('resize', function(event) {
+                if(innerWidth <= 960) {
+                    accordion.addEventListener('click', function() {
+                        this.classList.toggle('active');
+                        if(this.classList.contains('active')) {
+                            content.style.height = content.scrollHeight + 'px';
+                        } else {
+                            content.style.height = 0 + 'px';
+                        }
+                    })
+                }  
+            })   
+        }
         if(dropdownRegion !== null) {
 
             const dropdownRegionSelectItems = basket.querySelectorAll('[data-dropdown-region-item]'),

@@ -323,7 +323,7 @@
                           <section class="basket__inputs">
                             <div class="basket__inputs-wrapper">
                               <form action="" class="basket__inputs-wrapper form">
-                                <div class="basket__wrapper-input personal-area-private-data__wrapper-input">
+                                <div class="basket__wrapper-input">
                                   <input data-input data-input-surname type="text" class="basket__input js-input" required/>
                                   <label data-label-surname class="basket__label">Фамилия</label>
                                 </div>
@@ -334,9 +334,10 @@
                                 </div>
                 
                                 <div class="basket__wrapper-input">
-                                  <input data-input data-input-tel maxlength="19" type="tel" class="basket__input js-input" placeholder="+3(800)000-00-00"  required/>
+                                  <input data-tel-input data-input data-input-tel maxlength="19" type="tel" class="basket__input js-input" required/>
                                   <label data-label-tel class="basket__label">Мобильный телефон</label>
                                 </div>
+
                                 <div class="basket__wrapper-input">
                                   <input data-input data-input-email type="text" class="basket__input js-input" required/>
                                   <label data-label-email class="basket__label" >Электронная почта</label>
@@ -463,13 +464,13 @@
                         <div class="basket__inputs-wrapper-main">
                           <h1 class="basket__subtitle basket__inputs-tilte">3. Способ оплаты</h1>
                           <section class="basket__inputs">
-                            <div class="basket__inputs-wrapper">
+                            <div class="basket__inputs-wrapper payment">
 
                               <div class="basket__wrapper-input-checkbox">
                                 <input checked class="basket__checkbox" type="radio" name="pay" id="c-o-d"> 
                                 <label class="basket__checkbox-label" for="c-o-d">Наложенный платёж</label>
                                 <div class="basket__explanation-wrapper">
-                                  <a class="basket__explanation" href="#">
+                                  <a class="basket__explanation">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                       <circle cx="8" cy="8" r="8" fill="#F3F2F2"/>
                                       <path class="basket__explanation-svg" d="M6.97 10.0769V9.51748C6.97 9.07925 7.054 8.67366 7.222 8.3007C7.39 7.92774 7.67933 7.52214 8.09 7.08392C8.398 6.75758 8.61267 6.47319 8.734 6.23077C8.86467 5.97902 8.93 5.72727 8.93 5.47552C8.93 5.15851 8.80867 4.91142 8.566 4.73427C8.33267 4.55711 8.006 4.46853 7.586 4.46853C7.222 4.46853 6.86267 4.52448 6.508 4.63636C6.15333 4.74825 5.81733 4.89744 5.5 5.08392V3.57343C5.82667 3.38695 6.19533 3.24709 6.606 3.15385C7.026 3.05128 7.43667 3 7.838 3C8.38867 3 8.87867 3.08392 9.308 3.25175C9.74667 3.41026 10.0873 3.65734 10.33 3.99301C10.582 4.31935 10.708 4.73893 10.708 5.25175C10.708 5.55944 10.652 5.85781 10.54 6.14685C10.4373 6.42657 10.288 6.69697 10.092 6.95804C9.896 7.21911 9.65333 7.48019 9.364 7.74126C8.90667 8.14219 8.58933 8.49184 8.412 8.79021C8.23467 9.08858 8.12733 9.38695 8.09 9.68531L8.034 10.0769H6.97ZM6.522 13V11.0559H8.482V13H6.522Z" fill="#DF9793"/>
@@ -485,7 +486,7 @@
                                 <input class="basket__checkbox" type="radio" name="pay" id="way-for-pay"> 
                                 <label class="basket__checkbox-label" for="way-for-pay">WayForPay</label>
                                 <div class="basket__explanation-wrapper">
-                                  <a class="basket__explanation" href="#">
+                                  <a class="basket__explanation">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                       <circle cx="8" cy="8" r="8" fill="#F3F2F2"/>
                                       <path class="basket__explanation-svg" d="M6.97 10.0769V9.51748C6.97 9.07925 7.054 8.67366 7.222 8.3007C7.39 7.92774 7.67933 7.52214 8.09 7.08392C8.398 6.75758 8.61267 6.47319 8.734 6.23077C8.86467 5.97902 8.93 5.72727 8.93 5.47552C8.93 5.15851 8.80867 4.91142 8.566 4.73427C8.33267 4.55711 8.006 4.46853 7.586 4.46853C7.222 4.46853 6.86267 4.52448 6.508 4.63636C6.15333 4.74825 5.81733 4.89744 5.5 5.08392V3.57343C5.82667 3.38695 6.19533 3.24709 6.606 3.15385C7.026 3.05128 7.43667 3 7.838 3C8.38867 3 8.87867 3.08392 9.308 3.25175C9.74667 3.41026 10.0873 3.65734 10.33 3.99301C10.582 4.31935 10.708 4.73893 10.708 5.25175C10.708 5.55944 10.652 5.85781 10.54 6.14685C10.4373 6.42657 10.288 6.69697 10.092 6.95804C9.896 7.21911 9.65333 7.48019 9.364 7.74126C8.90667 8.14219 8.58933 8.49184 8.412 8.79021C8.23467 9.08858 8.12733 9.38695 8.09 9.68531L8.034 10.0769H6.97ZM6.522 13V11.0559H8.482V13H6.522Z" fill="#DF9793"/>
@@ -501,7 +502,7 @@
                                 <input class="basket__checkbox" type="radio" name="pay" id="bank-transfer"> 
                                 <label class="basket__checkbox-label" for="bank-transfer">Банковский перевод</label>
                                 <div class="basket__explanation-wrapper">
-                                  <a class="basket__explanation" href="#">
+                                  <a class="basket__explanation">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                       <circle cx="8" cy="8" r="8" fill="#F3F2F2"/>
                                       <path class="basket__explanation-svg" d="M6.97 10.0769V9.51748C6.97 9.07925 7.054 8.67366 7.222 8.3007C7.39 7.92774 7.67933 7.52214 8.09 7.08392C8.398 6.75758 8.61267 6.47319 8.734 6.23077C8.86467 5.97902 8.93 5.72727 8.93 5.47552C8.93 5.15851 8.80867 4.91142 8.566 4.73427C8.33267 4.55711 8.006 4.46853 7.586 4.46853C7.222 4.46853 6.86267 4.52448 6.508 4.63636C6.15333 4.74825 5.81733 4.89744 5.5 5.08392V3.57343C5.82667 3.38695 6.19533 3.24709 6.606 3.15385C7.026 3.05128 7.43667 3 7.838 3C8.38867 3 8.87867 3.08392 9.308 3.25175C9.74667 3.41026 10.0873 3.65734 10.33 3.99301C10.582 4.31935 10.708 4.73893 10.708 5.25175C10.708 5.55944 10.652 5.85781 10.54 6.14685C10.4373 6.42657 10.288 6.69697 10.092 6.95804C9.896 7.21911 9.65333 7.48019 9.364 7.74126C8.90667 8.14219 8.58933 8.49184 8.412 8.79021C8.23467 9.08858 8.12733 9.38695 8.09 9.68531L8.034 10.0769H6.97ZM6.522 13V11.0559H8.482V13H6.522Z" fill="#DF9793"/>
@@ -530,11 +531,12 @@
                 </div>
               </section>
               <section data-my-order-mobile-accordion class="my-order">
-                <div class="my-order__wrapper">
+                <div data-order-accordion class="my-order__wrapper">
                     <header class="my-order__header">
                       <div class="my-order__header-wrapper">
                         <h1 class="basket__title order-header">Корзина</h1>
                         <a class="my-order__edit-order" href="#">Редактировать заказ</a>
+                        <a class="my-order__edit-order mobile" href="#">Редактировать</a>
                         <div class="my-order__arrow-mobile">
                           <button class="my-order__arrow">
                             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">

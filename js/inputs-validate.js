@@ -239,10 +239,9 @@ export let inputValidate = function() {
     showPass(btnShowPassPersonalArea)
     showPass(btnShowPassModal)
     }
-
-    if(carProduct !== null || personalArea != null) {
+   //------------------phone mask---------------------
+    if(carProduct !== null || personalArea !== null || basket !== null) {
       const phoneInputs = document.querySelectorAll('[data-tel-input]');
-
       const getInputNumbersValue = function (input) {
           return input.value.replace(/\D/g, '');
       }
