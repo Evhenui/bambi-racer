@@ -324,22 +324,22 @@
                             <div class="basket__inputs-wrapper">
                               <form action="" class="basket__inputs-wrapper form">
                                 <div class="basket__wrapper-input personal-area-private-data__wrapper-input">
-                                  <input data-input-surname type="text" class="basket__input js-input" required/>
+                                  <input data-input data-input-surname type="text" class="basket__input js-input" required/>
                                   <label data-label-surname class="basket__label">Фамилия</label>
                                 </div>
                 
                                 <div class="basket__wrapper-input">
-                                  <input data-input-name type="text" class="basket__input js-input" required/>
+                                  <input data-input data-input-name type="text" class="basket__input js-input" required/>
                                   <label data-label-name class="basket__label">Имя</label>
                                 </div>
                 
                                 <div class="basket__wrapper-input">
-                                  <input data-input-tel maxlength="19" type="tel" class="basket__input js-input" required/>
+                                  <input data-input data-input-tel maxlength="19" type="tel" class="basket__input js-input" required/>
                                   <label data-label-tel class="basket__label">Мобильный телефон</label>
                                 </div>
                 
                                 <div class="basket__wrapper-input">
-                                  <input data-input-email type="text" class="basket__input js-input" required/>
+                                  <input data-input data-input-email type="text" class="basket__input js-input" required/>
                                   <label data-label-email class="basket__label" >Электронная почта</label>
                                 </div>
                               </form>
@@ -357,12 +357,12 @@
                                 <section class="basket__inputs-select-post">
 
                                   <div class="basket__wrapper-input-checkbox">
-                                    <input class="basket__checkbox" type="radio" name="rb" id="rb2"> 
+                                    <input data-input-checkbox checked class="basket__checkbox" type="radio" name="rb" id="rb2"> 
                                     <label class="basket__checkbox-label" for="rb2">Новая Почта до отделения</label>
                                   </div>
                                   
                                   <div class="basket__wrapper-input-checkbox">
-                                    <input class="basket__checkbox" type="radio" name="rb" id="rb3"> 
+                                    <input data-input-checkbox class="basket__checkbox" type="radio" name="rb" id="rb3"> 
                                     <label class="basket__checkbox-label" for="rb3">Новая почта курьерская доставка</label>
                                   </div>
                                 </section>
@@ -372,7 +372,7 @@
                                   <section data-dropdown-region data-dropdown class="basket__dropdown region">
                                     <div class="basket__dropdown-input region">
                                       <span data-dropdown-region-label class="basket__dropdown-label">Область</span>
-                                      <span data-dropdown-region-selected class="basket__dropdown-selected-text"></span>
+                                      <span data-input-selected data-dropdown-region-selected class="basket__dropdown-selected-text"></span>
                                       <svg class="basket__dropdown-arrow" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path class="basket__dropdown-arrow-hover" d="M16.7071 17.2929L16 16.5858L14.5858 18L15.2929 18.7071L16.7071 17.2929ZM20 22L19.2929 22.7071L20 23.4142L20.7071 22.7071L20 22ZM24.7071 18.7071L25.4142 18L24 16.5858L23.2929 17.2929L24.7071 18.7071ZM15.2929 18.7071L19.2929 22.7071L20.7071 21.2929L16.7071 17.2929L15.2929 18.7071ZM20.7071 22.7071L24.7071 18.7071L23.2929 17.2929L19.2929 21.2929L20.7071 22.7071Z" fill="#4E4B4B"/>
                                       </svg> 
@@ -400,7 +400,7 @@
                                   <section data-dropdown-city data-dropdown class="basket__dropdown city">
                                     <div class="basket__dropdown-input city">
                                       <span data-dropdown-city-label class="basket__dropdown-label">Город</span>
-                                      <span data-dropdown-city-selected class="basket__dropdown-selected-text"></span>
+                                      <span data-input-selected data-dropdown-city-selected class="basket__dropdown-selected-text"></span>
                                       <svg class="basket__dropdown-arrow" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path class="basket__dropdown-arrow-hover" d="M16.7071 17.2929L16 16.5858L14.5858 18L15.2929 18.7071L16.7071 17.2929ZM20 22L19.2929 22.7071L20 23.4142L20.7071 22.7071L20 22ZM24.7071 18.7071L25.4142 18L24 16.5858L23.2929 17.2929L24.7071 18.7071ZM15.2929 18.7071L19.2929 22.7071L20.7071 21.2929L16.7071 17.2929L15.2929 18.7071ZM20.7071 22.7071L24.7071 18.7071L23.2929 17.2929L19.2929 21.2929L20.7071 22.7071Z" fill="#4E4B4B"/>
                                       </svg> 
@@ -428,7 +428,7 @@
                                   <section data-dropdown-department-number data-dropdown class="basket__dropdown department-number">
                                     <div class="basket__dropdown-input department-number">
                                       <span data-dropdown-department-number-label class="basket__dropdown-label">Номер отделения</span>
-                                      <span data-dropdown-department-number-selected class="basket__dropdown-selected-text"></span>
+                                      <span data-input-selected data-dropdown-department-number-selected class="basket__dropdown-selected-text"></span>
                                       <svg class="basket__dropdown-arrow" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path class="basket__dropdown-arrow-hover" d="M16.7071 17.2929L16 16.5858L14.5858 18L15.2929 18.7071L16.7071 17.2929ZM20 22L19.2929 22.7071L20 23.4142L20.7071 22.7071L20 22ZM24.7071 18.7071L25.4142 18L24 16.5858L23.2929 17.2929L24.7071 18.7071ZM15.2929 18.7071L19.2929 22.7071L20.7071 21.2929L16.7071 17.2929L15.2929 18.7071ZM20.7071 22.7071L24.7071 18.7071L23.2929 17.2929L19.2929 21.2929L20.7071 22.7071Z" fill="#4E4B4B"/>
                                       </svg> 
@@ -467,7 +467,7 @@
                             <div class="basket__inputs-wrapper">
 
                               <div class="basket__wrapper-input-checkbox">
-                                <input class="basket__checkbox" type="radio" name="pay" id="c-o-d"> 
+                                <input checked data-input-checkbox class="basket__checkbox" type="radio" name="pay" id="c-o-d"> 
                                 <label class="basket__checkbox-label" for="c-o-d">Наложенный платёж</label>
                                 <div class="basket__explanation-wrapper">
                                   <a class="basket__explanation" href="#">
@@ -483,7 +483,7 @@
                                </div>
 
                               <div class="basket__wrapper-input-checkbox">
-                                <input class="basket__checkbox" type="radio" name="pay" id="way-for-pay"> 
+                                <input data-input-checkbox class="basket__checkbox" type="radio" name="pay" id="way-for-pay"> 
                                 <label class="basket__checkbox-label" for="way-for-pay">WayForPay</label>
                                 <div class="basket__explanation-wrapper">
                                   <a class="basket__explanation" href="#">
@@ -499,7 +499,7 @@
                               </div>
 
                               <div class="basket__wrapper-input-checkbox">
-                                <input class="basket__checkbox" type="radio" name="pay" id="bank-transfer"> 
+                                <input data-input-checkbox class="basket__checkbox" type="radio" name="pay" id="bank-transfer"> 
                                 <label class="basket__checkbox-label" for="bank-transfer">Банковский перевод</label>
                                 <div class="basket__explanation-wrapper">
                                   <a class="basket__explanation" href="#">
@@ -511,7 +511,7 @@
                                   <div class="basket__explanation-hidden">
                                     <span class="basket__explanation-hidden-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
                                   </div>
-                                </div></div>
+
                             </div> 
                           </section>  
                         </div>
@@ -520,7 +520,7 @@
                   </main>
                   <footer class="basket__inputs-data-footer">
                     <div class="basket__inputs-data-footer-wrapper">
-                      <button class="basket__button-confirm btn-red">Заказ подтверждаю</button>
+                      <button data-button-confirm disabled class="basket__button-confirm btn-red">Заказ подтверждаю</button>
                       <section class="basket__conditions">
                         <div class="basket__conditions-wrapper">
                           <p class="basket__subtitle basket__footer-text">Оформляя заказ, я принимаю <a class="basket__footer-link" href="#">Договор публичной оферты </a>и <a class="basket__footer-link" href="#">Политику конфиденциальности</a></p>

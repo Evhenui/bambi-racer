@@ -399,6 +399,9 @@
     &__button-confirm {
         margin-bottom: 12px;
         max-width: 200px;
+        &:disabled {
+            cursor: auto;
+        }
     }
 
     &__conditions {

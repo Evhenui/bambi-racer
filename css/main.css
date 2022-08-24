@@ -8633,6 +8633,9 @@ body.lock {
   margin-bottom: 12px;
   max-width: 200px;
 }
+.basket__button-confirm:disabled {
+  cursor: auto;
+}
 .basket__conditions-wrapper {
   max-width: 360px;
   width: 100%;

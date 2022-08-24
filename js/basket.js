@@ -6,6 +6,22 @@ export let basket = function () {
               dropdownCity = basket.querySelector('[data-dropdown-city]'),
               dropdownDepartmentNumber = basket.querySelector('[data-dropdown-department-number]'),
               dropdowns = basket.querySelectorAll('[data-dropdown]');
+
+        const buttonConfirm = basket.querySelector('[data-button-confirm]');
+        const inputs = basket.querySelectorAll('[data-input]');
+        const inputsCheckbox = basket.querySelectorAll('[data-input-checkbox]');
+        const inputsSelected = basket.querySelectorAll ('[data-input-selected]');
+
+        inputs.forEach((item)=> {
+            item.addEventListener('input', function() {
+                console.log(item.value)
+            })
+        })
+        
+
+
+
+
               
             function delActive (params) {
                 params.forEach((el) => {
@@ -102,6 +118,5 @@ export let basket = function () {
             })
             changeLable(dropdownRegionSelectItems, dropdownRegionSelected)
         }
-        
     } 
 }
