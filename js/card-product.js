@@ -11,7 +11,23 @@ export let cardProduct = function () {
             modalOnClick = carProduct.querySelector('[data-modal-on-click]'),
             modalZoom = carProduct.querySelector("[data-modal-zoom]"),
             modalBasket = carProduct.querySelector("[data-modal-basket]"),
-            sectionReviews = carProduct.querySelector('[data-card-product-reviews]');
+            sectionReviews = carProduct.querySelector('[data-card-product-reviews]'),
+            characteristicsSection = carProduct.querySelector('[data-characteristics-section]');
+
+    //------show all characteristics-------------------
+    if(characteristicsSection !== null) {
+      const buttonShowMore = characteristicsSection.querySelector('[data-show-all-characteristics]'),
+            sectionShowMore = characteristicsSection.querySelector('[data-show-more]'),
+            characteristicsBlock = characteristicsSection.querySelectorAll('[data-characteristics-block]');
+      buttonShowMore.addEventListener('click', function() {
+        sectionShowMore.classList.toggle('active');
+        characteristicsBlock.forEach((item)=> {
+          item.classList.toggle('active');
+        })
+      })
+      
+    }
+    
 
     //-----add class active groop------
     function addActiveClass(list) {

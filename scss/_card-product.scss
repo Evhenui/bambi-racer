@@ -1603,6 +1603,8 @@
     }
     @media (max-width: 960px) {
       margin-bottom: 40px;
+      flex-direction: column;
+      row-gap: 32px;
     }
   }
   &__detailed-left-part {
@@ -1611,6 +1613,9 @@
     display: flex;
     flex-direction: column;
     row-gap: 20px;
+    @media (max-width: 960px) {
+      row-gap: 32px;
+    }
   }
   .card-product-description__wrapper {
     display: flex;
@@ -1632,6 +1637,14 @@
       background-color: $color-white;
       &:nth-child(n+4) {
         display: none;
+      }
+    }
+  }
+
+  &__section-characteristics.active {
+    @media (max-width: 960px) {
+      &:nth-child(n+4) {
+        display: block;
       }
     }
   }
@@ -1676,6 +1689,13 @@
     row-gap: 20px;
     @media (max-width: 960px) {
       display: none;
+      row-gap: 32px;
+    }
+  }
+
+  &__detailed-right-part.active {
+    @media (max-width: 960px) {
+      display: flex;
     }
   }
   &__button-mobile {

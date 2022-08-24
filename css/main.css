@@ -7385,6 +7385,8 @@ body.lock {
 @media (max-width: 960px) {
   .card-product-characteristics__detailed-information {
     margin-bottom: 40px;
+    flex-direction: column;
+    row-gap: 32px;
   }
 }
 .card-product-characteristics__detailed-left-part {
@@ -7393,6 +7395,11 @@ body.lock {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
+}
+@media (max-width: 960px) {
+  .card-product-characteristics__detailed-left-part {
+    row-gap: 32px;
+  }
 }
 .card-product-characteristics .card-product-description__wrapper {
   display: flex;
@@ -7417,6 +7424,11 @@ body.lock {
   }
   .card-product-characteristics__section-characteristics:nth-child(n+4) {
     display: none;
+  }
+}
+@media (max-width: 960px) {
+  .card-product-characteristics__section-characteristics.active:nth-child(n+4) {
+    display: block;
   }
 }
 .card-product-characteristics .card-product-title.characteristics {
@@ -7461,6 +7473,12 @@ body.lock {
 @media (max-width: 960px) {
   .card-product-characteristics__detailed-right-part {
     display: none;
+    row-gap: 32px;
+  }
+}
+@media (max-width: 960px) {
+  .card-product-characteristics__detailed-right-part.active {
+    display: flex;
   }
 }
 .card-product-characteristics__button-mobile {
