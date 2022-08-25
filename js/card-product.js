@@ -27,8 +27,6 @@ export let cardProduct = function () {
       })
       
     }
-    
-
     //-----add class active groop------
     function addActiveClass(list) {
       list.forEach((item) => {
@@ -93,8 +91,7 @@ export let cardProduct = function () {
             modalZoomButtonBuyOnClick = carProduct.querySelector("[data-modal-zoom__buy-on-click]"),
             modalBasketOpen = carProduct.querySelector("[data-modal-basket]"),
             modalBuyOnClickOpen = carProduct.querySelector("[data-modal-on-click]");
-
-            
+     
       buttonOpenModalZoom.addEventListener("click", function () {
         modalZoom.classList.add("active");
         body.classList.add("lock");

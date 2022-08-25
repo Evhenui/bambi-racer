@@ -3,7 +3,7 @@ export let personalArea = function () {
         tabsItems = document.querySelectorAll(".js-personal-area-section"),
         accordion = document.querySelector('[data-accordion]'),
         productButton = document.querySelectorAll('.js-product-button'),
-        modalWindow = document.querySelector('[data-popup-modal]');
+        modalWindow = document.querySelector('[data-modal-enter]');
 
 //----------------------tab menu-----------------
   if (itemTabMenu != null && tabsItems != null) {
@@ -30,8 +30,14 @@ export let personalArea = function () {
     const modalLink = modalWindow.querySelectorAll('.js-modal-tab-item'),
           tabsItems = modalWindow.querySelectorAll(".js-modal-tab-section"),
           buttonCloseModal = modalWindow.querySelectorAll('[data-close-modal]'),
-          modalContainer = modalWindow.querySelector('[data-popup-modal-container]');
-//----------modal tabs------------------------------------
+          modalContainer = modalWindow.querySelector('[data-popup-modal-container]'),
+          body = document.querySelector("#body-cont");
+
+          if(modalWindow.classList.contains('active')) {
+            body.style.overflow = 'hidden';
+          }
+
+//----------modal tabs----------------------------------------------
           modalLink.forEach(function(item) {
             item.addEventListener("click", function () {
               const tabId = item.getAttribute("data-modal-tab-item"),
@@ -48,18 +54,20 @@ export let personalArea = function () {
               }
             })
           })
-//----------modal close------------------------------------
-buttonCloseModal.forEach((item)=> {
-  item.addEventListener('click', function() {
-    modalWindow.classList.remove('active');
-  })
-  document.addEventListener('click',(e)=>{
-    const click = e.composedPath().includes(modalContainer);
-    if(!click) {
-      modalWindow.classList.remove('active');
-    }
-  })
-})   
+//----------modal close---------------------------------------------
+          buttonCloseModal.forEach((item)=> {
+            item.addEventListener('click', function() {
+              modalWindow.classList.remove('active');
+              body.style.overflow = 'auto';
+            })
+            modalWindow.addEventListener('click',(e)=>{
+              const click = e.composedPath().includes(modalContainer);
+              if(!click) {
+                modalWindow.classList.remove('active');
+                body.style.overflow = 'auto';
+              }
+            })
+          })   
   }
 //----------------------button show menu comparison-----------------
   if (productButton != null) {
@@ -95,7 +103,7 @@ buttonCloseModal.forEach((item)=> {
     });
     
   }
-//----------------------accordion-----------------
+//----------------------accordion-----------------------------------
 if (accordion != null) {
   const accordionItem = accordion.querySelectorAll('[data-accordion-item]');
   accordionItem.forEach((item) => {

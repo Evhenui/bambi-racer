@@ -17,7 +17,7 @@
             }
         }
         const btnBuyCardProd = document.querySelectorAll('.js-btn-buy-card-prod-catalog');
-        btnBuyCardProd.forEach((el) => {
+              btnBuyCardProd.forEach((el) => {
             el.addEventListener('mouseenter', () => {
                 el.querySelector('.card-prod-catalog__buy-text').classList.add('active');
             });

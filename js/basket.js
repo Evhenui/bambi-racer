@@ -7,8 +7,8 @@ export let basket = function () {
               dropdownDepartmentNumber = basket.querySelector('[data-dropdown-department-number]'),
               dropdowns = basket.querySelectorAll('[data-dropdown]'),
               accordion = basket.querySelector('[data-order-accordion]'),
-              popupModal = basket.querySelector('[data-popup-modal]');
-
+              popupModal = basket.querySelector('[data-modal-enter]');
+         
             function delActive (params) {
                 params.forEach((el) => {
                     el.classList.remove('active');
@@ -119,9 +119,50 @@ export let basket = function () {
             changeLable(dropdownRegionSelectItems, dropdownRegionSelected)
         }
 
-       if(popupModal !== null) {
+        if(popupModal !== null) {
+            const   modalLink = popupModal.querySelectorAll('.js-modal-tab-item'),
+                    tabsItems = popupModal.querySelectorAll(".js-modal-tab-section"),
+                    buttonCloseModal = popupModal.querySelectorAll('[data-close-modal]'),
+                    modalContainer = popupModal.querySelector('[data-popup-modal-container]'),
+                    body = document.querySelector("#body-cont"),
+                    buttonOpenModal = basket.querySelector('[data-open-popup]');
 
+                    buttonOpenModal.addEventListener('click', function() {
+                        popupModal.classList.add('active');
+                        body.style.overflow = 'hidden';
+                    })             
+  //----------modal tabs----------------------------------------------
+            modalLink.forEach(function(item) {
+              item.addEventListener("click", function () {
+                const tabId = item.getAttribute("data-modal-tab-item"),
+                      currentTub = popupModal.querySelector(tabId);
+                if (!item.classList.contains("active")) {
+                  modalLink.forEach(function (item) {
+                    item.classList.remove("active");
+                  });
+                  tabsItems.forEach(function (item) {
+                    item.classList.remove("active");
+                  });
+                  item.classList.add("active");
+                  currentTub.classList.add("active");
+                }
+              })
+            })
+  //----------modal close---------------------------------------------
+            buttonCloseModal.forEach((item)=> {
+              item.addEventListener('click', function() { 
+                popupModal.classList.remove('active');
+                body.style.overflow = 'auto';
+              })
+              popupModal.addEventListener('click',(e)=>{
+                const click = e.composedPath().includes(modalContainer);
+                if(!click) {
+                    popupModal.classList.remove('active');
+                    body.style.overflow = 'auto';
 
-       }
+                }
+              })
+            })   
+        }
     } 
 }

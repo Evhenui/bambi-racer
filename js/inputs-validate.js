@@ -1,8 +1,8 @@
 export let inputValidate = function() {
-  const modalWindow = document.querySelector('[data-popup-modal]'),
-        personalArea = document.querySelector('[data-personal-area-section]'),
+  const personalArea = document.querySelector('[data-personal-area-section]'),
         carProduct = document.querySelector("[data-wrapper-car-product]"),
-        basket = document.querySelector("[data-basket-section]");
+        basket = document.querySelector("[data-basket-section]"),
+        modalEnter = document.querySelector('[data-modal-enter]');
   //------------------input validate---------------------
     function validate(regex, input) {
     return regex.test(input);
@@ -97,26 +97,25 @@ export let inputValidate = function() {
                     inputValidate(inputButton);
                     inputValidate(inputButtonMobile);
 
-
     }
 
-    if (modalWindow != null) {
-    const inputNameReg = modalWindow.querySelector('[data-modal-input-name-reg]'),
-          inputButtonEnterModal = modalWindow.querySelector("[data-modal-button-enter]"),
-          inputsModal = modalWindow.querySelectorAll('.js-modal-input'),
-          inputsModalReg = modalWindow.querySelectorAll('.js-modal-input-reg'),
-          inputNameModal = modalWindow.querySelector("[data-modal-input-name]"),
-          inputPhone = modalWindow.querySelector("[data-modal-input-phone-reg]"),
-          inputPassword = modalWindow.querySelector('[data-modal-input-password]'),
-          inputPasswordFirstModal = modalWindow.querySelector("[data-modal-input-password-first]"),
-          inputPasswordReModal = modalWindow.querySelector("[data-modal-input-password-re]"),
-          labelNameModal = modalWindow.querySelector("[data-modal-label-name]"),
-          labelNameReg = modalWindow.querySelector('[data-modal-label-name-reg]'),
-          labelPhone = modalWindow.querySelector("[data-modal-label-phone-reg]"),
-          labelPassword = modalWindow.querySelector("[data-modal-label-password]"),
-          labelPasswordFirstModal = modalWindow.querySelector("[data-modal-label-password-first]"),
-          labelPasswordReModal = modalWindow.querySelector("[data-modal-label-password-re]"),
-          inputButtonRegisterModal = modalWindow.querySelector("[data-modal-button-register]");
+    if (modalEnter !== null) {
+    const inputNameReg = document.querySelector('[data-modal-input-name-reg]'),
+          inputButtonEnterModal = document.querySelector("[data-modal-button-enter]"),
+          inputsModal = document.querySelectorAll('.js-modal-input'),
+          inputsModalReg = document.querySelectorAll('.js-modal-input-reg'),
+          inputNameModal = document.querySelector("[data-modal-input-name]"),
+          inputPhone = document.querySelector("[data-modal-input-phone-reg]"),
+          inputPassword = document.querySelector('[data-modal-input-password]'),
+          inputPasswordFirstModal = document.querySelector("[data-modal-input-password-first]"),
+          inputPasswordReModal = document.querySelector("[data-modal-input-password-re]"),
+          labelNameModal = document.querySelector("[data-modal-label-name]"),
+          labelNameReg = document.querySelector('[data-modal-label-name-reg]'),
+          labelPhone = document.querySelector("[data-modal-label-phone-reg]"),
+          labelPassword = document.querySelector("[data-modal-label-password]"),
+          labelPasswordFirstModal = document.querySelector("[data-modal-label-password-first]"),
+          labelPasswordReModal = document.querySelector("[data-modal-label-password-re]"),
+          inputButtonRegisterModal = document.querySelector("[data-modal-button-register]");
 
   const regPhone = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/,
         regText = /^([A-Za-z\-\']{1,50})|([А-Яа-я\-\']{1,50})$/;
@@ -240,7 +239,6 @@ export let inputValidate = function() {
              inputs = basket.querySelectorAll("[data-input]"),
              button = basket.querySelector('[data-button-confirm]');
     
-             
       const  regPhone = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/,
              regText = /^([A-Za-z\-\']{1,50})|([А-Яа-я\-\']{1,50})$/,
              regEmail = /[a-zA-Z0-9]+@[a-zA-Z0-9]+.[a-zA-Z0-9]/;
@@ -277,9 +275,9 @@ export let inputValidate = function() {
 
     }
    //------------------show password--------------------- 
-   if (personalArea != null || modalWindow != null) {
-    const btnShowPassModal = modalWindow.querySelectorAll('[data-show-password]'),
-          btnShowPassPersonalArea = personalArea.querySelectorAll('[data-show-password-personal-area]');
+   if (modalEnter != null) {
+    const btnShowPassModal = document.querySelectorAll('[data-show-pass]'),
+          btnShowPassPersonalArea = document.querySelectorAll('[data-show-password-personal-area]');
     function showPass(buttons) {
       buttons.forEach((item) => {
         item.addEventListener('click', function() {
