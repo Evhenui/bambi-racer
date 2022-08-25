@@ -43,7 +43,7 @@
     }
 
     &__ordering-wrapper {
-        padding: 148px 48px 140px 48px;
+        padding: 148px 48px 138px 48px;
         @extend %size-page; 
         display: flex;
         justify-content: space-between;
@@ -82,6 +82,9 @@
         padding: 20px;
         background: $color-white;
         border-radius: 8px;
+        &.payment {
+            padding: 20px 20px 28px 20px;
+        }
     }
 
     &__inputs-wrapper {
@@ -95,6 +98,7 @@
     }
 
     &__inputs-wrapper.payment {
+        column-gap: 32px;
         @media (max-width: 1105px) {
             flex-direction: column;
             row-gap: 28px;
@@ -179,6 +183,10 @@
         @include text($size: 1.125rem, $color: $color-black, $textAlign: left, $fontWeight: 700, $lineHeight: 28px);
     }
 
+    &__inputs-tilte.contacts {
+        margin-bottom: 44px;
+    }
+
     &__wrapper-input {
         margin: 0;
         flex: 1 1 300px;
@@ -245,18 +253,14 @@
         color: $color-red-60;
     }
 
-    &__inputs-delivery-wrapper {
-    }
-
     &__inputs-select-post {
         display: flex;
         column-gap: 60px;
-        margin-bottom: 28px;
+        margin-bottom: 52px;
         overflow: hidden;
         @media (max-width: 1174px) {
             flex-direction: column;
             row-gap: 28px;
-            margin-bottom: 36px;
         }
     }
 
@@ -283,7 +287,7 @@
         }
     }
     &__checkbox-label,  &__checkbox-label-pay{
-        @include text($size: 0.875rem, $color: $color-gray-60, $textAlign: left, $fontWeight: 400, $lineHeight: 18px);
+        @include text($size: 0.875rem, $color: $color-gray-60, $textAlign: left, $fontWeight: 400, $lineHeight: 24px);
     }
 
 
@@ -291,7 +295,7 @@
     &__checkbox:not(:checked) + &__checkbox-label {
         display: inline-block;
         position: relative;
-        padding-left: 24px;
+        padding-left: 27px;
         cursor: pointer;
     }
 
@@ -300,7 +304,7 @@
         content: "";
         position: absolute;
         left: 3px;
-        top: 3px;
+        top: 6px;
         width: 12px;
         height: 12px;
         border: 1px solid $color-gray-70;
@@ -317,7 +321,7 @@
         -o-transition: all 0.2s ease;
         transition: all 0.2s ease;
         left: 5px;
-        top: 5px;
+        top: 8px;
         width: 8px;
         height: 8px;
         border-radius: 50%;
@@ -510,7 +514,7 @@
     } 
 }
 .my-order {
-    max-width: 469px;
+    max-width: 468px;
     width: 100%;
     @media (max-width: 1250px) {
         max-width: 400px;

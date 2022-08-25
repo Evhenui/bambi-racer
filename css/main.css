@@ -8369,7 +8369,7 @@ body.lock {
   background-color: #E5E5E5;
 }
 .basket__ordering-wrapper {
-  padding: 148px 48px 140px 48px;
+  padding: 148px 48px 138px 48px;
   display: flex;
   justify-content: space-between;
   -moz-column-gap: 15px;
@@ -8412,6 +8412,9 @@ body.lock {
   background: #ffffff;
   border-radius: 8px;
 }
+.basket__inputs-wrapper-main.payment {
+  padding: 20px 20px 28px 20px;
+}
 .basket__inputs-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -8422,6 +8425,10 @@ body.lock {
     flex-direction: column;
     gap: 32px 0;
   }
+}
+.basket__inputs-wrapper.payment {
+  -moz-column-gap: 32px;
+       column-gap: 32px;
 }
 @media (max-width: 1105px) {
   .basket__inputs-wrapper.payment {
@@ -8515,6 +8522,9 @@ body.lock {
   text-align: left;
   color: #090102;
 }
+.basket__inputs-tilte.contacts {
+  margin-bottom: 44px;
+}
 .basket__wrapper-input {
   margin: 0;
   flex: 1 1 300px;
@@ -8607,14 +8617,13 @@ body.lock {
   display: flex;
   -moz-column-gap: 60px;
        column-gap: 60px;
-  margin-bottom: 28px;
+  margin-bottom: 52px;
   overflow: hidden;
 }
 @media (max-width: 1174px) {
   .basket__inputs-select-post {
     flex-direction: column;
     row-gap: 28px;
-    margin-bottom: 36px;
   }
 }
 @media (max-width: 860px) {
@@ -8638,21 +8647,21 @@ body.lock {
   font-family: "Mulish", sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 24px;
   text-align: left;
   color: #827d7d;
 }
 .basket__checkbox:checked + .basket__checkbox-label, .basket__checkbox:not(:checked) + .basket__checkbox-label {
   display: inline-block;
   position: relative;
-  padding-left: 24px;
+  padding-left: 27px;
   cursor: pointer;
 }
 .basket__checkbox:checked + .basket__checkbox-label:before, .basket__checkbox:not(:checked) + .basket__checkbox-label:before {
   content: "";
   position: absolute;
   left: 3px;
-  top: 3px;
+  top: 6px;
   width: 12px;
   height: 12px;
   border: 1px solid #686464;
@@ -8664,7 +8673,7 @@ body.lock {
   position: absolute;
   transition: all 0.2s ease;
   left: 5px;
-  top: 5px;
+  top: 8px;
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -8849,7 +8858,7 @@ body.lock {
 }
 
 .my-order {
-  max-width: 469px;
+  max-width: 468px;
   width: 100%;
 }
 @media (max-width: 1250px) {
