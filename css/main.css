@@ -8873,15 +8873,21 @@ body.lock {
     box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.1);
   }
 }
-.my-order__wrapper.active .my-order__arrow-mobile {
-  transform: rotateZ(180deg);
+@media (max-width: 960px) {
+  .my-order__wrapper.active .my-order__arrow-mobile {
+    transform: rotateZ(180deg);
+  }
 }
-.my-order__wrapper.active .my-order__header-wrapper {
-  padding-top: 20px;
+@media (max-width: 960px) {
+  .my-order__wrapper.active .my-order__header-wrapper {
+    padding-top: 20px;
+  }
 }
-.my-order__wrapper.active .my-order__edit-order.mobile {
-  visibility: visible;
-  opacity: 1;
+@media (max-width: 960px) {
+  .my-order__wrapper.active .my-order__edit-order.mobile {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 .my-order__header-wrapper {
   transition: all 0.2s ease-in-out;
@@ -8944,8 +8950,12 @@ body.lock {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   font-size: 0;
 }
+.my-order__full-information {
+  min-height: 477px;
+}
 @media (max-width: 960px) {
   .my-order__full-information {
+    min-height: auto;
     height: 0;
     overflow: hidden;
     transition: all 0.2s ease-in-out;
@@ -8984,6 +8994,7 @@ body.lock {
 @media (max-width: 960px) {
   .my-order__order-item {
     padding: 8px 0 8px 0;
+    justify-content: space-between;
   }
 }
 .my-order__order-item.discount {

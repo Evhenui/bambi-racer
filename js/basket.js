@@ -43,18 +43,16 @@ export let basket = function () {
 
         if(accordion !== null) {
             const content = accordion.querySelector('[data-my-order-mobile-full-information]');
-            window.addEventListener('resize', function(event) {
-                if(innerWidth <= 960) {
-                    accordion.addEventListener('click', function() {
-                        this.classList.toggle('active');
-                        if(this.classList.contains('active')) {
-                            content.style.height = content.scrollHeight + 'px';
-                        } else {
-                            content.style.height = 0 + 'px';
-                        }
-                    })
-                }  
-            })   
+
+            accordion.addEventListener('click', function() {
+                accordion.classList.toggle('active');
+                if(accordion.classList.contains('active')) {
+                    content.style.height = content.scrollHeight + 'px';
+                } else {
+                    content.style.height = 0 + 'px';
+                }
+            })
+
         }
         if(dropdownRegion !== null) {
 

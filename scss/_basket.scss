@@ -604,16 +604,22 @@
     }
 
     &__wrapper.active &__arrow-mobile {
-        transform: rotateZ(180deg);
+        @include __960 {
+            transform: rotateZ(180deg);
+        } 
     }
 
     &__wrapper.active &__header-wrapper {
-        padding-top: 20px;
+        @include __960 {
+            padding-top: 20px;
+        }   
     }
 
     &__wrapper.active &__edit-order.mobile {
-        visibility: visible;
-        opacity: 1;
+        @include __960 { 
+            visibility: visible;
+            opacity: 1;
+        }
     }
 
 
@@ -673,7 +679,9 @@
 
     
     &__full-information {
+        min-height: 477px;
         @include __960 {
+            min-height: auto;
             height: 0;
             overflow: hidden;
             transition: all .2s ease-in-out;
@@ -707,6 +715,7 @@
         }
         @include __960 {
             padding: 8px 0 8px 0;
+            justify-content: space-between;
         }
     }
 
