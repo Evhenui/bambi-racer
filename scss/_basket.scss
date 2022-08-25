@@ -1,16 +1,13 @@
 .basket {
-
     &__wrapper {       
         padding-top: 76px;
-    }
-
+    }   
     &__header {
         position: fixed;
         width: 100%;
         background-color: $color-gray-95;
         z-index: 100000;
     }
-
     &__header-wrapper {
         @extend %size-page;       
         padding: 24px 48px;
@@ -72,7 +69,6 @@
         color: $color-red-60
     }
 
-
     &__inputs-data {
         max-width: 664px;
         width: 100%;
@@ -107,10 +103,6 @@
 
     &__inputs-data-header-wrapper {  
         border-bottom: 1px solid $color-gray-30;
-    }
-
-    &__inputs-data-navigation {
-        
     }
 
     &__inputs-data-navigation-list {
@@ -172,35 +164,19 @@
         }
     }
 
-    &__inputs-data-main {
-    }
-
     &__inputs-data-main-wrapper {
         display: flex;
         flex-direction: column;
         row-gap: 40px;
     }
 
-    &__inputs-contact-details {
-    }
-
-    &__inputs-contact-details-wrapper {
-    }
-
     &__subtitle {
         @include text($size: 0.875rem, $color: $color-black, $textAlign: left, $fontWeight: 400, $lineHeight: 24px);
     }
 
-
     &__inputs-tilte {
         margin-bottom: 36px;
         @include text($size: 1.125rem, $color: $color-black, $textAlign: left, $fontWeight: 700, $lineHeight: 28px);
-    }
-
-    &__inputs {
-    }
-
-    &__inputs-wrapper {
     }
 
     &__wrapper-input {
@@ -258,7 +234,6 @@
         position: static;
     }
 
-    
     &__input:focus ~ &__label,
     &__input:valid ~ &__label {
         left: 16px;
@@ -268,10 +243,6 @@
 
     .personal-area-private-data__label.is-invalid {
         color: $color-red-60;
-    }
-
-    &__inputs-delivery {
-
     }
 
     &__inputs-delivery-wrapper {
@@ -369,7 +340,6 @@
         border-color: $color-red;
     }
 
-
     &__inputs-select-place {
         display: flex;
         flex-wrap: wrap;
@@ -383,30 +353,6 @@
 
     &__wrapper-select {
        flex: 1 1 300px;
-    }
-
-    &__select-title {
-    }
-
-    &__select-item {
-    }
-
-
-    &__wrapper-input-checkbox-pay {
-
-    }
-
-    &__checkbox-pay {
-
-    }
-
-    &__checkbox-label-pay {
-
-    }
-
-
-
-    &__inputs-payment-wrapper {
     }
 
     &__explanation {
@@ -427,11 +373,6 @@
     &__explanation-wrapper:hover &__explanation-hidden {
         opacity: 1;
         visibility: visible;
-    }
-
-
-    &__explanation-svg {
-        
     }
 
     &__explanation-hidden {
@@ -466,9 +407,6 @@
         }
     }
 
-    &__inputs-data-footer {
-    }
-
     &__inputs-data-footer-wrapper {
         padding-top: 56px;
         @extend %centre-flex-columb;
@@ -480,9 +418,6 @@
         &:disabled {
             cursor: auto;
         }
-    }
-
-    &__conditions {
     }
 
     &__conditions-wrapper {
@@ -501,10 +436,6 @@
 
     &__dropdown {
         position: relative;
-    }
-
-    &__dropdown.active {
-        
     }
 
     &__dropdown:hover &__dropdown-input{
@@ -576,13 +507,7 @@
         z-index: 2;
         width: 100%;
         top: 44px;
-    }
-
-    &__dropdown-list-item {
-    }
-
-
-   
+    } 
 }
 .my-order {
     max-width: 469px;
@@ -621,7 +546,6 @@
             opacity: 1;
         }
     }
-
 
     &__header-wrapper {
         transition: all .2s ease-in-out;
@@ -673,10 +597,6 @@
         -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
         font-size: 0;
     }
-
-    &__main {
-    }
-
     
     &__full-information {
         min-height: 477px;
@@ -696,9 +616,6 @@
         @include __960 {
             padding: 8px 8px 0 8px;
         }
-    }
-
-    &__items {
     }
 
     &__order-item {
@@ -726,10 +643,6 @@
         }
     } 
 
-    &__order-item-wrapper {
-        
-    }
-
     &__item-image-wrapper {
         max-width: 60px;
         width: 100%;
@@ -751,9 +664,6 @@
         }
     }
 
-    &__price {
-    }
-
     &__real-price {
         font-weight: 700;
         @media (max-width: 1250px) {
@@ -767,9 +677,6 @@
     &__old-price {
        color: $color-gray-60;
        text-decoration-line: line-through;
-    }
-
-    &__footer {
     }
 
     &__footer-wrapper {
@@ -793,17 +700,8 @@
         @include text($size: 1.125rem, $fontWeight: 700, $lineHeight: 28px);
     }
 }
-.full-order {
-}
-.done-order {
-}
-.working-mode {
-}
-
-
 
 .basket {
-
     &__select {
         position: relative;
     }
@@ -815,17 +713,12 @@
 
     &__select-navigation {
         max-width: 300px;
-        width: 100%;
-        
+        width: 100%;  
     }
 
-    &__select.active{
-        
-    }
     &__wrapper-input.region:hover &__input-arrow-hover{
         fill: #991a1d;
     }
-
 
     &__input.region:focus ~ &__input-arrow ,
     &__input.region:valid ~ &__input-arrow  {
@@ -835,26 +728,6 @@
     &__input.region:valid ~ &__input-arrow > path {
         fill: #991a1d;
     }
-
-    &__label {
-    }
-
-    &__input-arrow {
-
-    }
-
-    &__list {
-    }
-
-    &__list-item {
-    }
-}
-.personal-area-private-data {
-
-    &__wrapper-input {
-    }
-}
-.js-input {
 }
 
 

@@ -6,14 +6,9 @@ export let basket = function () {
               dropdownCity = basket.querySelector('[data-dropdown-city]'),
               dropdownDepartmentNumber = basket.querySelector('[data-dropdown-department-number]'),
               dropdowns = basket.querySelectorAll('[data-dropdown]'),
-              accordion = basket.querySelector('[data-order-accordion]');
+              accordion = basket.querySelector('[data-order-accordion]'),
+              popupModal = basket.querySelector('[data-popup-modal]');
 
-        const buttonConfirm = basket.querySelector('[data-button-confirm]');
-        const inputs = basket.querySelectorAll('[data-input]');
-        const inputsSelected = basket.querySelectorAll ('[data-input-selected]');
-
-
-         
             function delActive (params) {
                 params.forEach((el) => {
                     el.classList.remove('active');
@@ -39,21 +34,20 @@ export let basket = function () {
                 
             }
 
-
-
         if(accordion !== null) {
-            const content = accordion.querySelector('[data-my-order-mobile-full-information]');
+                const content = accordion.querySelector('[data-my-order-mobile-full-information]');
 
-            accordion.addEventListener('click', function() {
-                accordion.classList.toggle('active');
-                if(accordion.classList.contains('active')) {
-                    content.style.height = content.scrollHeight + 'px';
-                } else {
-                    content.style.height = 0 + 'px';
-                }
+                accordion.addEventListener('click', function() {
+                    accordion.classList.toggle('active');
+                    if(accordion.classList.contains('active')) {
+                        content.style.height = content.scrollHeight + 'px';
+                    } else {
+                        content.style.height = 0 + 'px';
+                    }
             })
 
         }
+
         if(dropdownRegion !== null) {
 
             const dropdownRegionSelectItems = basket.querySelectorAll('[data-dropdown-region-item]'),
@@ -124,5 +118,10 @@ export let basket = function () {
             })
             changeLable(dropdownRegionSelectItems, dropdownRegionSelected)
         }
+
+       if(popupModal !== null) {
+
+
+       }
     } 
 }

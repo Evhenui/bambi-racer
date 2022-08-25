@@ -1950,7 +1950,7 @@
   }
 
   &__button {
-    cursor: auto;
+    cursor: pointer;
     max-width: 300px;
     width: 100%;
     padding: 12px 0;
@@ -1959,16 +1959,12 @@
     font-size: 0.875rem;
     line-height: 20px;
     text-align: center;
-    background: #9c9696;
+    background: $color-red;
     color: #FFFFFF;
     border-radius: 1px;
     @media (max-width: 860px) {
       max-width: 100%;
     }
-  }
-  &__button.active {
-    cursor: pointer;
-    background: $color-red;
     &:hover {
       background: $color-red-60;
     }
@@ -1977,6 +1973,7 @@
     }
     &:disabled {
       background: $color-gray-50;
+      cursor: auto;
     }
   }
 

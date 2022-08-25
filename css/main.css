@@ -5350,7 +5350,7 @@ label {
   color: #9c9696;
 }
 .personal-area-modal__button {
-  cursor: auto;
+  cursor: pointer;
   max-width: 300px;
   width: 100%;
   padding: 12px 0;
@@ -5359,7 +5359,7 @@ label {
   font-size: 0.875rem;
   line-height: 20px;
   text-align: center;
-  background: #9c9696;
+  background: #c12125;
   color: #FFFFFF;
   border-radius: 1px;
 }
@@ -5368,18 +5368,15 @@ label {
     max-width: 100%;
   }
 }
-.personal-area-modal__button.active {
-  cursor: pointer;
-  background: #c12125;
-}
-.personal-area-modal__button.active:hover {
+.personal-area-modal__button:hover {
   background: #991a1d;
 }
-.personal-area-modal__button.active:active {
+.personal-area-modal__button:active {
   background: #890019;
 }
-.personal-area-modal__button.active:disabled {
+.personal-area-modal__button:disabled {
   background: #9c9696;
+  cursor: auto;
 }
 .personal-area-modal__register {
   display: none;
@@ -8850,6 +8847,7 @@ body.lock {
   width: 100%;
   top: 44px;
 }
+
 .my-order {
   max-width: 469px;
   width: 100%;
@@ -9087,6 +9085,7 @@ body.lock {
 .basket__input.region:focus ~ .basket__input-arrow > path, .basket__input.region:valid ~ .basket__input-arrow > path {
   fill: #991a1d;
 }
+
 .waiting-title.done-title {
   margin-bottom: 0;
 }
